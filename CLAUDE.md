@@ -54,10 +54,6 @@ before the reference fix and passes after it.
 - Missing predictions, invalid patches, and timeouts stay in the denominator.
 - Budget (provisional): 100 steps and 30 minutes per instance.
 
-## Machine
-Mihir's laptop, WSL Ubuntu on D:, Docker data on D:\Docker\Data. C: is almost
-full: never write large files outside WSL or Docker storage.
-
 ## Working style
 - Ask before installing system packages, changing Docker settings, or anything
   hard to undo.
