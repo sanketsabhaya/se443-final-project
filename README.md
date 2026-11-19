@@ -32,17 +32,19 @@ Both arms are evaluated with the official SWT-Bench harness in unit-test mode. A
 | `notes/progress-log.md` | A dated log of every decision, check and intervention |
 | `notes/environment/` | Environment records: SWT-Bench commit, venv freeze, dataset revision, mini-swe-agent freeze |
 | `docs/` | The workflow design (rationale) and the procedure (as frozen) |
+| `smoke/` | SWT-Bench harness smoke tests (gold and empty predictions), run before the experiment to check the harness setup |
 
 **Note on `evaluation/swt-runs/`:**
 - The per-instance harness logs include the reference test patches and the gold runs, because the harness uses them internally. They are evaluator-only artifacts, and the generation pipeline never read them.
 - Each run's `dataset` entry is a symlink to the local harness checkout, so the dataset itself is not copied. On another machine those links dangle.
+- Harness lock files (`locks/*.lck`, all empty) had `:` in their names on Linux; in this copy the `:` is replaced by `_`.
 
 ## Environment (as used)
 
 | Component | Version / location |
 |---|---|
 | OS | Windows + WSL2 3.0.5.0 (kernel 6.18.58.1), Ubuntu 26.04.1 LTS |
-| Docker | Docker Desktop 29.9.3, WSL2 backend, data on `D:\Docker\Data`; 16 CPUs |
+| Docker | Docker Desktop 4.99.0 (Engine 29.9.3), WSL2 backend, data on `D:\Docker\Data`; 16 CPUs |
 | WSL memory | 7.5 GB at the start, raised to 12 GB during final-1 (see Interventions) |
 | uv | 0.13.8 |
 | mini-swe-agent | `~/se443/mini-swe-agent`, commit `04d809ceab9df28f9adaed044884180159172930` (v2.4.6). Used unmodified and read-only. |
@@ -88,9 +90,9 @@ All commands run from `~/se443/project`. Run one instance at a time; nothing run
 
 **Scoring rules:**
 - Missing predictions, invalid predictions and timeouts stay in the denominator.
-- Harness errors count as failures for both arms. This is option A, decided by the user on 2026-11-14.
+- Harness errors count as failures for both arms. This is option A, which we chose on 2026-11-14.
 
-## Frozen files (tag `freeze-1`, commit `f8772f5`)
+## Frozen files (tag `freeze-1`, commit `f8772f5` in the original development repository)
 These files were not changed after the freeze. The sha256 values were rechecked after every step.
 
 ```
@@ -101,21 +103,21 @@ b6714e87713e1098707b6b8fec643b53ff2ac8fc3fcd56e79c6f4c69ba8378a1  scripts/run_ba
 0430fdbfba624090df319e5cc6c9d858386b05a1a1be587021ebe0e7bab0a0d2  scripts/run_experiment.py
 7218cd7c12ff1c4b14ececffb85324865c7624c50dc6e57dc8c655ef6d254eb6  scripts/run_swt_harness.sh
 ```
-Check with `sha256sum -c` against this list, or `git diff freeze-1 -- configs scripts/run_*.py scripts/run_*.sh scripts/check_test_only.py`.
+Check with `sha256sum -c` against this list.
 
 ## Infrastructure interventions during final-1
 final-1 ran from 2026-11-13 19:05:48 to 2026-11-14 13:28:42 (times are local, UTC−6). Details are in `notes/progress-log.md`.
 None of these interventions changed a frozen file or redid a generation.
 
 1. **WSL memory, about 21:44–21:52, instance 6 (matplotlib-22719):**
-   - A harness `conda-env create` build hung for 47 minutes or more, and its memory use kept rising. The user killed the container and paused the driver.
-   - The user raised WSL memory from 7.5 GB to 12 GB, ran `wsl --shutdown` and restarted Docker Desktop. The driver resumed at 21:51:48.
+   - A harness `conda-env create` build hung for 47 minutes or more, and its memory use kept rising. We killed the container and paused the driver.
+   - We raised WSL memory from 7.5 GB to 12 GB, ran `wsl --shutdown` and restarted Docker Desktop. The driver resumed at 21:51:48.
    - Instances 1–5, and the generation for instance 6, ran under 7.5 GB. Every later step ran under 12 GB.
 2. **Watchdog, 23:02 to about 13:35** (`scripts/watchdog_conda.sh`, not frozen and not part of the method):
    - It killed harness containers stuck in `conda-env create` for more than 30 minutes. It made 14 kills, all on matplotlib 3.5 environment builds (22719, 22865, 22871, 23299), the last at 06:45.
    - Those instances ended unevaluated for both arms.
 3. **Network change, from just after 08:59:28 to 09:50:07:**
-   - The laptop moved to a different network. The user paused the driver and the watchdog. No generation was running at the time.
+   - The laptop moved to a different network. We paused the driver and the watchdog. No generation was running at the time.
    - One harness attempt (sphinx-11510, baseline) was moved aside and rerun on the same prediction.
 
 Interventions 1 and 3 are the two interruptions counted in the results.
@@ -140,7 +142,7 @@ All 13 `HARNESS_RETRY_same_prediction` entries in `runs/experiment/final-1/statu
   - **C3, matplotlib 3.7:** runs `python -m pip uninstall -y vcs-versioning || true`.
 - Launchers: `scripts/posthoc/run_swt_harness_posthoc.sh` (the frozen harness launcher with only the harness path changed) and `scripts/posthoc/run_reeval_C.sh`.
 
-**Gating rule** (pre-registered: logged in commit `8213220` before any re-evaluation result was read):
+**Gating rule** (pre-registered: logged in commit `8213220` of the original development repository, before any re-evaluation result was read):
 - An instance counts in the sensitivity table only if **its own gold patch resolves** under the patched harness.
 - Otherwise it is unevaluable for both arms.
 - Both arms' **unchanged** final-1 predictions were re-evaluated, the same `harness_input.jsonl` files with their sha256 logged. Nothing was regenerated, and nothing went back to the agent.
@@ -164,7 +166,7 @@ All 13 `HARNESS_RETRY_same_prediction` entries in `runs/experiment/final-1/statu
 - **Unevaluable instances:** six instances are unevaluable in both arms.
 
 ## Rules followed
-These come from `CLAUDE.md`:
+We followed these rules throughout:
 - mini-swe-agent is never modified.
 - Generated tests are never edited.
 - The pipeline never reads `patch`, `test_patch`, harness results or instructor labels.
