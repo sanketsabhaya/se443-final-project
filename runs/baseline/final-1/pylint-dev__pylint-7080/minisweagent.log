@@ -1,0 +1,7 @@
+2026-11-14 08:26:47,572 - minisweagent - INFO - Loading dataset /home/mihir_barvaliya/.cache/huggingface/hub/datasets--princeton-nlp--SWE-bench_Verified/snapshots/c104f840cc67f8b6eec6f759ebc8b2693d585d4a, split test...
+2026-11-14 08:26:48,192 - minisweagent - INFO - Instance filter: 500 -> 1 instances
+2026-11-14 08:26:48,195 - minisweagent - INFO - Running on 1 instances...
+2026-11-14 08:26:48,195 - minisweagent - INFO - Building agent config from specs: ['/home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml']
+2026-11-14 08:26:52,763 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-34c2b779 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-7080:latest sleep 2h
+2026-11-14 08:26:53,974 - minisweagent.environment - INFO - Started container minisweagent-34c2b779 with ID 2380e6975e1f79c6c06f5927e59f9a329b279d3e06acdf3f49a7244b18ef32ff
+2026-11-14 08:28:40,797 - minisweagent - INFO - Saved trajectory to '/home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7080/pylint-dev__pylint-7080/pylint-dev__pylint-7080.traj.json'

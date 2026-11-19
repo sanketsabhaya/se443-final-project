@@ -1,0 +1,73 @@
+[
+  {
+    "round": 1,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 64.2,
+      "steps": 14,
+      "exit_status": "Submitted",
+      "patch_chars": 1080
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 21.0,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": false,
+    "overrides": []
+  },
+  {
+    "round": 2,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 94.9,
+      "steps": 21,
+      "exit_status": "Submitted",
+      "patch_chars": 1571
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 21.6,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": true,
+    "overrides": [
+      "agent.step_limit=85",
+      "agent.wall_time_limit_seconds=1714",
+      "run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply"
+    ]
+  },
+  {
+    "round": 3,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 78.1,
+      "steps": 24,
+      "exit_status": "Submitted",
+      "patch_chars": 1430
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 20.5,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description_and_type_aliases",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": true,
+    "overrides": [
+      "agent.step_limit=63",
+      "agent.wall_time_limit_seconds=1598",
+      "run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply"
+    ]
+  }
+]

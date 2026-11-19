@@ -1,0 +1,95 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.20, pytest-8.3.4, pluggy-1.5.0
+rootdir: /testbed
+configfile: pytest.ini
+plugins: xdist-3.6.1, timeout-2.3.1, cov-5.0.0, rerunfailures-14.0
+collected 4 items
+
+lib/matplotlib/tests/test_axes.py ..FF                                   [100%]
+
+=================================== FAILURES ===================================
+___________________ test_inverted_limits_via_set_lim[log-x] ____________________
+
+axis = 'x', scale = 'log'
+
+    @pytest.mark.parametrize('axis', ['x', 'y'])
+    @pytest.mark.parametrize('scale', ['linear', 'log'])
+    def test_inverted_limits_via_set_lim(axis, scale):
+        # Test gh:14646: reversing the limits of a log-scaled axis must invert
+        # the axis just like it does for a linear scale.
+        data = np.linspace(100, 1, 10)
+        fig, ax = plt.subplots()
+        if axis == 'x':
+            ax.plot(data, np.arange(data.size))
+        else:
+            ax.plot(np.arange(data.size), data)
+        getattr(ax, f'set_{axis}scale')(scale)
+    
+        limits = (100, 1)
+        getattr(ax, f'set_{axis}lim')(*limits)
+    
+>       assert getattr(ax, f'get_{axis}lim')() == limits
+E       assert (1.0, 100.0) == (100, 1)
+E         
+E         At index 0 diff: 1.0 != 100
+E         Use -v to get more diff
+
+lib/matplotlib/tests/test_axes.py:958: AssertionError
+___________________ test_inverted_limits_via_set_lim[log-y] ____________________
+
+axis = 'y', scale = 'log'
+
+    @pytest.mark.parametrize('axis', ['x', 'y'])
+    @pytest.mark.parametrize('scale', ['linear', 'log'])
+    def test_inverted_limits_via_set_lim(axis, scale):
+        # Test gh:14646: reversing the limits of a log-scaled axis must invert
+        # the axis just like it does for a linear scale.
+        data = np.linspace(100, 1, 10)
+        fig, ax = plt.subplots()
+        if axis == 'x':
+            ax.plot(data, np.arange(data.size))
+        else:
+            ax.plot(np.arange(data.size), data)
+        getattr(ax, f'set_{axis}scale')(scale)
+    
+        limits = (100, 1)
+        getattr(ax, f'set_{axis}lim')(*limits)
+    
+>       assert getattr(ax, f'get_{axis}lim')() == limits
+E       assert (1.0, 100.0) == (100, 1)
+E         
+E         At index 0 diff: 1.0 != 100
+E         Use -v to get more diff
+
+lib/matplotlib/tests/test_axes.py:958: AssertionError
+=============================== warnings summary ===============================
+lib/matplotlib/__init__.py:200
+lib/matplotlib/__init__.py:200
+lib/matplotlib/__init__.py:200
+lib/matplotlib/__init__.py:200
+lib/matplotlib/__init__.py:200
+  /testbed/lib/matplotlib/__init__.py:200: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if LooseVersion(module.__version__) < minver:
+
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    other = LooseVersion(other)
+
+lib/matplotlib/__init__.py:332
+  /testbed/lib/matplotlib/__init__.py:332: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    version = LooseVersion(match.group(1))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[linear-x]
+PASSED lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[linear-y]
+FAILED lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[log-x]
+FAILED lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[log-y]
+=================== 2 failed, 2 passed, 12 warnings in 3.15s ===================
+Matplotlib is not built with the correct FreeType version to run tests.  Set local_freetype=True in setup.cfg and rebuild. Expect many image comparison failures below. Expected freetype version 2.6.1. Found freetype version 2.11.1. Freetype build type is not local

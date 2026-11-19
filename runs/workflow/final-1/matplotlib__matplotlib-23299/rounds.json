@@ -1,0 +1,23 @@
+[
+  {
+    "round": 1,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 85.5,
+      "steps": 20,
+      "exit_status": "Submitted",
+      "patch_chars": 1420
+    },
+    "check": {
+      "group": "G5",
+      "apply_ok": true,
+      "duration_s": 6.6,
+      "selection_mode": "functions",
+      "command": "pytest -rA --tb=long -p no:cacheprovider lib/matplotlib/tests/test_rcparams.py::test_rc_context_figure_survives_get_backend",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": false,
+    "overrides": []
+  }
+]

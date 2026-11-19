@@ -1,0 +1,155 @@
+{
+  "run_id": "final-1",
+  "n_instances": 25,
+  "price_schedule_usd_per_1M": {
+    "cache_hit": 0.006,
+    "cache_miss": 0.3,
+    "output": 1.2
+  },
+  "arms": {
+    "baseline": {
+      "success": 5,
+      "applicable": 19,
+      "unevaluated": [
+        "astropy__astropy-8872",
+        "matplotlib__matplotlib-22719",
+        "matplotlib__matplotlib-22865",
+        "matplotlib__matplotlib-22871",
+        "matplotlib__matplotlib-23299",
+        "pylint-dev__pylint-7277"
+      ],
+      "missing_prediction": [],
+      "invalid": {},
+      "coverage_delta_mean": 0.3903454184704185,
+      "coverage_delta_n": 16,
+      "coverage_delta_mean_successful": 0.6480952380952381,
+      "coverage_delta_n_successful": 5,
+      "cost_usd_fixed_peak": 0.442717308,
+      "n_calls": 429,
+      "calls_in_peak_hours": 0,
+      "avg_generation_seconds": 77.8,
+      "n_generation_times": 25,
+      "total_harness_seconds": 19583.0,
+      "fingerprints": [
+        "bc19ba97cbe016479903222bb1578db6"
+      ],
+      "models": [
+        "deepseek-flash"
+      ]
+    },
+    "workflow": {
+      "success": 6,
+      "applicable": 19,
+      "unevaluated": [
+        "astropy__astropy-8872",
+        "matplotlib__matplotlib-22719",
+        "matplotlib__matplotlib-22865",
+        "matplotlib__matplotlib-22871",
+        "matplotlib__matplotlib-23299",
+        "pylint-dev__pylint-7277"
+      ],
+      "missing_prediction": [],
+      "invalid": {},
+      "coverage_delta_mean": 0.4098124098124098,
+      "coverage_delta_n": 16,
+      "coverage_delta_mean_successful": 0.7738095238095238,
+      "coverage_delta_n_successful": 6,
+      "cost_usd_fixed_peak": 1.114880724,
+      "n_calls": 1022,
+      "calls_in_peak_hours": 0,
+      "avg_generation_seconds": 215.352,
+      "n_generation_times": 25,
+      "total_harness_seconds": 12645.0,
+      "fingerprints": [
+        "bc19ba97cbe016479903222bb1578db6"
+      ],
+      "models": [
+        "deepseek-flash"
+      ]
+    }
+  },
+  "paired": {
+    "both": 5,
+    "only_baseline": 0,
+    "only_workflow": 1,
+    "neither": 19
+  },
+  "workflow": {
+    "group_counts_per_round": {
+      "round_1": {
+        "G1": 0,
+        "G2": 0,
+        "G3": 2,
+        "G4": 12,
+        "G5": 11,
+        "UNTESTED": 0
+      },
+      "round_2": {
+        "G1": 0,
+        "G2": 0,
+        "G3": 2,
+        "G4": 12,
+        "G5": 0,
+        "UNTESTED": 0
+      },
+      "round_3": {
+        "G1": 0,
+        "G2": 0,
+        "G3": 2,
+        "G4": 10,
+        "G5": 2,
+        "UNTESTED": 0
+      }
+    },
+    "instances_revised": 14,
+    "success_revised": "3/14 (21.4%)",
+    "success_not_revised": "3/11 (27.3%)",
+    "no_workflow_record": []
+  },
+  "retries": {
+    "INFRA_RETRY_generation": 0,
+    "HARNESS_RETRY_same_prediction": 13,
+    "interruptions_moved_aside": 2
+  },
+  "reasoning_tokens_in_completion": {
+    "verdict": "included (completion_tokens = visible + reasoning)",
+    "n_calls": 1451,
+    "beta_reasoning": 1.007,
+    "alpha_per_visible_char": 0.317,
+    "implied_visible_chars_per_token": 3.15,
+    "reasoning_le_completion_all": true
+  },
+  "case_study_candidates": {
+    "successful_both": [
+      "django__django-16485",
+      "matplotlib__matplotlib-14623",
+      "matplotlib__matplotlib-20676",
+      "matplotlib__matplotlib-21568",
+      "sphinx-doc__sphinx-11510"
+    ],
+    "unsuccessful_both": [
+      "astropy__astropy-8872",
+      "matplotlib__matplotlib-22719",
+      "matplotlib__matplotlib-22865",
+      "matplotlib__matplotlib-22871",
+      "matplotlib__matplotlib-23299",
+      "matplotlib__matplotlib-25311",
+      "pylint-dev__pylint-6386",
+      "pylint-dev__pylint-6903",
+      "pylint-dev__pylint-7080",
+      "pylint-dev__pylint-7277",
+      "sphinx-doc__sphinx-8459",
+      "sphinx-doc__sphinx-8475",
+      "sphinx-doc__sphinx-8548",
+      "sphinx-doc__sphinx-8551",
+      "sphinx-doc__sphinx-8593",
+      "sphinx-doc__sphinx-8595",
+      "sphinx-doc__sphinx-8621",
+      "sphinx-doc__sphinx-8638",
+      "sphinx-doc__sphinx-8721"
+    ],
+    "methods_disagree": [
+      "sympy__sympy-15017"
+    ]
+  }
+}

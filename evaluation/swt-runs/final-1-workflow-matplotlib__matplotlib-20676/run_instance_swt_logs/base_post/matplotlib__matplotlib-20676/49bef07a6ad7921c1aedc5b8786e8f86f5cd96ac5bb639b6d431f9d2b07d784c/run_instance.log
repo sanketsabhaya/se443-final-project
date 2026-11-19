@@ -1,0 +1,32 @@
+2026-11-13 20:22:18,699 - WARNING - Starting evaluation at 1794622938.6992464
+2026-11-13 20:22:18,983 - INFO - Creating container for matplotlib__matplotlib-20676...
+2026-11-13 20:22:19,060 - INFO - Container for matplotlib__matplotlib-20676 created: 9c7261ee4772f3f46b156700cddeace34a84602402152ad93f98228c73e1a6e0
+2026-11-13 20:22:19,228 - INFO - Container for matplotlib__matplotlib-20676 started: 9c7261ee4772f3f46b156700cddeace34a84602402152ad93f98228c73e1a6e0
+2026-11-13 20:22:20,225 - INFO - Git diff before:
+
+2026-11-13 20:22:20,225 - INFO - Eval script for matplotlib__matplotlib-20676 written to eval.sh, now applying to container...
+2026-11-13 20:22:39,918 - INFO - Test output for matplotlib__matplotlib-20676 written to run_instance_swt_logs/base_post/matplotlib__matplotlib-20676/49bef07a6ad7921c1aedc5b8786e8f86f5cd96ac5bb639b6d431f9d2b07d784c/test_output.txt
+2026-11-13 20:22:39,996 - INFO - Git diff after:
+diff --git a/lib/matplotlib/widgets.py b/lib/matplotlib/widgets.py
+index a199e45d40..00759db0be 100644
+--- a/lib/matplotlib/widgets.py
++++ b/lib/matplotlib/widgets.py
+@@ -2156,7 +2156,12 @@ class SpanSelector(_SelectorWidget):
+             self.artists.append(self._rect)
+ 
+     def _setup_edge_handle(self, props):
+-        self._edge_handles = ToolLineHandles(self.ax, self.extents,
++        # Define initial position using the axis bounds to keep the same bounds
++        if self.direction == 'horizontal':
++            positions = self.ax.get_xbound()
++        else:
++            positions = self.ax.get_ybound()
++        self._edge_handles = ToolLineHandles(self.ax, positions,
+                                              direction=self.direction,
+                                              line_props=props,
+                                              useblit=self.useblit)
+2026-11-13 20:22:39,996 - INFO - Git diff changed after running eval script
+2026-11-13 20:22:39,996 - INFO - Attempting to stop container exec.eval.x86_64.ea14326ccfbf5376330c69.98285d7b47072b73e49460.140140810537424...
+2026-11-13 20:22:55,228 - INFO - Attempting to remove container exec.eval.x86_64.ea14326ccfbf5376330c69.98285d7b47072b73e49460.140140810537424...
+2026-11-13 20:22:55,275 - INFO - Container exec.eval.x86_64.ea14326ccfbf5376330c69.98285d7b47072b73e49460.140140810537424 removed.
+2026-11-13 20:22:55,275 - WARNING - End of eval at 1794622975.2754698

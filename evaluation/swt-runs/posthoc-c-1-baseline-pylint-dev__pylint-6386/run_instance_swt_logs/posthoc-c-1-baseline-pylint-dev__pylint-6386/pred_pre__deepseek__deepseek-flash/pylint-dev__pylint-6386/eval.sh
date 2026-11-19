@@ -1,0 +1,38 @@
+#!/bin/bash
+set -uxo pipefail
+source /opt/miniconda3/bin/activate
+conda activate testbed
+cd /testbed
+git diff HEAD 754b487f4d892e3d4872b6fc7468a71db4e31c13 >> /root/pre_state.patch
+git config --global --add safe.directory /testbed
+cd /testbed
+git status
+git show
+git diff 754b487f4d892e3d4872b6fc7468a71db4e31c13
+source /opt/miniconda3/bin/activate
+conda activate testbed
+python -m pip install -e . --config-settings editable_mode=compat
+git apply -v - <<'EOF_114329324912'
+diff --git a/tests/config/test_argparse_config.py b/tests/config/test_argparse_config.py
+index 901bb547..80cd9318 100644
+--- a/tests/config/test_argparse_config.py
++++ b/tests/config/test_argparse_config.py
+@@ -46,6 +46,12 @@ class TestArgparseOptionsProviderMixin:
+             Run([LOGGING_TEST, f"--rcfile={LOGGING_TEST.replace('.py', '.rc')}"])
+         assert ex.value.code == 0
+ 
++    @staticmethod
++    def test_verbose_short_option() -> None:
++        """Check that the short verbose option does not expect an argument."""
++        run = Run([EMPTY_MODULE, "-v"], exit=False)
++        assert run.verbose
++
+ 
+ class TestDeprecationOptions:
+     @staticmethod
+
+EOF_114329324912
+python3 /root/trace.py --count -C coverage.cover --include-pattern '/testbed/(pylint/lint/base_options\.py|pylint/config/utils\.py|pylint/config/argument\.py|pylint/config/arguments_manager\.py)' -m pytest --no-header -rA  -p no:cacheprovider tests/config/test_argparse_config.py
+cat coverage.cover
+git checkout 754b487f4d892e3d4872b6fc7468a71db4e31c13
+git apply /root/pre_state.patch

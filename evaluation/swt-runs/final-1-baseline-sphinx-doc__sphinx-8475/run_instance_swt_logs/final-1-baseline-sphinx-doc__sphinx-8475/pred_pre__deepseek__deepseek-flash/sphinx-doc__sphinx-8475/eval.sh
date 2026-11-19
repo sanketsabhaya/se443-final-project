@@ -1,0 +1,54 @@
+#!/bin/bash
+set -uxo pipefail
+source /opt/miniconda3/bin/activate
+conda activate testbed
+cd /testbed
+git diff HEAD 3ea1ec84cc610f7a9f4f6b354e264565254923ff >> /root/pre_state.patch
+git config --global --add safe.directory /testbed
+cd /testbed
+git status
+git show
+git diff 3ea1ec84cc610f7a9f4f6b354e264565254923ff
+source /opt/miniconda3/bin/activate
+conda activate testbed
+python -m pip install -e .[test]
+git apply -v - <<'EOF_114329324912'
+diff --git a/tests/test_build_linkcheck.py b/tests/test_build_linkcheck.py
+index c09c81fe0..c490f883d 100644
+--- a/tests/test_build_linkcheck.py
++++ b/tests/test_build_linkcheck.py
+@@ -274,6 +274,28 @@ def test_follows_redirects_on_GET(app, capsys):
+     )
+ 
+ 
++class TooManyRedirectsHandler(http.server.BaseHTTPRequestHandler):
++    def do_HEAD(self):
++        self.send_response(302, "Found")
++        self.send_header("Location", "http://localhost:7777/")
++        self.end_headers()
++
++    def do_GET(self):
++        self.send_response(200, "OK")
++        self.end_headers()
++
++
++@pytest.mark.sphinx('linkcheck', testroot='linkcheck-localserver', freshenv=True)
++def test_too_many_redirects_on_HEAD(app):
++    # Some servers enter an infinite redirect loop for HEAD requests, but
++    # handle GET requests successfully.  In that case linkcheck should fall
++    # back to GET instead of reporting the link as broken.
++    with http_server(TooManyRedirectsHandler):
++        app.builder.build_all()
++    content = (app.outdir / 'output.txt').read_text()
++    assert content == ""
++
++
+ class OKHandler(http.server.BaseHTTPRequestHandler):
+     def do_HEAD(self):
+         self.send_response(200, "OK")
+
+EOF_114329324912
+python3 /root/trace.py --count -C coverage.cover --include-pattern '/testbed/(sphinx/builders/linkcheck\.py)' -m tox -epy39 -v -- tests/test_build_linkcheck.py
+cat coverage.cover
+git checkout 3ea1ec84cc610f7a9f4f6b354e264565254923ff
+git apply /root/pre_state.patch

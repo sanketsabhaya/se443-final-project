@@ -1,0 +1,29 @@
+diff --git a/tests/test_ext_viewcode.py b/tests/test_ext_viewcode.py
+index 79864095b..a051736e8 100755
+--- a/tests/test_ext_viewcode.py
++++ b/tests/test_ext_viewcode.py
+@@ -102,3 +102,24 @@ def test_local_source_files(app, status, warning):
+ 
+     assert result.count('href="_modules/not_a_package/submodule.html#not_a_package.submodule.Class3.class_attr"') == 1
+     assert result.count('This is the class attribute class_attr') == 1
++
++
++@pytest.mark.sphinx('html', testroot='ext-viewcode')
++def test_viewcode_epub_disabled(app, make_app):
++    # First build HTML so that the viewcode module metadata is stored in the
++    # shared doctree environment, as happens with ``make html epub``.
++    app.build()
++
++    html_module_page = app.outdir / '_modules/spam/mod1.html'
++    assert html_module_page.exists()
++    assert 'Source code for spam.mod1' in html_module_page.read_text()
++
++    epub_app = make_app('epub', srcdir=app.srcdir)
++    assert epub_app.config.viewcode_enable_epub is False
++    epub_app.build()
++
++    epub_module_dir = epub_app.outdir / '_modules'
++    assert not epub_module_dir.exists(), (
++        'viewcode generated EPUB module pages despite '
++        'viewcode_enable_epub=False: %s' % epub_module_dir
++    )

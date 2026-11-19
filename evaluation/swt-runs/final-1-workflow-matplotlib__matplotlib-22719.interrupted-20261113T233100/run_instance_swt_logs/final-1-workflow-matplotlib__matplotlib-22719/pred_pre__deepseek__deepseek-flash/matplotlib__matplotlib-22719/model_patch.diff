@@ -1,0 +1,26 @@
+diff --git a/lib/matplotlib/tests/test_category.py b/lib/matplotlib/tests/test_category.py
+index f0e424bd8e..8e2b0a42d0 100644
+--- a/lib/matplotlib/tests/test_category.py
++++ b/lib/matplotlib/tests/test_category.py
+@@ -1,4 +1,6 @@
+ """Catch all for categorical functions"""
++import warnings
++
+ import pytest
+ import numpy as np
+ 
+@@ -211,6 +213,14 @@ class TestPlotNumlike:
+ 
+ 
+ class TestPlotTypes:
++    def test_plot_empty(self):
++        fig, ax = plt.subplots()
++        ax.xaxis.update_units(["a", "b"])
++        with warnings.catch_warnings():
++            warnings.simplefilter("error", MatplotlibDeprecationWarning)
++            line, = ax.plot([], [])
++        assert line.get_xdata().size == 0
++
+     @pytest.mark.parametrize("plotter", PLOT_LIST, ids=PLOT_IDS)
+     def test_plot_unicode(self, plotter):
+         ax = plt.figure().subplots()

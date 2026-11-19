@@ -1,0 +1,282 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.20, pytest-7.4.4, pluggy-1.5.0
+benchmark: 4.0.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /testbed
+configfile: setup.cfg
+plugins: timeout-2.3.1, profiling-1.7.0, xdist-2.5.0, forked-1.6.0, cov-3.0.0, benchmark-4.0.0
+collected 1 item
+
+tests/test_pylint_runners.py F                                           [100%]
+
+=================================== FAILURES ===================================
+_________ test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction _________
+
+tmpdir = local('/tmp/pytest-of-root/pytest-0/test_pylint_run_jobs_equal_zer0')
+
+    def test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction(
+        tmpdir: LocalPath,
+    ) -> None:
+        """Check that the pylint runner does not crash if `pylint.lint.run._query_cpu`
+        determines only a fraction of a CPU core to be available.
+        """
+        builtin_open = open
+    
+        def _mock_open(*args, **kwargs):
+            if args[0] == "/sys/fs/cgroup/cpu/cpu.cfs_quota_us":
+                return mock_open(read_data=b"-1")(*args, **kwargs)
+            if args[0] == "/sys/fs/cgroup/cpu/cpu.shares":
+                return mock_open(read_data=b"2")(*args, **kwargs)
+            return builtin_open(*args, **kwargs)
+    
+        pathlib_path = pathlib.Path
+    
+        def _mock_path(*args, **kwargs):
+            if args[0] == "/sys/fs/cgroup/cpu/cpu.shares":
+                return MagicMock(is_file=lambda: True)
+            return pathlib_path(*args, **kwargs)
+    
+        filepath = os.path.abspath(__file__)
+        testargs = [filepath, "--jobs=0"]
+        with tmpdir.as_cwd():
+            with pytest.raises(SystemExit) as err:
+                with patch("builtins.open", _mock_open):
+                    with patch("pylint.lint.run.Path", _mock_path):
+>                       Run(testargs, reporter=Reporter())
+
+tests/test_pylint_runners.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pylint.lint.run.Run object at 0x7e2ebf103040>
+args = ['/testbed/tests/test_pylint_runners.py']
+reporter = <pylint.testutils.reporter_for_tests.GenericTestReporter object at 0x7e2ebf1034f0>
+exit = True, do_exit = <object object at 0x7e2ebf58fca0>
+
+    def __init__(
+        self,
+        args: Sequence[str],
+        reporter: BaseReporter | None = None,
+        exit: bool = True,  # pylint: disable=redefined-builtin
+        do_exit: Any = UNUSED_PARAM_SENTINEL,
+    ) -> None:
+        # Immediately exit if user asks for version
+        if "--version" in args:
+            print(full_version)
+            sys.exit(0)
+    
+        self._rcfile: str | None = None
+        self._output: str | None = None
+        self._plugins: list[str] = []
+        self.verbose: bool = False
+    
+        # Pre-process certain options and remove them from args list
+        try:
+            args = _preprocess_options(self, args)
+        except ArgumentPreprocessingError as ex:
+            print(ex, file=sys.stderr)
+            sys.exit(32)
+    
+        # Determine configuration file
+        if self._rcfile is None:
+            default_file = next(config.find_default_config_files(), None)
+            if default_file:
+                self._rcfile = str(default_file)
+    
+        self.linter = linter = self.LinterClass(
+            _make_run_options(self),
+            option_groups=self.option_groups,
+            pylintrc=self._rcfile,
+        )
+        # register standard checkers
+        linter.load_default_plugins()
+        # load command line plugins
+        linter.load_plugin_modules(self._plugins)
+    
+        linter.disable("I")
+        linter.enable("c-extension-no-member")
+    
+        # Register the options needed for 'pylint-config'
+        # By not registering them by default they don't show up in the normal usage message
+        if self._is_pylint_config:
+            _register_generate_config_options(linter._arg_parser)
+    
+        args = _config_initialization(
+            linter, args, reporter, config_file=self._rcfile, verbose_mode=self.verbose
+        )
+    
+        # Handle the 'pylint-config' command
+        if self._is_pylint_config:
+            warnings.warn(
+                "NOTE: The 'pylint-config' command is experimental and usage can change",
+                UserWarning,
+            )
+            code = _handle_pylint_config_commands(linter)
+            if exit:
+                sys.exit(code)
+            return
+    
+        # Display help messages if there are no files to lint
+        if not args:
+            print(linter.help())
+            sys.exit(32)
+    
+        if linter.config.jobs < 0:
+            print(
+                f"Jobs number ({linter.config.jobs}) should be greater than or equal to 0",
+                file=sys.stderr,
+            )
+            sys.exit(32)
+        if linter.config.jobs > 1 or linter.config.jobs == 0:
+            if multiprocessing is None:
+                print(
+                    "Multiprocessing library is missing, fallback to single process",
+                    file=sys.stderr,
+                )
+                linter.set_option("jobs", 1)
+            elif linter.config.jobs == 0:
+                linter.config.jobs = _cpu_count()
+    
+        if self._output:
+            try:
+                with open(self._output, "w", encoding="utf-8") as output:
+                    linter.reporter.out = output
+                    linter.check(args)
+                    score_value = linter.generate_reports()
+            except OSError as ex:
+                print(ex, file=sys.stderr)
+                sys.exit(32)
+        else:
+>           linter.check(args)
+
+pylint/lint/run.py:197: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = Checker 'main' (responsible for 'F0001', 'F0002', 'F0010', 'F0011', 'I0001', 'I0010', 'I0011', 'I0013', 'I0020', 'I0021', 'I0022', 'E0001', 'E0011', 'W0012', 'R0022', 'E0013', 'E0014', 'E0015')
+files_or_modules = ['/testbed/tests/test_pylint_runners.py']
+
+    def check(self, files_or_modules: Sequence[str] | str) -> None:
+        """Main checking entry: check a list of files or modules from their name.
+    
+        files_or_modules is either a string or list of strings presenting modules to check.
+        """
+        self.initialize()
+        if not isinstance(files_or_modules, (list, tuple)):
+            # TODO: 3.0: Remove deprecated typing and update docstring
+            warnings.warn(
+                "In pylint 3.0, the checkers check function will only accept sequence of string",
+                DeprecationWarning,
+            )
+            files_or_modules = (files_or_modules,)  # type: ignore[assignment]
+        if self.config.recursive:
+            files_or_modules = tuple(self._discover_files(files_or_modules))
+        if self.config.from_stdin:
+            if len(files_or_modules) != 1:
+                raise exceptions.InvalidArgsError(
+                    "Missing filename required for --from-stdin"
+                )
+    
+            filepath = files_or_modules[0]
+            with fix_import_path(files_or_modules):
+                self._check_files(
+                    functools.partial(self.get_ast, data=_read_stdin()),
+                    [self._get_file_descr_from_stdin(filepath)],
+                )
+        elif self.config.jobs == 1:
+            with fix_import_path(files_or_modules):
+                self._check_files(
+                    self.get_ast, self._iterate_file_descrs(files_or_modules)
+                )
+        else:
+>           check_parallel(
+                self,
+                self.config.jobs,
+                self._iterate_file_descrs(files_or_modules),
+                files_or_modules,
+            )
+
+pylint/lint/pylinter.py:654: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+linter = Checker 'main' (responsible for 'F0001', 'F0002', 'F0010', 'F0011', 'I0001', 'I0010', 'I0011', 'I0013', 'I0020', 'I0021', 'I0022', 'E0001', 'E0011', 'W0012', 'R0022', 'E0013', 'E0014', 'E0015')
+jobs = 0
+files = <generator object PyLinter._iterate_file_descrs at 0x7e2ebedad2e0>
+arguments = ['/testbed/tests/test_pylint_runners.py']
+
+    def check_parallel(
+        linter: PyLinter,
+        jobs: int,
+        files: Iterable[FileItem],
+        arguments: None | str | Sequence[str] = None,
+    ) -> None:
+        """Use the given linter to lint the files with given amount of workers (jobs).
+    
+        This splits the work filestream-by-filestream. If you need to do work across
+        multiple files, as in the similarity-checker, then implement the map/reduce mixin functionality.
+        """
+        # The linter is inherited by all the pool's workers, i.e. the linter
+        # is identical to the linter object here. This is required so that
+        # a custom PyLinter object can be used.
+        initializer = functools.partial(_worker_initialize, arguments=arguments)
+>       with multiprocessing.Pool(
+            jobs, initializer=initializer, initargs=[dill.dumps(linter)]
+        ) as pool:
+
+pylint/lint/parallel.py:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <multiprocessing.context.DefaultContext object at 0x7e2ec086ad60>
+processes = 0
+initializer = functools.partial(<function _worker_initialize at 0x7e2ebf2c7ee0>, arguments=['/testbed/tests/test_pylint_runners.py'])
+initargs = [b'\x80\x04\x95\r\x00\x01\x00\x00\x00\x00\x00\x8c\x14pylint.lint.pylinter\x94\x8c\x08PyLinter\x94\x93\x94)\x81\x94}\x9...\x94j\xcf\x15\x00\x00j\xd1\x15\x00\x00\x87\x94\x8c\x06RP0003\x94j\xd4\x15\x00\x00j\xd6\x15\x00\x00\x87\x94\x87\x94ub.']
+maxtasksperchild = None
+
+    def Pool(self, processes=None, initializer=None, initargs=(),
+             maxtasksperchild=None):
+        '''Returns a process pool object'''
+        from .pool import Pool
+>       return Pool(processes, initializer, initargs, maxtasksperchild,
+                    context=self.get_context())
+
+/opt/miniconda3/envs/testbed/lib/python3.9/multiprocessing/context.py:119: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <multiprocessing.pool.Pool state=INIT pool_size=0>, processes = 0
+initializer = functools.partial(<function _worker_initialize at 0x7e2ebf2c7ee0>, arguments=['/testbed/tests/test_pylint_runners.py'])
+initargs = [b'\x80\x04\x95\r\x00\x01\x00\x00\x00\x00\x00\x8c\x14pylint.lint.pylinter\x94\x8c\x08PyLinter\x94\x93\x94)\x81\x94}\x9...\x94j\xcf\x15\x00\x00j\xd1\x15\x00\x00\x87\x94\x8c\x06RP0003\x94j\xd4\x15\x00\x00j\xd6\x15\x00\x00\x87\x94\x87\x94ub.']
+maxtasksperchild = None
+context = <multiprocessing.context.ForkContext object at 0x7e2ec086a910>
+
+    def __init__(self, processes=None, initializer=None, initargs=(),
+                 maxtasksperchild=None, context=None):
+        # Attributes initialized early to make sure that they exist in
+        # __del__() if __init__() raises an exception
+        self._pool = []
+        self._state = INIT
+    
+        self._ctx = context or get_context()
+        self._setup_queues()
+        self._taskqueue = queue.SimpleQueue()
+        # The _change_notifier queue exist to wake up self._handle_workers()
+        # when the cache (self._cache) is empty or when there is a change in
+        # the _state variable of the thread that runs _handle_workers.
+        self._change_notifier = self._ctx.SimpleQueue()
+        self._cache = _PoolCache(notifier=self._change_notifier)
+        self._maxtasksperchild = maxtasksperchild
+        self._initializer = initializer
+        self._initargs = initargs
+    
+        if processes is None:
+            processes = os.cpu_count() or 1
+        if processes < 1:
+>           raise ValueError("Number of processes must be at least 1")
+E           ValueError: Number of processes must be at least 1
+
+/opt/miniconda3/envs/testbed/lib/python3.9/multiprocessing/pool.py:205: ValueError
+=============================== warnings summary ===============================
+../opt/miniconda3/envs/testbed/lib/python3.9/site-packages/astroid/interpreter/_import/util.py:6
+  /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/astroid/interpreter/_import/util.py:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    import pkg_resources
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_pylint_runners.py::test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction
+========================= 1 failed, 1 warning in 0.19s =========================

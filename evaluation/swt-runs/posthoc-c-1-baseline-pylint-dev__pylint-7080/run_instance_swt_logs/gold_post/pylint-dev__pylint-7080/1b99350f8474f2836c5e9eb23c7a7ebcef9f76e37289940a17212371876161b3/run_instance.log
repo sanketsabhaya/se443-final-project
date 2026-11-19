@@ -1,0 +1,58 @@
+2026-11-14 16:11:43,909 - WARNING - Starting evaluation at 1794694303.9092562
+2026-11-14 16:11:44,191 - INFO - Creating container for pylint-dev__pylint-7080...
+2026-11-14 16:11:44,271 - INFO - Container for pylint-dev__pylint-7080 created: befcff062fe4db0a72b1f57e23ee422f9c560f25ba3e13486a5835354631ff10
+2026-11-14 16:11:44,452 - INFO - Container for pylint-dev__pylint-7080 started: befcff062fe4db0a72b1f57e23ee422f9c560f25ba3e13486a5835354631ff10
+2026-11-14 16:11:44,741 - INFO - Git diff before:
+
+2026-11-14 16:11:44,741 - INFO - Eval script for pylint-dev__pylint-7080 written to eval.sh, now applying to container...
+2026-11-14 16:12:30,538 - INFO - Test output for pylint-dev__pylint-7080 written to run_instance_swt_logs/gold_post/pylint-dev__pylint-7080/1b99350f8474f2836c5e9eb23c7a7ebcef9f76e37289940a17212371876161b3/test_output.txt
+2026-11-14 16:12:30,617 - INFO - Git diff after:
+diff --git a/pylint/lint/expand_modules.py b/pylint/lint/expand_modules.py
+index 5cacc0371..289e1afce 100644
+--- a/pylint/lint/expand_modules.py
++++ b/pylint/lint/expand_modules.py
+@@ -52,6 +52,7 @@ def _is_ignored_file(
+     ignore_list_re: list[Pattern[str]],
+     ignore_list_paths_re: list[Pattern[str]],
+ ) -> bool:
++    element = os.path.normpath(element)
+     basename = os.path.basename(element)
+     return (
+         basename in ignore_list
+diff --git a/tests/test_self.py b/tests/test_self.py
+index c18a04aef..d745161c5 100644
+--- a/tests/test_self.py
++++ b/tests/test_self.py
+@@ -1330,6 +1330,27 @@ class TestRunTC:
+                     code=0,
+                 )
+ 
++    def test_ignore_path_recursive_current_dir(self) -> None:
++        """Tests that path is normalized before checked that is ignored. GitHub issue #6964"""
++        with _test_sys_path():
++            # pytest is including directory HERE/regrtest_data to sys.path which causes
++            # astroid to believe that directory is a package.
++            sys.path = [
++                path
++                for path in sys.path
++                if not os.path.basename(path) == "regrtest_data"
++            ]
++            with _test_cwd():
++                os.chdir(join(HERE, "regrtest_data", "directory"))
++                self._runtest(
++                    [
++                        ".",
++                        "--recursive=y",
++                        "--ignore-paths=^ignored_subdirectory/.*",
++                    ],
++                    code=0,
++                )
++
+     def test_regression_recursive_current_dir(self):
+         with _test_sys_path():
+             # pytest is including directory HERE/regrtest_data to sys.path which causes
+2026-11-14 16:12:30,618 - INFO - Git diff changed after running eval script
+2026-11-14 16:12:30,618 - INFO - Attempting to stop container exec.eval.x86_64.fc8235bb41fea90b41065e.ba1b50b26284d65b1dfcf9.124263654973136...
+2026-11-14 16:12:45,842 - INFO - Attempting to remove container exec.eval.x86_64.fc8235bb41fea90b41065e.ba1b50b26284d65b1dfcf9.124263654973136...
+2026-11-14 16:12:45,885 - INFO - Container exec.eval.x86_64.fc8235bb41fea90b41065e.ba1b50b26284d65b1dfcf9.124263654973136 removed.
+2026-11-14 16:12:45,885 - WARNING - End of eval at 1794694365.8855536

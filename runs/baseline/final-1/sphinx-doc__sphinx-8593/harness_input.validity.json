@@ -1,0 +1,12 @@
+{
+  "sphinx-doc__sphinx-8593": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "tests/roots/test-ext-autodoc/target/private_variable.py",
+      "tests/test_ext_autodoc_private_members.py"
+    ],
+    "non_test_files": [],
+    "model_name_or_path": "deepseek/deepseek-flash"
+  }
+}

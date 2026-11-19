@@ -1,0 +1,73 @@
+[
+  {
+    "round": 1,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 72.7,
+      "steps": 18,
+      "exit_status": "Submitted",
+      "patch_chars": 861
+    },
+    "check": {
+      "group": "G3",
+      "apply_ok": true,
+      "duration_s": 6.0,
+      "selection_mode": "functions",
+      "command": "pytest -rA --tb=long -p no:cacheprovider lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": false,
+    "overrides": []
+  },
+  {
+    "round": 2,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 63.1,
+      "steps": 13,
+      "exit_status": "Submitted",
+      "patch_chars": 1102
+    },
+    "check": {
+      "group": "G3",
+      "apply_ok": true,
+      "duration_s": 5.7,
+      "selection_mode": "functions",
+      "command": "pytest -rA --tb=long -p no:cacheprovider lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": true,
+    "overrides": [
+      "agent.step_limit=81",
+      "agent.wall_time_limit_seconds=1721",
+      "run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply"
+    ]
+  },
+  {
+    "round": 3,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 58.1,
+      "steps": 10,
+      "exit_status": "Submitted",
+      "patch_chars": 1431
+    },
+    "check": {
+      "group": "G3",
+      "apply_ok": true,
+      "duration_s": 5.6,
+      "selection_mode": "functions",
+      "command": "pytest -rA --tb=long -p no:cacheprovider lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": true,
+    "overrides": [
+      "agent.step_limit=67",
+      "agent.wall_time_limit_seconds=1652",
+      "run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply"
+    ]
+  }
+]

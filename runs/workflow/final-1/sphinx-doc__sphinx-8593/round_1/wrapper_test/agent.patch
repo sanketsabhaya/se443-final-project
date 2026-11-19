@@ -1,0 +1,73 @@
+diff --git a/tests/roots/test-ext-autodoc/target/private.py b/tests/roots/test-ext-autodoc/target/private.py
+index a39ce085e..d2d6a29e7 100644
+--- a/tests/roots/test-ext-autodoc/target/private.py
++++ b/tests/roots/test-ext-autodoc/target/private.py
+@@ -9,3 +9,10 @@ def _public_function(name):
+ 
+     :meta public:
+     """
++
++
++#: :meta public:
++_public_variable = None
++
++#: :meta private:
++private_variable = None
+diff --git a/tests/test_ext_autodoc_private_members.py b/tests/test_ext_autodoc_private_members.py
+index 6bce5ce78..44b292607 100644
+--- a/tests/test_ext_autodoc_private_members.py
++++ b/tests/test_ext_autodoc_private_members.py
+@@ -30,6 +30,13 @@ def test_private_field(app):
+         '',
+         '   :meta public:',
+         '',
++        '',
++        '.. py:data:: _public_variable',
++        '   :module: target.private',
++        '   :value: None',
++        '',
++        '   :meta public:',
++        '',
+     ]
+ 
+ 
+@@ -52,6 +59,13 @@ def test_private_field_and_private_members(app):
+         '   :meta public:',
+         '',
+         '',
++        '.. py:data:: _public_variable',
++        '   :module: target.private',
++        '   :value: None',
++        '',
++        '   :meta public:',
++        '',
++        '',
+         '.. py:function:: private_function(name)',
+         '   :module: target.private',
+         '',
+@@ -59,6 +73,13 @@ def test_private_field_and_private_members(app):
+         '',
+         '   :meta private:',
+         '',
++        '',
++        '.. py:data:: private_variable',
++        '   :module: target.private',
++        '   :value: None',
++        '',
++        '   :meta private:',
++        '',
+     ]
+ 
+ 
+@@ -80,4 +101,11 @@ def test_private_members(app):
+         '',
+         '   :meta public:',
+         '',
++        '',
++        '.. py:data:: _public_variable',
++        '   :module: target.private',
++        '   :value: None',
++        '',
++        '   :meta public:',
++        '',
+     ]

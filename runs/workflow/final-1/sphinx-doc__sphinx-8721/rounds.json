@@ -1,0 +1,73 @@
+[
+  {
+    "round": 1,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 43.5,
+      "steps": 10,
+      "exit_status": "Submitted",
+      "patch_chars": 757
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 22.2,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_ext_viewcode.py::test_viewcode_epub_disabled",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": false,
+    "overrides": []
+  },
+  {
+    "round": 2,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 82.9,
+      "steps": 16,
+      "exit_status": "Submitted",
+      "patch_chars": 1239
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 22.9,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_ext_viewcode.py::test_viewcode_epub_disabled",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": true,
+    "overrides": [
+      "agent.step_limit=89",
+      "agent.wall_time_limit_seconds=1734",
+      "run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply"
+    ]
+  },
+  {
+    "round": 3,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 203.5,
+      "steps": 41,
+      "exit_status": "Submitted",
+      "patch_chars": 2137
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 22.9,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_ext_viewcode.py::test_viewcode_epub_disabled",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": true,
+    "overrides": [
+      "agent.step_limit=72",
+      "agent.wall_time_limit_seconds=1628",
+      "run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply"
+    ]
+  }
+]

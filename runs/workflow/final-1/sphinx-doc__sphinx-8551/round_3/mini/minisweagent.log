@@ -1,0 +1,6 @@
+2026-11-14 11:08:35,139 - minisweagent - INFO - Loading dataset /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8551/round_3/dataset, split test...
+2026-11-14 11:08:35,185 - minisweagent - INFO - Running on 1 instances...
+2026-11-14 11:08:35,186 - minisweagent - INFO - Building agent config from specs: ['/home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml', 'agent.step_limit=32', 'agent.wall_time_limit_seconds=1496', 'run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply']
+2026-11-14 11:08:37,459 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-ed6fad9e -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8551:latest sleep 2h
+2026-11-14 11:08:37,773 - minisweagent.environment - INFO - Started container minisweagent-ed6fad9e with ID f6ab54c533f373d2ead80f3127c109f621adaa35e026c53f95856abed925517d
+2026-11-14 11:10:04,442 - minisweagent - INFO - Saved trajectory to '/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8551/round_3/mini/sphinx-doc__sphinx-8551/sphinx-doc__sphinx-8551.traj.json'

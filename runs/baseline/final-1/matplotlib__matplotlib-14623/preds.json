@@ -1,0 +1,7 @@
+{
+  "matplotlib__matplotlib-14623": {
+    "model_name_or_path": "deepseek/deepseek-flash",
+    "instance_id": "matplotlib__matplotlib-14623",
+    "model_patch": "diff --git a/lib/matplotlib/tests/test_scale.py b/lib/matplotlib/tests/test_scale.py\nindex e406b1b9a..483e89249 100644\n--- a/lib/matplotlib/tests/test_scale.py\n+++ b/lib/matplotlib/tests/test_scale.py\n@@ -123,6 +123,20 @@ def test_logscale_invert_transform():\n     assert isinstance(Log10Transform().inverted(), InvertedLog10Transform)\n \n \n+def test_logscale_inverted_limits():\n+    # Explicitly inverted limits should be preserved on log-scaled axes.\n+    fig, ax = plt.subplots()\n+    ax.set_yscale('log')\n+    ax.set_ylim(100, 1)\n+    assert ax.get_ylim() == (100, 1)\n+    assert ax.yaxis_inverted()\n+\n+    ax.set_xscale('log')\n+    ax.set_xlim(100, 1)\n+    assert ax.get_xlim() == (100, 1)\n+    assert ax.xaxis_inverted()\n+\n+\n def test_logscale_transform_repr():\n     # check that repr of log transform succeeds\n     fig, ax = plt.subplots()\n"
+  }
+}

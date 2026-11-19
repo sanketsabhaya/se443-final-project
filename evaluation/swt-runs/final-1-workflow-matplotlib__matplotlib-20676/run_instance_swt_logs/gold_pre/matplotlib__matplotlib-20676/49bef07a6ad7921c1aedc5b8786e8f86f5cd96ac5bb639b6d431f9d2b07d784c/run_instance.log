@@ -1,0 +1,53 @@
+2026-11-13 20:20:28,089 - WARNING - Starting evaluation at 1794622828.089118
+2026-11-13 20:20:28,390 - INFO - Creating container for matplotlib__matplotlib-20676...
+2026-11-13 20:20:28,469 - INFO - Container for matplotlib__matplotlib-20676 created: 689af03bf9ec480b8a2260f41fb7dc0b3c40f020147f4c53b0e2d9f576c00ea7
+2026-11-13 20:20:28,648 - INFO - Container for matplotlib__matplotlib-20676 started: 689af03bf9ec480b8a2260f41fb7dc0b3c40f020147f4c53b0e2d9f576c00ea7
+2026-11-13 20:20:29,623 - INFO - Git diff before:
+
+2026-11-13 20:20:29,624 - INFO - Eval script for matplotlib__matplotlib-20676 written to eval.sh, now applying to container...
+2026-11-13 20:20:49,588 - INFO - Test output for matplotlib__matplotlib-20676 written to run_instance_swt_logs/gold_pre/matplotlib__matplotlib-20676/49bef07a6ad7921c1aedc5b8786e8f86f5cd96ac5bb639b6d431f9d2b07d784c/test_output.txt
+2026-11-13 20:20:49,663 - INFO - Git diff after:
+diff --git a/lib/matplotlib/tests/test_widgets.py b/lib/matplotlib/tests/test_widgets.py
+index 71ebd176f0..19094bca85 100644
+--- a/lib/matplotlib/tests/test_widgets.py
++++ b/lib/matplotlib/tests/test_widgets.py
+@@ -302,6 +302,35 @@ def test_tool_line_handle():
+     assert tool_line_handle.positions == positions
+ 
+ 
++@pytest.mark.parametrize('direction', ("horizontal", "vertical"))
++def test_span_selector_bound(direction):
++    fig, ax = plt.subplots(1, 1)
++    ax.plot([10, 20], [10, 30])
++    ax.figure.canvas.draw()
++    x_bound = ax.get_xbound()
++    y_bound = ax.get_ybound()
++
++    tool = widgets.SpanSelector(ax, print, direction, interactive=True)
++    assert ax.get_xbound() == x_bound
++    assert ax.get_ybound() == y_bound
++
++    bound = x_bound if direction == 'horizontal' else y_bound
++    assert tool._edge_handles.positions == list(bound)
++
++    press_data = [10.5, 11.5]
++    move_data = [11, 13]  # Updating selector is done in onmove
++    release_data = move_data
++    do_event(tool, 'press', xdata=press_data[0], ydata=press_data[1], button=1)
++    do_event(tool, 'onmove', xdata=move_data[0], ydata=move_data[1], button=1)
++
++    assert ax.get_xbound() == x_bound
++    assert ax.get_ybound() == y_bound
++
++    index = 0 if direction == 'horizontal' else 1
++    handle_positions = [press_data[index], release_data[index]]
++    assert tool._edge_handles.positions == handle_positions
++
++
+ def check_lasso_selector(**kwargs):
+     ax = get_ax()
+2026-11-13 20:20:49,663 - INFO - Git diff changed after running eval script
+2026-11-13 20:20:49,663 - INFO - Attempting to stop container exec.eval.x86_64.ea14326ccfbf5376330c69.98285d7b47072b73e49460.140140810537424...
+2026-11-13 20:21:04,916 - INFO - Attempting to remove container exec.eval.x86_64.ea14326ccfbf5376330c69.98285d7b47072b73e49460.140140810537424...
+2026-11-13 20:21:04,950 - INFO - Container exec.eval.x86_64.ea14326ccfbf5376330c69.98285d7b47072b73e49460.140140810537424 removed.
+2026-11-13 20:21:04,950 - WARNING - End of eval at 1794622864.9509354

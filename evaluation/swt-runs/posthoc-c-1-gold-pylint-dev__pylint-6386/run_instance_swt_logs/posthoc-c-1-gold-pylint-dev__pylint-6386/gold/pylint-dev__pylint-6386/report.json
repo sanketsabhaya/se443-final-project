@@ -1,0 +1,63 @@
+{
+    "pylint-dev__pylint-6386": {
+        "patch_is_None": false,
+        "patch_exists": true,
+        "patch_successfully_applied": true,
+        "resolved": true,
+        "coverage_pred": 0.1111111111111111,
+        "coverage_gold": 1.0,
+        "coverage_base": 0.0,
+        "coverage_delta_pred": 0.1111111111111111,
+        "coverage_delta_gold": 1.0,
+        "added_f2p": 1,
+        "tests_base": {
+            "FAIL_TO_PASS": [],
+            "PASS_TO_PASS": [
+                "tests/config/test_config.py::test_unknown_option_name",
+                "tests/config/test_config.py::test_unknown_confidence",
+                "tests/config/test_config.py::test_unknown_short_option_name",
+                "tests/config/test_config.py::test_unknown_py_version",
+                "tests/config/test_config.py::test_unknown_yes_no",
+                "tests/config/test_config.py::test_unknown_message_id",
+                "tests/config/test_config.py::test_can_read_toml_env_variable"
+            ],
+            "FAIL_TO_FAIL": [],
+            "PASS_TO_FAIL": [],
+            "UNMATCHED": []
+        },
+        "tests_pred": {
+            "FAIL_TO_PASS": [
+                "tests/config/test_config.py::test_short_verbose"
+            ],
+            "PASS_TO_PASS": [
+                "tests/config/test_config.py::test_unknown_option_name",
+                "tests/config/test_config.py::test_unknown_confidence",
+                "tests/config/test_config.py::test_unknown_short_option_name",
+                "tests/config/test_config.py::test_unknown_py_version",
+                "tests/config/test_config.py::test_unknown_yes_no",
+                "tests/config/test_config.py::test_unknown_message_id",
+                "tests/config/test_config.py::test_can_read_toml_env_variable"
+            ],
+            "FAIL_TO_FAIL": [],
+            "PASS_TO_FAIL": [],
+            "UNMATCHED": []
+        },
+        "tests_gold": {
+            "FAIL_TO_PASS": [
+                "tests/config/test_config.py::test_short_verbose"
+            ],
+            "PASS_TO_PASS": [
+                "tests/config/test_config.py::test_unknown_option_name",
+                "tests/config/test_config.py::test_unknown_confidence",
+                "tests/config/test_config.py::test_unknown_short_option_name",
+                "tests/config/test_config.py::test_unknown_py_version",
+                "tests/config/test_config.py::test_unknown_yes_no",
+                "tests/config/test_config.py::test_unknown_message_id",
+                "tests/config/test_config.py::test_can_read_toml_env_variable"
+            ],
+            "FAIL_TO_FAIL": [],
+            "PASS_TO_FAIL": [],
+            "UNMATCHED": []
+        }
+    }
+}

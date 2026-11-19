@@ -1,0 +1,11 @@
+{
+  "sphinx-doc__sphinx-8638": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "tests/test_domain_py.py"
+    ],
+    "non_test_files": [],
+    "model_name_or_path": "deepseek/deepseek-flash"
+  }
+}

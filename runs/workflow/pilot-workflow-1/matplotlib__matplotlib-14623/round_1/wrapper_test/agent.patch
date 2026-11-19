@@ -1,0 +1,24 @@
+diff --git a/lib/matplotlib/tests/test_axes.py b/lib/matplotlib/tests/test_axes.py
+index 06ff5aca4..cd764e9aa 100644
+--- a/lib/matplotlib/tests/test_axes.py
++++ b/lib/matplotlib/tests/test_axes.py
+@@ -939,6 +939,19 @@ def test_inverted_limits():
+     plt.close()
+ 
+ 
++@pytest.mark.parametrize("axis", ["x", "y"])
++def test_inverted_limits_log(axis):
++    # Test gh:14647.  Setting inverted limits on a log-scaled axis should
++    # invert the axis rather than silently reordering the limits.
++    fig, ax = plt.subplots()
++    getattr(ax, "set_{}scale".format(axis))("log")
++    getattr(ax, "set_{}lim".format(axis))(10, 1)
++
++    assert getattr(ax, "get_{}lim".format(axis))() == (10, 1)
++    assert getattr(ax, "{}axis_inverted".format(axis))()
++    plt.close(fig)
++
++
+ @image_comparison(baseline_images=['nonfinite_limits'])
+ def test_nonfinite_limits():
+     x = np.arange(0., np.e, 0.01)

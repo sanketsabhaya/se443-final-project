@@ -1,0 +1,46 @@
+{
+  "start": "2026-11-13T19:23:41-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "lib/matplotlib/tests/test_axes.py"
+    ]
+  },
+  "end": "2026-11-13T19:23:47-06:00",
+  "duration_s": 5.7,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "lib/matplotlib/tests/test_axes.py",
+      "cls": null,
+      "func": "test_inverted_limits_via_set_lim",
+      "label": "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim"
+    }
+  ],
+  "command": "pytest -rA --tb=long -p no:cacheprovider lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[linear-x]": "PASSED",
+    "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[linear-y]": "PASSED",
+    "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[log-x]": "FAILED",
+    "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[log-y]": "FAILED"
+  },
+  "group": "G3",
+  "evidence": {
+    "issue_exc": [],
+    "mode": "functions",
+    "collected": {
+      "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim": "PASSED"
+    },
+    "setup_markers": [],
+    "reason": "no_target_failed"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": false,
+    "skip_or_xfail_added": false
+  }
+}

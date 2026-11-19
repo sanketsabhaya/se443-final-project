@@ -1,0 +1,23 @@
+[
+  {
+    "round": 1,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 116.1,
+      "steps": 25,
+      "exit_status": "Submitted",
+      "patch_chars": 1605
+    },
+    "check": {
+      "group": "G5",
+      "apply_ok": true,
+      "duration_s": 5.0,
+      "selection_mode": "functions",
+      "command": "pytest -rA --tb=long -p no:cacheprovider lib/matplotlib/tests/test_pickle.py::test_pickle_draggable",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": false,
+    "overrides": []
+  }
+]

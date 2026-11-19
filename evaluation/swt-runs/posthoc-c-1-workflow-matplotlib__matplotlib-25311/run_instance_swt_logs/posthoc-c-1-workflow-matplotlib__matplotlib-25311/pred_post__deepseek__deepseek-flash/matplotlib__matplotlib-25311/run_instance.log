@@ -1,0 +1,79 @@
+2026-11-14 16:32:01,007 - WARNING - Starting evaluation at 1794695521.0072627
+2026-11-14 16:32:01,298 - INFO - Creating container for matplotlib__matplotlib-25311...
+2026-11-14 16:32:01,374 - INFO - Container for matplotlib__matplotlib-25311 created: 6f08dd1a4572461fc33bd70e176a4601b95fab773db4d56e5d67dc899903acc8
+2026-11-14 16:32:01,542 - INFO - Container for matplotlib__matplotlib-25311 started: 6f08dd1a4572461fc33bd70e176a4601b95fab773db4d56e5d67dc899903acc8
+2026-11-14 16:32:02,577 - INFO - Git diff before:
+
+2026-11-14 16:32:02,577 - INFO - Eval script for matplotlib__matplotlib-25311 written to eval.sh, now applying to container...
+2026-11-14 16:33:07,724 - INFO - Test output for matplotlib__matplotlib-25311 written to run_instance_swt_logs/posthoc-c-1-workflow-matplotlib__matplotlib-25311/pred_post__deepseek__deepseek-flash/matplotlib__matplotlib-25311/test_output.txt
+2026-11-14 16:33:07,803 - INFO - Git diff after:
+diff --git a/lib/matplotlib/offsetbox.py b/lib/matplotlib/offsetbox.py
+index 1dee8a23d9..a46b9cd431 100644
+--- a/lib/matplotlib/offsetbox.py
++++ b/lib/matplotlib/offsetbox.py
+@@ -1505,7 +1505,6 @@ class DraggableBase:
+         if not ref_artist.pickable():
+             ref_artist.set_picker(True)
+         self.got_artist = False
+-        self.canvas = self.ref_artist.figure.canvas
+         self._use_blit = use_blit and self.canvas.supports_blit
+         self.cids = [
+             self.canvas.callbacks._connect_picklable(
+@@ -1514,6 +1513,9 @@ class DraggableBase:
+                 'button_release_event', self.on_release),
+         ]
+ 
++    # A property, not an attribute, to maintain picklability.
++    canvas = property(lambda self: self.ref_artist.figure.canvas)
++
+     def on_motion(self, evt):
+         if self._check_still_parented() and self.got_artist:
+             dx = evt.x - self.mouse_x
+diff --git a/lib/matplotlib/tests/test_pickle.py b/lib/matplotlib/tests/test_pickle.py
+index ec6bdcc2fe..1b5fcba213 100644
+--- a/lib/matplotlib/tests/test_pickle.py
++++ b/lib/matplotlib/tests/test_pickle.py
+@@ -7,6 +7,7 @@ import pytest
+ 
+ import matplotlib as mpl
+ from matplotlib import cm
++from matplotlib.backend_bases import FigureCanvasBase
+ from matplotlib.testing import subprocess_run_helper
+ from matplotlib.testing.decorators import check_figures_equal
+ from matplotlib.dates import rrulewrapper
+@@ -44,6 +45,30 @@ def test_simple():
+     pickle.dump(fig, BytesIO(), pickle.HIGHEST_PROTOCOL)
+ 
+ 
++@pytest.mark.parametrize("draggable_artist", ["legend", "annotation"])
++def test_pickle_draggable(draggable_artist):
++    # The canvas itself is not pickleable, but Figure.__getstate__ normally
++    # drops it.  Draggable artists must not keep a second reference to it.
++    class UnpicklableCanvas(FigureCanvasBase):
++        def __getstate__(self):
++            raise TypeError("cannot pickle canvas")
++
++    fig = mfigure.Figure()
++    UnpicklableCanvas(fig)
++    ax = fig.subplots()
++    ax.plot([0, 1], [0, 1], label="speed")
++    if draggable_artist == "legend":
++        ax.legend().set_draggable(True)
++    else:
++        ax.annotate("foo", (0, 0)).draggable(True)
++
++    fig = pickle.loads(pickle.dumps(fig))
++    if draggable_artist == "legend":
++        assert fig.axes[0].get_legend().get_draggable()
++    else:
++        assert fig.axes[0].texts[0]._draggable is not None
++
++
+ def _generate_complete_test_figure(fig_ref):
+     fig_ref.set_size_inches((10, 6))
+     plt.figure(fig_ref)
+2026-11-14 16:33:07,803 - INFO - Git diff changed after running eval script
+2026-11-14 16:33:07,803 - INFO - Attempting to stop container exec.eval.x86_64.89beb6334e800c4362eea6.11542a1f66c7d18094303c.130772956743248...
+2026-11-14 16:33:23,066 - INFO - Attempting to remove container exec.eval.x86_64.89beb6334e800c4362eea6.11542a1f66c7d18094303c.130772956743248...
+2026-11-14 16:33:23,108 - INFO - Container exec.eval.x86_64.89beb6334e800c4362eea6.11542a1f66c7d18094303c.130772956743248 removed.
+2026-11-14 16:33:23,108 - WARNING - End of eval at 1794695603.1082249

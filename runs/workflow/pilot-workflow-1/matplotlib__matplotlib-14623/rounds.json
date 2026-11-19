@@ -1,0 +1,48 @@
+[
+  {
+    "round": 1,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 53.8,
+      "steps": 15,
+      "exit_status": "Submitted",
+      "patch_chars": 893
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 5.7,
+      "selection_mode": "functions",
+      "command": "pytest -rA --tb=long -p no:cacheprovider lib/matplotlib/tests/test_axes.py::test_inverted_limits_log",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": false,
+    "overrides": []
+  },
+  {
+    "round": 2,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 75.1,
+      "steps": 16,
+      "exit_status": "Submitted",
+      "patch_chars": 600
+    },
+    "check": {
+      "group": "G5",
+      "apply_ok": true,
+      "duration_s": 5.5,
+      "selection_mode": "functions",
+      "command": "pytest -rA --tb=long -p no:cacheprovider lib/matplotlib/tests/test_axes.py::test_inverted_limits",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": true,
+    "overrides": [
+      "agent.step_limit=84",
+      "agent.wall_time_limit_seconds=1740",
+      "run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply"
+    ]
+  }
+]

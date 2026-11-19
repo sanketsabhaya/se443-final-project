@@ -1,0 +1,12 @@
+[2026-11-14T12:00:43-06:00] pulling docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8621:latest
+[2026-11-14T12:00:44-06:00] round 1: start mini (steps_left=100, secs_left=1799, overrides=[])
+[2026-11-14T12:02:39-06:00] round 1: mini done exit_status=Submitted steps=21 dur=114.8s patch_chars=1471
+[2026-11-14T12:03:00-06:00] round 1: wrapper check group=G4 reason=failure_unrelated apply_ok=True charged_step=True dur=21.4s
+[2026-11-14T12:03:00-06:00] round 2: start mini (steps_left=78, secs_left=1663, overrides=['agent.step_limit=78', 'agent.wall_time_limit_seconds=1663', 'run.env_startup_command=cd /testbed && echo {{prev_patch_b64'])
+[2026-11-14T12:04:16-06:00] round 2: mini done exit_status=Submitted steps=17 dur=75.9s patch_chars=2076
+[2026-11-14T12:04:38-06:00] round 2: wrapper check group=G4 reason=failure_unrelated apply_ok=True charged_step=True dur=21.9s
+[2026-11-14T12:04:38-06:00] round 3: start mini (steps_left=60, secs_left=1565, overrides=['agent.step_limit=60', 'agent.wall_time_limit_seconds=1565', 'run.env_startup_command=cd /testbed && echo {{prev_patch_b64'])
+[2026-11-14T12:07:06-06:00] round 3: mini done exit_status=Submitted steps=21 dur=148.5s patch_chars=2687
+[2026-11-14T12:07:29-06:00] round 3: wrapper check group=G3 reason=no_target_failed apply_ok=True charged_step=True dur=22.3s
+[2026-11-14T12:07:29-06:00] stop after round 3: max_revisions
+[2026-11-14T12:07:29-06:00] done

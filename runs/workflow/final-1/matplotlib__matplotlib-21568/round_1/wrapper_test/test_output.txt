@@ -1,0 +1,29 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.20, pytest-8.3.4, pluggy-1.5.0
+rootdir: /testbed
+configfile: pytest.ini
+plugins: xdist-3.6.1, timeout-2.3.1, cov-5.0.0, rerunfailures-14.0
+collected 1 item
+
+lib/matplotlib/tests/test_dates.py F                                     [100%]
+
+=================================== FAILURES ===================================
+______________________ test_date_formatter_usetex_spacing ______________________
+
+    def test_date_formatter_usetex_spacing():
+        # Test that separators in datetime labels are not spaced like TeX
+        # binary operators (see issue #21518).
+        formatter = mdates.DateFormatter("%d %H:%M", usetex=True)
+        result = formatter(mdates.date2num(datetime.datetime(2020, 1, 1)))
+>       assert result == r'$\mathdefault{01\;00{:}00}$'
+E       AssertionError: assert '$\\mathdefault{01 00:00}$' == '$\\mathdefau...1\\;00{:}00}$'
+E         
+E         - $\mathdefault{01\;00{:}00}$
+E         ?                 ^^  - -
+E         + $\mathdefault{01 00:00}$
+E         ?                 ^
+
+lib/matplotlib/tests/test_dates.py:349: AssertionError
+=========================== short test summary info ============================
+FAILED lib/matplotlib/tests/test_dates.py::test_date_formatter_usetex_spacing
+============================== 1 failed in 2.76s ===============================

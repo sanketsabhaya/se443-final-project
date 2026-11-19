@@ -1,0 +1,40 @@
+2026-11-13 19:16:04,757 - WARNING - Starting evaluation at 1794618964.7578654
+2026-11-13 19:16:05,057 - INFO - Creating container for django__django-16485...
+2026-11-13 19:16:05,136 - INFO - Container for django__django-16485 created: 8c1f1b2ae830041e4945d0a4f4ad75efaf525ff435e9a7e76571926d378c9b2f
+2026-11-13 19:16:05,315 - INFO - Container for django__django-16485 started: 8c1f1b2ae830041e4945d0a4f4ad75efaf525ff435e9a7e76571926d378c9b2f
+2026-11-13 19:16:06,098 - INFO - Git diff before:
+
+2026-11-13 19:16:06,098 - INFO - Eval script for django__django-16485 written to eval.sh, now applying to container...
+2026-11-13 19:16:11,182 - INFO - Test output for django__django-16485 written to run_instance_swt_logs/final-1-baseline-django__django-16485/pred_post__deepseek__deepseek-flash/django__django-16485/test_output.txt
+2026-11-13 19:16:11,261 - INFO - Git diff after:
+diff --git a/django/template/defaultfilters.py b/django/template/defaultfilters.py
+index 23c3a08c67..78881987fc 100644
+--- a/django/template/defaultfilters.py
++++ b/django/template/defaultfilters.py
+@@ -168,7 +168,7 @@ def floatformat(text, arg=-1):
+     except (ValueError, OverflowError, InvalidOperation):
+         return input_val
+ 
+-    if not m and p < 0:
++    if not m and p <= 0:
+         return mark_safe(
+             formats.number_format(
+                 "%d" % (int(d)),
+diff --git a/tests/template_tests/filter_tests/test_floatformat.py b/tests/template_tests/filter_tests/test_floatformat.py
+index 361a888ce3..db8498ff1c 100644
+--- a/tests/template_tests/filter_tests/test_floatformat.py
++++ b/tests/template_tests/filter_tests/test_floatformat.py
+@@ -108,6 +108,8 @@ class FunctionTests(SimpleTestCase):
+         self.assertEqual(floatformat(0, 6), "0.000000")
+         self.assertEqual(floatformat(0, 7), "0.0000000")
+         self.assertEqual(floatformat(0, 10), "0.0000000000")
++        self.assertEqual(floatformat("0.00", 0), "0")
++        self.assertEqual(floatformat(Decimal("0.00"), 0), "0")
+         self.assertEqual(
+             floatformat(0.000000000000000000015, 20), "0.00000000000000000002"
+         )
+2026-11-13 19:16:11,261 - INFO - Git diff changed after running eval script
+2026-11-13 19:16:11,261 - INFO - Attempting to stop container exec.eval.x86_64.9097b18874f4d0ac315ef2.3054e91debcdaa3051adcc.137221114020240...
+2026-11-13 19:16:26,537 - INFO - Attempting to remove container exec.eval.x86_64.9097b18874f4d0ac315ef2.3054e91debcdaa3051adcc.137221114020240...
+2026-11-13 19:16:26,580 - INFO - Container exec.eval.x86_64.9097b18874f4d0ac315ef2.3054e91debcdaa3051adcc.137221114020240 removed.
+2026-11-13 19:16:26,580 - WARNING - End of eval at 1794618986.5806384

@@ -1,0 +1,22 @@
+arm: workflow
+run_id: final-1
+instance_id: sphinx-doc__sphinx-8721
+mini_swe_agent_commit: 04d809ceab9df28f9adaed044884180159172930
+config: /home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml sha256=eb3e1ccd8a5a1d024c4f320c36a814baeaa9b74e7fbbb88d1033c80186040902
+dataset: /home/mihir_barvaliya/.cache/huggingface/hub/datasets--princeton-nlp--SWE-bench_Verified/snapshots/c104f840cc67f8b6eec6f759ebc8b2693d585d4a
+image: docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8721:latest
+model_name: deepseek/deepseek-flash (from config, unchanged)
+temperature: not sent -> DeepSeek API default 1.0 (no effect in thinking mode, which is the default)
+seed: not sent (DeepSeek chat API has no seed parameter)
+budget: 100 steps (model calls + 1 per wrapper check), 1800 s wall from round-1 start
+max_revisions: 2
+pull_start: 2026-11-14T12:41:55-06:00
+pull_end: 2026-11-14T12:41:56-06:00
+image_digest: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8721@sha256:8f02afdb324767a2e56b7940569ea822cfa58c3c1f0ef9a910162d21cf52c3f5
+start: 2026-11-14T12:41:56-06:00
+end: 2026-11-14T12:48:34-06:00
+wall_s: 397.9
+steps_used: 70
+rounds: 3
+groups: ['G4', 'G4', 'G4']
+final_round: 3

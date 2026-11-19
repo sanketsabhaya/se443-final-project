@@ -1,0 +1,57 @@
+2026-11-14 16:30:38,550 - WARNING - Starting evaluation at 1794695438.5499864
+2026-11-14 16:30:38,822 - INFO - Creating container for matplotlib__matplotlib-25311...
+2026-11-14 16:30:38,898 - INFO - Container for matplotlib__matplotlib-25311 created: 7fea226d723872f7db10a1b8a75c49cdb39e839aed88773907f6f8e48bc9e146
+2026-11-14 16:30:39,065 - INFO - Container for matplotlib__matplotlib-25311 started: 7fea226d723872f7db10a1b8a75c49cdb39e839aed88773907f6f8e48bc9e146
+2026-11-14 16:30:40,118 - INFO - Git diff before:
+
+2026-11-14 16:30:40,118 - INFO - Eval script for matplotlib__matplotlib-25311 written to eval.sh, now applying to container...
+2026-11-14 16:31:45,610 - INFO - Test output for matplotlib__matplotlib-25311 written to run_instance_swt_logs/posthoc-c-1-workflow-matplotlib__matplotlib-25311/pred_pre__deepseek__deepseek-flash/matplotlib__matplotlib-25311/test_output.txt
+2026-11-14 16:31:45,685 - INFO - Git diff after:
+diff --git a/lib/matplotlib/tests/test_pickle.py b/lib/matplotlib/tests/test_pickle.py
+index ec6bdcc2fe..1b5fcba213 100644
+--- a/lib/matplotlib/tests/test_pickle.py
++++ b/lib/matplotlib/tests/test_pickle.py
+@@ -7,6 +7,7 @@ import pytest
+ 
+ import matplotlib as mpl
+ from matplotlib import cm
++from matplotlib.backend_bases import FigureCanvasBase
+ from matplotlib.testing import subprocess_run_helper
+ from matplotlib.testing.decorators import check_figures_equal
+ from matplotlib.dates import rrulewrapper
+@@ -44,6 +45,30 @@ def test_simple():
+     pickle.dump(fig, BytesIO(), pickle.HIGHEST_PROTOCOL)
+ 
+ 
++@pytest.mark.parametrize("draggable_artist", ["legend", "annotation"])
++def test_pickle_draggable(draggable_artist):
++    # The canvas itself is not pickleable, but Figure.__getstate__ normally
++    # drops it.  Draggable artists must not keep a second reference to it.
++    class UnpicklableCanvas(FigureCanvasBase):
++        def __getstate__(self):
++            raise TypeError("cannot pickle canvas")
++
++    fig = mfigure.Figure()
++    UnpicklableCanvas(fig)
++    ax = fig.subplots()
++    ax.plot([0, 1], [0, 1], label="speed")
++    if draggable_artist == "legend":
++        ax.legend().set_draggable(True)
++    else:
++        ax.annotate("foo", (0, 0)).draggable(True)
++
++    fig = pickle.loads(pickle.dumps(fig))
++    if draggable_artist == "legend":
++        assert fig.axes[0].get_legend().get_draggable()
++    else:
++        assert fig.axes[0].texts[0]._draggable is not None
++
++
+ def _generate_complete_test_figure(fig_ref):
+     fig_ref.set_size_inches((10, 6))
+     plt.figure(fig_ref)
+2026-11-14 16:31:45,685 - INFO - Git diff changed after running eval script
+2026-11-14 16:31:45,685 - INFO - Attempting to stop container exec.eval.x86_64.89beb6334e800c4362eea6.11542a1f66c7d18094303c.130772956743248...
+2026-11-14 16:32:00,946 - INFO - Attempting to remove container exec.eval.x86_64.89beb6334e800c4362eea6.11542a1f66c7d18094303c.130772956743248...
+2026-11-14 16:32:00,984 - INFO - Container exec.eval.x86_64.89beb6334e800c4362eea6.11542a1f66c7d18094303c.130772956743248 removed.
+2026-11-14 16:32:00,985 - WARNING - End of eval at 1794695520.9851081

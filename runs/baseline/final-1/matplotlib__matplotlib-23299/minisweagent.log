@@ -1,0 +1,7 @@
+2026-11-14 04:38:12,717 - minisweagent - INFO - Loading dataset /home/mihir_barvaliya/.cache/huggingface/hub/datasets--princeton-nlp--SWE-bench_Verified/snapshots/c104f840cc67f8b6eec6f759ebc8b2693d585d4a, split test...
+2026-11-14 04:38:13,649 - minisweagent - INFO - Instance filter: 500 -> 1 instances
+2026-11-14 04:38:13,650 - minisweagent - INFO - Running on 1 instances...
+2026-11-14 04:38:13,651 - minisweagent - INFO - Building agent config from specs: ['/home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml']
+2026-11-14 04:38:17,750 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-66eeb0b8 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23299:latest sleep 2h
+2026-11-14 04:38:23,397 - minisweagent.environment - INFO - Started container minisweagent-66eeb0b8 with ID 6e06f5b2475b4a39a3ade65398b1da440000972e0f2f1d68eccc41d4005c2479
+2026-11-14 04:39:39,952 - minisweagent - INFO - Saved trajectory to '/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-23299/matplotlib__matplotlib-23299/matplotlib__matplotlib-23299.traj.json'

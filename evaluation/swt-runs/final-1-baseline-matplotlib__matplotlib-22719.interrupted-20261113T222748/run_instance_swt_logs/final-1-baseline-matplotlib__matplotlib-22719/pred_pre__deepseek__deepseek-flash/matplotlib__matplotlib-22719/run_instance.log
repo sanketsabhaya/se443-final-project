@@ -1,0 +1,31 @@
+2026-11-13 21:51:56,330 - WARNING - Starting evaluation at 1794628316.3307798
+2026-11-13 22:27:40,910 - ERROR - Error in evaluating model for matplotlib__matplotlib-22719: exec.env.x86_64.1888cbc29e8911ba248a1e:latest: The command '/bin/sh -c /bin/bash -c "source ~/.bashrc && /root/setup_env.sh"' returned a non-zero code: 137
+Check (image_build_logs/base/exec.env.x86_64.1888cbc29e8911ba248a1e__latest/build_image.log) for more information.
+2026-11-13 22:27:41,007 - INFO - Traceback (most recent call last):
+  File "/home/mihir_barvaliya/se443/SWT-Bench/src/docker_build.py", line 172, in build_image
+    for line in response:
+  File "/home/mihir_barvaliya/se443/SWT-Bench/src/docker_build.py", line 101, in docker_build_api
+    raise docker.errors.BuildError(
+docker.errors.BuildError: The command '/bin/sh -c /bin/bash -c "source ~/.bashrc && /root/setup_env.sh"' returned a non-zero code: 137
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mihir_barvaliya/se443/SWT-Bench/src/run_evaluation.py", line 223, in run_eval_exec_spec
+    container = start_container(exec_spec, client, logger, build_mode=build_mode)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mihir_barvaliya/se443/SWT-Bench/src/docker_build.py", line 756, in start_container
+    container = build_container(exec_spec, client, logger, exec_spec.rm_image, exec_spec.force_rebuild, build_mode)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mihir_barvaliya/se443/SWT-Bench/src/docker_build.py", line 724, in build_container
+    build_instance_image_from_exec_spec(exec_spec, force_rebuild, build_mode)
+  File "/home/mihir_barvaliya/se443/SWT-Bench/src/docker_build.py", line 574, in build_instance_image_from_exec_spec
+    build_env_image_from_exec_spec(exec_spec, force_rebuild, build_mode=build_mode)
+  File "/home/mihir_barvaliya/se443/SWT-Bench/src/docker_build.py", line 331, in build_env_image_from_exec_spec
+    build_image(
+  File "/home/mihir_barvaliya/se443/SWT-Bench/src/docker_build.py", line 177, in build_image
+    raise BuildImageError(image_name, str(e), logger) from e
+src.docker_build.BuildImageError: exec.env.x86_64.1888cbc29e8911ba248a1e:latest: The command '/bin/sh -c /bin/bash -c "source ~/.bashrc && /root/setup_env.sh"' returned a non-zero code: 137
+Check (image_build_logs/base/exec.env.x86_64.1888cbc29e8911ba248a1e__latest/build_image.log) for more information.
+
+2026-11-13 22:27:41,062 - WARNING - End of eval at 1794630461.0619352

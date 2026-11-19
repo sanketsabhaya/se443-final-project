@@ -1,0 +1,2 @@
+2026-11-13 19:12:31,190 - INFO - Environment image exec.env.x86_64.13bad202ba417fcce45d9d:latest found for astropy__astropy-8872
+Building instance image exec.eval.x86_64.13bad202ba417fcce45d9d.8eb2cd2dd2ab3b5daf4d51:latest for astropy__astropy-8872

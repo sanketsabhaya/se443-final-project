@@ -1,0 +1,55 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.20, pytest-8.3.4, pluggy-1.5.0
+rootdir: /testbed
+configfile: pytest.ini
+plugins: xdist-3.6.1, timeout-2.3.1, cov-5.0.0, rerunfailures-14.0
+collected 2 items
+
+lib/matplotlib/tests/test_widgets.py FF                                  [100%]
+
+=================================== FAILURES ===================================
+_____________________ test_span_selector_bound[horizontal] _____________________
+
+direction = 'horizontal'
+
+    @pytest.mark.parametrize('direction', ("horizontal", "vertical"))
+    def test_span_selector_bound(direction):
+        fig, ax = plt.subplots(1, 1)
+        ax.plot([10, 20], [10, 30])
+        ax.figure.canvas.draw()
+        x_bound = ax.get_xbound()
+        y_bound = ax.get_ybound()
+    
+        tool = widgets.SpanSelector(ax, print, direction, interactive=True)
+>       assert ax.get_xbound() == x_bound
+E       assert (0.0, 20.0) == (10.0, 20.0)
+E         
+E         At index 0 diff: 0.0 != 10.0
+E         Use -v to get more diff
+
+lib/matplotlib/tests/test_widgets.py:314: AssertionError
+______________________ test_span_selector_bound[vertical] ______________________
+
+direction = 'vertical'
+
+    @pytest.mark.parametrize('direction', ("horizontal", "vertical"))
+    def test_span_selector_bound(direction):
+        fig, ax = plt.subplots(1, 1)
+        ax.plot([10, 20], [10, 30])
+        ax.figure.canvas.draw()
+        x_bound = ax.get_xbound()
+        y_bound = ax.get_ybound()
+    
+        tool = widgets.SpanSelector(ax, print, direction, interactive=True)
+        assert ax.get_xbound() == x_bound
+>       assert ax.get_ybound() == y_bound
+E       assert (0.0, 30.0) == (10.0, 30.0)
+E         
+E         At index 0 diff: 0.0 != 10.0
+E         Use -v to get more diff
+
+lib/matplotlib/tests/test_widgets.py:315: AssertionError
+=========================== short test summary info ============================
+FAILED lib/matplotlib/tests/test_widgets.py::test_span_selector_bound[horizontal]
+FAILED lib/matplotlib/tests/test_widgets.py::test_span_selector_bound[vertical]
+============================== 2 failed in 2.91s ===============================

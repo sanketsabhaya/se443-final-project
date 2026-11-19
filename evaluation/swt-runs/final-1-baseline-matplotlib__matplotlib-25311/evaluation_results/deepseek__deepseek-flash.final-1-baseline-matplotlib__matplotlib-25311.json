@@ -1,0 +1,20 @@
+{
+    "total_instances": 1,
+    "completed_instances": 0,
+    "resolved_instances": 0,
+    "unresolved_instances": 1,
+    "error_instances": 0,
+    "Mean coverage": 0.5,
+    "Mean coverage delta": 0.5,
+    "unstopped_instances": 0,
+    "completed_ids": [],
+    "resolved_ids": [],
+    "unresolved_ids": [
+        "matplotlib__matplotlib-25311"
+    ],
+    "error_ids": [],
+    "unstopped_containers": [],
+    "unremoved_images": [
+        "exec.eval.x86_64.89beb6334e800c4362eea6.a0be8ca4c1490fd9d2a3a4:latest"
+    ]
+}

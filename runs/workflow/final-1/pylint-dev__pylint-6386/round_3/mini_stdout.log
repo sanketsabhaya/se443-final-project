@@ -1,0 +1,82 @@
+This is mini-swe-agent version 2.4.6.
+Check the v2 migration guide at https://klieret.short.gy/mini-v2-migration
+Loading global config from '/home/mihir_barvaliya/.config/mini-swe-agent/.env'
+minisweagent: INFO: Results will be saved to                                    
+/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-638
+6/round_3/mini                                                                  
+Logging to '/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6386/round_3/mini/minisweagent.log'
+minisweagent: INFO: Loading dataset                                             
+/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-638
+6/round_3/dataset, split test...                                                
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 1 examples [00:00, 38.10 examples/s]
+minisweagent: INFO: Running on 1 instances...                                   
+minisweagent: INFO: Building agent config from specs:                           
+['/home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml',              
+'agent.step_limit=52', 'agent.wall_time_limit_seconds=1599',                    
+'run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d |   
+git apply']                                                                     
+minisweagent.environment: DEBUG: Starting container with command: docker run -d 
+--name minisweagent-1cd53766 -w /testbed --rm                                   
+docker.io/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-6386:latest sleep 2h 
+minisweagent.environment: INFO: Started container minisweagent-1cd53766 with ID 
+b80ddecdab53d703bd857444d5b07801e7940131ac7e67e2388b1088923a7ddf                
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: INFO: Saved trajectory to                                         
+'/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-63
+86/round_3/mini/pylint-dev__pylint-6386/pylint-dev__pylint-6386.traj.json'      
+  Overall Progress ($0.01) ━━━━━━━━━━━━━━━━━━━━━━━ 1/1 100% 0:01:12 eta: 0:00:00
+┏━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Exit Status ┃ Count ┃ Most recent instances                                  ┃
+┡━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Submitted   │     1 │ pylint-dev__pylint-6386                                │
+└─────────────┴───────┴────────────────────────────────────────────────────────┘

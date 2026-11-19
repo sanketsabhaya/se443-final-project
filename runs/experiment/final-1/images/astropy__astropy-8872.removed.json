@@ -1,0 +1,14 @@
+{
+  "time": "2026-11-13T19:14:15-06:00",
+  "images": [
+    {
+      "image": "docker.io/swebench/sweb.eval.x86_64.astropy_1776_astropy-8872:latest",
+      "id": "sha256:468c8d10c1fcf97460eba3f53642c13f03f6238a7b6cf5b9e8a763685ee1b21e",
+      "repo_digests": [
+        "swebench/sweb.eval.x86_64.astropy_1776_astropy-8872@sha256:468c8d10c1fcf97460eba3f53642c13f03f6238a7b6cf5b9e8a763685ee1b21e"
+      ],
+      "size_bytes": 4354975930,
+      "rmi_exit_code": 0
+    }
+  ]
+}

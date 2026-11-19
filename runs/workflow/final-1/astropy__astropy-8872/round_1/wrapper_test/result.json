@@ -1,0 +1,46 @@
+{
+  "start": "2026-11-13T19:07:22-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "astropy/units/tests/test_quantity.py"
+    ]
+  },
+  "end": "2026-11-13T19:07:26-06:00",
+  "duration_s": 4.0,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "astropy/units/tests/test_quantity.py",
+      "cls": "TestQuantityCreation",
+      "func": "test_preserve_float16_dtype",
+      "label": "astropy/units/tests/test_quantity.py::TestQuantityCreation::test_preserve_float16_dtype"
+    }
+  ],
+  "command": "pytest -rA --tb=long -p no:cacheprovider astropy/units/tests/test_quantity.py::TestQuantityCreation::test_preserve_float16_dtype",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "astropy/units/tests/test_quantity.py::TestQuantityCreation::test_preserve_float16_dtype": "FAILED"
+  },
+  "group": "G5",
+  "evidence": {
+    "issue_exc": [],
+    "mode": "functions",
+    "collected": {
+      "astropy/units/tests/test_quantity.py::TestQuantityCreation::test_preserve_float16_dtype": "FAILED"
+    },
+    "setup_markers": [],
+    "failure_types": {
+      "astropy/units/tests/test_quantity.py::TestQuantityCreation::test_preserve_float16_dtype": "AssertionError"
+    },
+    "reason": "failure_matches_issue"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": false,
+    "skip_or_xfail_added": false
+  }
+}

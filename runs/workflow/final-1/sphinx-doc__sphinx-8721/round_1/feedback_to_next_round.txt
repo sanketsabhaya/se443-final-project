@@ -1,0 +1,178 @@
+
+
+---
+FEEDBACK FROM AN AUTOMATED TEST RUN (revision 1 of at most 2)
+
+A previous attempt at this task produced the test patch shown below. We applied it to the current,
+unfixed code in a fresh copy of the repository and ran only the tests it adds or changes.
+
+Command: tox -epy39 -v -- tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+Result: Your tests fail, but not in a way related to the issue.
+The failure (unknown error) does not look like the problem described in the issue. Fix the test so that it fails because of the behavior the issue describes, not because of a mistake in the test.
+
+Per-test results:
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled: FAILED
+
+Test output (last 150 lines):
+<test_output>
+nodes.image):
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  /testbed/sphinx/environment/adapters/toctree.py:312: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in toc.traverse(nodes.reference):
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  /testbed/.tox/py39/lib/python3.9/site-packages/alabaster/layout.html:114: DeprecationWarning: 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+    _gaq.push(['_setAllowLinker', true]);
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  /testbed/.tox/py39/lib/python3.9/site-packages/alabaster/about.html:70: DeprecationWarning: 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  /testbed/.tox/py39/lib/python3.9/site-packages/alabaster/about.html:99: DeprecationWarning: 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  /testbed/sphinx/environment/adapters/toctree.py:328: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for toctreenode in doctree.traverse(addnodes.toctree):
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  /testbed/.tox/py39/lib/python3.9/site-packages/alabaster/layout.html:215: DeprecationWarning: 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  /testbed/.tox/py39/lib/python3.9/site-packages/alabaster/layout.html:238: DeprecationWarning: 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  <template>:33: DeprecationWarning: 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  <template>:224: DeprecationWarning: 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  <template>:386: DeprecationWarning: 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  <template>:401: DeprecationWarning: 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  /testbed/sphinx/util/nodes.py:350: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for img in node.traverse(nodes.image):
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  /testbed/sphinx/util/nodes.py:352: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for raw in node.traverse(nodes.raw):
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  /testbed/sphinx/builders/_epub_base.py:275: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for reference in tree.traverse(nodes.reference):
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  /testbed/sphinx/builders/_epub_base.py:283: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for target in tree.traverse(nodes.target):
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  /testbed/sphinx/builders/_epub_base.py:290: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for desc_signature in tree.traverse(addnodes.desc_signature):
+
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+  /testbed/sphinx/builders/_epub_base.py:340: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in tree.traverse(nodes.reference):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================= slowest 25 durations =============================
+0.57s call     tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+0.39s setup    tests/test_ext_viewcode.py::test_viewcode_epub_disabled
+
+(1 durations < 0.005s hidden.  Use -vv to show these durations.)
+[36m[1m=========================== short test summary info ============================[0m
+[31mFAILED[0m tests/test_ext_viewcode.py::[1mtest_viewcode_epub_disabled[0m - AssertionError: assert not True
+[31m======================= [31m[1m1 failed[0m, [33m426 warnings[0m[31m in 1.06s[0m[31m ========================[0m
+py39: exit 1 (2.06 seconds) /testbed> python -X dev -m pytest -rA --durations 25 tests/test_ext_viewcode.py::test_viewcode_epub_disabled pid=92
+  py39: FAIL code 1 (19.47=setup[17.41]+cmd[2.06] seconds)
+  evaluation failed :( (20.06 seconds)
+</test_output>
+
+Previous test patch:
+<previous_patch>
+diff --git a/tests/test_ext_viewcode.py b/tests/test_ext_viewcode.py
+index 79864095b..4af334aa3 100755
+--- a/tests/test_ext_viewcode.py
++++ b/tests/test_ext_viewcode.py
+@@ -102,3 +102,15 @@ def test_local_source_files(app, status, warning):
+ 
+     assert result.count('href="_modules/not_a_package/submodule.html#not_a_package.submodule.Class3.class_attr"') == 1
+     assert result.count('This is the class attribute class_attr') == 1
++
++
++@pytest.mark.sphinx('html', testroot='ext-viewcode')
++def test_viewcode_epub_disabled(app, make_app):
++    app.build()
++
++    assert (app.outdir / '_modules/spam/mod1.html').exists()
++
++    epub_app = make_app('epub', srcdir=app.srcdir)
++    epub_app.build()
++
++    assert not (epub_app.outdir / '_modules').exists()
+
+</previous_patch>
+This patch is already applied in /testbed. Edit the test files in place, then submit as instructed.
+
+Please revise the test. It must still check the behavior described in the issue with meaningful
+assertions: do not delete or weaken assertions, and do not skip, xfail or otherwise disable the test
+just to change its outcome. As before, change test files only and do not fix the issue.

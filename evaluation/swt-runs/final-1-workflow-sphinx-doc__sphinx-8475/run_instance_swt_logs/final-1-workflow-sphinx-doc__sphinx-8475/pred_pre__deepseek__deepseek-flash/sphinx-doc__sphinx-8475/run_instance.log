@@ -1,0 +1,157 @@
+2026-11-14 10:35:36,515 - WARNING - Starting evaluation at 1794674136.5149918
+2026-11-14 10:35:36,792 - INFO - Creating container for sphinx-doc__sphinx-8475...
+2026-11-14 10:35:36,868 - INFO - Container for sphinx-doc__sphinx-8475 created: 1a28943817ff3fedd164a3f8a99e339e7c6ccf20b83f93de5ae16fd2a4b89fdb
+2026-11-14 10:35:37,042 - INFO - Container for sphinx-doc__sphinx-8475 started: 1a28943817ff3fedd164a3f8a99e339e7c6ccf20b83f93de5ae16fd2a4b89fdb
+2026-11-14 10:35:37,296 - INFO - Git diff before:
+diff --git a/setup.py b/setup.py
+index ca08a6d4a..21cb67b8f 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.12',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tox.ini b/tox.ini
+index dbb705a3a..9f4fc3a32 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+     PYTEST_ADDOPTS = {env:PYTEST_ADDOPTS:} --color yes
+ commands=
+-    python -X dev -m pytest --durations 25 {posargs}
++    python -X dev -m pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-14 10:35:37,296 - INFO - Eval script for sphinx-doc__sphinx-8475 written to eval.sh, now applying to container...
+2026-11-14 10:35:58,648 - INFO - Test output for sphinx-doc__sphinx-8475 written to run_instance_swt_logs/final-1-workflow-sphinx-doc__sphinx-8475/pred_pre__deepseek__deepseek-flash/sphinx-doc__sphinx-8475/test_output.txt
+2026-11-14 10:35:58,725 - INFO - Git diff after:
+diff --git a/setup.py b/setup.py
+index ca08a6d4a..21cb67b8f 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.12',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tests/test_build_linkcheck.py b/tests/test_build_linkcheck.py
+index c09c81fe0..fa86e13fa 100644
+--- a/tests/test_build_linkcheck.py
++++ b/tests/test_build_linkcheck.py
+@@ -274,6 +274,43 @@ def test_follows_redirects_on_GET(app, capsys):
+     )
+ 
+ 
++@pytest.mark.sphinx('linkcheck', testroot='linkcheck-localserver', freshenv=True)
++def test_too_many_redirects_on_HEAD(app):
++    requests_seen = []
++
++    class TooManyRedirectsHandler(http.server.BaseHTTPRequestHandler):
++        def do_HEAD(self):
++            requests_seen.append("HEAD")
++            self.send_response(302, "Found")
++            self.send_header("Location", "http://localhost:7777/")
++            self.end_headers()
++
++        def do_GET(self):
++            requests_seen.append("GET")
++            self.send_response(200, "OK")
++            self.end_headers()
++
++    with http_server(TooManyRedirectsHandler):
++        app.builder.build_all()
++
++    with open(app.outdir / 'output.json') as fp:
++        content = json.load(fp)
++
++    # The HEAD request follows redirects until requests raises
++    # TooManyRedirects.  Linkcheck should then fall back to a GET request
++    # and report the link as working instead of broken.
++    assert content == {
++        "code": 0,
++        "status": "working",
++        "filename": "index.rst",
++        "lineno": 1,
++        "uri": "http://localhost:7777/",
++        "info": "",
++    }
++    assert requests_seen.count("GET") == 1
++    assert requests_seen[-1] == "GET"
++
++
+ class OKHandler(http.server.BaseHTTPRequestHandler):
+     def do_HEAD(self):
+         self.send_response(200, "OK")
+diff --git a/tox.ini b/tox.ini
+index dbb705a3a..9f4fc3a32 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+     PYTEST_ADDOPTS = {env:PYTEST_ADDOPTS:} --color yes
+ commands=
+-    python -X dev -m pytest --durations 25 {posargs}
++    python -X dev -m pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-14 10:35:58,726 - INFO - Git diff changed after running eval script
+2026-11-14 10:35:58,726 - INFO - Attempting to stop container exec.eval.x86_64.77d82541416cab86d0d86a.0599ff53767a95070e5c74.127392560218320...
+2026-11-14 10:36:14,044 - INFO - Attempting to remove container exec.eval.x86_64.77d82541416cab86d0d86a.0599ff53767a95070e5c74.127392560218320...
+2026-11-14 10:36:14,147 - INFO - Container exec.eval.x86_64.77d82541416cab86d0d86a.0599ff53767a95070e5c74.127392560218320 removed.
+2026-11-14 10:36:14,147 - WARNING - End of eval at 1794674174.1475372

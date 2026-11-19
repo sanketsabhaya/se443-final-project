@@ -1,0 +1,57 @@
+This is mini-swe-agent version 2.4.6.
+Check the v2 migration guide at https://klieret.short.gy/mini-v2-migration
+Loading global config from '/home/mihir_barvaliya/.config/mini-swe-agent/.env'
+minisweagent: INFO: Results will be saved to                                    
+/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib
+-22719/round_1/mini                                                             
+Logging to '/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22719/round_1/mini/minisweagent.log'
+minisweagent: INFO: Loading dataset                                             
+/home/mihir_barvaliya/.cache/huggingface/hub/datasets--princeton-nlp--SWE-bench_
+Verified/snapshots/c104f840cc67f8b6eec6f759ebc8b2693d585d4a, split test...      
+minisweagent: INFO: Instance filter: 500 -> 1 instances                         
+minisweagent: INFO: Running on 1 instances...                                   
+minisweagent: INFO: Building agent config from specs:                           
+['/home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml']              
+minisweagent.environment: DEBUG: Starting container with command: docker run -d 
+--name minisweagent-ebac4a6c -w /testbed --rm                                   
+docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-22719:latest     
+sleep 2h                                                                        
+minisweagent.environment: INFO: Started container minisweagent-ebac4a6c with ID 
+4ee0d67649b9575d167bb0bdae6c353c9d75615dbb88c140b2b9d7b86ff379a5                
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: INFO: Saved trajectory to                                         
+'/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotli
+b-22719/round_1/mini/matplotlib__matplotlib-22719/matplotlib__matplotlib-22719.t
+raj.json'                                                                       
+  Overall Progress ($0.00) ━━━━━━━━━━━━━━━━━━━━━━━ 1/1 100% 0:00:46 eta: 0:00:00
+┏━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Exit Status ┃ Count ┃ Most recent instances                                  ┃
+┡━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Submitted   │     1 │ matplotlib__matplotlib-22719                           │
+└─────────────┴───────┴────────────────────────────────────────────────────────┘

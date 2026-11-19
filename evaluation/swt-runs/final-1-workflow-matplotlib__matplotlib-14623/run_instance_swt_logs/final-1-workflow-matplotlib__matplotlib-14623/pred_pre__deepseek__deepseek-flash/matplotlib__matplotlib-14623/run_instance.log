@@ -1,0 +1,54 @@
+2026-11-13 19:42:22,647 - WARNING - Starting evaluation at 1794620542.647963
+2026-11-13 19:42:22,925 - INFO - Creating container for matplotlib__matplotlib-14623...
+2026-11-13 19:42:23,004 - INFO - Container for matplotlib__matplotlib-14623 created: 5b08c4e6735c481fad7faf4a81ea7cee329377ff23fac8d63eae619a7996a6b7
+2026-11-13 19:42:23,183 - INFO - Container for matplotlib__matplotlib-14623 started: 5b08c4e6735c481fad7faf4a81ea7cee329377ff23fac8d63eae619a7996a6b7
+2026-11-13 19:42:24,204 - INFO - Git diff before:
+
+2026-11-13 19:42:24,204 - INFO - Eval script for matplotlib__matplotlib-14623 written to eval.sh, now applying to container...
+2026-11-13 19:44:39,193 - INFO - Test output for matplotlib__matplotlib-14623 written to run_instance_swt_logs/final-1-workflow-matplotlib__matplotlib-14623/pred_pre__deepseek__deepseek-flash/matplotlib__matplotlib-14623/test_output.txt
+2026-11-13 19:44:39,281 - INFO - Git diff after:
+diff --git a/lib/matplotlib/tests/test_axes.py b/lib/matplotlib/tests/test_axes.py
+index 06ff5aca44..9acffd966b 100644
+--- a/lib/matplotlib/tests/test_axes.py
++++ b/lib/matplotlib/tests/test_axes.py
+@@ -939,6 +939,35 @@ def test_inverted_limits():
+     plt.close()
+ 
+ 
++@pytest.mark.parametrize('axis', ['x', 'y'])
++@pytest.mark.parametrize('scale', ['linear', 'log'])
++def test_inverted_limits_via_set_lim(axis, scale):
++    # Test gh:14646: reversing the limits of a log-scaled axis must invert
++    # the axis just like it does for a linear scale.
++    data = np.linspace(100, 1, 10)
++    fig, ax = plt.subplots()
++    if axis == 'x':
++        ax.plot(data, np.arange(data.size))
++    else:
++        ax.plot(np.arange(data.size), data)
++    getattr(ax, f'set_{axis}scale')(scale)
++
++    limits = (100, 1)
++    result = getattr(ax, f'set_{axis}lim')(*limits)
++
++    assert result == limits
++    assert getattr(ax, f'get_{axis}lim')() == limits
++    assert getattr(ax, f'{axis}axis_inverted')()
++
++    # The larger data value should be displayed first on the inverted axis.
++    if axis == 'x':
++        positions = ax.transData.transform([(100, 0), (1, 0)])[:, 0]
++    else:
++        positions = ax.transData.transform([(0, 100), (0, 1)])[:, 1]
++    assert positions[0] < positions[1]
++    plt.close(fig)
++
++
+ @image_comparison(baseline_images=['nonfinite_limits'])
+ def test_nonfinite_limits():
+     x = np.arange(0., np.e, 0.01)
+2026-11-13 19:44:39,281 - INFO - Git diff changed after running eval script
+2026-11-13 19:44:39,281 - INFO - Attempting to stop container exec.eval.x86_64.4c04dd2da7e137006c2b92.ee2b23ea35e21165f9fdb8.126951214456656...
+2026-11-13 19:44:54,528 - INFO - Attempting to remove container exec.eval.x86_64.4c04dd2da7e137006c2b92.ee2b23ea35e21165f9fdb8.126951214456656...
+2026-11-13 19:44:54,642 - INFO - Container exec.eval.x86_64.4c04dd2da7e137006c2b92.ee2b23ea35e21165f9fdb8.126951214456656 removed.
+2026-11-13 19:44:54,642 - WARNING - End of eval at 1794620694.6425276

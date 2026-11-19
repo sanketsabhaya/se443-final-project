@@ -1,0 +1,102 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.20, pytest-7.4.4, pluggy-1.5.0
+benchmark: 4.0.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /testbed
+configfile: setup.cfg
+plugins: timeout-2.3.1, profiling-1.7.0, xdist-2.5.0, forked-1.6.0, cov-3.0.0, benchmark-4.0.0
+collected 1 item
+
+tests/test_self.py F                                                     [100%]
+
+=================================== FAILURES ===================================
+________________________ TestRunTC.test_modify_sys_path ________________________
+
+    @staticmethod
+    def test_modify_sys_path() -> None:
+        cwd = "/tmp/pytest-of-root/pytest-0/test_do_not_import_files_from_0"
+        default_paths = [
+            "/usr/local/lib/python39.zip",
+            "/usr/local/lib/python3.9",
+            "/usr/local/lib/python3.9/lib-dynload",
+            "/usr/local/lib/python3.9/site-packages",
+        ]
+        with _test_sys_path(), patch("os.getcwd") as mock_getcwd:
+            mock_getcwd.return_value = cwd
+            paths = [cwd, *default_paths]
+            sys.path = copy(paths)
+            with _test_environ_pythonpath():
+                modify_sys_path()
+            assert sys.path == paths[1:]
+    
+            paths = [cwd, cwd, *default_paths]
+            sys.path = copy(paths)
+            with _test_environ_pythonpath("."):
+                modify_sys_path()
+            assert sys.path == paths[1:]
+    
+            paths = [cwd, "/custom_pythonpath", *default_paths]
+            sys.path = copy(paths)
+            with _test_environ_pythonpath("/custom_pythonpath"):
+                modify_sys_path()
+            assert sys.path == paths[1:]
+    
+            paths = [cwd, "/custom_pythonpath", cwd, *default_paths]
+            sys.path = copy(paths)
+            with _test_environ_pythonpath("/custom_pythonpath:"):
+                modify_sys_path()
+            assert sys.path == [paths[1]] + paths[3:]
+    
+            paths = ["", cwd, "/custom_pythonpath", *default_paths]
+            sys.path = copy(paths)
+            with _test_environ_pythonpath(":/custom_pythonpath"):
+                modify_sys_path()
+            assert sys.path == paths[2:]
+    
+            paths = [cwd, cwd, "/custom_pythonpath", *default_paths]
+            sys.path = copy(paths)
+            with _test_environ_pythonpath(":/custom_pythonpath:"):
+                modify_sys_path()
+            assert sys.path == paths[2:]
+    
+            paths = [cwd, cwd, *default_paths]
+            sys.path = copy(paths)
+            with _test_environ_pythonpath(":."):
+                modify_sys_path()
+            assert sys.path == paths[1:]
+            sys.path = copy(paths)
+            with _test_environ_pythonpath(f":{cwd}"):
+                modify_sys_path()
+            assert sys.path == paths[1:]
+    
+            sys.path = copy(paths)
+            with _test_environ_pythonpath(".:"):
+                modify_sys_path()
+            assert sys.path == paths[1:]
+            sys.path = copy(paths)
+            with _test_environ_pythonpath(f"{cwd}:"):
+                modify_sys_path()
+            assert sys.path == paths[1:]
+    
+            paths = ["", cwd, *default_paths, cwd]
+            sys.path = copy(paths)
+            with _test_environ_pythonpath(cwd):
+                modify_sys_path()
+            assert sys.path == paths[1:]
+    
+            # Only remove the first entry when it refers to the current
+            # working directory. Extensions can add their own entries that
+            # must not be discarded.
+            paths = ["/custom_pythonpath", *default_paths]
+            sys.path = copy(paths)
+            with _test_environ_pythonpath():
+                modify_sys_path()
+>           assert sys.path == paths
+E           AssertionError: assert ['/usr/local/...ite-packages'] == ['/custom_pyt...ite-packages']
+E             At index 0 diff: '/usr/local/lib/python39.zip' != '/custom_pythonpath'
+E             Right contains one more item: '/usr/local/lib/python3.9/site-packages'
+E             Use -v to get more diff
+
+tests/test_self.py:824: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_self.py::TestRunTC::test_modify_sys_path - AssertionError: ...
+============================== 1 failed in 0.18s ===============================

@@ -1,0 +1,27 @@
+diff --git a/lib/matplotlib/tests/test_dates.py b/lib/matplotlib/tests/test_dates.py
+index a78c39c560..925672e94e 100644
+--- a/lib/matplotlib/tests/test_dates.py
++++ b/lib/matplotlib/tests/test_dates.py
+@@ -635,6 +635,22 @@ def test_offset_changes():
+     assert formatter.get_offset() == ''
+ 
+ 
++def test_concise_formatter_offset_year_not_in_ticks():
++    # If January is not among the ticks, the year must be shown as an offset.
++    fig, ax = plt.subplots()
++    d1 = datetime.datetime(1997, 1, 1)
++
++    locator = mdates.AutoDateLocator()
++    formatter = mdates.ConciseDateFormatter(locator)
++    ax.xaxis.set_major_locator(locator)
++    ax.xaxis.set_major_formatter(formatter)
++
++    ax.plot([d1 + datetime.timedelta(weeks=7),
++             d1 + datetime.timedelta(weeks=30)], [0, 0])
++    fig.draw_without_rendering()
++    assert formatter.get_offset() == '1997'
++
++
+ @pytest.mark.parametrize('t_delta, expected', [
+     (datetime.timedelta(weeks=52 * 200),
+      range(1980, 2201, 20)),

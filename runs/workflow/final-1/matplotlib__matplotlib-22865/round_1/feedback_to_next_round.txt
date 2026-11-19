@@ -1,0 +1,198 @@
+
+
+---
+FEEDBACK FROM AN AUTOMATED TEST RUN (revision 1 of at most 2)
+
+A previous attempt at this task produced the test patch shown below. We applied it to the current,
+unfixed code in a fresh copy of the repository and ran only the tests it adds or changes.
+
+Command: pytest -rA --tb=long -p no:cacheprovider lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges
+Result: All of your tests PASS on the current, unfixed code.
+A test that passes on the unfixed code does not reproduce the issue. Change it so that it fails because of the problem described in the issue and would pass once the issue is fixed.
+
+Per-test results:
+lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges: PASSED
+
+Test output (last 135 lines):
+<test_output>
+============================= test session starts ==============================
+platform linux -- Python 3.11.11, pytest-8.3.4, pluggy-1.5.0
+rootdir: /testbed
+configfile: pytest.ini
+plugins: xdist-3.6.1, timeout-2.3.1, cov-6.0.0, rerunfailures-15.0
+collected 4 items
+
+lib/matplotlib/tests/test_colorbar.py FFF.                               [100%]
+
+=================================== FAILURES ===================================
+_________________ test_colorbar_extend_drawedges[both-1-res0] __________________
+
+extend = 'both', coloroffset = 1
+res = [array([[0., 0.],
+       [0., 1.]]), array([[1., 0.],
+       [1., 1.]]), array([[2., 0.],
+       [2., 1.]])]
+
+    @pytest.mark.parametrize("extend, coloroffset, res", [
+        ('both', 1, [np.array([[0., 0.], [0., 1.]]),
+                     np.array([[1., 0.], [1., 1.]]),
+                     np.array([[2., 0.], [2., 1.]])]),
+        ('min', 0, [np.array([[0., 0.], [0., 1.]]),
+                    np.array([[1., 0.], [1., 1.]])]),
+        ('max', 0, [np.array([[1., 0.], [1., 1.]]),
+                    np.array([[2., 0.], [2., 1.]])]),
+        ('neither', -1, [np.array([[1., 0.], [1., 1.]])])
+        ])
+    def test_colorbar_extend_drawedges(extend, coloroffset, res):
+        cmap = plt.get_cmap("viridis")
+        bounds = np.arange(3)
+        nb_colors = len(bounds) + coloroffset
+        colors = cmap(np.linspace(100, 255, nb_colors).astype(int))
+        cmap, norm = mcolors.from_levels_and_colors(bounds, colors, extend=extend)
+    
+        plt.figure(figsize=(5, 1))
+        ax = plt.subplot(111)
+        cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation='horizontal',
+                        drawedges=True)
+>       assert np.all(np.equal(cbar.dividers.get_segments(), res))
+E       AssertionError: assert False
+E        +  where False = <function all at 0x7c22accb0d70>(array([[[False,  True],\n        [False,  True]],\n\n       [[ True,  True],\n        [ True,  True]],\n\n       [[False,  True],\n        [False,  True]]]))
+E        +    where <function all at 0x7c22accb0d70> = np.all
+E        +    and   array([[[False,  True],\n        [False,  True]],\n\n       [[ True,  True],\n        [ True,  True]],\n\n       [[False,  True],\n        [False,  True]]]) = <ufunc 'equal'>([array([[1., 0.],\n       [1., 1.]])], [array([[0., 0.],\n       [0., 1.]]), array([[1., 0.],\n       [1., 1.]]), array([[2., 0.],\n       [2., 1.]])])
+E        +      where <ufunc 'equal'> = np.equal
+E        +      and   [array([[1., 0.],\n       [1., 1.]])] = get_segments()
+E        +        where get_segments = <matplotlib.collections.LineCollection object at 0x7c228230a690>.get_segments
+E        +          where <matplotlib.collections.LineCollection object at 0x7c228230a690> = <matplotlib.colorbar.Colorbar object at 0x7c22a09aeed0>.dividers
+
+lib/matplotlib/tests/test_colorbar.py:943: AssertionError
+__________________ test_colorbar_extend_drawedges[min-0-res1] __________________
+
+extend = 'min', coloroffset = 0
+res = [array([[0., 0.],
+       [0., 1.]]), array([[1., 0.],
+       [1., 1.]])]
+
+    @pytest.mark.parametrize("extend, coloroffset, res", [
+        ('both', 1, [np.array([[0., 0.], [0., 1.]]),
+                     np.array([[1., 0.], [1., 1.]]),
+                     np.array([[2., 0.], [2., 1.]])]),
+        ('min', 0, [np.array([[0., 0.], [0., 1.]]),
+                    np.array([[1., 0.], [1., 1.]])]),
+        ('max', 0, [np.array([[1., 0.], [1., 1.]]),
+                    np.array([[2., 0.], [2., 1.]])]),
+        ('neither', -1, [np.array([[1., 0.], [1., 1.]])])
+        ])
+    def test_colorbar_extend_drawedges(extend, coloroffset, res):
+        cmap = plt.get_cmap("viridis")
+        bounds = np.arange(3)
+        nb_colors = len(bounds) + coloroffset
+        colors = cmap(np.linspace(100, 255, nb_colors).astype(int))
+        cmap, norm = mcolors.from_levels_and_colors(bounds, colors, extend=extend)
+    
+        plt.figure(figsize=(5, 1))
+        ax = plt.subplot(111)
+        cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation='horizontal',
+                        drawedges=True)
+>       assert np.all(np.equal(cbar.dividers.get_segments(), res))
+E       AssertionError: assert False
+E        +  where False = <function all at 0x7c22accb0d70>(array([[[False,  True],\n        [False,  True]],\n\n       [[ True,  True],\n        [ True,  True]]]))
+E        +    where <function all at 0x7c22accb0d70> = np.all
+E        +    and   array([[[False,  True],\n        [False,  True]],\n\n       [[ True,  True],\n        [ True,  True]]]) = <ufunc 'equal'>([array([[1., 0.],\n       [1., 1.]])], [array([[0., 0.],\n       [0., 1.]]), array([[1., 0.],\n       [1., 1.]])])
+E        +      where <ufunc 'equal'> = np.equal
+E        +      and   [array([[1., 0.],\n       [1., 1.]])] = get_segments()
+E        +        where get_segments = <matplotlib.collections.LineCollection object at 0x7c2280a51e10>.get_segments
+E        +          where <matplotlib.collections.LineCollection object at 0x7c2280a51e10> = <matplotlib.colorbar.Colorbar object at 0x7c228b9e6850>.dividers
+
+lib/matplotlib/tests/test_colorbar.py:943: AssertionError
+__________________ test_colorbar_extend_drawedges[max-0-res2] __________________
+
+extend = 'max', coloroffset = 0
+res = [array([[1., 0.],
+       [1., 1.]]), array([[2., 0.],
+       [2., 1.]])]
+
+    @pytest.mark.parametrize("extend, coloroffset, res", [
+        ('both', 1, [np.array([[0., 0.], [0., 1.]]),
+                     np.array([[1., 0.], [1., 1.]]),
+                     np.array([[2., 0.], [2., 1.]])]),
+        ('min', 0, [np.array([[0., 0.], [0., 1.]]),
+                    np.array([[1., 0.], [1., 1.]])]),
+        ('max', 0, [np.array([[1., 0.], [1., 1.]]),
+                    np.array([[2., 0.], [2., 1.]])]),
+        ('neither', -1, [np.array([[1., 0.], [1., 1.]])])
+        ])
+    def test_colorbar_extend_drawedges(extend, coloroffset, res):
+        cmap = plt.get_cmap("viridis")
+        bounds = np.arange(3)
+        nb_colors = len(bounds) + coloroffset
+        colors = cmap(np.linspace(100, 255, nb_colors).astype(int))
+        cmap, norm = mcolors.from_levels_and_colors(bounds, colors, extend=extend)
+    
+        plt.figure(figsize=(5, 1))
+        ax = plt.subplot(111)
+        cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation='horizontal',
+                        drawedges=True)
+>       assert np.all(np.equal(cbar.dividers.get_segments(), res))
+E       AssertionError: assert False
+E        +  where False = <function all at 0x7c22accb0d70>(array([[[ True,  True],\n        [ True,  True]],\n\n       [[False,  True],\n        [False,  True]]]))
+E        +    where <function all at 0x7c22accb0d70> = np.all
+E        +    and   array([[[ True,  True],\n        [ True,  True]],\n\n       [[False,  True],\n        [False,  True]]]) = <ufunc 'equal'>([array([[1., 0.],\n       [1., 1.]])], [array([[1., 0.],\n       [1., 1.]]), array([[2., 0.],\n       [2., 1.]])])
+E        +      where <ufunc 'equal'> = np.equal
+E        +      and   [array([[1., 0.],\n       [1., 1.]])] = get_segments()
+E        +        where get_segments = <matplotlib.collections.LineCollection object at 0x7c22809f6ad0>.get_segments
+E        +          where <matplotlib.collections.LineCollection object at 0x7c22809f6ad0> = <matplotlib.colorbar.Colorbar object at 0x7c2282336c90>.dividers
+
+lib/matplotlib/tests/test_colorbar.py:943: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[neither--1-res3]
+FAILED lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[both-1-res0]
+FAILED lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[min-0-res1]
+FAILED lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[max-0-res2]
+========================= 3 failed, 1 passed in 8.66s ==========================
+</test_output>
+
+Previous test patch:
+<previous_patch>
+diff --git a/lib/matplotlib/tests/test_colorbar.py b/lib/matplotlib/tests/test_colorbar.py
+index ae3ab92c0d..ee12d722b6 100644
+--- a/lib/matplotlib/tests/test_colorbar.py
++++ b/lib/matplotlib/tests/test_colorbar.py
+@@ -919,6 +919,30 @@ def test_proportional_colorbars():
+             fig.colorbar(CS3, spacing=spacings[j], ax=axs[i, j])
+ 
+ 
++@pytest.mark.parametrize("extend, coloroffset, res", [
++    ('both', 1, [np.array([[0., 0.], [0., 1.]]),
++                 np.array([[1., 0.], [1., 1.]]),
++                 np.array([[2., 0.], [2., 1.]])]),
++    ('min', 0, [np.array([[0., 0.], [0., 1.]]),
++                np.array([[1., 0.], [1., 1.]])]),
++    ('max', 0, [np.array([[1., 0.], [1., 1.]]),
++                np.array([[2., 0.], [2., 1.]])]),
++    ('neither', -1, [np.array([[1., 0.], [1., 1.]])])
++    ])
++def test_colorbar_extend_drawedges(extend, coloroffset, res):
++    cmap = plt.get_cmap("viridis")
++    bounds = np.arange(3)
++    nb_colors = len(bounds) + coloroffset
++    colors = cmap(np.linspace(100, 255, nb_colors).astype(int))
++    cmap, norm = mcolors.from_levels_and_colors(bounds, colors, extend=extend)
++
++    plt.figure(figsize=(5, 1))
++    ax = plt.subplot(111)
++    cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation='horizontal',
++                    drawedges=True)
++    assert np.all(np.equal(cbar.dividers.get_segments(), res))
++
++
+ def test_negative_boundarynorm():
+     fig, ax = plt.subplots(figsize=(1, 3))
+     cmap = plt.get_cmap("viridis")
+
+</previous_patch>
+This patch is already applied in /testbed. Edit the test files in place, then submit as instructed.
+
+Please revise the test. It must still check the behavior described in the issue with meaningful
+assertions: do not delete or weaken assertions, and do not skip, xfail or otherwise disable the test
+just to change its outcome. As before, change test files only and do not fix the issue.

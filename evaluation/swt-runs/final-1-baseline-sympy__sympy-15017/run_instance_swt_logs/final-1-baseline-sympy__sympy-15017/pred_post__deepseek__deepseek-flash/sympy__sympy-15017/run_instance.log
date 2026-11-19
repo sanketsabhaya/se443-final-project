@@ -1,0 +1,53 @@
+2026-11-14 13:24:14,982 - WARNING - Starting evaluation at 1794684254.9827936
+2026-11-14 13:24:15,291 - INFO - Creating container for sympy__sympy-15017...
+2026-11-14 13:24:15,371 - INFO - Container for sympy__sympy-15017 created: 0559500e753aae63c1b61a9f317bb88b50abf074cce5558b3d3ac8474aecfec4
+2026-11-14 13:24:15,560 - INFO - Container for sympy__sympy-15017 started: 0559500e753aae63c1b61a9f317bb88b50abf074cce5558b3d3ac8474aecfec4
+2026-11-14 13:24:15,932 - INFO - Git diff before:
+
+2026-11-14 13:24:15,932 - INFO - Eval script for sympy__sympy-15017 written to eval.sh, now applying to container...
+2026-11-14 13:24:21,162 - INFO - Test output for sympy__sympy-15017 written to run_instance_swt_logs/final-1-baseline-sympy__sympy-15017/pred_post__deepseek__deepseek-flash/sympy__sympy-15017/test_output.txt
+2026-11-14 13:24:21,238 - INFO - Git diff after:
+diff --git a/sympy/tensor/array/dense_ndim_array.py b/sympy/tensor/array/dense_ndim_array.py
+index 9be94a8631..3e04e75891 100644
+--- a/sympy/tensor/array/dense_ndim_array.py
++++ b/sympy/tensor/array/dense_ndim_array.py
+@@ -149,7 +149,7 @@ def _new(cls, iterable, shape, **kwargs):
+         self._shape = shape
+         self._array = list(flat_list)
+         self._rank = len(shape)
+-        self._loop_size = functools.reduce(lambda x,y: x*y, shape) if shape else 0
++        self._loop_size = functools.reduce(lambda x,y: x*y, shape, 1)
+         return self
+ 
+     def __setitem__(self, index, value):
+diff --git a/sympy/tensor/array/tests/test_immutable_ndim_array.py b/sympy/tensor/array/tests/test_immutable_ndim_array.py
+index 5a576c44f0..d1d98c9f53 100644
+--- a/sympy/tensor/array/tests/test_immutable_ndim_array.py
++++ b/sympy/tensor/array/tests/test_immutable_ndim_array.py
+@@ -73,13 +73,20 @@ def test_ndim_array_initiation():
+ 
+     from sympy.abc import x
+     rank_zero_array = ImmutableDenseNDimArray(x)
+-    assert len(rank_zero_array) == 0
++    assert len(rank_zero_array) == 1
+     assert rank_zero_array.shape == ()
+     assert rank_zero_array.rank() == 0
+     assert rank_zero_array[()] == x
+     raises(ValueError, lambda: rank_zero_array[0])
+ 
+ 
++def test_rank_zero_array_len():
++    from sympy import Array
++    a = Array(3)
++    assert len(a) == 1
++    assert len(list(a)) == 1
++
++
+ def test_reshape():
+     array = ImmutableDenseNDimArray(range(50), 50)
+     assert array.shape == (50,)
+2026-11-14 13:24:21,239 - INFO - Git diff changed after running eval script
+2026-11-14 13:24:21,239 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.10cf833f01c9d407cdc40c.128060624865488...
+2026-11-14 13:24:36,488 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.10cf833f01c9d407cdc40c.128060624865488...
+2026-11-14 13:24:36,535 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.10cf833f01c9d407cdc40c.128060624865488 removed.
+2026-11-14 13:24:36,535 - WARNING - End of eval at 1794684276.5358758

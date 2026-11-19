@@ -1,0 +1,292 @@
+time	instance_id	arm	stage	exit_code	path
+2026-11-13T19:05:48-06:00	astropy__astropy-8872	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/astropy__astropy-8872
+2026-11-13T19:06:30-06:00	astropy__astropy-8872	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/astropy__astropy-8872
+2026-11-13T19:06:30-06:00	astropy__astropy-8872	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/astropy__astropy-8872
+2026-11-13T19:07:26-06:00	astropy__astropy-8872	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/astropy__astropy-8872
+2026-11-13T19:07:26-06:00	astropy__astropy-8872	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/astropy__astropy-8872/harness_input.validity.json
+2026-11-13T19:07:26-06:00	astropy__astropy-8872	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-astropy__astropy-8872
+2026-11-13T19:12:24-06:00	astropy__astropy-8872	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-astropy__astropy-8872
+2026-11-13T19:12:24-06:00	astropy__astropy-8872	baseline	HARNESS_RETRY_same_prediction	2	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-astropy__astropy-8872
+2026-11-13T19:12:24-06:00	astropy__astropy-8872	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-astropy__astropy-8872
+2026-11-13T19:13:03-06:00	astropy__astropy-8872	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-astropy__astropy-8872
+2026-11-13T19:13:03-06:00	astropy__astropy-8872	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/astropy__astropy-8872/harness_input.validity.json
+2026-11-13T19:13:03-06:00	astropy__astropy-8872	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-astropy__astropy-8872
+2026-11-13T19:13:41-06:00	astropy__astropy-8872	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-astropy__astropy-8872
+2026-11-13T19:13:41-06:00	astropy__astropy-8872	workflow	HARNESS_RETRY_same_prediction	2	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-astropy__astropy-8872
+2026-11-13T19:13:41-06:00	astropy__astropy-8872	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-astropy__astropy-8872
+2026-11-13T19:14:13-06:00	astropy__astropy-8872	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-astropy__astropy-8872
+2026-11-13T19:14:15-06:00	django__django-16485	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/django__django-16485
+2026-11-13T19:14:52-06:00	django__django-16485	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/django__django-16485
+2026-11-13T19:14:52-06:00	django__django-16485	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/django__django-16485
+2026-11-13T19:15:34-06:00	django__django-16485	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/django__django-16485
+2026-11-13T19:15:34-06:00	django__django-16485	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/django__django-16485/harness_input.validity.json
+2026-11-13T19:15:34-06:00	django__django-16485	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-django__django-16485
+2026-11-13T19:17:57-06:00	django__django-16485	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-django__django-16485
+2026-11-13T19:17:57-06:00	django__django-16485	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/django__django-16485/harness_input.validity.json
+2026-11-13T19:17:57-06:00	django__django-16485	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-django__django-16485
+2026-11-13T19:20:17-06:00	django__django-16485	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-django__django-16485
+2026-11-13T19:20:19-06:00	matplotlib__matplotlib-14623	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-14623
+2026-11-13T19:21:17-06:00	matplotlib__matplotlib-14623	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-14623
+2026-11-13T19:21:17-06:00	matplotlib__matplotlib-14623	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-14623
+2026-11-13T19:24:51-06:00	matplotlib__matplotlib-14623	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-14623
+2026-11-13T19:24:51-06:00	matplotlib__matplotlib-14623	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-14623/harness_input.validity.json
+2026-11-13T19:24:51-06:00	matplotlib__matplotlib-14623	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-14623
+2026-11-13T19:42:15-06:00	matplotlib__matplotlib-14623	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-14623
+2026-11-13T19:42:15-06:00	matplotlib__matplotlib-14623	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-14623/harness_input.validity.json
+2026-11-13T19:42:15-06:00	matplotlib__matplotlib-14623	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-14623
+2026-11-13T19:57:18-06:00	matplotlib__matplotlib-14623	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-14623
+2026-11-13T19:57:26-06:00	matplotlib__matplotlib-20676	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-20676
+2026-11-13T20:01:48-06:00	matplotlib__matplotlib-20676	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-20676
+2026-11-13T20:01:48-06:00	matplotlib__matplotlib-20676	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-20676
+2026-11-13T20:03:20-06:00	matplotlib__matplotlib-20676	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-20676
+2026-11-13T20:03:20-06:00	matplotlib__matplotlib-20676	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-20676/harness_input.validity.json
+2026-11-13T20:03:20-06:00	matplotlib__matplotlib-20676	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-20676
+2026-11-13T20:19:05-06:00	matplotlib__matplotlib-20676	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-20676
+2026-11-13T20:19:05-06:00	matplotlib__matplotlib-20676	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-20676/harness_input.validity.json
+2026-11-13T20:19:05-06:00	matplotlib__matplotlib-20676	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-20676
+2026-11-13T20:23:01-06:00	matplotlib__matplotlib-20676	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-20676
+2026-11-13T20:23:10-06:00	matplotlib__matplotlib-21568	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-21568
+2026-11-13T20:27:29-06:00	matplotlib__matplotlib-21568	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-21568
+2026-11-13T20:27:29-06:00	matplotlib__matplotlib-21568	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-21568
+2026-11-13T20:29:15-06:00	matplotlib__matplotlib-21568	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-21568
+2026-11-13T20:29:15-06:00	matplotlib__matplotlib-21568	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-21568/harness_input.validity.json
+2026-11-13T20:29:16-06:00	matplotlib__matplotlib-21568	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-21568
+2026-11-13T20:40:38-06:00	matplotlib__matplotlib-21568	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-21568
+2026-11-13T20:40:38-06:00	matplotlib__matplotlib-21568	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-21568/harness_input.validity.json
+2026-11-13T20:40:38-06:00	matplotlib__matplotlib-21568	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-21568
+2026-11-13T20:44:50-06:00	matplotlib__matplotlib-21568	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-21568
+2026-11-13T20:44:59-06:00	matplotlib__matplotlib-22719	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22719
+2026-11-13T20:52:09-06:00	matplotlib__matplotlib-22719	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22719
+2026-11-13T20:52:09-06:00	matplotlib__matplotlib-22719	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22719
+2026-11-13T20:53:05-06:00	matplotlib__matplotlib-22719	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22719
+2026-11-13T20:53:05-06:00	matplotlib__matplotlib-22719	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22719/harness_input.validity.json
+2026-11-13T20:53:05-06:00	matplotlib__matplotlib-22719	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22719
+2026-11-13T21:45:32-06:00	matplotlib__matplotlib-22719	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22719
+2026-11-13T21:45:32-06:00	matplotlib__matplotlib-22719	baseline	HARNESS_RETRY_same_prediction	2	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22719
+2026-11-13T21:45:32-06:00	matplotlib__matplotlib-22719	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22719
+2026-11-13T21:51:48-06:00	matplotlib__matplotlib-22719	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22719
+2026-11-13T22:27:48-06:00	matplotlib__matplotlib-22719	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22719
+2026-11-13T22:27:48-06:00	matplotlib__matplotlib-22719	baseline	HARNESS_RETRY_same_prediction	2	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22719
+2026-11-13T22:27:48-06:00	matplotlib__matplotlib-22719	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22719
+2026-11-13T23:00:24-06:00	matplotlib__matplotlib-22719	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22719
+2026-11-13T23:00:24-06:00	matplotlib__matplotlib-22719	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22719/harness_input.validity.json
+2026-11-13T23:00:24-06:00	matplotlib__matplotlib-22719	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22719
+2026-11-13T23:31:00-06:00	matplotlib__matplotlib-22719	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22719
+2026-11-13T23:31:00-06:00	matplotlib__matplotlib-22719	workflow	HARNESS_RETRY_same_prediction	2	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22719
+2026-11-13T23:31:00-06:00	matplotlib__matplotlib-22719	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22719
+2026-11-14T00:02:05-06:00	matplotlib__matplotlib-22719	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22719
+2026-11-14T00:02:16-06:00	matplotlib__matplotlib-22865	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22865
+2026-11-14T00:09:25-06:00	matplotlib__matplotlib-22865	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22865
+2026-11-14T00:09:25-06:00	matplotlib__matplotlib-22865	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22865
+2026-11-14T00:14:48-06:00	matplotlib__matplotlib-22865	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22865
+2026-11-14T00:14:48-06:00	matplotlib__matplotlib-22865	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22865/harness_input.validity.json
+2026-11-14T00:14:48-06:00	matplotlib__matplotlib-22865	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22865
+2026-11-14T00:45:13-06:00	matplotlib__matplotlib-22865	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22865
+2026-11-14T00:45:13-06:00	matplotlib__matplotlib-22865	baseline	HARNESS_RETRY_same_prediction	2	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22865
+2026-11-14T00:45:13-06:00	matplotlib__matplotlib-22865	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22865
+2026-11-14T01:16:18-06:00	matplotlib__matplotlib-22865	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22865
+2026-11-14T01:16:18-06:00	matplotlib__matplotlib-22865	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22865/harness_input.validity.json
+2026-11-14T01:16:18-06:00	matplotlib__matplotlib-22865	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22865
+2026-11-14T01:47:24-06:00	matplotlib__matplotlib-22865	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22865
+2026-11-14T01:47:24-06:00	matplotlib__matplotlib-22865	workflow	HARNESS_RETRY_same_prediction	2	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22865
+2026-11-14T01:47:24-06:00	matplotlib__matplotlib-22865	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22865
+2026-11-14T02:18:30-06:00	matplotlib__matplotlib-22865	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22865
+2026-11-14T02:18:43-06:00	matplotlib__matplotlib-22871	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22871
+2026-11-14T02:25:54-06:00	matplotlib__matplotlib-22871	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22871
+2026-11-14T02:25:54-06:00	matplotlib__matplotlib-22871	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22871
+2026-11-14T02:27:19-06:00	matplotlib__matplotlib-22871	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22871
+2026-11-14T02:27:19-06:00	matplotlib__matplotlib-22871	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22871/harness_input.validity.json
+2026-11-14T02:27:19-06:00	matplotlib__matplotlib-22871	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22871
+2026-11-14T02:57:39-06:00	matplotlib__matplotlib-22871	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22871
+2026-11-14T02:57:39-06:00	matplotlib__matplotlib-22871	baseline	HARNESS_RETRY_same_prediction	2	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22871
+2026-11-14T02:57:39-06:00	matplotlib__matplotlib-22871	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22871
+2026-11-14T03:28:43-06:00	matplotlib__matplotlib-22871	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22871
+2026-11-14T03:28:43-06:00	matplotlib__matplotlib-22871	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22871/harness_input.validity.json
+2026-11-14T03:28:43-06:00	matplotlib__matplotlib-22871	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22871
+2026-11-14T03:59:50-06:00	matplotlib__matplotlib-22871	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22871
+2026-11-14T03:59:50-06:00	matplotlib__matplotlib-22871	workflow	HARNESS_RETRY_same_prediction	2	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22871
+2026-11-14T03:59:50-06:00	matplotlib__matplotlib-22871	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22871
+2026-11-14T04:30:55-06:00	matplotlib__matplotlib-22871	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22871
+2026-11-14T04:31:08-06:00	matplotlib__matplotlib-23299	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-23299
+2026-11-14T04:39:41-06:00	matplotlib__matplotlib-23299	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-23299
+2026-11-14T04:39:41-06:00	matplotlib__matplotlib-23299	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-23299
+2026-11-14T04:41:16-06:00	matplotlib__matplotlib-23299	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-23299
+2026-11-14T04:41:16-06:00	matplotlib__matplotlib-23299	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-23299/harness_input.validity.json
+2026-11-14T04:41:16-06:00	matplotlib__matplotlib-23299	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-23299
+2026-11-14T05:12:04-06:00	matplotlib__matplotlib-23299	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-23299
+2026-11-14T05:12:04-06:00	matplotlib__matplotlib-23299	baseline	HARNESS_RETRY_same_prediction	2	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-23299
+2026-11-14T05:12:04-06:00	matplotlib__matplotlib-23299	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-23299
+2026-11-14T05:43:09-06:00	matplotlib__matplotlib-23299	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-23299
+2026-11-14T05:43:09-06:00	matplotlib__matplotlib-23299	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-23299/harness_input.validity.json
+2026-11-14T05:43:09-06:00	matplotlib__matplotlib-23299	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-23299
+2026-11-14T06:14:15-06:00	matplotlib__matplotlib-23299	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-23299
+2026-11-14T06:14:15-06:00	matplotlib__matplotlib-23299	workflow	HARNESS_RETRY_same_prediction	2	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-23299
+2026-11-14T06:14:15-06:00	matplotlib__matplotlib-23299	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-23299
+2026-11-14T06:45:23-06:00	matplotlib__matplotlib-23299	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-23299
+2026-11-14T06:45:40-06:00	matplotlib__matplotlib-25311	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-25311
+2026-11-14T06:55:02-06:00	matplotlib__matplotlib-25311	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-25311
+2026-11-14T06:55:02-06:00	matplotlib__matplotlib-25311	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-25311
+2026-11-14T06:57:07-06:00	matplotlib__matplotlib-25311	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-25311
+2026-11-14T06:57:07-06:00	matplotlib__matplotlib-25311	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-25311/harness_input.validity.json
+2026-11-14T06:57:07-06:00	matplotlib__matplotlib-25311	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-25311
+2026-11-14T07:43:53-06:00	matplotlib__matplotlib-25311	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-25311
+2026-11-14T07:43:53-06:00	matplotlib__matplotlib-25311	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-25311/harness_input.validity.json
+2026-11-14T07:43:53-06:00	matplotlib__matplotlib-25311	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-25311
+2026-11-14T07:52:27-06:00	matplotlib__matplotlib-25311	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-25311
+2026-11-14T07:52:44-06:00	pylint-dev__pylint-6386	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-6386
+2026-11-14T07:55:36-06:00	pylint-dev__pylint-6386	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-6386
+2026-11-14T07:55:36-06:00	pylint-dev__pylint-6386	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6386
+2026-11-14T08:00:16-06:00	pylint-dev__pylint-6386	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6386
+2026-11-14T08:00:16-06:00	pylint-dev__pylint-6386	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-6386/harness_input.validity.json
+2026-11-14T08:00:16-06:00	pylint-dev__pylint-6386	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-pylint-dev__pylint-6386
+2026-11-14T08:08:43-06:00	pylint-dev__pylint-6386	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-pylint-dev__pylint-6386
+2026-11-14T08:08:43-06:00	pylint-dev__pylint-6386	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6386/harness_input.validity.json
+2026-11-14T08:08:43-06:00	pylint-dev__pylint-6386	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-pylint-dev__pylint-6386
+2026-11-14T08:11:13-06:00	pylint-dev__pylint-6386	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-pylint-dev__pylint-6386
+2026-11-14T08:11:14-06:00	pylint-dev__pylint-6903	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-6903
+2026-11-14T08:12:26-06:00	pylint-dev__pylint-6903	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-6903
+2026-11-14T08:12:26-06:00	pylint-dev__pylint-6903	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6903
+2026-11-14T08:13:53-06:00	pylint-dev__pylint-6903	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6903
+2026-11-14T08:13:53-06:00	pylint-dev__pylint-6903	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-6903/harness_input.validity.json
+2026-11-14T08:13:53-06:00	pylint-dev__pylint-6903	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-pylint-dev__pylint-6903
+2026-11-14T08:21:50-06:00	pylint-dev__pylint-6903	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-pylint-dev__pylint-6903
+2026-11-14T08:21:50-06:00	pylint-dev__pylint-6903	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6903/harness_input.validity.json
+2026-11-14T08:21:50-06:00	pylint-dev__pylint-6903	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-pylint-dev__pylint-6903
+2026-11-14T08:24:28-06:00	pylint-dev__pylint-6903	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-pylint-dev__pylint-6903
+2026-11-14T08:24:30-06:00	pylint-dev__pylint-7080	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7080
+2026-11-14T08:28:42-06:00	pylint-dev__pylint-7080	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7080
+2026-11-14T08:28:42-06:00	pylint-dev__pylint-7080	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7080
+2026-11-14T08:30:22-06:00	pylint-dev__pylint-7080	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7080
+2026-11-14T08:30:23-06:00	pylint-dev__pylint-7080	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7080/harness_input.validity.json
+2026-11-14T08:30:23-06:00	pylint-dev__pylint-7080	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-pylint-dev__pylint-7080
+2026-11-14T08:37:59-06:00	pylint-dev__pylint-7080	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-pylint-dev__pylint-7080
+2026-11-14T08:37:59-06:00	pylint-dev__pylint-7080	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7080/harness_input.validity.json
+2026-11-14T08:37:59-06:00	pylint-dev__pylint-7080	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-pylint-dev__pylint-7080
+2026-11-14T08:43:56-06:00	pylint-dev__pylint-7080	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-pylint-dev__pylint-7080
+2026-11-14T08:44:01-06:00	pylint-dev__pylint-7277	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7277
+2026-11-14T08:46:28-06:00	pylint-dev__pylint-7277	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7277
+2026-11-14T08:46:28-06:00	pylint-dev__pylint-7277	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7277
+2026-11-14T08:47:24-06:00	pylint-dev__pylint-7277	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7277
+2026-11-14T08:47:24-06:00	pylint-dev__pylint-7277	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7277/harness_input.validity.json
+2026-11-14T08:47:24-06:00	pylint-dev__pylint-7277	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-pylint-dev__pylint-7277
+2026-11-14T08:48:00-06:00	pylint-dev__pylint-7277	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-pylint-dev__pylint-7277
+2026-11-14T08:48:00-06:00	pylint-dev__pylint-7277	baseline	HARNESS_RETRY_same_prediction	2	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-pylint-dev__pylint-7277
+2026-11-14T08:48:00-06:00	pylint-dev__pylint-7277	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-pylint-dev__pylint-7277
+2026-11-14T08:48:24-06:00	pylint-dev__pylint-7277	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-pylint-dev__pylint-7277
+2026-11-14T08:48:24-06:00	pylint-dev__pylint-7277	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7277/harness_input.validity.json
+2026-11-14T08:48:24-06:00	pylint-dev__pylint-7277	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-pylint-dev__pylint-7277
+2026-11-14T08:48:48-06:00	pylint-dev__pylint-7277	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-pylint-dev__pylint-7277
+2026-11-14T08:48:48-06:00	pylint-dev__pylint-7277	workflow	HARNESS_RETRY_same_prediction	2	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-pylint-dev__pylint-7277
+2026-11-14T08:48:48-06:00	pylint-dev__pylint-7277	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-pylint-dev__pylint-7277
+2026-11-14T08:49:12-06:00	pylint-dev__pylint-7277	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-pylint-dev__pylint-7277
+2026-11-14T08:49:13-06:00	sphinx-doc__sphinx-11510	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-11510
+2026-11-14T08:52:19-06:00	sphinx-doc__sphinx-11510	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-11510
+2026-11-14T08:52:19-06:00	sphinx-doc__sphinx-11510	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-11510
+2026-11-14T08:59:28-06:00	sphinx-doc__sphinx-11510	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-11510
+2026-11-14T08:59:28-06:00	sphinx-doc__sphinx-11510	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-11510/harness_input.validity.json
+2026-11-14T08:59:28-06:00	sphinx-doc__sphinx-11510	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-11510
+2026-11-14T09:50:07-06:00	sphinx-doc__sphinx-11510	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-11510
+2026-11-14T10:03:14-06:00	sphinx-doc__sphinx-11510	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-11510
+2026-11-14T10:03:14-06:00	sphinx-doc__sphinx-11510	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-11510/harness_input.validity.json
+2026-11-14T10:03:14-06:00	sphinx-doc__sphinx-11510	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-11510
+2026-11-14T10:06:22-06:00	sphinx-doc__sphinx-11510	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-11510
+2026-11-14T10:06:24-06:00	sphinx-doc__sphinx-8459	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8459
+2026-11-14T10:08:00-06:00	sphinx-doc__sphinx-8459	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8459
+2026-11-14T10:08:00-06:00	sphinx-doc__sphinx-8459	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8459
+2026-11-14T10:13:03-06:00	sphinx-doc__sphinx-8459	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8459
+2026-11-14T10:13:03-06:00	sphinx-doc__sphinx-8459	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8459/harness_input.validity.json
+2026-11-14T10:13:03-06:00	sphinx-doc__sphinx-8459	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8459
+2026-11-14T10:18:06-06:00	sphinx-doc__sphinx-8459	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8459
+2026-11-14T10:18:06-06:00	sphinx-doc__sphinx-8459	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8459/harness_input.validity.json
+2026-11-14T10:18:06-06:00	sphinx-doc__sphinx-8459	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8459
+2026-11-14T10:22:08-06:00	sphinx-doc__sphinx-8459	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8459
+2026-11-14T10:22:10-06:00	sphinx-doc__sphinx-8475	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8475
+2026-11-14T10:25:40-06:00	sphinx-doc__sphinx-8475	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8475
+2026-11-14T10:25:40-06:00	sphinx-doc__sphinx-8475	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8475
+2026-11-14T10:29:58-06:00	sphinx-doc__sphinx-8475	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8475
+2026-11-14T10:29:59-06:00	sphinx-doc__sphinx-8475	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8475/harness_input.validity.json
+2026-11-14T10:29:59-06:00	sphinx-doc__sphinx-8475	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8475
+2026-11-14T10:35:28-06:00	sphinx-doc__sphinx-8475	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8475
+2026-11-14T10:35:28-06:00	sphinx-doc__sphinx-8475	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8475/harness_input.validity.json
+2026-11-14T10:35:28-06:00	sphinx-doc__sphinx-8475	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8475
+2026-11-14T10:39:26-06:00	sphinx-doc__sphinx-8475	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8475
+2026-11-14T10:39:30-06:00	sphinx-doc__sphinx-8548	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8548
+2026-11-14T10:44:11-06:00	sphinx-doc__sphinx-8548	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8548
+2026-11-14T10:44:11-06:00	sphinx-doc__sphinx-8548	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8548
+2026-11-14T10:50:38-06:00	sphinx-doc__sphinx-8548	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8548
+2026-11-14T10:50:38-06:00	sphinx-doc__sphinx-8548	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8548/harness_input.validity.json
+2026-11-14T10:50:38-06:00	sphinx-doc__sphinx-8548	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8548
+2026-11-14T10:55:35-06:00	sphinx-doc__sphinx-8548	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8548
+2026-11-14T10:55:35-06:00	sphinx-doc__sphinx-8548	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8548/harness_input.validity.json
+2026-11-14T10:55:35-06:00	sphinx-doc__sphinx-8548	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8548
+2026-11-14T10:59:02-06:00	sphinx-doc__sphinx-8548	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8548
+2026-11-14T10:59:06-06:00	sphinx-doc__sphinx-8551	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8551
+2026-11-14T11:03:29-06:00	sphinx-doc__sphinx-8551	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8551
+2026-11-14T11:03:29-06:00	sphinx-doc__sphinx-8551	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8551
+2026-11-14T11:10:27-06:00	sphinx-doc__sphinx-8551	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8551
+2026-11-14T11:10:27-06:00	sphinx-doc__sphinx-8551	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8551/harness_input.validity.json
+2026-11-14T11:10:27-06:00	sphinx-doc__sphinx-8551	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8551
+2026-11-14T11:15:58-06:00	sphinx-doc__sphinx-8551	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8551
+2026-11-14T11:15:58-06:00	sphinx-doc__sphinx-8551	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8551/harness_input.validity.json
+2026-11-14T11:15:58-06:00	sphinx-doc__sphinx-8551	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8551
+2026-11-14T11:20:27-06:00	sphinx-doc__sphinx-8551	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8551
+2026-11-14T11:20:32-06:00	sphinx-doc__sphinx-8593	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8593
+2026-11-14T11:24:32-06:00	sphinx-doc__sphinx-8593	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8593
+2026-11-14T11:24:32-06:00	sphinx-doc__sphinx-8593	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8593
+2026-11-14T11:30:25-06:00	sphinx-doc__sphinx-8593	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8593
+2026-11-14T11:30:25-06:00	sphinx-doc__sphinx-8593	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8593/harness_input.validity.json
+2026-11-14T11:30:25-06:00	sphinx-doc__sphinx-8593	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8593
+2026-11-14T11:35:19-06:00	sphinx-doc__sphinx-8593	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8593
+2026-11-14T11:35:19-06:00	sphinx-doc__sphinx-8593	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8593/harness_input.validity.json
+2026-11-14T11:35:19-06:00	sphinx-doc__sphinx-8593	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8593
+2026-11-14T11:38:48-06:00	sphinx-doc__sphinx-8593	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8593
+2026-11-14T11:38:52-06:00	sphinx-doc__sphinx-8595	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8595
+2026-11-14T11:42:39-06:00	sphinx-doc__sphinx-8595	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8595
+2026-11-14T11:42:39-06:00	sphinx-doc__sphinx-8595	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8595
+2026-11-14T11:46:10-06:00	sphinx-doc__sphinx-8595	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8595
+2026-11-14T11:46:10-06:00	sphinx-doc__sphinx-8595	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8595/harness_input.validity.json
+2026-11-14T11:46:10-06:00	sphinx-doc__sphinx-8595	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8595
+2026-11-14T11:51:56-06:00	sphinx-doc__sphinx-8595	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8595
+2026-11-14T11:51:56-06:00	sphinx-doc__sphinx-8595	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8595/harness_input.validity.json
+2026-11-14T11:51:56-06:00	sphinx-doc__sphinx-8595	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8595
+2026-11-14T11:56:12-06:00	sphinx-doc__sphinx-8595	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8595
+2026-11-14T11:56:17-06:00	sphinx-doc__sphinx-8621	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8621
+2026-11-14T12:00:42-06:00	sphinx-doc__sphinx-8621	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8621
+2026-11-14T12:00:42-06:00	sphinx-doc__sphinx-8621	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8621
+2026-11-14T12:07:29-06:00	sphinx-doc__sphinx-8621	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8621
+2026-11-14T12:07:29-06:00	sphinx-doc__sphinx-8621	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8621/harness_input.validity.json
+2026-11-14T12:07:29-06:00	sphinx-doc__sphinx-8621	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8621
+2026-11-14T12:12:18-06:00	sphinx-doc__sphinx-8621	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8621
+2026-11-14T12:12:18-06:00	sphinx-doc__sphinx-8621	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8621/harness_input.validity.json
+2026-11-14T12:12:18-06:00	sphinx-doc__sphinx-8621	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8621
+2026-11-14T12:15:39-06:00	sphinx-doc__sphinx-8621	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8621
+2026-11-14T12:15:43-06:00	sphinx-doc__sphinx-8638	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8638
+2026-11-14T12:20:46-06:00	sphinx-doc__sphinx-8638	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8638
+2026-11-14T12:20:46-06:00	sphinx-doc__sphinx-8638	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8638
+2026-11-14T12:26:30-06:00	sphinx-doc__sphinx-8638	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8638
+2026-11-14T12:26:30-06:00	sphinx-doc__sphinx-8638	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8638/harness_input.validity.json
+2026-11-14T12:26:30-06:00	sphinx-doc__sphinx-8638	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8638
+2026-11-14T12:32:32-06:00	sphinx-doc__sphinx-8638	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8638
+2026-11-14T12:32:32-06:00	sphinx-doc__sphinx-8638	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8638/harness_input.validity.json
+2026-11-14T12:32:32-06:00	sphinx-doc__sphinx-8638	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8638
+2026-11-14T12:36:59-06:00	sphinx-doc__sphinx-8638	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8638
+2026-11-14T12:37:04-06:00	sphinx-doc__sphinx-8721	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8721
+2026-11-14T12:41:54-06:00	sphinx-doc__sphinx-8721	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8721
+2026-11-14T12:41:54-06:00	sphinx-doc__sphinx-8721	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8721
+2026-11-14T12:48:34-06:00	sphinx-doc__sphinx-8721	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8721
+2026-11-14T12:48:34-06:00	sphinx-doc__sphinx-8721	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8721/harness_input.validity.json
+2026-11-14T12:48:34-06:00	sphinx-doc__sphinx-8721	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8721
+2026-11-14T13:07:55-06:00	sphinx-doc__sphinx-8721	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-8721
+2026-11-14T13:07:55-06:00	sphinx-doc__sphinx-8721	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8721/harness_input.validity.json
+2026-11-14T13:07:55-06:00	sphinx-doc__sphinx-8721	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8721
+2026-11-14T13:11:25-06:00	sphinx-doc__sphinx-8721	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sphinx-doc__sphinx-8721
+2026-11-14T13:11:29-06:00	sympy__sympy-15017	baseline	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sympy__sympy-15017
+2026-11-14T13:15:13-06:00	sympy__sympy-15017	baseline	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sympy__sympy-15017
+2026-11-14T13:15:13-06:00	sympy__sympy-15017	workflow	generate_start_attempt1		/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sympy__sympy-15017
+2026-11-14T13:18:55-06:00	sympy__sympy-15017	workflow	generate_end_attempt1	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sympy__sympy-15017
+2026-11-14T13:18:56-06:00	sympy__sympy-15017	baseline	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sympy__sympy-15017/harness_input.validity.json
+2026-11-14T13:18:56-06:00	sympy__sympy-15017	baseline	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sympy__sympy-15017
+2026-11-14T13:26:12-06:00	sympy__sympy-15017	baseline	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sympy__sympy-15017
+2026-11-14T13:26:12-06:00	sympy__sympy-15017	workflow	rule4_check	0	/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sympy__sympy-15017/harness_input.validity.json
+2026-11-14T13:26:12-06:00	sympy__sympy-15017	workflow	harness_start		/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sympy__sympy-15017
+2026-11-14T13:28:39-06:00	sympy__sympy-15017	workflow	harness_end	0	/home/mihir_barvaliya/se443/swt-runs/final-1-workflow-sympy__sympy-15017

@@ -1,0 +1,73 @@
+[
+  {
+    "round": 1,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 82.1,
+      "steps": 23,
+      "exit_status": "Submitted",
+      "patch_chars": 2861
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 15.9,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_directive_other.py::test_include_source_read_event tests/test_directive_other.py::test_include_source_read_event_nested_includes",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": false,
+    "overrides": []
+  },
+  {
+    "round": 2,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 188.7,
+      "steps": 31,
+      "exit_status": "Submitted",
+      "patch_chars": 3138
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 16.3,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_directive_other.py::test_include_source_read_event tests/test_directive_other.py::test_include_source_read_event_nested_includes",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": true,
+    "overrides": [
+      "agent.step_limit=76",
+      "agent.wall_time_limit_seconds=1701",
+      "run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply"
+    ]
+  },
+  {
+    "round": 3,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 102.5,
+      "steps": 22,
+      "exit_status": "Submitted",
+      "patch_chars": 2889
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 21.3,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_directive_other.py::test_include_source_read_event tests/test_directive_other.py::test_include_source_read_event_nested_includes",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": true,
+    "overrides": [
+      "agent.step_limit=44",
+      "agent.wall_time_limit_seconds=1496",
+      "run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply"
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+{
+    "total_instances": 1,
+    "completed_instances": 0,
+    "resolved_instances": 1,
+    "unresolved_instances": 0,
+    "error_instances": 0,
+    "Mean coverage": 1.0,
+    "Mean coverage delta": 0.0,
+    "unstopped_instances": 0,
+    "completed_ids": [],
+    "resolved_ids": [
+        "sphinx-doc__sphinx-8621"
+    ],
+    "unresolved_ids": [],
+    "error_ids": [],
+    "unstopped_containers": [],
+    "unremoved_images": [
+        "exec.eval.x86_64.77d82541416cab86d0d86a.1bd59db010a0a97adc63e6:latest"
+    ]
+}

@@ -1,0 +1,28 @@
+diff --git a/lib/matplotlib/tests/test_rcparams.py b/lib/matplotlib/tests/test_rcparams.py
+index 99856b3442..37be07febc 100755
+--- a/lib/matplotlib/tests/test_rcparams.py
++++ b/lib/matplotlib/tests/test_rcparams.py
+@@ -584,3 +584,23 @@ def test_deprecation(monkeypatch):
+     # Note that the warning suppression actually arises from the
+     # iteration over the updater rcParams being protected by
+     # suppress_matplotlib_deprecation_warning, rather than any explicit check.
++
++
++def test_rc_context_does_not_close_figures_on_get_backend(tmp_path):
++    # If the backend is resolved while inside rc_context(), exiting the
++    # context must not restore the unresolved auto-backend sentinel, as a
++    # subsequent get_backend() call would then switch backends and close all
++    # figures.
++    code = (
++        "import matplotlib as mpl\n"
++        "import matplotlib.pyplot as plt\n"
++        "from matplotlib._pylab_helpers import Gcf\n"
++        "with mpl.rc_context():\n"
++        "    fig = plt.figure()\n"
++        "figs = dict(Gcf.figs)\n"
++        "assert figs\n"
++        "mpl.get_backend()\n"
++        "assert Gcf.figs == figs\n"
++    )
++    env = {**os.environ, "MPLBACKEND": "", "MPLCONFIGDIR": str(tmp_path)}
++    subprocess.run([sys.executable, "-c", code], check=True, env=env)

@@ -1,0 +1,8 @@
+{
+  "arm": "workflow",
+  "run_id": "final-1",
+  "instance_id": "sphinx-doc__sphinx-8593",
+  "finished": "2026-11-14T11:30:25-06:00",
+  "final_round": 3,
+  "stop_reason": "max_revisions"
+}

@@ -1,0 +1,28 @@
+diff --git a/lib/matplotlib/tests/test_category.py b/lib/matplotlib/tests/test_category.py
+index f0e424bd8e..660f0b89ec 100644
+--- a/lib/matplotlib/tests/test_category.py
++++ b/lib/matplotlib/tests/test_category.py
+@@ -1,4 +1,6 @@
+ """Catch all for categorical functions"""
++import warnings
++
+ import pytest
+ import numpy as np
+ 
+@@ -218,6 +220,16 @@ class TestPlotTypes:
+         plotter(ax, words, [0, 1])
+         axis_test(ax.xaxis, words)
+ 
++    def test_plot_empty(self):
++        # Empty data should not trigger the deprecation warning for passing
++        # numbers through unit converters.
++        ax = plt.figure().subplots()
++        ax.xaxis.update_units(["a", "b"])
++        with warnings.catch_warnings():
++            warnings.simplefilter("error", MatplotlibDeprecationWarning)
++            line, = ax.plot([], [])
++        assert len(line.get_xdata()) == 0
++
+     @pytest.fixture
+     def test_data(self):
+         self.x = ["hello", "happy", "world"]

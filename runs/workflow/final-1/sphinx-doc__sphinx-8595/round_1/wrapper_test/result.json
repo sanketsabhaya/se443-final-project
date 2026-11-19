@@ -1,0 +1,47 @@
+{
+  "start": "2026-11-14T11:43:13-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "tests/roots/test-ext-autodoc/target/empty_all.py",
+      "tests/test_ext_autodoc.py"
+    ]
+  },
+  "end": "2026-11-14T11:43:36-06:00",
+  "duration_s": 22.3,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "tests/test_ext_autodoc.py",
+      "cls": null,
+      "func": "test_autodoc_empty_module_all",
+      "label": "tests/test_ext_autodoc.py::test_autodoc_empty_module_all"
+    }
+  ],
+  "command": "tox -epy39 -v -- tests/test_ext_autodoc.py::test_autodoc_empty_module_all",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "tests/test_ext_autodoc.py::test_autodoc_empty_module_all": "FAILED"
+  },
+  "group": "G4",
+  "evidence": {
+    "issue_exc": [],
+    "mode": "functions",
+    "collected": {
+      "tests/test_ext_autodoc.py::test_autodoc_empty_module_all": "FAILED"
+    },
+    "setup_markers": [],
+    "failure_types": {
+      "tests/test_ext_autodoc.py::test_autodoc_empty_module_all": null
+    },
+    "reason": "failure_unrelated"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": false,
+    "skip_or_xfail_added": false
+  }
+}

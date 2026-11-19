@@ -1,0 +1,49 @@
+{
+    "sphinx-doc__sphinx-8593": {
+        "patch_is_None": false,
+        "patch_exists": true,
+        "patch_successfully_applied": true,
+        "resolved": true,
+        "coverage_pred": 0.425531914893617,
+        "coverage_gold": 0.425531914893617,
+        "coverage_base": 0.48936170212765956,
+        "coverage_delta_pred": 0.1276595744680851,
+        "coverage_delta_gold": 0.1276595744680851,
+        "added_f2p": 2,
+        "tests_base": {
+            "FAIL_TO_PASS": [],
+            "PASS_TO_PASS": [
+                "tests/test_ext_autodoc_private_members.py::test_private_members",
+                "tests/test_ext_autodoc_private_members.py::test_private_field",
+                "tests/test_ext_autodoc_private_members.py::test_private_field_and_private_members"
+            ],
+            "FAIL_TO_FAIL": [],
+            "PASS_TO_FAIL": [],
+            "UNMATCHED": []
+        },
+        "tests_pred": {
+            "FAIL_TO_PASS": [
+                "tests/test_ext_autodoc_private_members.py::test_private_members",
+                "tests/test_ext_autodoc_private_members.py::test_private_field"
+            ],
+            "PASS_TO_PASS": [
+                "tests/test_ext_autodoc_private_members.py::test_private_field_and_private_members"
+            ],
+            "FAIL_TO_FAIL": [],
+            "PASS_TO_FAIL": [],
+            "UNMATCHED": []
+        },
+        "tests_gold": {
+            "FAIL_TO_PASS": [
+                "tests/test_ext_autodoc_private_members.py::test_private_members",
+                "tests/test_ext_autodoc_private_members.py::test_private_field"
+            ],
+            "PASS_TO_PASS": [
+                "tests/test_ext_autodoc_private_members.py::test_private_field_and_private_members"
+            ],
+            "FAIL_TO_FAIL": [],
+            "PASS_TO_FAIL": [],
+            "UNMATCHED": []
+        }
+    }
+}

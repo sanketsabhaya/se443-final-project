@@ -1,0 +1,50 @@
+{
+  "start": "2026-11-14T00:13:13-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "lib/matplotlib/tests/test_colorbar.py"
+    ]
+  },
+  "end": "2026-11-14T00:13:23-06:00",
+  "duration_s": 10.6,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "lib/matplotlib/tests/test_colorbar.py",
+      "cls": null,
+      "func": "test_colorbar_extend_drawedges",
+      "label": "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges"
+    }
+  ],
+  "command": "pytest -rA --tb=long -p no:cacheprovider lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[neither--1-res3-horizontal]": "PASSED",
+    "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[neither--1-res3-vertical]": "PASSED",
+    "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[both-1-res0-horizontal]": "FAILED",
+    "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[both-1-res0-vertical]": "FAILED",
+    "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[min-0-res1-horizontal]": "FAILED",
+    "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[min-0-res1-vertical]": "FAILED",
+    "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[max-0-res2-horizontal]": "FAILED",
+    "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[max-0-res2-vertical]": "FAILED"
+  },
+  "group": "G3",
+  "evidence": {
+    "issue_exc": [],
+    "mode": "functions",
+    "collected": {
+      "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges": "PASSED"
+    },
+    "setup_markers": [],
+    "reason": "no_target_failed"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": false,
+    "skip_or_xfail_added": false
+  }
+}

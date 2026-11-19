@@ -1,0 +1,7 @@
+{
+  "sphinx-doc__sphinx-8595": {
+    "model_name_or_path": "deepseek/deepseek-flash",
+    "instance_id": "sphinx-doc__sphinx-8595",
+    "model_patch": "diff --git a/tests/roots/test-ext-autodoc/target/empty_all.py b/tests/roots/test-ext-autodoc/target/empty_all.py\nnew file mode 100644\nindex 000000000..00c66c720\n--- /dev/null\n+++ b/tests/roots/test-ext-autodoc/target/empty_all.py\n@@ -0,0 +1,13 @@\n+__all__ = []\n+\n+\n+def foo():\n+    \"docstring\"\n+\n+\n+def bar():\n+    \"docstring\"\n+\n+\n+def baz():\n+    \"docstring\"\ndiff --git a/tests/test_ext_autodoc.py b/tests/test_ext_autodoc.py\nindex 39897eb7d..5339c3b8e 100755\n--- a/tests/test_ext_autodoc.py\n+++ b/tests/test_ext_autodoc.py\n@@ -714,6 +714,19 @@ def test_autodoc_special_members(app):\n     ]\n \n \n+@pytest.mark.sphinx('html', testroot='ext-autodoc')\n+def test_autodoc_empty_module_all(app):\n+    options = {\"members\": None}\n+    actual = do_autodoc(app, 'module', 'target.empty_all', options)\n+\n+    # An empty __all__ means that the module itself is documented, but none of\n+    # its members are.\n+    assert '.. py:module:: target.empty_all' in actual\n+    assert '.. py:function:: foo()' not in actual\n+    assert '.. py:function:: bar()' not in actual\n+    assert '.. py:function:: baz()' not in actual\n+\n+\n @pytest.mark.sphinx('html', testroot='ext-autodoc')\n def test_autodoc_ignore_module_all(app):\n     # default (no-ignore-module-all)\n"
+  }
+}

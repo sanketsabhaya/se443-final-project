@@ -1,0 +1,22 @@
+run_id: posthoc-c-1-gold-pylint-dev__pylint-7080
+predictions: gold
+instances: pylint-dev__pylint-7080
+dataset: princeton-nlp/SWE-bench_Verified --filter_swt (HF offline, cached rev c104f840cc67f8b6eec6f759ebc8b2693d585d4a)
+swt_bench_commit: be12d4c8e7a5315a6bd60b0cad72736e96a4af3e
+start: 2026-11-14T16:01:03-06:00
+--- disk before
+D:\             200G   53G  148G  27% /mnt/d
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          25        0         36.94GB   14.82GB (40%)
+Containers      0         0         0B        0B
+Local Volumes   0         0         0B        0B
+Build Cache     0         0         0B        0B
+end: 2026-11-14T16:08:23-06:00
+exit_code: 0
+--- disk after
+D:\             200G   53G  148G  27% /mnt/d
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          26        0         37.06GB   14.94GB (40%)
+Containers      0         0         0B        0B
+Local Volumes   0         0         0B        0B
+Build Cache     0         0         0B        0B

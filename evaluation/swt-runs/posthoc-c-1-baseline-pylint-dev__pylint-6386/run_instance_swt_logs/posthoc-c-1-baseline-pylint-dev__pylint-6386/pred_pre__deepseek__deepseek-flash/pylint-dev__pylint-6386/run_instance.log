@@ -1,0 +1,31 @@
+2026-11-14 15:48:27,478 - WARNING - Starting evaluation at 1794692907.478653
+2026-11-14 15:48:27,761 - INFO - Creating container for pylint-dev__pylint-6386...
+2026-11-14 15:48:27,839 - INFO - Container for pylint-dev__pylint-6386 created: 0a7bdce87435cd00d3fa3cb239d0e0b965ed75c78638f30b0f0649d0eb32e6b4
+2026-11-14 15:48:28,021 - INFO - Container for pylint-dev__pylint-6386 started: 0a7bdce87435cd00d3fa3cb239d0e0b965ed75c78638f30b0f0649d0eb32e6b4
+2026-11-14 15:48:28,256 - INFO - Git diff before:
+
+2026-11-14 15:48:28,256 - INFO - Eval script for pylint-dev__pylint-6386 written to eval.sh, now applying to container...
+2026-11-14 15:48:34,785 - INFO - Test output for pylint-dev__pylint-6386 written to run_instance_swt_logs/posthoc-c-1-baseline-pylint-dev__pylint-6386/pred_pre__deepseek__deepseek-flash/pylint-dev__pylint-6386/test_output.txt
+2026-11-14 15:48:34,857 - INFO - Git diff after:
+diff --git a/tests/config/test_argparse_config.py b/tests/config/test_argparse_config.py
+index 901bb5470..80cd9318e 100644
+--- a/tests/config/test_argparse_config.py
++++ b/tests/config/test_argparse_config.py
+@@ -46,6 +46,12 @@ class TestArgparseOptionsProviderMixin:
+             Run([LOGGING_TEST, f"--rcfile={LOGGING_TEST.replace('.py', '.rc')}"])
+         assert ex.value.code == 0
+ 
++    @staticmethod
++    def test_verbose_short_option() -> None:
++        """Check that the short verbose option does not expect an argument."""
++        run = Run([EMPTY_MODULE, "-v"], exit=False)
++        assert run.verbose
++
+ 
+ class TestDeprecationOptions:
+     @staticmethod
+2026-11-14 15:48:34,857 - INFO - Git diff changed after running eval script
+2026-11-14 15:48:34,857 - INFO - Attempting to stop container exec.eval.x86_64.efca49fa1fde6067d6f416.558acdbe3fad3b7b8a3e50.135168093673360...
+2026-11-14 15:48:50,085 - INFO - Attempting to remove container exec.eval.x86_64.efca49fa1fde6067d6f416.558acdbe3fad3b7b8a3e50.135168093673360...
+2026-11-14 15:48:50,120 - INFO - Container exec.eval.x86_64.efca49fa1fde6067d6f416.558acdbe3fad3b7b8a3e50.135168093673360 removed.
+2026-11-14 15:48:50,120 - WARNING - End of eval at 1794692930.1208735

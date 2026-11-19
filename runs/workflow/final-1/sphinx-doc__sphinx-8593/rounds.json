@@ -1,0 +1,73 @@
+[
+  {
+    "round": 1,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 74.0,
+      "steps": 16,
+      "exit_status": "Submitted",
+      "patch_chars": 1944
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 21.7,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_ext_autodoc_private_members.py::test_private_field tests/test_ext_autodoc_private_members.py::test_private_field_and_private_members tests/test_ext_autodoc_private_members.py::test_private_members",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": false,
+    "overrides": []
+  },
+  {
+    "round": 2,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 97.6,
+      "steps": 15,
+      "exit_status": "Submitted",
+      "patch_chars": 1176
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 22.1,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_ext_autodoc_private_members.py::test_private_variable_with_meta_public",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": true,
+    "overrides": [
+      "agent.step_limit=83",
+      "agent.wall_time_limit_seconds=1704",
+      "run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply"
+    ]
+  },
+  {
+    "round": 3,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 113.8,
+      "steps": 17,
+      "exit_status": "Submitted",
+      "patch_chars": 2399
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 21.2,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_ext_autodoc_private_members.py::test_private_field tests/test_ext_autodoc_private_members.py::test_private_field_and_private_members tests/test_ext_autodoc_private_members.py::test_private_members",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": true,
+    "overrides": [
+      "agent.step_limit=67",
+      "agent.wall_time_limit_seconds=1584",
+      "run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply"
+    ]
+  }
+]

@@ -1,0 +1,3 @@
+2026-11-14 13:28:09,437 - INFO - Environment image exec.env.x86_64.deec2122407a414e380748:latest found for sympy__sympy-15017
+Building instance image exec.eval.x86_64.deec2122407a414e380748.10cf833f01c9d407cdc40c:latest for sympy__sympy-15017
+2026-11-14 13:28:09,491 - INFO - Image exec.eval.x86_64.deec2122407a414e380748.10cf833f01c9d407cdc40c:latest already exists, skipping build.

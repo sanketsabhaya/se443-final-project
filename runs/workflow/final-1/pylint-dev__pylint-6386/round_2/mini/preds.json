@@ -1,0 +1,7 @@
+{
+  "pylint-dev__pylint-6386": {
+    "model_name_or_path": "deepseek/deepseek-flash",
+    "instance_id": "pylint-dev__pylint-6386",
+    "model_patch": "diff --git a/tests/config/test_config.py b/tests/config/test_config.py\nindex f91e6cbf..d519f9d8 100644\n--- a/tests/config/test_config.py\n+++ b/tests/config/test_config.py\n@@ -100,3 +100,18 @@ def test_unknown_py_version(capsys: CaptureFixture) -> None:\n         Run([str(EMPTY_MODULE), \"--py-version=the-newest\"], exit=False)\n     output = capsys.readouterr()\n     assert \"the-newest has an invalid format, should be a version string.\" in output.err\n+\n+\n+def test_short_verbose(capsys: CaptureFixture) -> None:\n+    \"\"\"Check that we correctly handle the -v flag.\"\"\"\n+    try:\n+        runner = Run([str(EMPTY_MODULE), \"-v\"], exit=False)\n+    except SystemExit as exc:\n+        output = capsys.readouterr()\n+        pytest.fail(\n+            f\"pylint should accept -v without an argument, but exited with \"\n+            f\"status {exc.code}: {output.err}\"\n+        )\n+    output = capsys.readouterr()\n+    assert runner.verbose\n+    assert \"Using config file\" in output.err\n"
+  }
+}

@@ -1,0 +1,1063 @@
+[
+ {
+  "iid": "astropy__astropy-8872",
+  "round": "round_1",
+  "saved": "G5",
+  "recomputed": "G5",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "astropy/units/tests/test_quantity.py::TestQuantityCreation::test_preserve_float16_dtype": "AssertionError"
+  },
+  "types_stripped": {
+   "astropy/units/tests/test_quantity.py::TestQuantityCreation::test_preserve_float16_dtype": "AssertionError"
+  },
+  "statuses": {
+   "astropy/units/tests/test_quantity.py::TestQuantityCreation::test_preserve_float16_dtype": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": false
+ },
+ {
+  "iid": "django__django-16485",
+  "round": "round_1",
+  "saved": "G5",
+  "recomputed": "G5",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "template_tests.filter_tests.test_floatformat.FunctionTests.test_zero_values": "ValueError"
+  },
+  "types_stripped": {
+   "template_tests.filter_tests.test_floatformat.FunctionTests.test_zero_values": "ValueError"
+  },
+  "statuses": {
+   "test_zero_values (template_tests.filter_tests.test_floatformat.FunctionTests.test_zero_values)": "ERROR"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": false
+ },
+ {
+  "iid": "matplotlib__matplotlib-14623",
+  "round": "round_1",
+  "saved": "G3",
+  "recomputed": "G3",
+  "ansi_stripped": "G3",
+  "types_saved": null,
+  "types_stripped": null,
+  "statuses": {
+   "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[linear-x]": "PASSED",
+   "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[linear-y]": "PASSED",
+   "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[log-x]": "FAILED",
+   "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[log-y]": "FAILED"
+  },
+  "reason_stripped": "no_target_failed",
+  "has_ansi": false
+ },
+ {
+  "iid": "matplotlib__matplotlib-14623",
+  "round": "round_2",
+  "saved": "G3",
+  "recomputed": "G3",
+  "ansi_stripped": "G3",
+  "types_saved": null,
+  "types_stripped": null,
+  "statuses": {
+   "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[linear-x]": "PASSED",
+   "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[linear-y]": "PASSED",
+   "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[log-x]": "FAILED",
+   "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[log-y]": "FAILED"
+  },
+  "reason_stripped": "no_target_failed",
+  "has_ansi": false
+ },
+ {
+  "iid": "matplotlib__matplotlib-14623",
+  "round": "round_3",
+  "saved": "G3",
+  "recomputed": "G3",
+  "ansi_stripped": "G3",
+  "types_saved": null,
+  "types_stripped": null,
+  "statuses": {
+   "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[linear-x]": "PASSED",
+   "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[linear-y]": "PASSED",
+   "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[log-x]": "FAILED",
+   "lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[log-y]": "FAILED"
+  },
+  "reason_stripped": "no_target_failed",
+  "has_ansi": false
+ },
+ {
+  "iid": "matplotlib__matplotlib-20676",
+  "round": "round_1",
+  "saved": "G5",
+  "recomputed": "G5",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "lib/matplotlib/tests/test_widgets.py::test_span_selector_bound": "AssertionError"
+  },
+  "types_stripped": {
+   "lib/matplotlib/tests/test_widgets.py::test_span_selector_bound": "AssertionError"
+  },
+  "statuses": {
+   "lib/matplotlib/tests/test_widgets.py::test_span_selector_bound[horizontal]": "FAILED",
+   "lib/matplotlib/tests/test_widgets.py::test_span_selector_bound[vertical]": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": false
+ },
+ {
+  "iid": "matplotlib__matplotlib-21568",
+  "round": "round_1",
+  "saved": "G5",
+  "recomputed": "G5",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "lib/matplotlib/tests/test_dates.py::test_date_formatter_usetex_spacing": "AssertionError"
+  },
+  "types_stripped": {
+   "lib/matplotlib/tests/test_dates.py::test_date_formatter_usetex_spacing": "AssertionError"
+  },
+  "statuses": {
+   "lib/matplotlib/tests/test_dates.py::test_date_formatter_usetex_spacing": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": false
+ },
+ {
+  "iid": "matplotlib__matplotlib-22719",
+  "round": "round_1",
+  "saved": "G5",
+  "recomputed": "G5",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "lib/matplotlib/tests/test_category.py::TestPlotTypes::test_plot_empty": "ConversionError"
+  },
+  "types_stripped": {
+   "lib/matplotlib/tests/test_category.py::TestPlotTypes::test_plot_empty": "ConversionError"
+  },
+  "statuses": {
+   "lib/matplotlib/tests/test_category.py::TestPlotTypes::test_plot_empty": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": false
+ },
+ {
+  "iid": "matplotlib__matplotlib-22865",
+  "round": "round_1",
+  "saved": "G3",
+  "recomputed": "G3",
+  "ansi_stripped": "G3",
+  "types_saved": null,
+  "types_stripped": null,
+  "statuses": {
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[neither--1-res3]": "PASSED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[both-1-res0]": "FAILED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[min-0-res1]": "FAILED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[max-0-res2]": "FAILED"
+  },
+  "reason_stripped": "no_target_failed",
+  "has_ansi": false
+ },
+ {
+  "iid": "matplotlib__matplotlib-22865",
+  "round": "round_2",
+  "saved": "G3",
+  "recomputed": "G3",
+  "ansi_stripped": "G3",
+  "types_saved": null,
+  "types_stripped": null,
+  "statuses": {
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[neither--1-res3-horizontal]": "PASSED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[neither--1-res3-vertical]": "PASSED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[both-1-res0-horizontal]": "FAILED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[both-1-res0-vertical]": "FAILED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[min-0-res1-horizontal]": "FAILED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[min-0-res1-vertical]": "FAILED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[max-0-res2-horizontal]": "FAILED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[max-0-res2-vertical]": "FAILED"
+  },
+  "reason_stripped": "no_target_failed",
+  "has_ansi": false
+ },
+ {
+  "iid": "matplotlib__matplotlib-22865",
+  "round": "round_3",
+  "saved": "G5",
+  "recomputed": "G5",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges": "AssertionError"
+  },
+  "types_stripped": {
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges": "AssertionError"
+  },
+  "statuses": {
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[both-1-res0-horizontal]": "FAILED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[both-1-res0-vertical]": "FAILED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[min-0-res1-horizontal]": "FAILED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[min-0-res1-vertical]": "FAILED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[max-0-res2-horizontal]": "FAILED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[max-0-res2-vertical]": "FAILED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[neither--1-res3-horizontal]": "FAILED",
+   "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[neither--1-res3-vertical]": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": false
+ },
+ {
+  "iid": "matplotlib__matplotlib-22871",
+  "round": "round_1",
+  "saved": "G5",
+  "recomputed": "G5",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "lib/matplotlib/tests/test_dates.py::test_concise_formatter_offset_year_not_in_ticks": "AssertionError"
+  },
+  "types_stripped": {
+   "lib/matplotlib/tests/test_dates.py::test_concise_formatter_offset_year_not_in_ticks": "AssertionError"
+  },
+  "statuses": {
+   "lib/matplotlib/tests/test_dates.py::test_concise_formatter_offset_year_not_in_ticks": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": false
+ },
+ {
+  "iid": "matplotlib__matplotlib-23299",
+  "round": "round_1",
+  "saved": "G5",
+  "recomputed": "G5",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "lib/matplotlib/tests/test_rcparams.py::test_rc_context_figure_survives_get_backend": "AssertionError"
+  },
+  "types_stripped": {
+   "lib/matplotlib/tests/test_rcparams.py::test_rc_context_figure_survives_get_backend": "AssertionError"
+  },
+  "statuses": {
+   "lib/matplotlib/tests/test_rcparams.py::test_rc_context_figure_survives_get_backend": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": false
+ },
+ {
+  "iid": "matplotlib__matplotlib-25311",
+  "round": "round_1",
+  "saved": "G5",
+  "recomputed": "G5",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "lib/matplotlib/tests/test_pickle.py::test_pickle_draggable": "TypeError"
+  },
+  "types_stripped": {
+   "lib/matplotlib/tests/test_pickle.py::test_pickle_draggable": "TypeError"
+  },
+  "statuses": {
+   "lib/matplotlib/tests/test_pickle.py::test_pickle_draggable[legend]": "FAILED",
+   "lib/matplotlib/tests/test_pickle.py::test_pickle_draggable[annotation]": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": false
+ },
+ {
+  "iid": "pylint-dev__pylint-6386",
+  "round": "round_1",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G4",
+  "types_saved": {
+   "tests/config/test_config.py::test_short_verbose": "SystemExit"
+  },
+  "types_stripped": {
+   "tests/config/test_config.py::test_short_verbose": "SystemExit"
+  },
+  "statuses": {
+   "tests/config/test_config.py::test_short_verbose": "FAILED"
+  },
+  "reason_stripped": "failure_unrelated",
+  "has_ansi": false
+ },
+ {
+  "iid": "pylint-dev__pylint-6386",
+  "round": "round_2",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G4",
+  "types_saved": {
+   "tests/config/test_config.py::test_short_verbose": "Failed"
+  },
+  "types_stripped": {
+   "tests/config/test_config.py::test_short_verbose": "Failed"
+  },
+  "statuses": {
+   "tests/config/test_config.py::test_short_verbose": "FAILED"
+  },
+  "reason_stripped": "failure_unrelated",
+  "has_ansi": false
+ },
+ {
+  "iid": "pylint-dev__pylint-6386",
+  "round": "round_3",
+  "saved": "G5",
+  "recomputed": "G5",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/config/test_config.py::test_short_verbose": "AssertionError"
+  },
+  "types_stripped": {
+   "tests/config/test_config.py::test_short_verbose": "AssertionError"
+  },
+  "statuses": {
+   "tests/config/test_config.py::test_short_verbose": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": false
+ },
+ {
+  "iid": "pylint-dev__pylint-6903",
+  "round": "round_1",
+  "saved": "G5",
+  "recomputed": "G5",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_pylint_runners.py::test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction": "ValueError"
+  },
+  "types_stripped": {
+   "tests/test_pylint_runners.py::test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction": "ValueError"
+  },
+  "statuses": {
+   "tests/test_pylint_runners.py::test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": false
+ },
+ {
+  "iid": "pylint-dev__pylint-7080",
+  "round": "round_1",
+  "saved": "G5",
+  "recomputed": "G5",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_self.py::TestRunTC::test_ignore_path_recursive_current_dir": "AssertionError"
+  },
+  "types_stripped": {
+   "tests/test_self.py::TestRunTC::test_ignore_path_recursive_current_dir": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_self.py::TestRunTC::test_ignore_path_recursive_current_dir": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": false
+ },
+ {
+  "iid": "pylint-dev__pylint-7277",
+  "round": "round_1",
+  "saved": "G5",
+  "recomputed": "G5",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_self.py::TestRunTC::test_modify_sys_path": "AssertionError"
+  },
+  "types_stripped": {
+   "tests/test_self.py::TestRunTC::test_modify_sys_path": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_self.py::TestRunTC::test_modify_sys_path": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": false
+ },
+ {
+  "iid": "sphinx-doc__sphinx-11510",
+  "round": "round_1",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_directive_other.py::test_include_source_read_event": null,
+   "tests/test_directive_other.py::test_include_source_read_event_nested_includes": null
+  },
+  "types_stripped": {
+   "tests/test_directive_other.py::test_include_source_read_event": "AssertionError",
+   "tests/test_directive_other.py::test_include_source_read_event_nested_includes": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_directive_other.py::test_include_source_read_event": "FAILED",
+   "tests/test_directive_other.py::test_include_source_read_event_nested_includes": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-11510",
+  "round": "round_2",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_directive_other.py::test_include_source_read_event": null,
+   "tests/test_directive_other.py::test_include_source_read_event_nested_includes": null
+  },
+  "types_stripped": {
+   "tests/test_directive_other.py::test_include_source_read_event": "AssertionError",
+   "tests/test_directive_other.py::test_include_source_read_event_nested_includes": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_directive_other.py::test_include_source_read_event": "FAILED",
+   "tests/test_directive_other.py::test_include_source_read_event_nested_includes": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-11510",
+  "round": "round_3",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_directive_other.py::test_include_source_read_event": null,
+   "tests/test_directive_other.py::test_include_source_read_event_nested_includes": null
+  },
+  "types_stripped": {
+   "tests/test_directive_other.py::test_include_source_read_event": "AssertionError",
+   "tests/test_directive_other.py::test_include_source_read_event_nested_includes": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_directive_other.py::test_include_source_read_event": "FAILED",
+   "tests/test_directive_other.py::test_include_source_read_event_nested_includes": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8459",
+  "round": "round_1",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description": null
+  },
+  "types_stripped": {
+   "tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8459",
+  "round": "round_2",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description": null
+  },
+  "types_stripped": {
+   "tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8459",
+  "round": "round_3",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description_and_type_aliases": null
+  },
+  "types_stripped": {
+   "tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description_and_type_aliases": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description_and_type_aliases": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8475",
+  "round": "round_1",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_build_linkcheck.py::test_too_many_redirects_on_HEAD": null
+  },
+  "types_stripped": {
+   "tests/test_build_linkcheck.py::test_too_many_redirects_on_HEAD": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_build_linkcheck.py::test_too_many_redirects_on_HEAD": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8475",
+  "round": "round_2",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_build_linkcheck.py::test_too_many_redirects_on_HEAD": null
+  },
+  "types_stripped": {
+   "tests/test_build_linkcheck.py::test_too_many_redirects_on_HEAD": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_build_linkcheck.py::test_too_many_redirects_on_HEAD": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8475",
+  "round": "round_3",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_build_linkcheck.py::test_too_many_redirects_on_HEAD": null
+  },
+  "types_stripped": {
+   "tests/test_build_linkcheck.py::test_too_many_redirects_on_HEAD": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_build_linkcheck.py::test_too_many_redirects_on_HEAD": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8548",
+  "round": "round_1",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable": null
+  },
+  "types_stripped": {
+   "tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_ext_autodoc_autoclass.py::test_instance_variable": "PASSED",
+   "tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8548",
+  "round": "round_2",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable": null
+  },
+  "types_stripped": {
+   "tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_ext_autodoc_autoclass.py::test_instance_variable": "PASSED",
+   "tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8548",
+  "round": "round_3",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable": null
+  },
+  "types_stripped": {
+   "tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_ext_autodoc_autoclass.py::test_instance_variable": "PASSED",
+   "tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8551",
+  "round": "round_1",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_domain_py.py::test_doc_field_xref_uses_current_module": null
+  },
+  "types_stripped": {
+   "tests/test_domain_py.py::test_doc_field_xref_uses_current_module": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_domain_py.py::test_doc_field_xref_uses_current_module": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8551",
+  "round": "round_2",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_domain_py.py::test_doc_field_xref_uses_current_module": null
+  },
+  "types_stripped": {
+   "tests/test_domain_py.py::test_doc_field_xref_uses_current_module": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_domain_py.py::test_doc_field_xref_uses_current_module": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8551",
+  "round": "round_3",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_domain_py.py::test_doc_field_xref_uses_current_module": null
+  },
+  "types_stripped": {
+   "tests/test_domain_py.py::test_doc_field_xref_uses_current_module": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_domain_py.py::test_doc_field_xref_uses_current_module": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8593",
+  "round": "round_1",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_ext_autodoc_private_members.py::test_private_field": null,
+   "tests/test_ext_autodoc_private_members.py::test_private_members": null
+  },
+  "types_stripped": {
+   "tests/test_ext_autodoc_private_members.py::test_private_field": "AssertionError",
+   "tests/test_ext_autodoc_private_members.py::test_private_members": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_ext_autodoc_private_members.py::test_private_field_and_private_members": "PASSED",
+   "tests/test_ext_autodoc_private_members.py::test_private_field": "FAILED",
+   "tests/test_ext_autodoc_private_members.py::test_private_members": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8593",
+  "round": "round_2",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_ext_autodoc_private_members.py::test_private_variable_with_meta_public": null
+  },
+  "types_stripped": {
+   "tests/test_ext_autodoc_private_members.py::test_private_variable_with_meta_public": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_ext_autodoc_private_members.py::test_private_variable_with_meta_public": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8593",
+  "round": "round_3",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_ext_autodoc_private_members.py::test_private_field": null,
+   "tests/test_ext_autodoc_private_members.py::test_private_members": null
+  },
+  "types_stripped": {
+   "tests/test_ext_autodoc_private_members.py::test_private_field": "AssertionError",
+   "tests/test_ext_autodoc_private_members.py::test_private_members": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_ext_autodoc_private_members.py::test_private_field_and_private_members": "PASSED",
+   "tests/test_ext_autodoc_private_members.py::test_private_field": "FAILED",
+   "tests/test_ext_autodoc_private_members.py::test_private_members": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8595",
+  "round": "round_1",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_ext_autodoc.py::test_autodoc_empty_module_all": null
+  },
+  "types_stripped": {
+   "tests/test_ext_autodoc.py::test_autodoc_empty_module_all": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_ext_autodoc.py::test_autodoc_empty_module_all": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8595",
+  "round": "round_2",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_ext_autodoc.py::test_autodoc_empty_module_all": null
+  },
+  "types_stripped": {
+   "tests/test_ext_autodoc.py::test_autodoc_empty_module_all": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_ext_autodoc.py::test_autodoc_empty_module_all": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8595",
+  "round": "round_3",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_ext_autodoc.py::test_autodoc_empty_module_all": null
+  },
+  "types_stripped": {
+   "tests/test_ext_autodoc.py::test_autodoc_empty_module_all": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_ext_autodoc.py::test_autodoc_empty_module_all": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8621",
+  "round": "round_1",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_markup.py::test_kbd_role_with_separator_as_keystroke": null
+  },
+  "types_stripped": {
+   "tests/test_markup.py::test_kbd_role_with_separator_as_keystroke": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`-`---expected_children0]": "FAILED",
+   "tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`+`-+-expected_children1]": "FAILED",
+   "tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`^`-^-expected_children2]": "FAILED",
+   "tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Shift-+`-Shift-+-expected_children3]": "FAILED",
+   "tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Ctrl+-`-Ctrl+--expected_children4]": "FAILED",
+   "tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Shift-^`-Shift-^-expected_children5]": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8621",
+  "round": "round_2",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G4",
+  "types_saved": {
+   "tests/test_markup.py::test_kbd_role_with_separator_as_keystroke": null
+  },
+  "types_stripped": {
+   "tests/test_markup.py::test_kbd_role_with_separator_as_keystroke": null
+  },
+  "statuses": {
+   "tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`-`-<p><kbd": "FAILED",
+   "tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`+`-<p><kbd": "FAILED",
+   "tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`^`-<p><kbd": "FAILED",
+   "tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Shift-+`-<p><kbd": "FAILED",
+   "tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Ctrl+-`-<p><kbd": "FAILED",
+   "tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Shift-^`-<p><kbd": "FAILED"
+  },
+  "reason_stripped": "failure_unrelated",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8621",
+  "round": "round_3",
+  "saved": "G3",
+  "recomputed": "G3",
+  "ansi_stripped": "G3",
+  "types_saved": null,
+  "types_stripped": null,
+  "statuses": {
+   "tests/test_markup.py::test_inline[verify-:rfc:`2324`-<p><span": "PASSED",
+   "tests/test_markup.py::test_inline[verify-:rfc:`2324#id1`-<p><span": "PASSED",
+   "tests/test_markup.py::test_inline[verify_re-``code": "PASSED",
+   "tests/test_markup.py::test_inline[verify-:menuselection:`a": "PASSED",
+   "tests/test_markup.py::test_inline[verify-:menuselection:`&Foo": "PASSED",
+   "tests/test_markup.py::test_inline[verify-:guilabel:`&Foo": "PASSED",
+   "tests/test_markup.py::test_inline[verify-:guilabel:`Foo`-<p><span": "PASSED",
+   "tests/test_markup.py::test_inline[verify-:kbd:`space`-<p><kbd": "PASSED",
+   "tests/test_markup.py::test_inline[verify-:kbd:`Control+X`-<p><kbd": "PASSED",
+   "tests/test_markup.py::test_inline[verify-:kbd:`M-x": "PASSED",
+   "tests/test_markup.py::test_inline[verify_re-:option:`--with-option`-<p><code(": "PASSED",
+   "tests/test_markup.py::test_inline[verify-\"John\"-<p>\\u201cJohn\\u201d</p>-\\u201cJohn\\u201d]": "PASSED",
+   "tests/test_markup.py::test_inline[verify-``\"John\"``-<p><code": "PASSED",
+   "tests/test_markup.py::test_inline[verify-:manpage:`mp(1)`-<p><em": "PASSED",
+   "tests/test_markup.py::test_inline[verify-\\u0393\\\\\\\\\\u221e$-None-\\u0393\\\\textbackslash{}\\\\(\\\\infty\\\\)\\\\$]": "PASSED",
+   "tests/test_markup.py::test_inline[verify-::\\n\\n": "PASSED",
+   "tests/test_markup.py::test_inline[verify_re-`test": "PASSED",
+   "tests/test_markup.py::test_inline[verify-term\\n": "PASSED",
+   "tests/test_markup.py::test_inline[verify-term": "PASSED",
+   "tests/test_markup.py::test_inline[verify-..": "PASSED",
+   "tests/test_markup.py::test_inline[verify-:pep:`8`-<p><span": "FAILED",
+   "tests/test_markup.py::test_inline[verify-:pep:`8#id1`-<p><span": "FAILED",
+   "tests/test_markup.py::test_inline[verify-:kbd:`Alt+^`-<p><kbd": "FAILED",
+   "tests/test_markup.py::test_inline[verify-:kbd:`-`-<p><kbd": "FAILED",
+   "tests/test_markup.py::test_inline[verify-:kbd:`+`-<p><kbd": "FAILED",
+   "tests/test_markup.py::test_inline[verify-:kbd:`^`-<p><kbd": "FAILED",
+   "tests/test_markup.py::test_inline[verify-:kbd:`Shift-+`-<p><kbd": "FAILED",
+   "tests/test_markup.py::test_inline[verify-:kbd:`Ctrl+-`-<p><kbd": "FAILED",
+   "tests/test_markup.py::test_inline[verify-:kbd:`Shift-^`-<p><kbd": "FAILED"
+  },
+  "reason_stripped": "no_target_failed",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8638",
+  "round": "round_1",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_domain_py.py::test_info_field_list_var": null
+  },
+  "types_stripped": {
+   "tests/test_domain_py.py::test_info_field_list_var": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_domain_py.py::test_info_field_list_var": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8638",
+  "round": "round_2",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_domain_py.py::test_info_field_list_var": null
+  },
+  "types_stripped": {
+   "tests/test_domain_py.py::test_info_field_list_var": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_domain_py.py::test_info_field_list_var": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8638",
+  "round": "round_3",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_domain_py.py::test_info_field_list_var": null
+  },
+  "types_stripped": {
+   "tests/test_domain_py.py::test_info_field_list_var": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_domain_py.py::test_info_field_list_var": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8721",
+  "round": "round_1",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_ext_viewcode.py::test_viewcode_epub_disabled": null
+  },
+  "types_stripped": {
+   "tests/test_ext_viewcode.py::test_viewcode_epub_disabled": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_ext_viewcode.py::test_viewcode_epub_disabled": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8721",
+  "round": "round_2",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_ext_viewcode.py::test_viewcode_epub_disabled": null
+  },
+  "types_stripped": {
+   "tests/test_ext_viewcode.py::test_viewcode_epub_disabled": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_ext_viewcode.py::test_viewcode_epub_disabled": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sphinx-doc__sphinx-8721",
+  "round": "round_3",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G5",
+  "types_saved": {
+   "tests/test_ext_viewcode.py::test_viewcode_epub_disabled": null
+  },
+  "types_stripped": {
+   "tests/test_ext_viewcode.py::test_viewcode_epub_disabled": "AssertionError"
+  },
+  "statuses": {
+   "tests/test_ext_viewcode.py::test_viewcode_epub_disabled": "FAILED"
+  },
+  "reason_stripped": "failure_matches_issue",
+  "has_ansi": true
+ },
+ {
+  "iid": "sympy__sympy-15017",
+  "round": "round_1",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G4",
+  "types_saved": {
+   "sympy/tensor/array/tests/test_immutable_ndim_array.py::test_ndim_array_initiation": null
+  },
+  "types_stripped": {
+   "sympy/tensor/array/tests/test_immutable_ndim_array.py::test_ndim_array_initiation": null
+  },
+  "statuses": {
+   "test_ndim_array_initiation": "FAILED",
+   "test_reshape": "PASSED",
+   "test_iterator": "PASSED",
+   "test_sparse": "PASSED",
+   "test_calculation": "PASSED",
+   "test_ndim_array_converting": "PASSED",
+   "test_converting_functions": "PASSED",
+   "test_equality": "PASSED",
+   "test_arithmetic": "PASSED",
+   "test_higher_dimenions": "PASSED",
+   "test_rebuild_immutable_arrays": "PASSED",
+   "test_slices": "PASSED",
+   "test_diff_and_applyfunc": "PASSED",
+   "test_op_priority": "PASSED",
+   "test_symbolic_indexing": "PASSED",
+   "test_issue_12665": "PASSED"
+  },
+  "reason_stripped": "failure_unrelated",
+  "has_ansi": false
+ },
+ {
+  "iid": "sympy__sympy-15017",
+  "round": "round_2",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G4",
+  "types_saved": {
+   "sympy/tensor/array/tests/test_immutable_ndim_array.py::test_ndim_array_initiation": null
+  },
+  "types_stripped": {
+   "sympy/tensor/array/tests/test_immutable_ndim_array.py::test_ndim_array_initiation": null
+  },
+  "statuses": {
+   "test_ndim_array_initiation": "FAILED",
+   "test_reshape": "PASSED",
+   "test_iterator": "PASSED",
+   "test_sparse": "PASSED",
+   "test_calculation": "PASSED",
+   "test_ndim_array_converting": "PASSED",
+   "test_converting_functions": "PASSED",
+   "test_equality": "PASSED",
+   "test_arithmetic": "PASSED",
+   "test_higher_dimenions": "PASSED",
+   "test_rebuild_immutable_arrays": "PASSED",
+   "test_slices": "PASSED",
+   "test_diff_and_applyfunc": "PASSED",
+   "test_op_priority": "PASSED",
+   "test_symbolic_indexing": "PASSED",
+   "test_issue_12665": "PASSED"
+  },
+  "reason_stripped": "failure_unrelated",
+  "has_ansi": false
+ },
+ {
+  "iid": "sympy__sympy-15017",
+  "round": "round_3",
+  "saved": "G4",
+  "recomputed": "G4",
+  "ansi_stripped": "G4",
+  "types_saved": {
+   "sympy/tensor/array/tests/test_immutable_ndim_array.py::test_ndim_array_initiation": null
+  },
+  "types_stripped": {
+   "sympy/tensor/array/tests/test_immutable_ndim_array.py::test_ndim_array_initiation": null
+  },
+  "statuses": {
+   "test_ndim_array_initiation": "FAILED",
+   "test_reshape": "PASSED",
+   "test_iterator": "PASSED",
+   "test_sparse": "PASSED",
+   "test_calculation": "PASSED",
+   "test_ndim_array_converting": "PASSED",
+   "test_converting_functions": "PASSED",
+   "test_equality": "PASSED",
+   "test_arithmetic": "PASSED",
+   "test_higher_dimenions": "PASSED",
+   "test_rebuild_immutable_arrays": "PASSED",
+   "test_slices": "PASSED",
+   "test_diff_and_applyfunc": "PASSED",
+   "test_op_priority": "PASSED",
+   "test_symbolic_indexing": "PASSED",
+   "test_issue_12665": "PASSED"
+  },
+  "reason_stripped": "failure_unrelated",
+  "has_ansi": false
+ }
+]

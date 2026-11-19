@@ -1,0 +1,23 @@
+[
+  {
+    "round": 1,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 51.0,
+      "steps": 10,
+      "exit_status": "Submitted",
+      "patch_chars": 779
+    },
+    "check": {
+      "group": "G5",
+      "apply_ok": true,
+      "duration_s": 2.9,
+      "selection_mode": "functions",
+      "command": "pytest -rA --tb=long -p no:cacheprovider tests/test_self.py::TestRunTC::test_modify_sys_path",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": false,
+    "overrides": []
+  }
+]

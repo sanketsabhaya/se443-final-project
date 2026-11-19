@@ -1,0 +1,23 @@
+[
+  {
+    "round": 1,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 49.5,
+      "steps": 12,
+      "exit_status": "Submitted",
+      "patch_chars": 868
+    },
+    "check": {
+      "group": "G5",
+      "apply_ok": true,
+      "duration_s": 4.0,
+      "selection_mode": "functions",
+      "command": "pytest -rA --tb=long -p no:cacheprovider astropy/units/tests/test_quantity.py::TestQuantityCreation::test_preserve_float16_dtype",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": false,
+    "overrides": []
+  }
+]

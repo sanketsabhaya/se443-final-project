@@ -1,0 +1,80 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.11, pytest-8.3.4, pluggy-1.5.0
+rootdir: /testbed
+configfile: pytest.ini
+plugins: xdist-3.6.1, timeout-2.3.1, cov-6.0.0, rerunfailures-15.0
+collected 2 items
+
+lib/matplotlib/tests/test_pickle.py FF                                   [100%]
+
+=================================== FAILURES ===================================
+________________________ test_pickle_draggable[legend] _________________________
+
+draggable_artist = 'legend'
+
+    @pytest.mark.parametrize("draggable_artist", ["legend", "annotation"])
+    def test_pickle_draggable(draggable_artist):
+        # The canvas itself is not pickleable, but Figure.__getstate__ normally
+        # drops it.  Draggable artists must not keep a second reference to it.
+        class UnpicklableCanvas(FigureCanvasBase):
+            def __getstate__(self):
+                raise TypeError("cannot pickle canvas")
+    
+        fig = mfigure.Figure()
+        UnpicklableCanvas(fig)
+        ax = fig.subplots()
+        ax.plot([0, 1], [0, 1], label="speed")
+        if draggable_artist == "legend":
+            ax.legend().set_draggable(True)
+        else:
+            ax.annotate("foo", (0, 0)).draggable(True)
+    
+>       fig = pickle.loads(pickle.dumps(fig))
+
+lib/matplotlib/tests/test_pickle.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <matplotlib.tests.test_pickle.test_pickle_draggable.<locals>.UnpicklableCanvas object at 0x7dcc2740d110>
+
+    def __getstate__(self):
+>       raise TypeError("cannot pickle canvas")
+E       TypeError: cannot pickle canvas
+
+lib/matplotlib/tests/test_pickle.py:54: TypeError
+______________________ test_pickle_draggable[annotation] _______________________
+
+draggable_artist = 'annotation'
+
+    @pytest.mark.parametrize("draggable_artist", ["legend", "annotation"])
+    def test_pickle_draggable(draggable_artist):
+        # The canvas itself is not pickleable, but Figure.__getstate__ normally
+        # drops it.  Draggable artists must not keep a second reference to it.
+        class UnpicklableCanvas(FigureCanvasBase):
+            def __getstate__(self):
+                raise TypeError("cannot pickle canvas")
+    
+        fig = mfigure.Figure()
+        UnpicklableCanvas(fig)
+        ax = fig.subplots()
+        ax.plot([0, 1], [0, 1], label="speed")
+        if draggable_artist == "legend":
+            ax.legend().set_draggable(True)
+        else:
+            ax.annotate("foo", (0, 0)).draggable(True)
+    
+>       fig = pickle.loads(pickle.dumps(fig))
+
+lib/matplotlib/tests/test_pickle.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <matplotlib.tests.test_pickle.test_pickle_draggable.<locals>.UnpicklableCanvas object at 0x7dcc2740f950>
+
+    def __getstate__(self):
+>       raise TypeError("cannot pickle canvas")
+E       TypeError: cannot pickle canvas
+
+lib/matplotlib/tests/test_pickle.py:54: TypeError
+=========================== short test summary info ============================
+FAILED lib/matplotlib/tests/test_pickle.py::test_pickle_draggable[legend] - T...
+FAILED lib/matplotlib/tests/test_pickle.py::test_pickle_draggable[annotation]
+============================== 2 failed in 2.94s ===============================

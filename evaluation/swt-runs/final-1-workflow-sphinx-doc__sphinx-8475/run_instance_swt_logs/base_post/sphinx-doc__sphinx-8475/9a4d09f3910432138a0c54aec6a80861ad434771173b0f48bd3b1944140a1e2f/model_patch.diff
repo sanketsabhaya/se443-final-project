@@ -1,0 +1,48 @@
+diff --git a/tests/test_build_linkcheck.py b/tests/test_build_linkcheck.py
+index c09c81fe0..fa86e13fa 100644
+--- a/tests/test_build_linkcheck.py
++++ b/tests/test_build_linkcheck.py
+@@ -274,6 +274,43 @@ def test_follows_redirects_on_GET(app, capsys):
+     )
+ 
+ 
++@pytest.mark.sphinx('linkcheck', testroot='linkcheck-localserver', freshenv=True)
++def test_too_many_redirects_on_HEAD(app):
++    requests_seen = []
++
++    class TooManyRedirectsHandler(http.server.BaseHTTPRequestHandler):
++        def do_HEAD(self):
++            requests_seen.append("HEAD")
++            self.send_response(302, "Found")
++            self.send_header("Location", "http://localhost:7777/")
++            self.end_headers()
++
++        def do_GET(self):
++            requests_seen.append("GET")
++            self.send_response(200, "OK")
++            self.end_headers()
++
++    with http_server(TooManyRedirectsHandler):
++        app.builder.build_all()
++
++    with open(app.outdir / 'output.json') as fp:
++        content = json.load(fp)
++
++    # The HEAD request follows redirects until requests raises
++    # TooManyRedirects.  Linkcheck should then fall back to a GET request
++    # and report the link as working instead of broken.
++    assert content == {
++        "code": 0,
++        "status": "working",
++        "filename": "index.rst",
++        "lineno": 1,
++        "uri": "http://localhost:7777/",
++        "info": "",
++    }
++    assert requests_seen.count("GET") == 1
++    assert requests_seen[-1] == "GET"
++
++
+ class OKHandler(http.server.BaseHTTPRequestHandler):
+     def do_HEAD(self):
+         self.send_response(200, "OK")

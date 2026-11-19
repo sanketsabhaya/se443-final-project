@@ -1,0 +1,22 @@
+run_id: posthoc-gold-1
+predictions: gold
+instances: sphinx-doc__sphinx-8459 pylint-dev__pylint-6903 matplotlib__matplotlib-25311
+dataset: princeton-nlp/SWE-bench_Verified --filter_swt (HF offline, cached rev c104f840cc67f8b6eec6f759ebc8b2693d585d4a)
+swt_bench_commit: be12d4c8e7a5315a6bd60b0cad72736e96a4af3e
+start: 2026-11-14T14:11:03-06:00
+--- disk before
+D:\             200G   53G  148G  27% /mnt/d
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          18        0         29.1GB    19.04GB (65%)
+Containers      0         0         0B        0B
+Local Volumes   0         0         0B        0B
+Build Cache     0         0         0B        0B
+end: 2026-11-14T14:42:31-06:00
+exit_code: 0
+--- disk after
+D:\             200G   53G  148G  27% /mnt/d
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          21        0         32.97GB   12.81GB (38%)
+Containers      0         0         0B        0B
+Local Volumes   0         0         0B        0B
+Build Cache     0         0         0B        0B

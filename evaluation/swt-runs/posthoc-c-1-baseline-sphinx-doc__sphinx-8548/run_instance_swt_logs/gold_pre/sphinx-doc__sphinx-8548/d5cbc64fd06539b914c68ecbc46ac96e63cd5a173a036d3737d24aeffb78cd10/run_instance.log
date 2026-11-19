@@ -1,0 +1,177 @@
+2026-11-14 17:05:03,230 - WARNING - Starting evaluation at 1794697503.2299793
+2026-11-14 17:05:03,576 - INFO - Creating container for sphinx-doc__sphinx-8548...
+2026-11-14 17:05:03,661 - INFO - Container for sphinx-doc__sphinx-8548 created: 54a3419ce56054275d0675209b238b343e2ad7f5b73934a33c615604521a6db6
+2026-11-14 17:05:03,836 - INFO - Container for sphinx-doc__sphinx-8548 started: 54a3419ce56054275d0675209b238b343e2ad7f5b73934a33c615604521a6db6
+2026-11-14 17:05:04,132 - INFO - Git diff before:
+diff --git a/setup.py b/setup.py
+index 8d40de1a8..d4c679bdd 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+-    'docutils>=0.12',
++    'docutils>=0.12,<0.20',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tox.ini b/tox.ini
+index dbb705a3a..9f4fc3a32 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+     PYTEST_ADDOPTS = {env:PYTEST_ADDOPTS:} --color yes
+ commands=
+-    python -X dev -m pytest --durations 25 {posargs}
++    python -X dev -m pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-14 17:05:04,133 - INFO - Eval script for sphinx-doc__sphinx-8548 written to eval.sh, now applying to container...
+2026-11-14 17:05:20,867 - INFO - Test output for sphinx-doc__sphinx-8548 written to run_instance_swt_logs/gold_pre/sphinx-doc__sphinx-8548/d5cbc64fd06539b914c68ecbc46ac96e63cd5a173a036d3737d24aeffb78cd10/test_output.txt
+2026-11-14 17:05:20,946 - INFO - Git diff after:
+diff --git a/setup.py b/setup.py
+index 8d40de1a8..d4c679bdd 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+-    'docutils>=0.12',
++    'docutils>=0.12,<0.20',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tests/test_ext_autodoc_autoclass.py b/tests/test_ext_autodoc_autoclass.py
+index c36305de3..6130f233a 100644
+--- a/tests/test_ext_autodoc_autoclass.py
++++ b/tests/test_ext_autodoc_autoclass.py
+@@ -51,6 +51,61 @@ def test_classes(app):
+     ]
+ 
+ 
++@pytest.mark.sphinx('html', testroot='ext-autodoc')
++def test_instance_variable(app):
++    options = {'members': True}
++    actual = do_autodoc(app, 'class', 'target.instance_variable.Bar', options)
++    assert list(actual) == [
++        '',
++        '.. py:class:: Bar()',
++        '   :module: target.instance_variable',
++        '',
++        '',
++        '   .. py:attribute:: Bar.attr2',
++        '      :module: target.instance_variable',
++        '',
++        '      docstring bar',
++        '',
++        '',
++        '   .. py:attribute:: Bar.attr3',
++        '      :module: target.instance_variable',
++        '',
++        '      docstring bar',
++        '',
++    ]
++
++
++@pytest.mark.sphinx('html', testroot='ext-autodoc')
++def test_inherited_instance_variable(app):
++    options = {'members': True,
++               'inherited-members': True}
++    actual = do_autodoc(app, 'class', 'target.instance_variable.Bar', options)
++    assert list(actual) == [
++        '',
++        '.. py:class:: Bar()',
++        '   :module: target.instance_variable',
++        '',
++        '',
++        '   .. py:attribute:: Bar.attr1',
++        '      :module: target.instance_variable',
++        '',
++        '      docstring foo',
++        '',
++        '',
++        '   .. py:attribute:: Bar.attr2',
++        '      :module: target.instance_variable',
++        '',
++        '      docstring bar',
++        '',
++        '',
++        '   .. py:attribute:: Bar.attr3',
++        '      :module: target.instance_variable',
++        '',
++        '      docstring bar',
++        '',
++    ]
++
++
+ def test_decorators(app):
+     actual = do_autodoc(app, 'class', 'target.decorator.Baz')
+     assert list(actual) == [
+diff --git a/tox.ini b/tox.ini
+index dbb705a3a..9f4fc3a32 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+     PYTEST_ADDOPTS = {env:PYTEST_ADDOPTS:} --color yes
+ commands=
+-    python -X dev -m pytest --durations 25 {posargs}
++    python -X dev -m pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-14 17:05:20,946 - INFO - Git diff changed after running eval script
+2026-11-14 17:05:20,946 - INFO - Attempting to stop container exec.eval.x86_64.77d82541416cab86d0d86a.2a3b7df506a794abf577f7.132692082837392...
+2026-11-14 17:05:36,171 - INFO - Attempting to remove container exec.eval.x86_64.77d82541416cab86d0d86a.2a3b7df506a794abf577f7.132692082837392...
+2026-11-14 17:05:36,284 - INFO - Container exec.eval.x86_64.77d82541416cab86d0d86a.2a3b7df506a794abf577f7.132692082837392 removed.
+2026-11-14 17:05:36,284 - WARNING - End of eval at 1794697536.284332

@@ -1,0 +1,57 @@
+2026-11-13 20:15:54,074 - WARNING - Starting evaluation at 1794622554.0740407
+2026-11-13 20:15:54,397 - INFO - Creating container for matplotlib__matplotlib-20676...
+2026-11-13 20:15:54,478 - INFO - Container for matplotlib__matplotlib-20676 created: fdde575b70a542024812cb2e295408d03eeac4b1fa3a2df83df621bed6b43976
+2026-11-13 20:15:54,661 - INFO - Container for matplotlib__matplotlib-20676 started: fdde575b70a542024812cb2e295408d03eeac4b1fa3a2df83df621bed6b43976
+2026-11-13 20:15:55,644 - INFO - Git diff before:
+
+2026-11-13 20:15:55,644 - INFO - Eval script for matplotlib__matplotlib-20676 written to eval.sh, now applying to container...
+2026-11-13 20:16:15,687 - INFO - Test output for matplotlib__matplotlib-20676 written to run_instance_swt_logs/final-1-baseline-matplotlib__matplotlib-20676/pred_post__deepseek__deepseek-flash/matplotlib__matplotlib-20676/test_output.txt
+2026-11-13 20:16:15,766 - INFO - Git diff after:
+diff --git a/lib/matplotlib/tests/test_widgets.py b/lib/matplotlib/tests/test_widgets.py
+index 71ebd176f0..ff8bbc5eb0 100644
+--- a/lib/matplotlib/tests/test_widgets.py
++++ b/lib/matplotlib/tests/test_widgets.py
+@@ -259,6 +259,20 @@ def test_span_selector_drag(drag_from_anywhere):
+     assert tool.extents == (175, 185)
+ 
+ 
++@pytest.mark.parametrize('direction', ['horizontal', 'vertical'])
++def test_span_selector_interactive_axes_limits(direction):
++    fig, ax = plt.subplots()
++    ax.plot([10, 20], [10, 20])
++    xlim = ax.get_xlim()
++    ylim = ax.get_ylim()
++
++    widgets.SpanSelector(ax, lambda *args: None, direction, interactive=True)
++
++    fig.canvas.draw()
++    assert_allclose(ax.get_xlim(), xlim)
++    assert_allclose(ax.get_ylim(), ylim)
++
++
+ def test_span_selector_direction():
+     ax = get_ax()
+ 
+diff --git a/lib/matplotlib/widgets.py b/lib/matplotlib/widgets.py
+index a199e45d40..00759db0be 100644
+--- a/lib/matplotlib/widgets.py
++++ b/lib/matplotlib/widgets.py
+@@ -2156,7 +2156,12 @@ class SpanSelector(_SelectorWidget):
+             self.artists.append(self._rect)
+ 
+     def _setup_edge_handle(self, props):
+-        self._edge_handles = ToolLineHandles(self.ax, self.extents,
++        # Define initial position using the axis bounds to keep the same bounds
++        if self.direction == 'horizontal':
++            positions = self.ax.get_xbound()
++        else:
++            positions = self.ax.get_ybound()
++        self._edge_handles = ToolLineHandles(self.ax, positions,
+                                              direction=self.direction,
+                                              line_props=props,
+                                              useblit=self.useblit)
+2026-11-13 20:16:15,766 - INFO - Git diff changed after running eval script
+2026-11-13 20:16:15,766 - INFO - Attempting to stop container exec.eval.x86_64.ea14326ccfbf5376330c69.98285d7b47072b73e49460.130852018262160...
+2026-11-13 20:16:31,023 - INFO - Attempting to remove container exec.eval.x86_64.ea14326ccfbf5376330c69.98285d7b47072b73e49460.130852018262160...
+2026-11-13 20:16:31,057 - INFO - Container exec.eval.x86_64.ea14326ccfbf5376330c69.98285d7b47072b73e49460.130852018262160 removed.
+2026-11-13 20:16:31,057 - WARNING - End of eval at 1794622591.0575507

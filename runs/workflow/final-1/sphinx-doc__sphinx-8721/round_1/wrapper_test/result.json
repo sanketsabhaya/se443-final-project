@@ -1,0 +1,46 @@
+{
+  "start": "2026-11-14T12:42:40-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "tests/test_ext_viewcode.py"
+    ]
+  },
+  "end": "2026-11-14T12:43:02-06:00",
+  "duration_s": 22.2,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "tests/test_ext_viewcode.py",
+      "cls": null,
+      "func": "test_viewcode_epub_disabled",
+      "label": "tests/test_ext_viewcode.py::test_viewcode_epub_disabled"
+    }
+  ],
+  "command": "tox -epy39 -v -- tests/test_ext_viewcode.py::test_viewcode_epub_disabled",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "tests/test_ext_viewcode.py::test_viewcode_epub_disabled": "FAILED"
+  },
+  "group": "G4",
+  "evidence": {
+    "issue_exc": [],
+    "mode": "functions",
+    "collected": {
+      "tests/test_ext_viewcode.py::test_viewcode_epub_disabled": "FAILED"
+    },
+    "setup_markers": [],
+    "failure_types": {
+      "tests/test_ext_viewcode.py::test_viewcode_epub_disabled": null
+    },
+    "reason": "failure_unrelated"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": false,
+    "skip_or_xfail_added": false
+  }
+}

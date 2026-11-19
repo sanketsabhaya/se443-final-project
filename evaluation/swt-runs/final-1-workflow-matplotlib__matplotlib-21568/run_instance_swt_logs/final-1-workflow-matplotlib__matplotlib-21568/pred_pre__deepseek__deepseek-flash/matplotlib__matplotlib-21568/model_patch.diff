@@ -1,0 +1,19 @@
+diff --git a/lib/matplotlib/tests/test_dates.py b/lib/matplotlib/tests/test_dates.py
+index 96a3db1730..e78df13ba5 100644
+--- a/lib/matplotlib/tests/test_dates.py
++++ b/lib/matplotlib/tests/test_dates.py
+@@ -341,6 +341,14 @@ def test_date_formatter_usetex(delta, expected):
+     assert [formatter(loc) for loc in locator()] == expected
+ 
+ 
++def test_date_formatter_usetex_spacing():
++    # Test that separators in datetime labels are not spaced like TeX
++    # binary operators (see issue #21518).
++    formatter = mdates.DateFormatter("%d %H:%M", usetex=True)
++    result = formatter(mdates.date2num(datetime.datetime(2020, 1, 1)))
++    assert result == r'$\mathdefault{01\;00{:}00}$'
++
++
+ def test_drange():
+     """
+     This test should check if drange works as expected, and if all the

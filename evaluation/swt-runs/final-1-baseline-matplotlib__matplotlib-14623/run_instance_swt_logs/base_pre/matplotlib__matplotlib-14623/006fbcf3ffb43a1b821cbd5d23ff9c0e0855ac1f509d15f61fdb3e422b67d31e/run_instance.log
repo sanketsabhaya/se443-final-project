@@ -1,0 +1,14 @@
+2026-11-13 19:41:08,952 - WARNING - Starting evaluation at 1794620468.9519837
+2026-11-13 19:41:09,242 - INFO - Creating container for matplotlib__matplotlib-14623...
+2026-11-13 19:41:09,321 - INFO - Container for matplotlib__matplotlib-14623 created: 79196e372b11dd19288192436b5133778bb057892b0ebf2f1c0f1d3229f450e6
+2026-11-13 19:41:09,502 - INFO - Container for matplotlib__matplotlib-14623 started: 79196e372b11dd19288192436b5133778bb057892b0ebf2f1c0f1d3229f450e6
+2026-11-13 19:41:10,515 - INFO - Git diff before:
+
+2026-11-13 19:41:10,516 - INFO - Eval script for matplotlib__matplotlib-14623 written to eval.sh, now applying to container...
+2026-11-13 19:41:23,311 - INFO - Test output for matplotlib__matplotlib-14623 written to run_instance_swt_logs/base_pre/matplotlib__matplotlib-14623/006fbcf3ffb43a1b821cbd5d23ff9c0e0855ac1f509d15f61fdb3e422b67d31e/test_output.txt
+2026-11-13 19:41:23,384 - INFO - Git diff after:
+
+2026-11-13 19:41:23,384 - INFO - Attempting to stop container exec.eval.x86_64.4c04dd2da7e137006c2b92.ee2b23ea35e21165f9fdb8.133642663282320...
+2026-11-13 19:41:38,625 - INFO - Attempting to remove container exec.eval.x86_64.4c04dd2da7e137006c2b92.ee2b23ea35e21165f9fdb8.133642663282320...
+2026-11-13 19:41:38,659 - INFO - Container exec.eval.x86_64.4c04dd2da7e137006c2b92.ee2b23ea35e21165f9fdb8.133642663282320 removed.
+2026-11-13 19:41:38,659 - WARNING - End of eval at 1794620498.6592364

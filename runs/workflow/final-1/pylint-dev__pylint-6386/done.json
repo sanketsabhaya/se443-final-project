@@ -1,0 +1,8 @@
+{
+  "arm": "workflow",
+  "run_id": "final-1",
+  "instance_id": "pylint-dev__pylint-6386",
+  "finished": "2026-11-14T08:00:16-06:00",
+  "final_round": 3,
+  "stop_reason": "G5"
+}

@@ -1,0 +1,38 @@
+diff --git a/tests/test_markup.py b/tests/test_markup.py
+index a2bcb2dc1..b4b145736 100644
+--- a/tests/test_markup.py
++++ b/tests/test_markup.py
+@@ -572,3 +572,33 @@ def test_default_role2(app, status, warning):
+     assert_node(doctree[0][1], nodes.paragraph)
+     assert_node(doctree[0][1][0], nodes.inline, classes=["guilabel"])
+     assert_node(doctree[0][1][1], nodes.Text)
++
++
++@pytest.mark.parametrize('rst, expected_text, expected_children', [
++    (':kbd:`-`', '-', [('text', '-')]),
++    (':kbd:`+`', '+', [('text', '+')]),
++    (':kbd:`^`', '^', [('text', '^')]),
++    (':kbd:`Shift-+`', 'Shift-+',
++     [('literal', 'Shift'), ('text', '-'), ('literal', '+')]),
++    (':kbd:`Ctrl+-`', 'Ctrl+-',
++     [('literal', 'Ctrl'), ('text', '+'), ('literal', '-')]),
++    (':kbd:`Shift-^`', 'Shift-^',
++     [('literal', 'Shift'), ('text', '-'), ('literal', '^')]),
++])
++def test_kbd_role_with_separator_as_keystroke(parse, rst, expected_text,
++                                             expected_children):
++    document = parse(rst)
++    KeyboardTransform(document).apply()
++
++    node = document[0][0]
++    assert_node(node, nodes.literal, classes=['kbd'])
++    assert node.astext() == expected_text
++
++    children = []
++    for child in node:
++        if isinstance(child, nodes.literal):
++            children.append(('literal', child.astext()))
++        else:
++            children.append(('text', child.astext()))
++
++    assert children == expected_children

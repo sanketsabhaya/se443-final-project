@@ -1,0 +1,20 @@
+diff --git a/tests/test_self.py b/tests/test_self.py
+index 7c11601a..860dc2d4 100644
+--- a/tests/test_self.py
++++ b/tests/test_self.py
+@@ -814,6 +814,15 @@ a.py:1:4: E0001: Parsing failed: 'invalid syntax (<unknown>, line 1)' (syntax-er
+                 modify_sys_path()
+             assert sys.path == paths[1:]
+ 
++            # Only remove the first entry when it refers to the current
++            # working directory. Extensions can add their own entries that
++            # must not be discarded.
++            paths = ["/custom_pythonpath", *default_paths]
++            sys.path = copy(paths)
++            with _test_environ_pythonpath():
++                modify_sys_path()
++            assert sys.path == paths
++
+     @pytest.mark.parametrize(
+         "args",
+         [

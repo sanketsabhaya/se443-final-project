@@ -1,0 +1,76 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.20, pytest-8.3.4, pluggy-1.5.0
+rootdir: /testbed
+configfile: pytest.ini
+plugins: xdist-3.6.1, timeout-2.3.1, cov-5.0.0, rerunfailures-14.0
+collected 2 items
+
+lib/matplotlib/tests/test_axes.py FF                                     [100%]
+
+=================================== FAILURES ===================================
+_________________________ test_inverted_limits_log[x] __________________________
+
+axis = 'x'
+
+    @pytest.mark.parametrize("axis", ["x", "y"])
+    def test_inverted_limits_log(axis):
+        # Test gh:14647.  Setting inverted limits on a log-scaled axis should
+        # invert the axis rather than silently reordering the limits.
+        fig, ax = plt.subplots()
+        getattr(ax, "set_{}scale".format(axis))("log")
+        getattr(ax, "set_{}lim".format(axis))(10, 1)
+    
+>       assert getattr(ax, "get_{}lim".format(axis))() == (10, 1)
+E       assert (1.0, 10.0) == (10, 1)
+E         
+E         At index 0 diff: 1.0 != 10
+E         Use -v to get more diff
+
+lib/matplotlib/tests/test_axes.py:950: AssertionError
+_________________________ test_inverted_limits_log[y] __________________________
+
+axis = 'y'
+
+    @pytest.mark.parametrize("axis", ["x", "y"])
+    def test_inverted_limits_log(axis):
+        # Test gh:14647.  Setting inverted limits on a log-scaled axis should
+        # invert the axis rather than silently reordering the limits.
+        fig, ax = plt.subplots()
+        getattr(ax, "set_{}scale".format(axis))("log")
+        getattr(ax, "set_{}lim".format(axis))(10, 1)
+    
+>       assert getattr(ax, "get_{}lim".format(axis))() == (10, 1)
+E       assert (1.0, 10.0) == (10, 1)
+E         
+E         At index 0 diff: 1.0 != 10
+E         Use -v to get more diff
+
+lib/matplotlib/tests/test_axes.py:950: AssertionError
+=============================== warnings summary ===============================
+lib/matplotlib/__init__.py:200
+lib/matplotlib/__init__.py:200
+lib/matplotlib/__init__.py:200
+lib/matplotlib/__init__.py:200
+lib/matplotlib/__init__.py:200
+  /testbed/lib/matplotlib/__init__.py:200: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if LooseVersion(module.__version__) < minver:
+
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    other = LooseVersion(other)
+
+lib/matplotlib/__init__.py:332
+  /testbed/lib/matplotlib/__init__.py:332: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    version = LooseVersion(match.group(1))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED lib/matplotlib/tests/test_axes.py::test_inverted_limits_log[x] - asser...
+FAILED lib/matplotlib/tests/test_axes.py::test_inverted_limits_log[y] - asser...
+======================== 2 failed, 12 warnings in 3.06s ========================
+Matplotlib is not built with the correct FreeType version to run tests.  Set local_freetype=True in setup.cfg and rebuild. Expect many image comparison failures below. Expected freetype version 2.6.1. Found freetype version 2.11.1. Freetype build type is not local

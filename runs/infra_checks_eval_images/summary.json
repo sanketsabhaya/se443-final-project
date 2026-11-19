@@ -1,0 +1,42 @@
+[
+  {
+    "infra_check_on_eval_image": true,
+    "instance_id": "sphinx-doc__sphinx-8459",
+    "repo": "sphinx-doc/sphinx",
+    "version": "3.4",
+    "command": "tox -epy39 -v -- tests/test_util_matching.py::test_compile_matchers",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_s": 20.7,
+    "n_parsed": 1,
+    "target_matched": {
+      "tests/test_util_matching.py::test_compile_matchers": "PASSED"
+    },
+    "ok": true
+  },
+  {
+    "infra_check_on_eval_image": true,
+    "instance_id": "pylint-dev__pylint-6903",
+    "repo": "pylint-dev/pylint",
+    "version": "2.15",
+    "command": "pytest -rA --tb=long -p no:cacheprovider tests/test_numversion.py::test_numversion",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_s": 1.6,
+    "n_parsed": 11,
+    "target_matched": {
+      "tests/test_numversion.py::test_numversion[2.8.1-expected_numversion0]": "PASSED",
+      "tests/test_numversion.py::test_numversion[2.8.2+-expected_numversion1]": "PASSED",
+      "tests/test_numversion.py::test_numversion[3.0.0a0-expected_numversion2]": "PASSED",
+      "tests/test_numversion.py::test_numversion[3..0-expected_numversion3]": "PASSED",
+      "tests/test_numversion.py::test_numversion[1.a-expected_numversion4]": "PASSED",
+      "tests/test_numversion.py::test_numversion[-expected_numversion5]": "PASSED",
+      "tests/test_numversion.py::test_numversion[3.0.0b1-expected_numversion6]": "PASSED",
+      "tests/test_numversion.py::test_numversion[3.0.0rc1-expected_numversion7]": "PASSED",
+      "tests/test_numversion.py::test_numversion[3.0.0dev-234324234234f23abc4-expected_numversion8]": "PASSED",
+      "tests/test_numversion.py::test_numversion[pylint-2.4.7-expected_numversion9]": "PASSED",
+      "tests/test_numversion.py::test_numversion[2.8.3.dev3+g28c093c2.d20210428-expected_numversion10]": "PASSED"
+    },
+    "ok": true
+  }
+]

@@ -1,0 +1,283 @@
+{
+ "astropy__astropy-8872": {
+  "saved": [
+   "G5"
+  ],
+  "fixed": [
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "django__django-16485": {
+  "saved": [
+   "G5"
+  ],
+  "fixed": [
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "matplotlib__matplotlib-14623": {
+  "saved": [
+   "G3",
+   "G3",
+   "G3"
+  ],
+  "fixed": [
+   "G5",
+   "G5",
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "matplotlib__matplotlib-20676": {
+  "saved": [
+   "G5"
+  ],
+  "fixed": [
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "matplotlib__matplotlib-21568": {
+  "saved": [
+   "G5"
+  ],
+  "fixed": [
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "matplotlib__matplotlib-22719": {
+  "saved": [
+   "G5"
+  ],
+  "fixed": [
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "matplotlib__matplotlib-22865": {
+  "saved": [
+   "G3",
+   "G3",
+   "G5"
+  ],
+  "fixed": [
+   "G5",
+   "G5",
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "matplotlib__matplotlib-22871": {
+  "saved": [
+   "G5"
+  ],
+  "fixed": [
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "matplotlib__matplotlib-23299": {
+  "saved": [
+   "G5"
+  ],
+  "fixed": [
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "matplotlib__matplotlib-25311": {
+  "saved": [
+   "G5"
+  ],
+  "fixed": [
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "pylint-dev__pylint-6386": {
+  "saved": [
+   "G4",
+   "G4",
+   "G5"
+  ],
+  "fixed": [
+   "G4",
+   "G4",
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 3
+ },
+ "pylint-dev__pylint-6903": {
+  "saved": [
+   "G5"
+  ],
+  "fixed": [
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "pylint-dev__pylint-7080": {
+  "saved": [
+   "G5"
+  ],
+  "fixed": [
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "pylint-dev__pylint-7277": {
+  "saved": [
+   "G5"
+  ],
+  "fixed": [
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "sphinx-doc__sphinx-11510": {
+  "saved": [
+   "G4",
+   "G4",
+   "G4"
+  ],
+  "fixed": [
+   "G5",
+   "G5",
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "sphinx-doc__sphinx-8459": {
+  "saved": [
+   "G4",
+   "G4",
+   "G4"
+  ],
+  "fixed": [
+   "G5",
+   "G5",
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "sphinx-doc__sphinx-8475": {
+  "saved": [
+   "G4",
+   "G4",
+   "G4"
+  ],
+  "fixed": [
+   "G5",
+   "G5",
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "sphinx-doc__sphinx-8548": {
+  "saved": [
+   "G4",
+   "G4",
+   "G4"
+  ],
+  "fixed": [
+   "G5",
+   "G5",
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "sphinx-doc__sphinx-8551": {
+  "saved": [
+   "G4",
+   "G4",
+   "G4"
+  ],
+  "fixed": [
+   "G5",
+   "G5",
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "sphinx-doc__sphinx-8593": {
+  "saved": [
+   "G4",
+   "G4",
+   "G4"
+  ],
+  "fixed": [
+   "G5",
+   "G5",
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "sphinx-doc__sphinx-8595": {
+  "saved": [
+   "G4",
+   "G4",
+   "G4"
+  ],
+  "fixed": [
+   "G5",
+   "G5",
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "sphinx-doc__sphinx-8621": {
+  "saved": [
+   "G4",
+   "G4",
+   "G3"
+  ],
+  "fixed": [
+   "G5",
+   "G5",
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "sphinx-doc__sphinx-8638": {
+  "saved": [
+   "G4",
+   "G4",
+   "G4"
+  ],
+  "fixed": [
+   "G5",
+   "G5",
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "sphinx-doc__sphinx-8721": {
+  "saved": [
+   "G4",
+   "G4",
+   "G4"
+  ],
+  "fixed": [
+   "G5",
+   "G5",
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ },
+ "sympy__sympy-15017": {
+  "saved": [
+   "G4",
+   "G4",
+   "G4"
+  ],
+  "fixed": [
+   "G5",
+   "G5",
+   "G5"
+  ],
+  "fixed_would_stop_after_round": 1
+ }
+}

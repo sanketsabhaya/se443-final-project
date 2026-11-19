@@ -1,0 +1,131 @@
+
+
+---
+FEEDBACK FROM AN AUTOMATED TEST RUN (revision 1 of at most 2)
+
+A previous attempt at this task produced the test patch shown below. We applied it to the current,
+unfixed code in a fresh copy of the repository and ran only the tests it adds or changes.
+
+Command: pytest -rA --tb=long -p no:cacheprovider lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim
+Result: All of your tests PASS on the current, unfixed code.
+A test that passes on the unfixed code does not reproduce the issue. Change it so that it fails because of the problem described in the issue and would pass once the issue is fixed.
+
+Per-test results:
+lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim: PASSED
+
+Test output (last 79 lines):
+<test_output>
+============================= test session starts ==============================
+platform linux -- Python 3.8.20, pytest-8.3.4, pluggy-1.5.0
+rootdir: /testbed
+configfile: pytest.ini
+plugins: xdist-3.6.1, timeout-2.3.1, cov-5.0.0, rerunfailures-14.0
+collected 4 items
+
+lib/matplotlib/tests/test_axes.py ..FF                                   [100%]
+
+=================================== FAILURES ===================================
+___________________ test_inverted_limits_via_set_lim[log-x] ____________________
+
+axis = 'x', scale = 'log'
+
+    @pytest.mark.parametrize('axis', ['x', 'y'])
+    @pytest.mark.parametrize('scale', ['linear', 'log'])
+    def test_inverted_limits_via_set_lim(axis, scale):
+        # Test gh:14646: reversed limits must invert log-scaled axes too.
+        fig, ax = plt.subplots()
+        getattr(ax, f'set_{axis}scale')(scale)
+        getattr(ax, f'set_{axis}lim')(100, 1)
+    
+>       assert getattr(ax, f'get_{axis}lim')() == (100, 1)
+E       assert (1.0, 100.0) == (100, 1)
+E         
+E         At index 0 diff: 1.0 != 100
+E         Use -v to get more diff
+
+lib/matplotlib/tests/test_axes.py:950: AssertionError
+___________________ test_inverted_limits_via_set_lim[log-y] ____________________
+
+axis = 'y', scale = 'log'
+
+    @pytest.mark.parametrize('axis', ['x', 'y'])
+    @pytest.mark.parametrize('scale', ['linear', 'log'])
+    def test_inverted_limits_via_set_lim(axis, scale):
+        # Test gh:14646: reversed limits must invert log-scaled axes too.
+        fig, ax = plt.subplots()
+        getattr(ax, f'set_{axis}scale')(scale)
+        getattr(ax, f'set_{axis}lim')(100, 1)
+    
+>       assert getattr(ax, f'get_{axis}lim')() == (100, 1)
+E       assert (1.0, 100.0) == (100, 1)
+E         
+E         At index 0 diff: 1.0 != 100
+E         Use -v to get more diff
+
+lib/matplotlib/tests/test_axes.py:950: AssertionError
+=============================== warnings summary ===============================
+lib/matplotlib/__init__.py:200
+lib/matplotlib/__init__.py:200
+lib/matplotlib/__init__.py:200
+lib/matplotlib/__init__.py:200
+lib/matplotlib/__init__.py:200
+  /testbed/lib/matplotlib/__init__.py:200: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if LooseVersion(module.__version__) < minver:
+
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+../opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools/_distutils/version.py:337: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    other = LooseVersion(other)
+
+lib/matplotlib/__init__.py:332
+  /testbed/lib/matplotlib/__init__.py:332: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    version = LooseVersion(match.group(1))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[linear-x]
+PASSED lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[linear-y]
+FAILED lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[log-x]
+FAILED lib/matplotlib/tests/test_axes.py::test_inverted_limits_via_set_lim[log-y]
+=================== 2 failed, 2 passed, 12 warnings in 3.27s ===================
+Matplotlib is not built with the correct FreeType version to run tests.  Set local_freetype=True in setup.cfg and rebuild. Expect many image comparison failures below. Expected freetype version 2.6.1. Found freetype version 2.11.1. Freetype build type is not local
+</test_output>
+
+Previous test patch:
+<previous_patch>
+diff --git a/lib/matplotlib/tests/test_axes.py b/lib/matplotlib/tests/test_axes.py
+index 06ff5aca4..5b62c779d 100644
+--- a/lib/matplotlib/tests/test_axes.py
++++ b/lib/matplotlib/tests/test_axes.py
+@@ -939,6 +939,19 @@ def test_inverted_limits():
+     plt.close()
+ 
+ 
++@pytest.mark.parametrize('axis', ['x', 'y'])
++@pytest.mark.parametrize('scale', ['linear', 'log'])
++def test_inverted_limits_via_set_lim(axis, scale):
++    # Test gh:14646: reversed limits must invert log-scaled axes too.
++    fig, ax = plt.subplots()
++    getattr(ax, f'set_{axis}scale')(scale)
++    getattr(ax, f'set_{axis}lim')(100, 1)
++
++    assert getattr(ax, f'get_{axis}lim')() == (100, 1)
++    assert getattr(ax, f'{axis}axis_inverted')()
++    plt.close(fig)
++
++
+ @image_comparison(baseline_images=['nonfinite_limits'])
+ def test_nonfinite_limits():
+     x = np.arange(0., np.e, 0.01)
+
+</previous_patch>
+This patch is already applied in /testbed. Edit the test files in place, then submit as instructed.
+
+Please revise the test. It must still check the behavior described in the issue with meaningful
+assertions: do not delete or weaken assertions, and do not skip, xfail or otherwise disable the test
+just to change its outcome. As before, change test files only and do not fix the issue.

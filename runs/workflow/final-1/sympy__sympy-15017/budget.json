@@ -1,0 +1,44 @@
+{
+  "ledger": [
+    {
+      "round": 1,
+      "kind": "agent",
+      "steps": 22,
+      "seconds": 78.2
+    },
+    {
+      "round": 1,
+      "kind": "wrapper_test",
+      "steps": 1,
+      "seconds": 3.3
+    },
+    {
+      "round": 2,
+      "kind": "agent",
+      "steps": 7,
+      "seconds": 30.0
+    },
+    {
+      "round": 2,
+      "kind": "wrapper_test",
+      "steps": 1,
+      "seconds": 3.1
+    },
+    {
+      "round": 3,
+      "kind": "agent",
+      "steps": 23,
+      "seconds": 102.0
+    },
+    {
+      "round": 3,
+      "kind": "wrapper_test",
+      "steps": 1,
+      "seconds": 3.0
+    }
+  ],
+  "steps_used": 55,
+  "wall_s": 219.6,
+  "step_budget": 100,
+  "time_budget_s": 1800
+}

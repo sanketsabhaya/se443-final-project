@@ -1,0 +1,255 @@
+
+
+---
+FEEDBACK FROM AN AUTOMATED TEST RUN (revision 2 of at most 2)
+
+A previous attempt at this task produced the test patch shown below. We applied it to the current,
+unfixed code in a fresh copy of the repository and ran only the tests it adds or changes.
+
+Command: tox -epy39 -v -- tests/test_directive_other.py::test_include_source_read_event tests/test_directive_other.py::test_include_source_read_event_nested_includes
+Result: Your tests fail, but not in a way related to the issue.
+The failure (unknown error) does not look like the problem described in the issue. Fix the test so that it fails because of the behavior the issue describes, not because of a mistake in the test.
+
+Per-test results:
+tests/test_directive_other.py::test_include_source_read_event: FAILED
+tests/test_directive_other.py::test_include_source_read_event_nested_includes: FAILED
+
+Test output (last 150 lines):
+<test_output>
+not[39;49;00m [95min[39;49;00m content[90m[39;49;00m
+[1m[31mE       assert 'REPLACE_ME' not in '<!DOCTYPE h...dy>\n</html>'[0m
+[1m[31mE         [0m
+[1m[31mE         'REPLACE_ME' is contained here:[0m
+[1m[31mE           >[0m
+[1m[31mE           <p>&amp;REPLACE_ME;</p>[0m
+[1m[31mE           </section>[0m
+[1m[31mE           <section id="baz">[0m
+[1m[31mE           <h1>Baz<a class="headerlink" href="#baz" title="Link to this heading">¶</a></h1>...[0m
+[1m[31mE         [0m
+[1m[31mE         ...Full output truncated (69 lines hidden), use '-vv' to show[0m
+
+[1m[31mtests/test_directive_other.py[0m:164: AssertionError
+--------------------------- Captured stdout teardown ---------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-root/pytest-0/directive-include
+# outdir: /tmp/pytest-of-root/pytest-0/directive-include/_build/html
+# status: 
+[01mRunning Sphinx v7.2.0+/d5aa7d4f8[39;49;00m
+[01mbuilding [mo]: [39;49;00mall of 0 po files
+[01mwriting output... [39;49;00m
+[01mbuilding [html]: [39;49;00mall source files
+[01mupdating environment: [39;49;00m[new config] 5 added, 0 changed, 0 removed
+[2K[01mreading sources... [39;49;00m[ 20%] [35mbaz/baz[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 40%] [35mbaz/foo[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 60%] [35mfoo[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 80%] [35mincluded[39;49;00m
+[2K[01mreading sources... [39;49;00m[100%] [35mindex[39;49;00m
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mcopying assets... [39;49;00m[01mcopying static files... [39;49;00mdone
+[01mcopying extra files... [39;49;00mdone
+done
+[2K[01mwriting output... [39;49;00m[ 20%] [32mbaz/baz[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 40%] [32mbaz/foo[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 60%] [32mfoo[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 80%] [32mincluded[39;49;00m
+[2K[01mwriting output... [39;49;00m[100%] [32mindex[39;49;00m
+[01mgenerating indices... [39;49;00mgenindex done
+[01mwriting additional pages... [39;49;00msearch done
+[01mdumping search index in English (code: en)... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild succeeded.[39;49;00m
+
+The HTML pages are in ../tmp/pytest-of-root/pytest-0/directive-include/_build/html.
+
+# warning: 
+
+[31m[1m________________ test_include_source_read_event_nested_includes ________________[0m
+
+app = <SphinxTestApp buildername='html'>
+
+    [0m[37m@pytest[39;49;00m.mark.sphinx([33m'[39;49;00m[33mhtml[39;49;00m[33m'[39;49;00m, testroot=[33m'[39;49;00m[33mdirective-include[39;49;00m[33m'[39;49;00m, freshenv=[94mTrue[39;49;00m)[90m[39;49;00m
+    [94mdef[39;49;00m[90m [39;49;00m[92mtest_include_source_read_event_nested_includes[39;49;00m(app):[90m[39;49;00m
+    [90m[39;49;00m
+        [94mdef[39;49;00m[90m [39;49;00m[92msource_read_handler[39;49;00m(app, doc, source):[90m[39;49;00m
+            source[[94m0[39;49;00m] = source[[94m0[39;49;00m].replace([33m"[39;49;00m[33m#magical[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mamazing[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        app.connect([33m"[39;49;00m[33msource-read[39;49;00m[33m"[39;49;00m, source_read_handler)[90m[39;49;00m
+        app.build(force_all=[94mTrue[39;49;00m)[90m[39;49;00m
+        content = (app.outdir / [33m'[39;49;00m[33mindex.html[39;49;00m[33m'[39;49;00m).read_text(encoding=[33m'[39;49;00m[33mutf8[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+>       [94massert[39;49;00m [33m"[39;49;00m[33m#magical[39;49;00m[33m"[39;49;00m [95mnot[39;49;00m [95min[39;49;00m content[90m[39;49;00m
+[1m[31mE       AssertionError: assert '#magical' not in '<!DOCTYPE h...dy>\n</html>'[0m
+[1m[31mE         [0m
+[1m[31mE         '#magical' is contained here:[0m
+[1m[31mE           1>[0m
+[1m[31mE           <p>The #magical foo.</p>[0m
+[1m[31mE         ?        ++++++++[0m
+[1m[31mE           <p>Baz was here.</p>[0m
+[1m[31mE           <p>&amp;REPLACE_ME;</p>...[0m
+[1m[31mE         [0m
+[1m[31mE         ...Full output truncated (66 lines hidden), use '-vv' to show[0m
+
+[1m[31mtests/test_directive_other.py[0m:178: AssertionError
+--------------------------- Captured stdout teardown ---------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-root/pytest-0/directive-include
+# outdir: /tmp/pytest-of-root/pytest-0/directive-include/_build/html
+# status: 
+[01mRunning Sphinx v7.2.0+/d5aa7d4f8[39;49;00m
+[01mbuilding [mo]: [39;49;00mall of 0 po files
+[01mwriting output... [39;49;00m
+[01mbuilding [html]: [39;49;00mall source files
+[01mupdating environment: [39;49;00m[new config] 5 added, 0 changed, 0 removed
+[2K[01mreading sources... [39;49;00m[ 20%] [35mbaz/baz[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 40%] [35mbaz/foo[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 60%] [35mfoo[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 80%] [35mincluded[39;49;00m
+[2K[01mreading sources... [39;49;00m[100%] [35mindex[39;49;00m
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mcopying assets... [39;49;00m[01mcopying static files... [39;49;00mdone
+[01mcopying extra files... [39;49;00mdone
+done
+[2K[01mwriting output... [39;49;00m[ 20%] [32mbaz/baz[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 40%] [32mbaz/foo[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 60%] [32mfoo[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 80%] [32mincluded[39;49;00m
+[2K[01mwriting output... [39;49;00m[100%] [32mindex[39;49;00m
+[01mgenerating indices... [39;49;00mgenindex done
+[01mwriting additional pages... [39;49;00msearch done
+[01mdumping search index in English (code: en)... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild succeeded.[39;49;00m
+
+The HTML pages are in ../tmp/pytest-of-root/pytest-0/directive-include/_build/html.
+
+# warning: 
+
+============================= slowest 25 durations =============================
+0.43s setup    tests/test_directive_other.py::test_include_source_read_event
+0.18s call     tests/test_directive_other.py::test_include_source_read_event_nested_includes
+0.17s call     tests/test_directive_other.py::test_include_source_read_event
+0.02s setup    tests/test_directive_other.py::test_include_source_read_event_nested_includes
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+[36m[1m=========================== short test summary info ============================[0m
+[31mFAILED[0m tests/test_directive_other.py::[1mtest_include_source_read_event[0m - assert 'REPLACE_ME' not in '<!DOCTYPE h...dy>\n</html>'
+[31mFAILED[0m tests/test_directive_other.py::[1mtest_include_source_read_event_nested_includes[0m - AssertionError: assert '#magical' not in '<!DOCTYPE h...dy>\n</html>'
+[31m============================== [31m[1m2 failed[0m[31m in 0.92s[0m[31m ===============================[0m
+py39: exit 1 (1.64 seconds) /testbed> python -X dev -X warn_default_encoding -m pytest -rA --durations 25 tests/test_directive_other.py::test_include_source_read_event tests/test_directive_other.py::test_include_source_read_event_nested_includes pid=90
+.pkg: _exit> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True flit_core.buildapi
+.pkg: exit None (0.00 seconds) /testbed> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True flit_core.buildapi pid=72
+  py39: FAIL code 1 (13.29=setup[11.65]+cmd[1.64] seconds)
+  evaluation failed :( (13.85 seconds)
+</test_output>
+
+Previous test patch:
+<previous_patch>
+diff --git a/tests/roots/test-directive-include/baz/baz.rst b/tests/roots/test-directive-include/baz/baz.rst
+new file mode 100644
+index 000000000..0b74be0ba
+--- /dev/null
++++ b/tests/roots/test-directive-include/baz/baz.rst
+@@ -0,0 +1,6 @@
++Baz
++===
++
++.. include:: foo.rst
++
++Baz was here.
+diff --git a/tests/roots/test-directive-include/baz/foo.rst b/tests/roots/test-directive-include/baz/foo.rst
+new file mode 100644
+index 000000000..0f82e661b
+--- /dev/null
++++ b/tests/roots/test-directive-include/baz/foo.rst
+@@ -0,0 +1 @@
++The #magical foo.
+diff --git a/tests/roots/test-directive-include/conf.py b/tests/roots/test-directive-include/conf.py
+new file mode 100644
+index 000000000..a4768582f
+--- /dev/null
++++ b/tests/roots/test-directive-include/conf.py
+@@ -0,0 +1,2 @@
++project = 'test-directive-include'
++exclude_patterns = ['_build']
+diff --git a/tests/roots/test-directive-include/foo.rst b/tests/roots/test-directive-include/foo.rst
+new file mode 100644
+index 000000000..0f82e661b
+--- /dev/null
++++ b/tests/roots/test-directive-include/foo.rst
+@@ -0,0 +1 @@
++The #magical foo.
+diff --git a/tests/roots/test-directive-include/included.rst b/tests/roots/test-directive-include/included.rst
+new file mode 100644
+index 000000000..e63253568
+--- /dev/null
++++ b/tests/roots/test-directive-include/included.rst
+@@ -0,0 +1,4 @@
++Testing
++=======
++
++&REPLACE_ME;
+diff --git a/tests/roots/test-directive-include/index.rst b/tests/roots/test-directive-include/index.rst
+new file mode 100644
+index 000000000..78f29c3f8
+--- /dev/null
++++ b/tests/roots/test-directive-include/index.rst
+@@ -0,0 +1,8 @@
++This is a test
++==============
++
++.. include:: included.rst
++
++.. include:: baz/baz.rst
++
++&REPLACE_ME;
+diff --git a/tests/test_directive_other.py b/tests/test_directive_other.py
+index f221db075..564986e94 100644
+--- a/tests/test_directive_other.py
++++ b/tests/test_directive_other.py
+@@ -148,3 +148,32 @@ def test_toctree_twice(app):
+     assert_node(doctree[0][0],
+                 entries=[(None, 'foo'), (None, 'foo')],
+                 includefiles=['foo', 'foo'])
++
++
++@pytest.mark.sphinx('html', testroot='directive-include', freshenv=True)
++def test_include_source_read_event(app):
++    sources_reported = []
++
++    def source_read_handler(app, doc, source):
++        sources_reported.append(doc)
++        source[0] = source[0].replace("&REPLACE_ME;", "REPLACED")
++
++    app.connect("source-read", source_read_handler)
++    app.build(force_all=True)
++    content = (app.outdir / 'index.html').read_text(encoding='utf8')
++    assert "REPLACE_ME" not in content
++    assert content.count("REPLACED") == 2
++    assert "included" in sources_reported
++
++
++@pytest.mark.sphinx('html', testroot='directive-include', freshenv=True)
++def test_include_source_read_event_nested_includes(app):
++
++    def source_read_handler(app, doc, source):
++        source[0] = source[0].replace("#magical", "amazing")
++
++    app.connect("source-read", source_read_handler)
++    app.build(force_all=True)
++    content = (app.outdir / 'index.html').read_text(encoding='utf8')
++    assert "#magical" not in content
++    assert "The amazing foo." in content
+
+</previous_patch>
+This patch is already applied in /testbed. Edit the test files in place, then submit as instructed.
+
+Please revise the test. It must still check the behavior described in the issue with meaningful
+assertions: do not delete or weaken assertions, and do not skip, xfail or otherwise disable the test
+just to change its outcome. As before, change test files only and do not fix the issue.

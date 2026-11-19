@@ -1,0 +1,22 @@
+arm: workflow
+run_id: final-1
+instance_id: matplotlib__matplotlib-22871
+mini_swe_agent_commit: 04d809ceab9df28f9adaed044884180159172930
+config: /home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml sha256=eb3e1ccd8a5a1d024c4f320c36a814baeaa9b74e7fbbb88d1033c80186040902
+dataset: /home/mihir_barvaliya/.cache/huggingface/hub/datasets--princeton-nlp--SWE-bench_Verified/snapshots/c104f840cc67f8b6eec6f759ebc8b2693d585d4a
+image: docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-22871:latest
+model_name: deepseek/deepseek-flash (from config, unchanged)
+temperature: not sent -> DeepSeek API default 1.0 (no effect in thinking mode, which is the default)
+seed: not sent (DeepSeek chat API has no seed parameter)
+budget: 100 steps (model calls + 1 per wrapper check), 1800 s wall from round-1 start
+max_revisions: 2
+pull_start: 2026-11-14T02:25:56-06:00
+pull_end: 2026-11-14T02:25:57-06:00
+image_digest: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-22871@sha256:8db2e8a94d2543644a7885b195e1cf3f102925d5c296ae25c0e6c1e40a059842
+start: 2026-11-14T02:25:57-06:00
+end: 2026-11-14T02:27:18-06:00
+wall_s: 81.1
+steps_used: 17
+rounds: 1
+groups: ['G5']
+final_round: 1

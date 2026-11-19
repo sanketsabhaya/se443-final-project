@@ -1,0 +1,59 @@
+{
+  "start": "2026-11-14T08:53:43-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "tests/roots/test-directive-include/baz/baz.rst",
+      "tests/roots/test-directive-include/conf.py",
+      "tests/roots/test-directive-include/foo.rst",
+      "tests/roots/test-directive-include/text.txt",
+      "tests/test_directive_other.py"
+    ]
+  },
+  "end": "2026-11-14T08:53:59-06:00",
+  "duration_s": 15.9,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "tests/test_directive_other.py",
+      "cls": null,
+      "func": "test_include_source_read_event",
+      "label": "tests/test_directive_other.py::test_include_source_read_event"
+    },
+    {
+      "file": "tests/test_directive_other.py",
+      "cls": null,
+      "func": "test_include_source_read_event_nested_includes",
+      "label": "tests/test_directive_other.py::test_include_source_read_event_nested_includes"
+    }
+  ],
+  "command": "tox -epy39 -v -- tests/test_directive_other.py::test_include_source_read_event tests/test_directive_other.py::test_include_source_read_event_nested_includes",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "tests/test_directive_other.py::test_include_source_read_event": "FAILED",
+    "tests/test_directive_other.py::test_include_source_read_event_nested_includes": "FAILED"
+  },
+  "group": "G4",
+  "evidence": {
+    "issue_exc": [],
+    "mode": "functions",
+    "collected": {
+      "tests/test_directive_other.py::test_include_source_read_event": "FAILED",
+      "tests/test_directive_other.py::test_include_source_read_event_nested_includes": "FAILED"
+    },
+    "setup_markers": [],
+    "failure_types": {
+      "tests/test_directive_other.py::test_include_source_read_event": null,
+      "tests/test_directive_other.py::test_include_source_read_event_nested_includes": null
+    },
+    "reason": "failure_unrelated"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": false,
+    "skip_or_xfail_added": false
+  }
+}

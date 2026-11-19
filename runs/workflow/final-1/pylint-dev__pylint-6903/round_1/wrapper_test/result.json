@@ -1,0 +1,48 @@
+{
+  "start": "2026-11-14T08:13:49-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "tests/test_pylint_runners.py"
+    ]
+  },
+  "end": "2026-11-14T08:13:52-06:00",
+  "duration_s": 2.9,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "tests/test_pylint_runners.py",
+      "cls": null,
+      "func": "test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction",
+      "label": "tests/test_pylint_runners.py::test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction"
+    }
+  ],
+  "command": "pytest -rA --tb=long -p no:cacheprovider tests/test_pylint_runners.py::test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "tests/test_pylint_runners.py::test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction": "FAILED"
+  },
+  "group": "G5",
+  "evidence": {
+    "issue_exc": [
+      "ValueError"
+    ],
+    "mode": "functions",
+    "collected": {
+      "tests/test_pylint_runners.py::test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction": "FAILED"
+    },
+    "setup_markers": [],
+    "failure_types": {
+      "tests/test_pylint_runners.py::test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction": "ValueError"
+    },
+    "reason": "failure_matches_issue"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": false,
+    "skip_or_xfail_added": false
+  }
+}

@@ -1,0 +1,20 @@
+arm: baseline
+run_id: final-1
+instance_id: pylint-dev__pylint-7277
+mini_swe_agent_commit: 04d809ceab9df28f9adaed044884180159172930
+config: /home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml sha256=eb3e1ccd8a5a1d024c4f320c36a814baeaa9b74e7fbbb88d1033c80186040902
+dataset: /home/mihir_barvaliya/.cache/huggingface/hub/datasets--princeton-nlp--SWE-bench_Verified/snapshots/c104f840cc67f8b6eec6f759ebc8b2693d585d4a
+image: docker.io/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-7277:latest
+This is mini-swe-agent version 2.4.6.
+Check the v2 migration guide at https://klieret.short.gy/mini-v2-migration
+Loading global config from '/home/mihir_barvaliya/.config/mini-swe-agent/.env'
+model_name: deepseek/deepseek-flash
+model_kwargs_sent: {"drop_params": true, "parallel_tool_calls": true}
+temperature: not sent -> DeepSeek API default 1.0 (no effect in thinking mode, which is the default)
+seed: not sent (DeepSeek chat API has no seed parameter)
+pull_start: 2026-11-14T08:44:01-06:00
+pull_end: 2026-11-14T08:45:27-06:00
+image_digest: swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-7277@sha256:7fa6347aa793c61e3cc9cfb4fb132b6a4e11b0bb75f7093f4db0b010d8e5a40c
+start: 2026-11-14T08:45:27-06:00
+end: 2026-11-14T08:46:28-06:00
+exit_code: 0

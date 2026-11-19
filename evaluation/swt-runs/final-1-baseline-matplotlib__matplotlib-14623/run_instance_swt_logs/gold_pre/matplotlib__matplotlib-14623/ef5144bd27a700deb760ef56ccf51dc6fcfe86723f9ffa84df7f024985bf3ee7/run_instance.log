@@ -1,0 +1,32 @@
+2026-11-13 19:36:08,172 - WARNING - Starting evaluation at 1794620168.1719818
+2026-11-13 19:36:08,462 - INFO - Creating container for matplotlib__matplotlib-14623...
+2026-11-13 19:36:08,542 - INFO - Container for matplotlib__matplotlib-14623 created: 5a8d90eaa12ebe84695f56fe9f6e49c87a4654362a31841e36f01dc5cdd7e326
+2026-11-13 19:36:08,725 - INFO - Container for matplotlib__matplotlib-14623 started: 5a8d90eaa12ebe84695f56fe9f6e49c87a4654362a31841e36f01dc5cdd7e326
+2026-11-13 19:36:09,750 - INFO - Git diff before:
+
+2026-11-13 19:36:09,750 - INFO - Eval script for matplotlib__matplotlib-14623 written to eval.sh, now applying to container...
+2026-11-13 19:38:23,091 - INFO - Test output for matplotlib__matplotlib-14623 written to run_instance_swt_logs/gold_pre/matplotlib__matplotlib-14623/ef5144bd27a700deb760ef56ccf51dc6fcfe86723f9ffa84df7f024985bf3ee7/test_output.txt
+2026-11-13 19:38:23,173 - INFO - Git diff after:
+diff --git a/lib/matplotlib/tests/test_axes.py b/lib/matplotlib/tests/test_axes.py
+index 06ff5aca44..0aa2c4af72 100644
+--- a/lib/matplotlib/tests/test_axes.py
++++ b/lib/matplotlib/tests/test_axes.py
+@@ -936,7 +936,12 @@ def test_inverted_limits():
+ 
+     assert ax.get_xlim() == (-5, 4)
+     assert ax.get_ylim() == (5, -3)
+-    plt.close()
++
++    # Test inverting nonlinear axes.
++    fig, ax = plt.subplots()
++    ax.set_yscale("log")
++    ax.set_ylim(10, 1)
++    assert ax.get_ylim() == (10, 1)
+ 
+ 
+ @image_comparison(baseline_images=['nonfinite_limits'])
+2026-11-13 19:38:23,173 - INFO - Git diff changed after running eval script
+2026-11-13 19:38:23,173 - INFO - Attempting to stop container exec.eval.x86_64.4c04dd2da7e137006c2b92.ee2b23ea35e21165f9fdb8.133642663282320...
+2026-11-13 19:38:38,429 - INFO - Attempting to remove container exec.eval.x86_64.4c04dd2da7e137006c2b92.ee2b23ea35e21165f9fdb8.133642663282320...
+2026-11-13 19:38:38,474 - INFO - Container exec.eval.x86_64.4c04dd2da7e137006c2b92.ee2b23ea35e21165f9fdb8.133642663282320 removed.
+2026-11-13 19:38:38,474 - WARNING - End of eval at 1794620318.4742546

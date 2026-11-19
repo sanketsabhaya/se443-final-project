@@ -1,0 +1,14 @@
+2026-11-14 13:27:47,830 - WARNING - Starting evaluation at 1794684467.8302505
+2026-11-14 13:27:48,112 - INFO - Creating container for sympy__sympy-15017...
+2026-11-14 13:27:48,191 - INFO - Container for sympy__sympy-15017 created: 912780f4874490cbdfcc14d15257c90f1aee82475741474a81412a9513b09c0b
+2026-11-14 13:27:48,375 - INFO - Container for sympy__sympy-15017 started: 912780f4874490cbdfcc14d15257c90f1aee82475741474a81412a9513b09c0b
+2026-11-14 13:27:48,725 - INFO - Git diff before:
+
+2026-11-14 13:27:48,726 - INFO - Eval script for sympy__sympy-15017 written to eval.sh, now applying to container...
+2026-11-14 13:27:53,798 - INFO - Test output for sympy__sympy-15017 written to run_instance_swt_logs/base_pre/sympy__sympy-15017/ba7fc9732c146af3174de1a4985d82dc72b3335da3c8d373aa6d8e0dfe7331be/test_output.txt
+2026-11-14 13:27:53,876 - INFO - Git diff after:
+
+2026-11-14 13:27:53,876 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.10cf833f01c9d407cdc40c.130769944699728...
+2026-11-14 13:28:09,137 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.10cf833f01c9d407cdc40c.130769944699728...
+2026-11-14 13:28:09,179 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.10cf833f01c9d407cdc40c.130769944699728 removed.
+2026-11-14 13:28:09,179 - WARNING - End of eval at 1794684489.179506

@@ -1,0 +1,71 @@
+{
+  "start": "2026-11-14T12:07:06-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "tests/test_markup.py"
+    ]
+  },
+  "end": "2026-11-14T12:07:29-06:00",
+  "duration_s": 22.3,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "tests/test_markup.py",
+      "cls": null,
+      "func": "test_inline",
+      "label": "tests/test_markup.py::test_inline"
+    }
+  ],
+  "command": "tox -epy39 -v -- tests/test_markup.py::test_inline",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "tests/test_markup.py::test_inline[verify-:rfc:`2324`-<p><span": "PASSED",
+    "tests/test_markup.py::test_inline[verify-:rfc:`2324#id1`-<p><span": "PASSED",
+    "tests/test_markup.py::test_inline[verify_re-``code": "PASSED",
+    "tests/test_markup.py::test_inline[verify-:menuselection:`a": "PASSED",
+    "tests/test_markup.py::test_inline[verify-:menuselection:`&Foo": "PASSED",
+    "tests/test_markup.py::test_inline[verify-:guilabel:`&Foo": "PASSED",
+    "tests/test_markup.py::test_inline[verify-:guilabel:`Foo`-<p><span": "PASSED",
+    "tests/test_markup.py::test_inline[verify-:kbd:`space`-<p><kbd": "PASSED",
+    "tests/test_markup.py::test_inline[verify-:kbd:`Control+X`-<p><kbd": "PASSED",
+    "tests/test_markup.py::test_inline[verify-:kbd:`M-x": "PASSED",
+    "tests/test_markup.py::test_inline[verify_re-:option:`--with-option`-<p><code(": "PASSED",
+    "tests/test_markup.py::test_inline[verify-\"John\"-<p>\\u201cJohn\\u201d</p>-\\u201cJohn\\u201d]": "PASSED",
+    "tests/test_markup.py::test_inline[verify-``\"John\"``-<p><code": "PASSED",
+    "tests/test_markup.py::test_inline[verify-:manpage:`mp(1)`-<p><em": "PASSED",
+    "tests/test_markup.py::test_inline[verify-\\u0393\\\\\\\\\\u221e$-None-\\u0393\\\\textbackslash{}\\\\(\\\\infty\\\\)\\\\$]": "PASSED",
+    "tests/test_markup.py::test_inline[verify-::\\n\\n": "PASSED",
+    "tests/test_markup.py::test_inline[verify_re-`test": "PASSED",
+    "tests/test_markup.py::test_inline[verify-term\\n": "PASSED",
+    "tests/test_markup.py::test_inline[verify-term": "PASSED",
+    "tests/test_markup.py::test_inline[verify-..": "PASSED",
+    "tests/test_markup.py::test_inline[verify-:pep:`8`-<p><span": "FAILED",
+    "tests/test_markup.py::test_inline[verify-:pep:`8#id1`-<p><span": "FAILED",
+    "tests/test_markup.py::test_inline[verify-:kbd:`Alt+^`-<p><kbd": "FAILED",
+    "tests/test_markup.py::test_inline[verify-:kbd:`-`-<p><kbd": "FAILED",
+    "tests/test_markup.py::test_inline[verify-:kbd:`+`-<p><kbd": "FAILED",
+    "tests/test_markup.py::test_inline[verify-:kbd:`^`-<p><kbd": "FAILED",
+    "tests/test_markup.py::test_inline[verify-:kbd:`Shift-+`-<p><kbd": "FAILED",
+    "tests/test_markup.py::test_inline[verify-:kbd:`Ctrl+-`-<p><kbd": "FAILED",
+    "tests/test_markup.py::test_inline[verify-:kbd:`Shift-^`-<p><kbd": "FAILED"
+  },
+  "group": "G3",
+  "evidence": {
+    "issue_exc": [],
+    "mode": "functions",
+    "collected": {
+      "tests/test_markup.py::test_inline": "PASSED"
+    },
+    "setup_markers": [],
+    "reason": "no_target_failed"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": true,
+    "skip_or_xfail_added": false
+  }
+}

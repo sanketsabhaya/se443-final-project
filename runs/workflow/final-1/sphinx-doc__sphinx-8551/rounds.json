@@ -1,0 +1,73 @@
+[
+  {
+    "round": 1,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 127.7,
+      "steps": 33,
+      "exit_status": "Submitted",
+      "patch_chars": 1754
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 21.0,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_domain_py.py::test_doc_field_xref_uses_current_module",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": false,
+    "overrides": []
+  },
+  {
+    "round": 2,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 133.0,
+      "steps": 33,
+      "exit_status": "Submitted",
+      "patch_chars": 2002
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 21.3,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_domain_py.py::test_doc_field_xref_uses_current_module",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": true,
+    "overrides": [
+      "agent.step_limit=66",
+      "agent.wall_time_limit_seconds=1651",
+      "run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply"
+    ]
+  },
+  {
+    "round": 3,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 91.4,
+      "steps": 16,
+      "exit_status": "Submitted",
+      "patch_chars": 1937
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 21.1,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_domain_py.py::test_doc_field_xref_uses_current_module",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": true,
+    "overrides": [
+      "agent.step_limit=32",
+      "agent.wall_time_limit_seconds=1496",
+      "run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply"
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+2026-11-14 15:49:12,238 - WARNING - Starting evaluation at 1794692952.2381248
+2026-11-14 15:49:12,606 - INFO - Creating container for pylint-dev__pylint-6386...
+2026-11-14 15:49:12,680 - INFO - Container for pylint-dev__pylint-6386 created: 37931bdacb0164a02b2f33e7abec850fcc10a5c185e02be8c1d729ce33bd08cb
+2026-11-14 15:49:12,849 - INFO - Container for pylint-dev__pylint-6386 started: 37931bdacb0164a02b2f33e7abec850fcc10a5c185e02be8c1d729ce33bd08cb
+2026-11-14 15:49:13,078 - INFO - Git diff before:
+
+2026-11-14 15:49:13,078 - INFO - Eval script for pylint-dev__pylint-6386 written to eval.sh, now applying to container...
+2026-11-14 15:49:19,170 - INFO - Test output for pylint-dev__pylint-6386 written to run_instance_swt_logs/gold_pre/pylint-dev__pylint-6386/763e5ed70b4305084f6aba1174081a3b96459310a22bad05e6887dc3e168d8c4/test_output.txt
+2026-11-14 15:49:19,250 - INFO - Git diff after:
+diff --git a/tests/config/test_config.py b/tests/config/test_config.py
+index f91e6cbf4..712d291ed 100644
+--- a/tests/config/test_config.py
++++ b/tests/config/test_config.py
+@@ -100,3 +100,10 @@ def test_unknown_py_version(capsys: CaptureFixture) -> None:
+         Run([str(EMPTY_MODULE), "--py-version=the-newest"], exit=False)
+     output = capsys.readouterr()
+     assert "the-newest has an invalid format, should be a version string." in output.err
++
++
++def test_short_verbose(capsys: CaptureFixture) -> None:
++    """Check that we correctly handle the -v flag."""
++    Run([str(EMPTY_MODULE), "-v"], exit=False)
++    output = capsys.readouterr()
++    assert "Using config file" in output.err
+2026-11-14 15:49:19,251 - INFO - Git diff changed after running eval script
+2026-11-14 15:49:19,251 - INFO - Attempting to stop container exec.eval.x86_64.efca49fa1fde6067d6f416.558acdbe3fad3b7b8a3e50.135168093673360...
+2026-11-14 15:49:34,507 - INFO - Attempting to remove container exec.eval.x86_64.efca49fa1fde6067d6f416.558acdbe3fad3b7b8a3e50.135168093673360...
+2026-11-14 15:49:34,544 - INFO - Container exec.eval.x86_64.efca49fa1fde6067d6f416.558acdbe3fad3b7b8a3e50.135168093673360 removed.
+2026-11-14 15:49:34,544 - WARNING - End of eval at 1794692974.544159

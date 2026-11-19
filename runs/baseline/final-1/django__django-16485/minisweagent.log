@@ -1,0 +1,7 @@
+2026-11-13 19:14:18,508 - minisweagent - INFO - Loading dataset /home/mihir_barvaliya/.cache/huggingface/hub/datasets--princeton-nlp--SWE-bench_Verified/snapshots/c104f840cc67f8b6eec6f759ebc8b2693d585d4a, split test...
+2026-11-13 19:14:18,594 - minisweagent - INFO - Instance filter: 500 -> 1 instances
+2026-11-13 19:14:18,595 - minisweagent - INFO - Running on 1 instances...
+2026-11-13 19:14:18,596 - minisweagent - INFO - Building agent config from specs: ['/home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml']
+2026-11-13 19:14:22,607 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-3d7386e2 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.django_1776_django-16485:latest sleep 2h
+2026-11-13 19:14:23,009 - minisweagent.environment - INFO - Started container minisweagent-3d7386e2 with ID 567f55221f50c9259039a9cfcc92d351c09360c41bef330324f2dc866d9d570d
+2026-11-13 19:14:51,008 - minisweagent - INFO - Saved trajectory to '/home/mihir_barvaliya/se443/project/runs/baseline/final-1/django__django-16485/django__django-16485/django__django-16485.traj.json'

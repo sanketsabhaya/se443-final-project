@@ -1,0 +1,124 @@
+This is mini-swe-agent version 2.4.6.
+Check the v2 migration guide at https://klieret.short.gy/mini-v2-migration
+Loading global config from '/home/mihir_barvaliya/.config/mini-swe-agent/.env'
+minisweagent: INFO: Results will be saved to                                    
+/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-115
+10/round_2/mini                                                                 
+Logging to '/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-11510/round_2/mini/minisweagent.log'
+minisweagent: INFO: Loading dataset                                             
+/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-115
+10/round_2/dataset, split test...                                               
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 1 examples [00:00, 71.72 examples/s]
+minisweagent: INFO: Running on 1 instances...                                   
+minisweagent: INFO: Building agent config from specs:                           
+['/home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml',              
+'agent.step_limit=76', 'agent.wall_time_limit_seconds=1701',                    
+'run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d |   
+git apply']                                                                     
+minisweagent.environment: DEBUG: Starting container with command: docker run -d 
+--name minisweagent-c38805bb -w /testbed --rm                                   
+docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-11510:latest sleep 2h
+minisweagent.environment: INFO: Started container minisweagent-c38805bb with ID 
+84f2bf3cae275bb4a2cb26b0f3c314249532d90a1d53d3ec7f31a97cbee49d49                
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: INFO: Saved trajectory to                                         
+'/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-11
+510/round_2/mini/sphinx-doc__sphinx-11510/sphinx-doc__sphinx-11510.traj.json'   
+  Overall Progress ($0.02) ━━━━━━━━━━━━━━━━━━━━━━━ 1/1 100% 0:03:06 eta: 0:00:00
+┏━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Exit Status ┃ Count ┃ Most recent instances                                  ┃
+┡━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Submitted   │     1 │ sphinx-doc__sphinx-11510                               │
+└─────────────┴───────┴────────────────────────────────────────────────────────┘

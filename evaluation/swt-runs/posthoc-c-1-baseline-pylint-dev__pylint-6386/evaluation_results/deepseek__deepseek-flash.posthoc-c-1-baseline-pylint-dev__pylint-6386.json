@@ -1,0 +1,20 @@
+{
+    "total_instances": 1,
+    "completed_instances": 0,
+    "resolved_instances": 1,
+    "unresolved_instances": 0,
+    "error_instances": 0,
+    "Mean coverage": 1.0,
+    "Mean coverage delta": 0.7777777777777778,
+    "unstopped_instances": 0,
+    "completed_ids": [],
+    "resolved_ids": [
+        "pylint-dev__pylint-6386"
+    ],
+    "unresolved_ids": [],
+    "error_ids": [],
+    "unstopped_containers": [],
+    "unremoved_images": [
+        "exec.eval.x86_64.efca49fa1fde6067d6f416.558acdbe3fad3b7b8a3e50:latest"
+    ]
+}

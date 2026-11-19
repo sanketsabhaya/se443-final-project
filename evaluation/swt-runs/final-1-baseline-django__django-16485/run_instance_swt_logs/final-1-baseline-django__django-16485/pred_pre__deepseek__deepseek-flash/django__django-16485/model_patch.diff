@@ -1,0 +1,13 @@
+diff --git a/tests/template_tests/filter_tests/test_floatformat.py b/tests/template_tests/filter_tests/test_floatformat.py
+index 361a888ce3..db8498ff1c 100644
+--- a/tests/template_tests/filter_tests/test_floatformat.py
++++ b/tests/template_tests/filter_tests/test_floatformat.py
+@@ -108,6 +108,8 @@ class FunctionTests(SimpleTestCase):
+         self.assertEqual(floatformat(0, 6), "0.000000")
+         self.assertEqual(floatformat(0, 7), "0.0000000")
+         self.assertEqual(floatformat(0, 10), "0.0000000000")
++        self.assertEqual(floatformat("0.00", 0), "0")
++        self.assertEqual(floatformat(Decimal("0.00"), 0), "0")
+         self.assertEqual(
+             floatformat(0.000000000000000000015, 20), "0.00000000000000000002"
+         )

@@ -1,0 +1,28 @@
+diff --git a/src/constants.py b/src/constants.py
+index 4805b26..1faa920 100644
+--- a/src/constants.py
++++ b/src/constants.py
+@@ -1537,3 +1537,23 @@ USE_X86 = {
+     "sympy__sympy-15222",
+     "sympy__sympy-19201",
+ }
++
++
++# ===== POST-HOC SENSITIVITY ANALYSIS (SE443 final-1), NOT the official harness =====
++# Harness-side environment fixes only; applied after final-1; predictions unchanged.
++# C1 sphinx 3.4/3.5/4.0: docutils 0.23 (drops roman) -> cap docutils below 0.20 (SWE-bench image had 0.19).
++for _k in ["3.4", "3.5", "4.0"]:
++    MAP_VERSION_TO_INSTALL_SPHINX[_k]["pre_install"] = MAP_VERSION_TO_INSTALL_SPHINX[_k]["pre_install"] + [
++        "sed -i \"s/'docutils>=0\\.1\\([0-9]\\)'/'docutils>=0.1\\1,<0.20'/\" setup.py",
++    ]
++# C2 pylint 2.14/2.15: setuptools>=64 PEP 660 editable install hides /testbed/pylint from astroid's module
++# lookup -> checkers not registered. Use setuptools' compat editable mode (path-based .pth, like legacy).
++for _k in ["2.14", "2.15"]:
++    MAP_VERSION_TO_INSTALL_PYLINT[_k] = dict(MAP_VERSION_TO_INSTALL_PYLINT[_k])
++    MAP_VERSION_TO_INSTALL_PYLINT[_k]["install"] = "python -m pip install -e . --config-settings editable_mode=compat"
++# C3 matplotlib 3.7: conda's setuptools-scm 10 left vcs-versioning installed next to pip's setuptools-scm 7.1.0;
++# its deprecated 'release-branch-semver' scheme warns and pytest turns that into an error.
++MAP_VERSION_TO_INSTALL_MATPLOTLIB["3.7"]["pre_install"] = MAP_VERSION_TO_INSTALL_MATPLOTLIB["3.7"]["pre_install"] + [
++    "python -m pip uninstall -y vcs-versioning || true",
++]
++MAP_VERSION_TO_INSTALL["pylint-dev/pylint"] = MAP_VERSION_TO_INSTALL_PYLINT

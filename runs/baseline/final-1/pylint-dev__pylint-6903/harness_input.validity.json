@@ -1,0 +1,11 @@
+{
+  "pylint-dev__pylint-6903": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "tests/test_pylint_runners.py"
+    ],
+    "non_test_files": [],
+    "model_name_or_path": "deepseek/deepseek-flash"
+  }
+}

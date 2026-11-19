@@ -1,0 +1,46 @@
+{
+  "start": "2026-11-13T20:29:10-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "lib/matplotlib/tests/test_dates.py"
+    ]
+  },
+  "end": "2026-11-13T20:29:15-06:00",
+  "duration_s": 4.8,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "lib/matplotlib/tests/test_dates.py",
+      "cls": null,
+      "func": "test_date_formatter_usetex_spacing",
+      "label": "lib/matplotlib/tests/test_dates.py::test_date_formatter_usetex_spacing"
+    }
+  ],
+  "command": "pytest -rA --tb=long -p no:cacheprovider lib/matplotlib/tests/test_dates.py::test_date_formatter_usetex_spacing",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "lib/matplotlib/tests/test_dates.py::test_date_formatter_usetex_spacing": "FAILED"
+  },
+  "group": "G5",
+  "evidence": {
+    "issue_exc": [],
+    "mode": "functions",
+    "collected": {
+      "lib/matplotlib/tests/test_dates.py::test_date_formatter_usetex_spacing": "FAILED"
+    },
+    "setup_markers": [],
+    "failure_types": {
+      "lib/matplotlib/tests/test_dates.py::test_date_formatter_usetex_spacing": "AssertionError"
+    },
+    "reason": "failure_matches_issue"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": false,
+    "skip_or_xfail_added": false
+  }
+}

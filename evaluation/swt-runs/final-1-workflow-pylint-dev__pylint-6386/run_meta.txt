@@ -1,0 +1,22 @@
+run_id: final-1-workflow-pylint-dev__pylint-6386
+predictions: /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6386/harness_input.jsonl
+instances: pylint-dev__pylint-6386
+dataset: princeton-nlp/SWE-bench_Verified --filter_swt (HF offline, cached rev c104f840cc67f8b6eec6f759ebc8b2693d585d4a)
+swt_bench_commit: be12d4c8e7a5315a6bd60b0cad72736e96a4af3e
+start: 2026-11-14T08:08:43-06:00
+--- disk before
+D:\             200G   53G  148G  27% /mnt/d
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          17        0         31.5GB    19.26GB (61%)
+Containers      0         0         0B        0B
+Local Volumes   0         0         0B        0B
+Build Cache     0         0         0B        0B
+end: 2026-11-14T08:11:12-06:00
+exit_code: 0
+--- disk after
+D:\             200G   53G  148G  27% /mnt/d
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          17        0         31.5GB    19.26GB (61%)
+Containers      0         0         0B        0B
+Local Volumes   0         0         0B        0B
+Build Cache     0         0         0B        0B

@@ -1,0 +1,25 @@
+diff --git a/lib/matplotlib/tests/test_scale.py b/lib/matplotlib/tests/test_scale.py
+index e406b1b9a..483e89249 100644
+--- a/lib/matplotlib/tests/test_scale.py
++++ b/lib/matplotlib/tests/test_scale.py
+@@ -123,6 +123,20 @@ def test_logscale_invert_transform():
+     assert isinstance(Log10Transform().inverted(), InvertedLog10Transform)
+ 
+ 
++def test_logscale_inverted_limits():
++    # Explicitly inverted limits should be preserved on log-scaled axes.
++    fig, ax = plt.subplots()
++    ax.set_yscale('log')
++    ax.set_ylim(100, 1)
++    assert ax.get_ylim() == (100, 1)
++    assert ax.yaxis_inverted()
++
++    ax.set_xscale('log')
++    ax.set_xlim(100, 1)
++    assert ax.get_xlim() == (100, 1)
++    assert ax.xaxis_inverted()
++
++
+ def test_logscale_transform_repr():
+     # check that repr of log transform succeeds
+     fig, ax = plt.subplots()

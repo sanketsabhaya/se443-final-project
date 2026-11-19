@@ -1,0 +1,14 @@
+{
+  "final_round": 3,
+  "reason": "latest round whose patch applied in the wrapper check",
+  "stop_reason": "G5",
+  "rounds": 3,
+  "revisions": 2,
+  "groups": [
+    "G3",
+    "G3",
+    "G5"
+  ],
+  "steps_used": 68,
+  "wall_s": 320.2
+}

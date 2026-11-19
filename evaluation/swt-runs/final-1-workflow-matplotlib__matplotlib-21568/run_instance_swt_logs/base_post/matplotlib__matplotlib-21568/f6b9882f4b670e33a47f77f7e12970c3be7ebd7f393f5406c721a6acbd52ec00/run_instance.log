@@ -1,0 +1,31 @@
+2026-11-13 20:44:05,651 - WARNING - Starting evaluation at 1794624245.6510577
+2026-11-13 20:44:06,022 - INFO - Creating container for matplotlib__matplotlib-21568...
+2026-11-13 20:44:06,112 - INFO - Container for matplotlib__matplotlib-21568 created: 8d041648bfdb5cb89ce4d03b184bc1a6d1633c1eddaae9d8f46247fd72c38625
+2026-11-13 20:44:06,304 - INFO - Container for matplotlib__matplotlib-21568 started: 8d041648bfdb5cb89ce4d03b184bc1a6d1633c1eddaae9d8f46247fd72c38625
+2026-11-13 20:44:07,340 - INFO - Git diff before:
+
+2026-11-13 20:44:07,341 - INFO - Eval script for matplotlib__matplotlib-21568 written to eval.sh, now applying to container...
+2026-11-13 20:44:29,910 - INFO - Test output for matplotlib__matplotlib-21568 written to run_instance_swt_logs/base_post/matplotlib__matplotlib-21568/f6b9882f4b670e33a47f77f7e12970c3be7ebd7f393f5406c721a6acbd52ec00/test_output.txt
+2026-11-13 20:44:29,988 - INFO - Git diff after:
+diff --git a/lib/matplotlib/dates.py b/lib/matplotlib/dates.py
+index 0766156d64..69f5890629 100644
+--- a/lib/matplotlib/dates.py
++++ b/lib/matplotlib/dates.py
+@@ -595,8 +595,11 @@ def _wrap_in_tex(text):
+     p = r'([a-zA-Z]+)'
+     ret_text = re.sub(p, r'}$\1$\\mathdefault{', text)
+ 
+-    # Braces ensure dashes are not spaced like binary operators.
+-    ret_text = '$\\mathdefault{'+ret_text.replace('-', '{-}')+'}$'
++    # Braces ensure symbols are not spaced like binary operators.
++    ret_text = ret_text.replace('-', '{-}').replace(':', '{:}')
++    # To not concatenate space between numbers.
++    ret_text = ret_text.replace(' ', r'\;')
++    ret_text = '$\\mathdefault{' + ret_text + '}$'
+     ret_text = ret_text.replace('$\\mathdefault{}$', '')
+     return ret_text
+2026-11-13 20:44:29,988 - INFO - Git diff changed after running eval script
+2026-11-13 20:44:29,988 - INFO - Attempting to stop container exec.eval.x86_64.ea14326ccfbf5376330c69.d07f6a72057eeedea9660a.137989196956752...
+2026-11-13 20:44:45,231 - INFO - Attempting to remove container exec.eval.x86_64.ea14326ccfbf5376330c69.d07f6a72057eeedea9660a.137989196956752...
+2026-11-13 20:44:45,265 - INFO - Container exec.eval.x86_64.ea14326ccfbf5376330c69.d07f6a72057eeedea9660a.137989196956752 removed.
+2026-11-13 20:44:45,266 - WARNING - End of eval at 1794624285.2660944

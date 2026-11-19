@@ -1,0 +1,39 @@
+2026-11-13 19:24:56,415 - WARNING - Starting evaluation at 1794619496.4154642
+2026-11-13 19:35:06,897 - INFO - Creating container for matplotlib__matplotlib-14623...
+2026-11-13 19:35:07,011 - INFO - Container for matplotlib__matplotlib-14623 created: d2a53edec45df3cf583e47edf60876bfe5df77a73184cc232c177dd39f2e3880
+2026-11-13 19:35:07,261 - INFO - Container for matplotlib__matplotlib-14623 started: d2a53edec45df3cf583e47edf60876bfe5df77a73184cc232c177dd39f2e3880
+2026-11-13 19:35:08,346 - INFO - Git diff before:
+
+2026-11-13 19:35:08,348 - INFO - Eval script for matplotlib__matplotlib-14623 written to eval.sh, now applying to container...
+2026-11-13 19:35:22,145 - INFO - Test output for matplotlib__matplotlib-14623 written to run_instance_swt_logs/final-1-baseline-matplotlib__matplotlib-14623/pred_pre__deepseek__deepseek-flash/matplotlib__matplotlib-14623/test_output.txt
+2026-11-13 19:35:22,228 - INFO - Git diff after:
+diff --git a/lib/matplotlib/tests/test_scale.py b/lib/matplotlib/tests/test_scale.py
+index e406b1b9a0..483e892494 100644
+--- a/lib/matplotlib/tests/test_scale.py
++++ b/lib/matplotlib/tests/test_scale.py
+@@ -123,6 +123,20 @@ def test_logscale_invert_transform():
+     assert isinstance(Log10Transform().inverted(), InvertedLog10Transform)
+ 
+ 
++def test_logscale_inverted_limits():
++    # Explicitly inverted limits should be preserved on log-scaled axes.
++    fig, ax = plt.subplots()
++    ax.set_yscale('log')
++    ax.set_ylim(100, 1)
++    assert ax.get_ylim() == (100, 1)
++    assert ax.yaxis_inverted()
++
++    ax.set_xscale('log')
++    ax.set_xlim(100, 1)
++    assert ax.get_xlim() == (100, 1)
++    assert ax.xaxis_inverted()
++
++
+ def test_logscale_transform_repr():
+     # check that repr of log transform succeeds
+     fig, ax = plt.subplots()
+2026-11-13 19:35:22,228 - INFO - Git diff changed after running eval script
+2026-11-13 19:35:22,228 - INFO - Attempting to stop container exec.eval.x86_64.4c04dd2da7e137006c2b92.ee2b23ea35e21165f9fdb8.133642663282320...
+2026-11-13 19:35:37,478 - INFO - Attempting to remove container exec.eval.x86_64.4c04dd2da7e137006c2b92.ee2b23ea35e21165f9fdb8.133642663282320...
+2026-11-13 19:35:37,514 - INFO - Container exec.eval.x86_64.4c04dd2da7e137006c2b92.ee2b23ea35e21165f9fdb8.133642663282320 removed.
+2026-11-13 19:35:37,515 - WARNING - End of eval at 1794620137.5145948

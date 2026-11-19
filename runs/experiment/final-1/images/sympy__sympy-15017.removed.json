@@ -1,0 +1,23 @@
+{
+  "time": "2026-11-14T13:28:42-06:00",
+  "images": [
+    {
+      "image": "exec.eval.x86_64.deec2122407a414e380748.10cf833f01c9d407cdc40c:latest",
+      "id": "sha256:f2d2000623f273ee3876d7a6559eebce873830d637697076ad446f40d8b63207",
+      "repo_digests": [
+        "exec.eval.x86_64.deec2122407a414e380748.10cf833f01c9d407cdc40c@sha256:f2d2000623f273ee3876d7a6559eebce873830d637697076ad446f40d8b63207"
+      ],
+      "size_bytes": 4431203531,
+      "rmi_exit_code": 0
+    },
+    {
+      "image": "docker.io/swebench/sweb.eval.x86_64.sympy_1776_sympy-15017:latest",
+      "id": "sha256:6bf2b82cdba92ff0030985067ef0dc74880be2cde224ec10e6da443a21925cfb",
+      "repo_digests": [
+        "swebench/sweb.eval.x86_64.sympy_1776_sympy-15017@sha256:6bf2b82cdba92ff0030985067ef0dc74880be2cde224ec10e6da443a21925cfb"
+      ],
+      "size_bytes": 3955715738,
+      "rmi_exit_code": 0
+    }
+  ]
+}

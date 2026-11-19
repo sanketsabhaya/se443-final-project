@@ -1,0 +1,23 @@
+[
+  {
+    "round": 1,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 93.1,
+      "steps": 26,
+      "exit_status": "Submitted",
+      "patch_chars": 1278
+    },
+    "check": {
+      "group": "G5",
+      "apply_ok": true,
+      "duration_s": 3.6,
+      "selection_mode": "functions",
+      "command": "pytest -rA --tb=long -p no:cacheprovider tests/test_self.py::TestRunTC::test_ignore_path_recursive_current_dir",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": false,
+    "overrides": []
+  }
+]

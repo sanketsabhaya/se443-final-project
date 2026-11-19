@@ -1,0 +1,108 @@
+2026-11-14 12:31:00,939 - WARNING - Starting evaluation at 1794681060.9390671
+2026-11-14 12:31:01,216 - INFO - Creating container for sphinx-doc__sphinx-8638...
+2026-11-14 12:31:01,298 - INFO - Container for sphinx-doc__sphinx-8638 created: 000d435cf48261a8c0b1f6a857d561922c80801af053324e349503046ba1c2fd
+2026-11-14 12:31:01,473 - INFO - Container for sphinx-doc__sphinx-8638 started: 000d435cf48261a8c0b1f6a857d561922c80801af053324e349503046ba1c2fd
+2026-11-14 12:31:01,730 - INFO - Git diff before:
+diff --git a/setup.py b/setup.py
+index a0c8ac102..2ef89ef1a 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 6):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.14',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tox.ini b/tox.ini
+index bdf4c2ad3..b12166264 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -26,7 +26,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils,ignore::DeprecationWarning:pip._vendor.packaging.version
+     PYTEST_ADDOPTS = {env:PYTEST_ADDOPTS:} --color yes
+ commands=
+-    python -X dev -m pytest --durations 25 {posargs}
++    python -X dev -m pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-14 12:31:01,730 - INFO - Eval script for sphinx-doc__sphinx-8638 written to eval.sh, now applying to container...
+2026-11-14 12:31:27,106 - INFO - Test output for sphinx-doc__sphinx-8638 written to run_instance_swt_logs/base_pre/sphinx-doc__sphinx-8638/a1bc97067693d6d7bcf900366f660df52a5f2d6bc61cad72f6411a12c48dccf6/test_output.txt
+2026-11-14 12:31:27,185 - INFO - Git diff after:
+diff --git a/setup.py b/setup.py
+index a0c8ac102..2ef89ef1a 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 6):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.14',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tox.ini b/tox.ini
+index bdf4c2ad3..b12166264 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -26,7 +26,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils,ignore::DeprecationWarning:pip._vendor.packaging.version
+     PYTEST_ADDOPTS = {env:PYTEST_ADDOPTS:} --color yes
+ commands=
+-    python -X dev -m pytest --durations 25 {posargs}
++    python -X dev -m pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-14 12:31:27,185 - INFO - Attempting to stop container exec.eval.x86_64.77d82541416cab86d0d86a.1622f4ab259b2666752891.131437771215632...
+2026-11-14 12:31:42,402 - INFO - Attempting to remove container exec.eval.x86_64.77d82541416cab86d0d86a.1622f4ab259b2666752891.131437771215632...
+2026-11-14 12:31:42,520 - INFO - Container exec.eval.x86_64.77d82541416cab86d0d86a.1622f4ab259b2666752891.131437771215632 removed.
+2026-11-14 12:31:42,521 - WARNING - End of eval at 1794681102.5211136

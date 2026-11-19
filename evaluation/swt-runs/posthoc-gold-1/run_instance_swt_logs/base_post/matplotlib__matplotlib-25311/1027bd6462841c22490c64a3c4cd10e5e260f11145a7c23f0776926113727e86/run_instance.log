@@ -1,0 +1,36 @@
+2026-11-14 14:30:21,696 - WARNING - Starting evaluation at 1794688221.69606
+2026-11-14 14:30:22,257 - INFO - Creating container for matplotlib__matplotlib-25311...
+2026-11-14 14:30:22,405 - INFO - Container for matplotlib__matplotlib-25311 created: f7ba377e6b9eb7aa96df83344af0439b0607cd78729c14f01f9e721f3cc390e4
+2026-11-14 14:30:22,724 - INFO - Container for matplotlib__matplotlib-25311 started: f7ba377e6b9eb7aa96df83344af0439b0607cd78729c14f01f9e721f3cc390e4
+2026-11-14 14:30:24,486 - INFO - Git diff before:
+
+2026-11-14 14:30:24,487 - INFO - Eval script for matplotlib__matplotlib-25311 written to eval.sh, now applying to container...
+2026-11-14 14:31:32,659 - INFO - Test output for matplotlib__matplotlib-25311 written to run_instance_swt_logs/base_post/matplotlib__matplotlib-25311/1027bd6462841c22490c64a3c4cd10e5e260f11145a7c23f0776926113727e86/test_output.txt
+2026-11-14 14:31:32,738 - INFO - Git diff after:
+diff --git a/lib/matplotlib/offsetbox.py b/lib/matplotlib/offsetbox.py
+index 1dee8a23d9..a46b9cd431 100644
+--- a/lib/matplotlib/offsetbox.py
++++ b/lib/matplotlib/offsetbox.py
+@@ -1505,7 +1505,6 @@ class DraggableBase:
+         if not ref_artist.pickable():
+             ref_artist.set_picker(True)
+         self.got_artist = False
+-        self.canvas = self.ref_artist.figure.canvas
+         self._use_blit = use_blit and self.canvas.supports_blit
+         self.cids = [
+             self.canvas.callbacks._connect_picklable(
+@@ -1514,6 +1513,9 @@ class DraggableBase:
+                 'button_release_event', self.on_release),
+         ]
+ 
++    # A property, not an attribute, to maintain picklability.
++    canvas = property(lambda self: self.ref_artist.figure.canvas)
++
+     def on_motion(self, evt):
+         if self._check_still_parented() and self.got_artist:
+             dx = evt.x - self.mouse_x
+2026-11-14 14:31:32,738 - INFO - Git diff changed after running eval script
+2026-11-14 14:31:32,738 - INFO - Attempting to stop container exec.eval.x86_64.89beb6334e800c4362eea6.a0be8ca4c1490fd9d2a3a4.126904893239184...
+2026-11-14 14:31:48,101 - INFO - Attempting to remove container exec.eval.x86_64.89beb6334e800c4362eea6.a0be8ca4c1490fd9d2a3a4.126904893239184...
+2026-11-14 14:31:48,181 - INFO - Container exec.eval.x86_64.89beb6334e800c4362eea6.a0be8ca4c1490fd9d2a3a4.126904893239184 removed.
+2026-11-14 14:31:48,181 - WARNING - End of eval at 1794688308.181585

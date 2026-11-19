@@ -1,0 +1,13 @@
+{
+  "sphinx-doc__sphinx-8551": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "tests/roots/test-domain-py-xref-types/conf.py",
+      "tests/roots/test-domain-py-xref-types/index.rst",
+      "tests/test_domain_py.py"
+    ],
+    "non_test_files": [],
+    "model_name_or_path": "deepseek/deepseek-flash"
+  }
+}

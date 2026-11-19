@@ -1,0 +1,3 @@
+Team,Method,Success Rate,Coverage,Applicability,Cost,Avg Generation Time
+Mihir Barvaliya & Sanket Sabhaya,mini-SWE-agent + DeepSeek-Flash (baseline),20.0%,39.0%,76.0%,$0.4427,77.8 s
+Mihir Barvaliya & Sanket Sabhaya,mini-SWE-agent + DeepSeek-Flash + execution-feedback wrapper,24.0%,41.0%,76.0%,$1.1149,215.4 s

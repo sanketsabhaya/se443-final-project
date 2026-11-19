@@ -1,0 +1,34 @@
+diff --git a/tests/roots/test-ext-autodoc/target/private_variables.py b/tests/roots/test-ext-autodoc/target/private_variables.py
+new file mode 100644
+index 000000000..1eacd2d2d
+--- /dev/null
++++ b/tests/roots/test-ext-autodoc/target/private_variables.py
+@@ -0,0 +1 @@
++_foo = None  #: :meta public:
+diff --git a/tests/test_ext_autodoc_private_members.py b/tests/test_ext_autodoc_private_members.py
+index 6bce5ce78..540c3c6e7 100644
+--- a/tests/test_ext_autodoc_private_members.py
++++ b/tests/test_ext_autodoc_private_members.py
+@@ -81,3 +81,22 @@ def test_private_members(app):
+         '   :meta public:',
+         '',
+     ]
++
++
++@pytest.mark.sphinx('html', testroot='ext-autodoc')
++def test_private_variable_with_meta_public(app):
++    options = {"members": None}
++    actual = do_autodoc(app, 'module', 'target.private_variables', options)
++    assert '.. py:data:: _foo' in actual
++    assert list(actual) == [
++        '',
++        '.. py:module:: target.private_variables',
++        '',
++        '',
++        '.. py:data:: _foo',
++        '   :module: target.private_variables',
++        '   :value: None',
++        '',
++        '   :meta public:',
++        '',
++    ]

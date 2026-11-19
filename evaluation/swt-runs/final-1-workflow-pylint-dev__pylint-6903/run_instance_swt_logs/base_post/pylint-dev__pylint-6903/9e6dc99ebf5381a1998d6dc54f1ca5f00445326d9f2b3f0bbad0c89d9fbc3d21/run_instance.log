@@ -1,0 +1,30 @@
+2026-11-14 08:23:57,160 - WARNING - Starting evaluation at 1794666237.1608384
+2026-11-14 08:23:57,446 - INFO - Creating container for pylint-dev__pylint-6903...
+2026-11-14 08:23:57,529 - INFO - Container for pylint-dev__pylint-6903 created: a51852e012d75c86edbaca776eaf45fc208c67022723b90efc462bb41451a9b0
+2026-11-14 08:23:57,710 - INFO - Container for pylint-dev__pylint-6903 started: a51852e012d75c86edbaca776eaf45fc208c67022723b90efc462bb41451a9b0
+2026-11-14 08:23:57,986 - INFO - Git diff before:
+
+2026-11-14 08:23:57,986 - INFO - Eval script for pylint-dev__pylint-6903 written to eval.sh, now applying to container...
+2026-11-14 08:24:05,352 - INFO - Test output for pylint-dev__pylint-6903 written to run_instance_swt_logs/base_post/pylint-dev__pylint-6903/9e6dc99ebf5381a1998d6dc54f1ca5f00445326d9f2b3f0bbad0c89d9fbc3d21/test_output.txt
+2026-11-14 08:24:05,437 - INFO - Git diff after:
+diff --git a/pylint/lint/run.py b/pylint/lint/run.py
+index a7e5d5574..27a4d9d84 100644
+--- a/pylint/lint/run.py
++++ b/pylint/lint/run.py
+@@ -58,6 +58,13 @@ def _query_cpu() -> int | None:
+             cpu_shares = int(file.read().rstrip())
+         # For AWS, gives correct value * 1024.
+         avail_cpu = int(cpu_shares / 1024)
++
++    # In K8s Pods also a fraction of a single core could be available
++    # As multiprocessing is not able to run only a "fraction" of process
++    # assume we have 1 CPU available
++    if avail_cpu == 0:
++        avail_cpu = 1
++
+     return avail_cpu
+2026-11-14 08:24:05,437 - INFO - Git diff changed after running eval script
+2026-11-14 08:24:05,437 - INFO - Attempting to stop container exec.eval.x86_64.fc8235bb41fea90b41065e.0e61b8e442dd90882e9ff4.123732026229008...
+2026-11-14 08:24:20,693 - INFO - Attempting to remove container exec.eval.x86_64.fc8235bb41fea90b41065e.0e61b8e442dd90882e9ff4.123732026229008...
+2026-11-14 08:24:20,729 - INFO - Container exec.eval.x86_64.fc8235bb41fea90b41065e.0e61b8e442dd90882e9ff4.123732026229008 removed.
+2026-11-14 08:24:20,729 - WARNING - End of eval at 1794666260.729684

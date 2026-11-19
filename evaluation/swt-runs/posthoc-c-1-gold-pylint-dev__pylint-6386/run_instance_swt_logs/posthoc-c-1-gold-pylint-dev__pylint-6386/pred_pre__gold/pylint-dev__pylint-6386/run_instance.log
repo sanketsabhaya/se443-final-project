@@ -1,0 +1,29 @@
+2026-11-14 15:44:51,296 - WARNING - Starting evaluation at 1794692691.2965093
+2026-11-14 15:45:52,186 - INFO - Creating container for pylint-dev__pylint-6386...
+2026-11-14 15:45:52,305 - INFO - Container for pylint-dev__pylint-6386 created: 4cb662f66bf6d5dd0cd2a2870b7ed3b99ca5122d3e9e811e3ad06aeae01245e8
+2026-11-14 15:45:52,474 - INFO - Container for pylint-dev__pylint-6386 started: 4cb662f66bf6d5dd0cd2a2870b7ed3b99ca5122d3e9e811e3ad06aeae01245e8
+2026-11-14 15:45:52,765 - INFO - Git diff before:
+
+2026-11-14 15:45:52,766 - INFO - Eval script for pylint-dev__pylint-6386 written to eval.sh, now applying to container...
+2026-11-14 15:45:58,982 - INFO - Test output for pylint-dev__pylint-6386 written to run_instance_swt_logs/posthoc-c-1-gold-pylint-dev__pylint-6386/pred_pre__gold/pylint-dev__pylint-6386/test_output.txt
+2026-11-14 15:45:59,057 - INFO - Git diff after:
+diff --git a/tests/config/test_config.py b/tests/config/test_config.py
+index f91e6cbf4..712d291ed 100644
+--- a/tests/config/test_config.py
++++ b/tests/config/test_config.py
+@@ -100,3 +100,10 @@ def test_unknown_py_version(capsys: CaptureFixture) -> None:
+         Run([str(EMPTY_MODULE), "--py-version=the-newest"], exit=False)
+     output = capsys.readouterr()
+     assert "the-newest has an invalid format, should be a version string." in output.err
++
++
++def test_short_verbose(capsys: CaptureFixture) -> None:
++    """Check that we correctly handle the -v flag."""
++    Run([str(EMPTY_MODULE), "-v"], exit=False)
++    output = capsys.readouterr()
++    assert "Using config file" in output.err
+2026-11-14 15:45:59,057 - INFO - Git diff changed after running eval script
+2026-11-14 15:45:59,057 - INFO - Attempting to stop container exec.eval.x86_64.efca49fa1fde6067d6f416.558acdbe3fad3b7b8a3e50.140101455464336...
+2026-11-14 15:46:14,300 - INFO - Attempting to remove container exec.eval.x86_64.efca49fa1fde6067d6f416.558acdbe3fad3b7b8a3e50.140101455464336...
+2026-11-14 15:46:14,337 - INFO - Container exec.eval.x86_64.efca49fa1fde6067d6f416.558acdbe3fad3b7b8a3e50.140101455464336 removed.
+2026-11-14 15:46:14,337 - WARNING - End of eval at 1794692774.3374476

@@ -1,0 +1,20 @@
+diff --git a/tests/test_ext_viewcode.py b/tests/test_ext_viewcode.py
+index 79864095b..4af334aa3 100755
+--- a/tests/test_ext_viewcode.py
++++ b/tests/test_ext_viewcode.py
+@@ -102,3 +102,15 @@ def test_local_source_files(app, status, warning):
+ 
+     assert result.count('href="_modules/not_a_package/submodule.html#not_a_package.submodule.Class3.class_attr"') == 1
+     assert result.count('This is the class attribute class_attr') == 1
++
++
++@pytest.mark.sphinx('html', testroot='ext-viewcode')
++def test_viewcode_epub_disabled(app, make_app):
++    app.build()
++
++    assert (app.outdir / '_modules/spam/mod1.html').exists()
++
++    epub_app = make_app('epub', srcdir=app.srcdir)
++    epub_app.build()
++
++    assert not (epub_app.outdir / '_modules').exists()

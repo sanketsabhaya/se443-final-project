@@ -1,0 +1,134 @@
+2026-11-14 11:15:21,081 - WARNING - Starting evaluation at 1794676521.0810661
+2026-11-14 11:15:21,358 - INFO - Creating container for sphinx-doc__sphinx-8551...
+2026-11-14 11:15:21,437 - INFO - Container for sphinx-doc__sphinx-8551 created: d485c52c59f6ae08e5e6ddb54cb6eedd3665472468703adc3e7a6f9b77468d37
+2026-11-14 11:15:21,619 - INFO - Container for sphinx-doc__sphinx-8551 started: d485c52c59f6ae08e5e6ddb54cb6eedd3665472468703adc3e7a6f9b77468d37
+2026-11-14 11:15:21,873 - INFO - Git diff before:
+diff --git a/setup.py b/setup.py
+index 8d40de1a8..03f325278 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.12',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tox.ini b/tox.ini
+index dbb705a3a..9f4fc3a32 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+     PYTEST_ADDOPTS = {env:PYTEST_ADDOPTS:} --color yes
+ commands=
+-    python -X dev -m pytest --durations 25 {posargs}
++    python -X dev -m pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-14 11:15:21,874 - INFO - Eval script for sphinx-doc__sphinx-8551 written to eval.sh, now applying to container...
+2026-11-14 11:15:35,325 - INFO - Test output for sphinx-doc__sphinx-8551 written to run_instance_swt_logs/base_post/sphinx-doc__sphinx-8551/108da6d09d4584224ed653272382df780c52e073f5af60673a00039de73b7fc9/test_output.txt
+2026-11-14 11:15:35,403 - INFO - Git diff after:
+diff --git a/setup.py b/setup.py
+index 8d40de1a8..03f325278 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.12',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/sphinx/domains/python.py b/sphinx/domains/python.py
+index 79d7e4f46..c4d134d08 100644
+--- a/sphinx/domains/python.py
++++ b/sphinx/domains/python.py
+@@ -272,6 +272,8 @@ class PyXrefMixin:
+         result = super().make_xref(rolename, domain, target,  # type: ignore
+                                    innernode, contnode, env)
+         result['refspecific'] = True
++        result['py:module'] = env.ref_context.get('py:module')
++        result['py:class'] = env.ref_context.get('py:class')
+         if target.startswith(('.', '~')):
+             prefix, result['reftarget'] = target[0], target[1:]
+             if prefix == '.':
+diff --git a/sphinx/util/docfields.py b/sphinx/util/docfields.py
+index 404bb127f..9a57ccff7 100644
+--- a/sphinx/util/docfields.py
++++ b/sphinx/util/docfields.py
+@@ -295,6 +295,7 @@ class DocFieldTransformer:
+                         self.directive.domain,
+                         target,
+                         contnode=content[0],
++                        env=self.directive.state.document.settings.env
+                     )
+                     if _is_single_paragraph(field_body):
+                         paragraph = cast(nodes.paragraph, field_body[0])
+diff --git a/tox.ini b/tox.ini
+index dbb705a3a..9f4fc3a32 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+     PYTEST_ADDOPTS = {env:PYTEST_ADDOPTS:} --color yes
+ commands=
+-    python -X dev -m pytest --durations 25 {posargs}
++    python -X dev -m pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-14 11:15:35,403 - INFO - Git diff changed after running eval script
+2026-11-14 11:15:35,403 - INFO - Attempting to stop container exec.eval.x86_64.77d82541416cab86d0d86a.f484b979b91a6e0136288c.127524148574096...
+2026-11-14 11:15:50,680 - INFO - Attempting to remove container exec.eval.x86_64.77d82541416cab86d0d86a.f484b979b91a6e0136288c.127524148574096...
+2026-11-14 11:15:50,782 - INFO - Container exec.eval.x86_64.77d82541416cab86d0d86a.f484b979b91a6e0136288c.127524148574096 removed.
+2026-11-14 11:15:50,782 - WARNING - End of eval at 1794676550.7824204

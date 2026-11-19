@@ -1,0 +1,231 @@
+
+
+---
+FEEDBACK FROM AN AUTOMATED TEST RUN (revision 2 of at most 2)
+
+A previous attempt at this task produced the test patch shown below. We applied it to the current,
+unfixed code in a fresh copy of the repository and ran only the tests it adds or changes.
+
+Command: tox -epy39 -v -- tests/test_ext_autodoc_autoclass.py::test_instance_variable tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable
+Result: Your tests fail, but not in a way related to the issue.
+The failure (unknown error) does not look like the problem described in the issue. Fix the test so that it fails because of the behavior the issue describes, not because of a mistake in the test.
+
+Per-test results:
+tests/test_ext_autodoc_autoclass.py::test_instance_variable: PASSED
+tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable: FAILED
+
+Test output (last 150 lines):
+<test_output>
+> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True setuptools.build_meta __legacy__ pid=78
+py39: install_package_deps> python -I -m pip install 'Jinja2<3.0' 'Pygments>=2.0' 'alabaster<0.7.12,>=0.7' 'babel>=1.3' 'colorama>=0.3.5; sys_platform == "win32"' cython 'docutils>=0.12' html5lib imagesize 'markupsafe<=2.0.1' packaging pytest pytest-cov 'requests>=2.5.0' setuptools 'snowballstemmer>=1.1' 'sphinxcontrib-applehelp<=1.0.7' 'sphinxcontrib-devhelp<=1.0.5' 'sphinxcontrib-htmlhelp<=2.0.4' sphinxcontrib-jsmath 'sphinxcontrib-qthelp<=1.0.6' 'sphinxcontrib-serializinghtml<=1.1.9' 'typed-ast; python_version < "3.8"'
+py39: exit 0 (13.52 seconds) /testbed> python -I -m pip install 'Jinja2<3.0' 'Pygments>=2.0' 'alabaster<0.7.12,>=0.7' 'babel>=1.3' 'colorama>=0.3.5; sys_platform == "win32"' cython 'docutils>=0.12' html5lib imagesize 'markupsafe<=2.0.1' packaging pytest pytest-cov 'requests>=2.5.0' setuptools 'snowballstemmer>=1.1' 'sphinxcontrib-applehelp<=1.0.7' 'sphinxcontrib-devhelp<=1.0.5' 'sphinxcontrib-htmlhelp<=2.0.4' sphinxcontrib-jsmath 'sphinxcontrib-qthelp<=1.0.6' 'sphinxcontrib-serializinghtml<=1.1.9' 'typed-ast; python_version < "3.8"' pid=82
+py39: install_package> python -I -m pip install --force-reinstall --no-deps /testbed/.tox/.tmp/package/1/Sphinx-3.4.0.dev20261114-0.editable-py3-none-any.whl
+py39: exit 0 (0.44 seconds) /testbed> python -I -m pip install --force-reinstall --no-deps /testbed/.tox/.tmp/package/1/Sphinx-3.4.0.dev20261114-0.editable-py3-none-any.whl pid=92
+py39: commands[0]> python -X dev -m pytest -rA --durations 25 tests/test_ext_autodoc_autoclass.py::test_instance_variable tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.9.20, pytest-8.4.2, pluggy-1.6.0
+cachedir: .tox/py39/.pytest_cache
+libraries: Sphinx-3.4.0+/88445db69, docutils-0.19
+base tempdir: /tmp/pytest-of-root/pytest-0
+rootdir: /testbed
+configfile: setup.cfg
+plugins: cov-7.1.0
+collected 2 items
+
+tests/test_ext_autodoc_autoclass.py [32m.[0m[31mF[0m[31m                                   [100%][0m
+
+=================================== FAILURES ===================================
+[31m[1m_______________________ test_inherited_instance_variable _______________________[0m
+
+app = <SphinxTestApp buildername='html'>
+
+    [0m[37m@pytest[39;49;00m.mark.sphinx([33m'[39;49;00m[33mhtml[39;49;00m[33m'[39;49;00m, testroot=[33m'[39;49;00m[33mext-autodoc[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+    [94mdef[39;49;00m[90m [39;49;00m[92mtest_inherited_instance_variable[39;49;00m(app):[90m[39;49;00m
+        options = {[33m'[39;49;00m[33mmembers[39;49;00m[33m'[39;49;00m: [94mTrue[39;49;00m,[90m[39;49;00m
+                   [33m'[39;49;00m[33minherited-members[39;49;00m[33m'[39;49;00m: [94mTrue[39;49;00m}[90m[39;49;00m
+        actual = [96mlist[39;49;00m(do_autodoc(app, [33m'[39;49;00m[33mclass[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mtarget.instance_variable.Bar[39;49;00m[33m'[39;49;00m, options))[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Bar inherits attr1 from Foo.  Its docstring is cached in the analyzer[39;49;00m[90m[39;49;00m
+        [90m# under Foo's namespace, so autodoc must look it up there too.[39;49;00m[90m[39;49;00m
+        inherited_attr = [33m'[39;49;00m[33m   .. py:attribute:: Bar.attr1[39;49;00m[33m'[39;49;00m[90m[39;49;00m
+>       [94massert[39;49;00m inherited_attr [95min[39;49;00m actual, ([90m[39;49;00m
+            [33m'[39;49;00m[33minherited instance attribute Bar.attr1 was not documented; output was:[39;49;00m[33m\n[39;49;00m[33m'[39;49;00m[90m[39;49;00m
+            + [33m'[39;49;00m[33m\n[39;49;00m[33m'[39;49;00m.join(actual)[90m[39;49;00m
+        )[90m[39;49;00m
+[1m[31mE       AssertionError: inherited instance attribute Bar.attr1 was not documented; output was:[0m
+[1m[31mE         [0m
+[1m[31mE         .. py:class:: Bar()[0m
+[1m[31mE            :module: target.instance_variable[0m
+[1m[31mE         [0m
+[1m[31mE         [0m
+[1m[31mE            .. py:attribute:: Bar.attr2[0m
+[1m[31mE               :module: target.instance_variable[0m
+[1m[31mE         [0m
+[1m[31mE               docstring bar[0m
+[1m[31mE         [0m
+[1m[31mE         [0m
+[1m[31mE            .. py:attribute:: Bar.attr3[0m
+[1m[31mE               :module: target.instance_variable[0m
+[1m[31mE         [0m
+[1m[31mE               docstring bar[0m
+[1m[31mE         [0m
+[1m[31mE       assert '   .. py:attribute:: Bar.attr1' in ['', '.. py:class:: Bar()', '   :module: target.instance_variable', '', '', '   .. py:attribute:: Bar.attr2', ...][0m
+
+[1m[31mtests/test_ext_autodoc_autoclass.py[0m:87: AssertionError
+--------------------------- Captured stdout teardown ---------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-root/pytest-0/ext-autodoc
+# outdir: /tmp/pytest-of-root/pytest-0/ext-autodoc/_build/html
+# status: 
+[01mRunning Sphinx v3.4.0+/88445db69[39;49;00m
+
+# warning: 
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'meta' is already registered, its visitors will be overridden[39;49;00m
+
+[33m=============================== warnings summary ===============================[0m
+sphinx/util/docutils.py:45
+  /testbed/sphinx/util/docutils.py:45: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    __version_info__ = tuple(LooseVersion(docutils.__version__).version)
+
+sphinx/registry.py:22
+  /testbed/sphinx/registry.py:22: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    from pkg_resources import iter_entry_points
+
+sphinx/directives/patches.py:14
+  /testbed/sphinx/directives/patches.py:14: DeprecationWarning: The `docutils.parsers.rst.directive.html` module will be removed in Docutils 2.0. Since Docutils 0.18, the "Meta" node is defined in `docutils.parsers.rst.directives.misc`.
+    from docutils.parsers.rst.directives import html, images, tables
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+--------------------------- Captured stdout teardown ---------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-root/pytest-0/ext-autodoc
+# outdir: /tmp/pytest-of-root/pytest-0/ext-autodoc/_build/html
+# status: 
+[01mRunning Sphinx v3.4.0+/88445db69[39;49;00m
+
+# warning: 
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'meta' is already registered, its visitors will be overridden[39;49;00m
+
+============================= slowest 25 durations =============================
+0.37s setup    tests/test_ext_autodoc_autoclass.py::test_instance_variable
+0.01s call     tests/test_ext_autodoc_autoclass.py::test_instance_variable
+0.01s setup    tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable
+
+(3 durations < 0.005s hidden.  Use -vv to show these durations.)
+[36m[1m=========================== short test summary info ============================[0m
+[32mPASSED[0m tests/test_ext_autodoc_autoclass.py::[1mtest_instance_variable[0m
+[31mFAILED[0m tests/test_ext_autodoc_autoclass.py::[1mtest_inherited_instance_variable[0m - AssertionError: inherited instance attribute Bar.attr1 was not documented; ...
+[31m=================== [31m[1m1 failed[0m, [32m1 passed[0m, [33m3 warnings[0m[31m in 0.66s[0m[31m ====================[0m
+py39: exit 1 (1.56 seconds) /testbed> python -X dev -m pytest -rA --durations 25 tests/test_ext_autodoc_autoclass.py::test_instance_variable tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable pid=99
+  py39: FAIL code 1 (18.17=setup[16.61]+cmd[1.56] seconds)
+  evaluation failed :( (18.74 seconds)
+</test_output>
+
+Previous test patch:
+<previous_patch>
+diff --git a/tests/roots/test-ext-autodoc/target/instance_variable.py b/tests/roots/test-ext-autodoc/target/instance_variable.py
+new file mode 100644
+index 000000000..ae86d1edb
+--- /dev/null
++++ b/tests/roots/test-ext-autodoc/target/instance_variable.py
+@@ -0,0 +1,10 @@
++class Foo:
++    def __init__(self):
++        self.attr1 = None  #: docstring foo
++        self.attr2 = None  #: docstring foo
++
++
++class Bar(Foo):
++    def __init__(self):
++        self.attr2 = None  #: docstring bar
++        self.attr3 = None  #: docstring bar
+diff --git a/tests/test_ext_autodoc_autoclass.py b/tests/test_ext_autodoc_autoclass.py
+index c36305de3..5ce2bd85e 100644
+--- a/tests/test_ext_autodoc_autoclass.py
++++ b/tests/test_ext_autodoc_autoclass.py
+@@ -51,6 +51,75 @@ def test_classes(app):
+     ]
+ 
+ 
++@pytest.mark.sphinx('html', testroot='ext-autodoc')
++def test_instance_variable(app):
++    options = {'members': True}
++    actual = do_autodoc(app, 'class', 'target.instance_variable.Bar', options)
++    assert list(actual) == [
++        '',
++        '.. py:class:: Bar()',
++        '   :module: target.instance_variable',
++        '',
++        '',
++        '   .. py:attribute:: Bar.attr2',
++        '      :module: target.instance_variable',
++        '',
++        '      docstring bar',
++        '',
++        '',
++        '   .. py:attribute:: Bar.attr3',
++        '      :module: target.instance_variable',
++        '',
++        '      docstring bar',
++        '',
++    ]
++
++
++@pytest.mark.sphinx('html', testroot='ext-autodoc')
++def test_inherited_instance_variable(app):
++    options = {'members': True,
++               'inherited-members': True}
++    actual = list(do_autodoc(app, 'class', 'target.instance_variable.Bar', options))
++
++    # Bar inherits attr1 from Foo.  Its docstring is cached in the analyzer
++    # under Foo's namespace, so autodoc must look it up there too.
++    inherited_attr = '   .. py:attribute:: Bar.attr1'
++    assert inherited_attr in actual, (
++        'inherited instance attribute Bar.attr1 was not documented; output was:\n'
++        + '\n'.join(actual)
++    )
++    inherited_attr_index = actual.index(inherited_attr)
++    assert '      docstring foo' in actual[inherited_attr_index:inherited_attr_index + 5], (
++        'docstring of inherited instance attribute Bar.attr1 was not found in '
++        "its base class Foo's namespace; output was:\n" + '\n'.join(actual)
++    )
++
++    assert actual == [
++        '',
++        '.. py:class:: Bar()',
++        '   :module: target.instance_variable',
++        '',
++        '',
++        '   .. py:attribute:: Bar.attr1',
++        '      :module: target.instance_variable',
++        '',
++        '      docstring foo',
++        '',
++        '',
++        '   .. py:attribute:: Bar.attr2',
++        '      :module: target.instance_variable',
++        '',
++        '      docstring bar',
++        '',
++        '',
++        '   .. py:attribute:: Bar.attr3',
++        '      :module: target.instance_variable',
++        '',
++        '      docstring bar',
++        '',
++    ]
++
++
+ def test_decorators(app):
+     actual = do_autodoc(app, 'class', 'target.decorator.Baz')
+     assert list(actual) == [
+
+</previous_patch>
+This patch is already applied in /testbed. Edit the test files in place, then submit as instructed.
+
+Please revise the test. It must still check the behavior described in the issue with meaningful
+assertions: do not delete or weaken assertions, and do not skip, xfail or otherwise disable the test
+just to change its outcome. As before, change test files only and do not fix the issue.

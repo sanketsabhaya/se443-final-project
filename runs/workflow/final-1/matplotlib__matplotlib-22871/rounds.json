@@ -1,0 +1,23 @@
+[
+  {
+    "round": 1,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 76.4,
+      "steps": 16,
+      "exit_status": "Submitted",
+      "patch_chars": 995
+    },
+    "check": {
+      "group": "G5",
+      "apply_ok": true,
+      "duration_s": 4.8,
+      "selection_mode": "functions",
+      "command": "pytest -rA --tb=long -p no:cacheprovider lib/matplotlib/tests/test_dates.py::test_concise_formatter_offset_year_not_in_ticks",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": false,
+    "overrides": []
+  }
+]

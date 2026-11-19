@@ -1,0 +1,46 @@
+{
+  "start": "2026-11-14T10:26:25-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "tests/test_build_linkcheck.py"
+    ]
+  },
+  "end": "2026-11-14T10:26:47-06:00",
+  "duration_s": 21.7,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "tests/test_build_linkcheck.py",
+      "cls": null,
+      "func": "test_too_many_redirects_on_HEAD",
+      "label": "tests/test_build_linkcheck.py::test_too_many_redirects_on_HEAD"
+    }
+  ],
+  "command": "tox -epy39 -v -- tests/test_build_linkcheck.py::test_too_many_redirects_on_HEAD",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "tests/test_build_linkcheck.py::test_too_many_redirects_on_HEAD": "FAILED"
+  },
+  "group": "G4",
+  "evidence": {
+    "issue_exc": [],
+    "mode": "functions",
+    "collected": {
+      "tests/test_build_linkcheck.py::test_too_many_redirects_on_HEAD": "FAILED"
+    },
+    "setup_markers": [],
+    "failure_types": {
+      "tests/test_build_linkcheck.py::test_too_many_redirects_on_HEAD": null
+    },
+    "reason": "failure_unrelated"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": false,
+    "skip_or_xfail_added": false
+  }
+}

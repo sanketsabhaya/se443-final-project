@@ -1,0 +1,29 @@
+diff --git a/lib/matplotlib/tests/test_colorbar.py b/lib/matplotlib/tests/test_colorbar.py
+index ae3ab92c0d..0b6f70c476 100644
+--- a/lib/matplotlib/tests/test_colorbar.py
++++ b/lib/matplotlib/tests/test_colorbar.py
+@@ -124,6 +124,24 @@ def test_colorbar_extension_length():
+     _colorbar_extension_length('proportional')
+ 
+ 
++@pytest.mark.parametrize("orientation", ["horizontal", "vertical"])
++def test_colorbar_drawedges_with_extensions(orientation):
++    """Test that colorbar dividers include the boundaries of the extends."""
++    bounds = np.arange(10)
++    colors = plt.get_cmap("viridis")(np.linspace(0, 1, len(bounds) + 1))
++    cmap, norm = mcolors.from_levels_and_colors(bounds, colors, extend="both")
++    fig, ax = plt.subplots()
++    cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation=orientation,
++                    drawedges=True)
++
++    segments = cbar.dividers.get_segments()
++    if orientation == "horizontal":
++        divider_positions = np.array([segment[0, 0] for segment in segments])
++    else:
++        divider_positions = np.array([segment[0, 1] for segment in segments])
++    np.testing.assert_allclose(np.sort(divider_positions), bounds)
++
++
+ @pytest.mark.parametrize("orientation", ["horizontal", "vertical"])
+ @pytest.mark.parametrize("extend,expected", [("min", (0, 0, 0, 1)),
+                                              ("max", (1, 1, 1, 1)),

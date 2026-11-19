@@ -1,0 +1,69 @@
+This is mini-swe-agent version 2.4.6.
+Check the v2 migration guide at https://klieret.short.gy/mini-v2-migration
+Loading global config from '/home/mihir_barvaliya/.config/mini-swe-agent/.env'
+minisweagent: INFO: Results will be saved to                                    
+/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sympy__sympy-15017    
+Logging to '/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sympy__sympy-15017/minisweagent.log'
+minisweagent: INFO: Loading dataset                                             
+/home/mihir_barvaliya/.cache/huggingface/hub/datasets--princeton-nlp--SWE-bench_
+Verified/snapshots/c104f840cc67f8b6eec6f759ebc8b2693d585d4a, split test...      
+minisweagent: INFO: Instance filter: 500 -> 1 instances                         
+minisweagent: INFO: Running on 1 instances...                                   
+minisweagent: INFO: Building agent config from specs:                           
+['/home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml']              
+minisweagent.environment: DEBUG: Starting container with command: docker run -d 
+--name minisweagent-9688c074 -w /testbed --rm                                   
+docker.io/swebench/sweb.eval.x86_64.sympy_1776_sympy-15017:latest sleep 2h      
+minisweagent.environment: INFO: Started container minisweagent-9688c074 with ID 
+a5e6b2274956a809a42f708220bd3c95d22d21abff66505ce2281196961fe305                
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: INFO: Saved trajectory to                                         
+'/home/mihir_barvaliya/se443/project/runs/baseline/final-1/sympy__sympy-15017/sy
+mpy__sympy-15017/sympy__sympy-15017.traj.json'                                  
+  Overall Progress ($0.01) ━━━━━━━━━━━━━━━━━━━━━━━ 1/1 100% 0:00:57 eta: 0:00:00
+┏━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Exit Status ┃ Count ┃ Most recent instances                                  ┃
+┡━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Submitted   │     1 │ sympy__sympy-15017                                     │
+└─────────────┴───────┴────────────────────────────────────────────────────────┘

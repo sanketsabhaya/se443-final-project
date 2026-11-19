@@ -1,0 +1,393 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.11, pytest-8.3.4, pluggy-1.5.0
+rootdir: /testbed
+configfile: pytest.ini
+plugins: xdist-3.6.1, timeout-2.3.1, cov-6.0.0, rerunfailures-15.0
+collected 8 items
+
+lib/matplotlib/tests/test_colorbar.py FFFFFF..                           [100%]
+
+=================================== FAILURES ===================================
+____________ test_colorbar_extend_drawedges[both-1-res0-horizontal] ____________
+
+orientation = 'horizontal', extend = 'both', coloroffset = 1
+res = [[[0.0, 0.0], [0.0, 1.0]], [[1.0, 0.0], [1.0, 1.0]], [[2.0, 0.0], [2.0, 1.0]]]
+
+    @pytest.mark.parametrize("orientation", ["horizontal", "vertical"])
+    @pytest.mark.parametrize("extend, coloroffset, res", [
+        ('both', 1, [[[0., 0.], [0., 1.]],
+                     [[1., 0.], [1., 1.]],
+                     [[2., 0.], [2., 1.]]]),
+        ('min', 0, [[[0., 0.], [0., 1.]],
+                    [[1., 0.], [1., 1.]]]),
+        ('max', 0, [[[1., 0.], [1., 1.]],
+                    [[2., 0.], [2., 1.]]]),
+        ('neither', -1, [[[1., 0.], [1., 1.]]]),
+        ])
+    def test_colorbar_extend_drawedges(orientation, extend, coloroffset, res):
+        cmap = plt.get_cmap("viridis")
+        bounds = np.arange(3)
+        nb_colors = len(bounds) + coloroffset
+        colors = cmap(np.linspace(100, 255, nb_colors).astype(int))
+        cmap, norm = mcolors.from_levels_and_colors(bounds, colors, extend=extend)
+    
+        fig, ax = plt.subplots(figsize=(5, 1))
+        cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation=orientation,
+                        drawedges=True)
+    
+        expected = np.array(res)
+        if orientation == "vertical":
+            # Exchange the x and y coordinates of each divider segment.
+            expected = expected[:, :, ::-1]
+        # The dividers must include the boundaries between the inner colorbar and
+        # the extension patches, so that all color transitions are outlined.
+>       np.testing.assert_array_equal(cbar.dividers.get_segments(), expected)
+
+lib/matplotlib/tests/test_colorbar.py:950: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<built-in function eq>, [array([[1., 0.],
+       [1., 1.]])], array([[[0., 0.],
+        [0., 1.]],
+
+       [[1., 0.],
+        [1., 1.]],
+
+       [[2., 0.],
+        [2., 1.]]]))
+kwds = {'err_msg': '', 'header': 'Arrays are not equal', 'strict': False, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not equal
+E           
+E           (shapes (1, 2, 2), (3, 2, 2) mismatch)
+E            x: array([[[1., 0.],
+E                   [1., 1.]]])
+E            y: array([[[0., 0.],
+E                   [0., 1.]],
+E           ...
+
+/opt/miniconda3/envs/testbed/lib/python3.11/contextlib.py:81: AssertionError
+_____________ test_colorbar_extend_drawedges[both-1-res0-vertical] _____________
+
+orientation = 'vertical', extend = 'both', coloroffset = 1
+res = [[[0.0, 0.0], [0.0, 1.0]], [[1.0, 0.0], [1.0, 1.0]], [[2.0, 0.0], [2.0, 1.0]]]
+
+    @pytest.mark.parametrize("orientation", ["horizontal", "vertical"])
+    @pytest.mark.parametrize("extend, coloroffset, res", [
+        ('both', 1, [[[0., 0.], [0., 1.]],
+                     [[1., 0.], [1., 1.]],
+                     [[2., 0.], [2., 1.]]]),
+        ('min', 0, [[[0., 0.], [0., 1.]],
+                    [[1., 0.], [1., 1.]]]),
+        ('max', 0, [[[1., 0.], [1., 1.]],
+                    [[2., 0.], [2., 1.]]]),
+        ('neither', -1, [[[1., 0.], [1., 1.]]]),
+        ])
+    def test_colorbar_extend_drawedges(orientation, extend, coloroffset, res):
+        cmap = plt.get_cmap("viridis")
+        bounds = np.arange(3)
+        nb_colors = len(bounds) + coloroffset
+        colors = cmap(np.linspace(100, 255, nb_colors).astype(int))
+        cmap, norm = mcolors.from_levels_and_colors(bounds, colors, extend=extend)
+    
+        fig, ax = plt.subplots(figsize=(5, 1))
+        cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation=orientation,
+                        drawedges=True)
+    
+        expected = np.array(res)
+        if orientation == "vertical":
+            # Exchange the x and y coordinates of each divider segment.
+            expected = expected[:, :, ::-1]
+        # The dividers must include the boundaries between the inner colorbar and
+        # the extension patches, so that all color transitions are outlined.
+>       np.testing.assert_array_equal(cbar.dividers.get_segments(), expected)
+
+lib/matplotlib/tests/test_colorbar.py:950: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<built-in function eq>, [array([[0., 1.],
+       [1., 1.]])], array([[[0., 0.],
+        [1., 0.]],
+
+       [[0., 1.],
+        [1., 1.]],
+
+       [[0., 2.],
+        [1., 2.]]]))
+kwds = {'err_msg': '', 'header': 'Arrays are not equal', 'strict': False, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not equal
+E           
+E           (shapes (1, 2, 2), (3, 2, 2) mismatch)
+E            x: array([[[0., 1.],
+E                   [1., 1.]]])
+E            y: array([[[0., 0.],
+E                   [1., 0.]],
+E           ...
+
+/opt/miniconda3/envs/testbed/lib/python3.11/contextlib.py:81: AssertionError
+____________ test_colorbar_extend_drawedges[min-0-res1-horizontal] _____________
+
+orientation = 'horizontal', extend = 'min', coloroffset = 0
+res = [[[0.0, 0.0], [0.0, 1.0]], [[1.0, 0.0], [1.0, 1.0]]]
+
+    @pytest.mark.parametrize("orientation", ["horizontal", "vertical"])
+    @pytest.mark.parametrize("extend, coloroffset, res", [
+        ('both', 1, [[[0., 0.], [0., 1.]],
+                     [[1., 0.], [1., 1.]],
+                     [[2., 0.], [2., 1.]]]),
+        ('min', 0, [[[0., 0.], [0., 1.]],
+                    [[1., 0.], [1., 1.]]]),
+        ('max', 0, [[[1., 0.], [1., 1.]],
+                    [[2., 0.], [2., 1.]]]),
+        ('neither', -1, [[[1., 0.], [1., 1.]]]),
+        ])
+    def test_colorbar_extend_drawedges(orientation, extend, coloroffset, res):
+        cmap = plt.get_cmap("viridis")
+        bounds = np.arange(3)
+        nb_colors = len(bounds) + coloroffset
+        colors = cmap(np.linspace(100, 255, nb_colors).astype(int))
+        cmap, norm = mcolors.from_levels_and_colors(bounds, colors, extend=extend)
+    
+        fig, ax = plt.subplots(figsize=(5, 1))
+        cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation=orientation,
+                        drawedges=True)
+    
+        expected = np.array(res)
+        if orientation == "vertical":
+            # Exchange the x and y coordinates of each divider segment.
+            expected = expected[:, :, ::-1]
+        # The dividers must include the boundaries between the inner colorbar and
+        # the extension patches, so that all color transitions are outlined.
+>       np.testing.assert_array_equal(cbar.dividers.get_segments(), expected)
+
+lib/matplotlib/tests/test_colorbar.py:950: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<built-in function eq>, [array([[1., 0.],
+       [1., 1.]])], array([[[0., 0.],
+        [0., 1.]],
+
+       [[1., 0.],
+        [1., 1.]]]))
+kwds = {'err_msg': '', 'header': 'Arrays are not equal', 'strict': False, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not equal
+E           
+E           (shapes (1, 2, 2), (2, 2, 2) mismatch)
+E            x: array([[[1., 0.],
+E                   [1., 1.]]])
+E            y: array([[[0., 0.],
+E                   [0., 1.]],
+E           ...
+
+/opt/miniconda3/envs/testbed/lib/python3.11/contextlib.py:81: AssertionError
+_____________ test_colorbar_extend_drawedges[min-0-res1-vertical] ______________
+
+orientation = 'vertical', extend = 'min', coloroffset = 0
+res = [[[0.0, 0.0], [0.0, 1.0]], [[1.0, 0.0], [1.0, 1.0]]]
+
+    @pytest.mark.parametrize("orientation", ["horizontal", "vertical"])
+    @pytest.mark.parametrize("extend, coloroffset, res", [
+        ('both', 1, [[[0., 0.], [0., 1.]],
+                     [[1., 0.], [1., 1.]],
+                     [[2., 0.], [2., 1.]]]),
+        ('min', 0, [[[0., 0.], [0., 1.]],
+                    [[1., 0.], [1., 1.]]]),
+        ('max', 0, [[[1., 0.], [1., 1.]],
+                    [[2., 0.], [2., 1.]]]),
+        ('neither', -1, [[[1., 0.], [1., 1.]]]),
+        ])
+    def test_colorbar_extend_drawedges(orientation, extend, coloroffset, res):
+        cmap = plt.get_cmap("viridis")
+        bounds = np.arange(3)
+        nb_colors = len(bounds) + coloroffset
+        colors = cmap(np.linspace(100, 255, nb_colors).astype(int))
+        cmap, norm = mcolors.from_levels_and_colors(bounds, colors, extend=extend)
+    
+        fig, ax = plt.subplots(figsize=(5, 1))
+        cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation=orientation,
+                        drawedges=True)
+    
+        expected = np.array(res)
+        if orientation == "vertical":
+            # Exchange the x and y coordinates of each divider segment.
+            expected = expected[:, :, ::-1]
+        # The dividers must include the boundaries between the inner colorbar and
+        # the extension patches, so that all color transitions are outlined.
+>       np.testing.assert_array_equal(cbar.dividers.get_segments(), expected)
+
+lib/matplotlib/tests/test_colorbar.py:950: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<built-in function eq>, [array([[0., 1.],
+       [1., 1.]])], array([[[0., 0.],
+        [1., 0.]],
+
+       [[0., 1.],
+        [1., 1.]]]))
+kwds = {'err_msg': '', 'header': 'Arrays are not equal', 'strict': False, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not equal
+E           
+E           (shapes (1, 2, 2), (2, 2, 2) mismatch)
+E            x: array([[[0., 1.],
+E                   [1., 1.]]])
+E            y: array([[[0., 0.],
+E                   [1., 0.]],
+E           ...
+
+/opt/miniconda3/envs/testbed/lib/python3.11/contextlib.py:81: AssertionError
+____________ test_colorbar_extend_drawedges[max-0-res2-horizontal] _____________
+
+orientation = 'horizontal', extend = 'max', coloroffset = 0
+res = [[[1.0, 0.0], [1.0, 1.0]], [[2.0, 0.0], [2.0, 1.0]]]
+
+    @pytest.mark.parametrize("orientation", ["horizontal", "vertical"])
+    @pytest.mark.parametrize("extend, coloroffset, res", [
+        ('both', 1, [[[0., 0.], [0., 1.]],
+                     [[1., 0.], [1., 1.]],
+                     [[2., 0.], [2., 1.]]]),
+        ('min', 0, [[[0., 0.], [0., 1.]],
+                    [[1., 0.], [1., 1.]]]),
+        ('max', 0, [[[1., 0.], [1., 1.]],
+                    [[2., 0.], [2., 1.]]]),
+        ('neither', -1, [[[1., 0.], [1., 1.]]]),
+        ])
+    def test_colorbar_extend_drawedges(orientation, extend, coloroffset, res):
+        cmap = plt.get_cmap("viridis")
+        bounds = np.arange(3)
+        nb_colors = len(bounds) + coloroffset
+        colors = cmap(np.linspace(100, 255, nb_colors).astype(int))
+        cmap, norm = mcolors.from_levels_and_colors(bounds, colors, extend=extend)
+    
+        fig, ax = plt.subplots(figsize=(5, 1))
+        cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation=orientation,
+                        drawedges=True)
+    
+        expected = np.array(res)
+        if orientation == "vertical":
+            # Exchange the x and y coordinates of each divider segment.
+            expected = expected[:, :, ::-1]
+        # The dividers must include the boundaries between the inner colorbar and
+        # the extension patches, so that all color transitions are outlined.
+>       np.testing.assert_array_equal(cbar.dividers.get_segments(), expected)
+
+lib/matplotlib/tests/test_colorbar.py:950: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<built-in function eq>, [array([[1., 0.],
+       [1., 1.]])], array([[[1., 0.],
+        [1., 1.]],
+
+       [[2., 0.],
+        [2., 1.]]]))
+kwds = {'err_msg': '', 'header': 'Arrays are not equal', 'strict': False, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not equal
+E           
+E           (shapes (1, 2, 2), (2, 2, 2) mismatch)
+E            x: array([[[1., 0.],
+E                   [1., 1.]]])
+E            y: array([[[1., 0.],
+E                   [1., 1.]],
+E           ...
+
+/opt/miniconda3/envs/testbed/lib/python3.11/contextlib.py:81: AssertionError
+_____________ test_colorbar_extend_drawedges[max-0-res2-vertical] ______________
+
+orientation = 'vertical', extend = 'max', coloroffset = 0
+res = [[[1.0, 0.0], [1.0, 1.0]], [[2.0, 0.0], [2.0, 1.0]]]
+
+    @pytest.mark.parametrize("orientation", ["horizontal", "vertical"])
+    @pytest.mark.parametrize("extend, coloroffset, res", [
+        ('both', 1, [[[0., 0.], [0., 1.]],
+                     [[1., 0.], [1., 1.]],
+                     [[2., 0.], [2., 1.]]]),
+        ('min', 0, [[[0., 0.], [0., 1.]],
+                    [[1., 0.], [1., 1.]]]),
+        ('max', 0, [[[1., 0.], [1., 1.]],
+                    [[2., 0.], [2., 1.]]]),
+        ('neither', -1, [[[1., 0.], [1., 1.]]]),
+        ])
+    def test_colorbar_extend_drawedges(orientation, extend, coloroffset, res):
+        cmap = plt.get_cmap("viridis")
+        bounds = np.arange(3)
+        nb_colors = len(bounds) + coloroffset
+        colors = cmap(np.linspace(100, 255, nb_colors).astype(int))
+        cmap, norm = mcolors.from_levels_and_colors(bounds, colors, extend=extend)
+    
+        fig, ax = plt.subplots(figsize=(5, 1))
+        cbar = Colorbar(ax, cmap=cmap, norm=norm, orientation=orientation,
+                        drawedges=True)
+    
+        expected = np.array(res)
+        if orientation == "vertical":
+            # Exchange the x and y coordinates of each divider segment.
+            expected = expected[:, :, ::-1]
+        # The dividers must include the boundaries between the inner colorbar and
+        # the extension patches, so that all color transitions are outlined.
+>       np.testing.assert_array_equal(cbar.dividers.get_segments(), expected)
+
+lib/matplotlib/tests/test_colorbar.py:950: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<built-in function eq>, [array([[0., 1.],
+       [1., 1.]])], array([[[0., 1.],
+        [1., 1.]],
+
+       [[0., 2.],
+        [1., 2.]]]))
+kwds = {'err_msg': '', 'header': 'Arrays are not equal', 'strict': False, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not equal
+E           
+E           (shapes (1, 2, 2), (2, 2, 2) mismatch)
+E            x: array([[[0., 1.],
+E                   [1., 1.]]])
+E            y: array([[[0., 1.],
+E                   [1., 1.]],
+E           ...
+
+/opt/miniconda3/envs/testbed/lib/python3.11/contextlib.py:81: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[neither--1-res3-horizontal]
+PASSED lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[neither--1-res3-vertical]
+FAILED lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[both-1-res0-horizontal]
+FAILED lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[both-1-res0-vertical]
+FAILED lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[min-0-res1-horizontal]
+FAILED lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[min-0-res1-vertical]
+FAILED lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[max-0-res2-horizontal]
+FAILED lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[max-0-res2-vertical]
+========================= 6 failed, 2 passed in 8.54s ==========================

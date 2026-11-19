@@ -1,0 +1,27 @@
+2026-11-13 19:19:51,735 - WARNING - Starting evaluation at 1794619191.7353578
+2026-11-13 19:19:52,021 - INFO - Creating container for django__django-16485...
+2026-11-13 19:19:52,097 - INFO - Container for django__django-16485 created: 96fde0ccf2fd8ceb50dc47e5f83567333d55b0d0fab2f866b5db01b701159c3f
+2026-11-13 19:19:52,268 - INFO - Container for django__django-16485 started: 96fde0ccf2fd8ceb50dc47e5f83567333d55b0d0fab2f866b5db01b701159c3f
+2026-11-13 19:19:52,980 - INFO - Git diff before:
+
+2026-11-13 19:19:52,980 - INFO - Eval script for django__django-16485 written to eval.sh, now applying to container...
+2026-11-13 19:19:58,178 - INFO - Test output for django__django-16485 written to run_instance_swt_logs/base_post/django__django-16485/246c58a97b75ca7b3551c411af15945ec4446a46cf04ac5b9ed8a2da7a8b3167/test_output.txt
+2026-11-13 19:19:58,260 - INFO - Git diff after:
+diff --git a/django/template/defaultfilters.py b/django/template/defaultfilters.py
+index 23c3a08c67..78881987fc 100644
+--- a/django/template/defaultfilters.py
++++ b/django/template/defaultfilters.py
+@@ -168,7 +168,7 @@ def floatformat(text, arg=-1):
+     except (ValueError, OverflowError, InvalidOperation):
+         return input_val
+ 
+-    if not m and p < 0:
++    if not m and p <= 0:
+         return mark_safe(
+             formats.number_format(
+                 "%d" % (int(d)),
+2026-11-13 19:19:58,260 - INFO - Git diff changed after running eval script
+2026-11-13 19:19:58,260 - INFO - Attempting to stop container exec.eval.x86_64.9097b18874f4d0ac315ef2.3054e91debcdaa3051adcc.131560706428176...
+2026-11-13 19:20:13,518 - INFO - Attempting to remove container exec.eval.x86_64.9097b18874f4d0ac315ef2.3054e91debcdaa3051adcc.131560706428176...
+2026-11-13 19:20:13,559 - INFO - Container exec.eval.x86_64.9097b18874f4d0ac315ef2.3054e91debcdaa3051adcc.131560706428176 removed.
+2026-11-13 19:20:13,560 - WARNING - End of eval at 1794619213.559989

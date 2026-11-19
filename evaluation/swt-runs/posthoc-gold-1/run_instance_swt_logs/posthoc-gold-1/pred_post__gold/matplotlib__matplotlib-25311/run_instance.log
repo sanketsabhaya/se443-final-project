@@ -1,0 +1,73 @@
+2026-11-14 14:24:26,626 - WARNING - Starting evaluation at 1794687866.626251
+2026-11-14 14:24:27,285 - INFO - Creating container for matplotlib__matplotlib-25311...
+2026-11-14 14:24:27,452 - INFO - Container for matplotlib__matplotlib-25311 created: 3f8d2272b7d7353053a6289a6660c0e61de67ce33569e34309d9113254514a1e
+2026-11-14 14:24:27,778 - INFO - Container for matplotlib__matplotlib-25311 started: 3f8d2272b7d7353053a6289a6660c0e61de67ce33569e34309d9113254514a1e
+2026-11-14 14:24:29,558 - INFO - Git diff before:
+
+2026-11-14 14:24:29,558 - INFO - Eval script for matplotlib__matplotlib-25311 written to eval.sh, now applying to container...
+2026-11-14 14:25:43,752 - INFO - Test output for matplotlib__matplotlib-25311 written to run_instance_swt_logs/posthoc-gold-1/pred_post__gold/matplotlib__matplotlib-25311/test_output.txt
+2026-11-14 14:25:43,850 - INFO - Git diff after:
+diff --git a/lib/matplotlib/offsetbox.py b/lib/matplotlib/offsetbox.py
+index 1dee8a23d9..a46b9cd431 100644
+--- a/lib/matplotlib/offsetbox.py
++++ b/lib/matplotlib/offsetbox.py
+@@ -1505,7 +1505,6 @@ class DraggableBase:
+         if not ref_artist.pickable():
+             ref_artist.set_picker(True)
+         self.got_artist = False
+-        self.canvas = self.ref_artist.figure.canvas
+         self._use_blit = use_blit and self.canvas.supports_blit
+         self.cids = [
+             self.canvas.callbacks._connect_picklable(
+@@ -1514,6 +1513,9 @@ class DraggableBase:
+                 'button_release_event', self.on_release),
+         ]
+ 
++    # A property, not an attribute, to maintain picklability.
++    canvas = property(lambda self: self.ref_artist.figure.canvas)
++
+     def on_motion(self, evt):
+         if self._check_still_parented() and self.got_artist:
+             dx = evt.x - self.mouse_x
+diff --git a/lib/matplotlib/tests/test_pickle.py b/lib/matplotlib/tests/test_pickle.py
+index ec6bdcc2fe..a31927d596 100644
+--- a/lib/matplotlib/tests/test_pickle.py
++++ b/lib/matplotlib/tests/test_pickle.py
+@@ -1,6 +1,7 @@
+ from io import BytesIO
+ import ast
+ import pickle
++import pickletools
+ 
+ import numpy as np
+ import pytest
+@@ -88,6 +89,7 @@ def _generate_complete_test_figure(fig_ref):
+ 
+     plt.subplot(3, 3, 9)
+     plt.errorbar(x, x * -0.5, xerr=0.2, yerr=0.4)
++    plt.legend(draggable=True)
+ 
+ 
+ @mpl.style.context("default")
+@@ -95,9 +97,13 @@ def _generate_complete_test_figure(fig_ref):
+ def test_complete(fig_test, fig_ref):
+     _generate_complete_test_figure(fig_ref)
+     # plotting is done, now test its pickle-ability
+-    pkl = BytesIO()
+-    pickle.dump(fig_ref, pkl, pickle.HIGHEST_PROTOCOL)
+-    loaded = pickle.loads(pkl.getbuffer())
++    pkl = pickle.dumps(fig_ref, pickle.HIGHEST_PROTOCOL)
++    # FigureCanvasAgg is picklable and GUI canvases are generally not, but there should
++    # be no reference to the canvas in the pickle stream in either case.  In order to
++    # keep the test independent of GUI toolkits, run it with Agg and check that there's
++    # no reference to FigureCanvasAgg in the pickle stream.
++    assert "FigureCanvasAgg" not in [arg for op, arg, pos in pickletools.genops(pkl)]
++    loaded = pickle.loads(pkl)
+     loaded.canvas.draw()
+ 
+     fig_test.set_size_inches(loaded.get_size_inches())
+2026-11-14 14:25:43,850 - INFO - Git diff changed after running eval script
+2026-11-14 14:25:43,850 - INFO - Attempting to stop container exec.eval.x86_64.89beb6334e800c4362eea6.a0be8ca4c1490fd9d2a3a4.126904893239184...
+2026-11-14 14:25:59,241 - INFO - Attempting to remove container exec.eval.x86_64.89beb6334e800c4362eea6.a0be8ca4c1490fd9d2a3a4.126904893239184...
+2026-11-14 14:25:59,330 - INFO - Container exec.eval.x86_64.89beb6334e800c4362eea6.a0be8ca4c1490fd9d2a3a4.126904893239184 removed.
+2026-11-14 14:25:59,330 - WARNING - End of eval at 1794687959.3307004

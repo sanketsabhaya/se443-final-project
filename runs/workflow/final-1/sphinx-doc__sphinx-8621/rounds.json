@@ -1,0 +1,73 @@
+[
+  {
+    "round": 1,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 114.8,
+      "steps": 21,
+      "exit_status": "Submitted",
+      "patch_chars": 1471
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 21.4,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_markup.py::test_kbd_role_with_separator_as_keystroke",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": false,
+    "overrides": []
+  },
+  {
+    "round": 2,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 75.9,
+      "steps": 17,
+      "exit_status": "Submitted",
+      "patch_chars": 2076
+    },
+    "check": {
+      "group": "G4",
+      "apply_ok": true,
+      "duration_s": 21.9,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_markup.py::test_kbd_role_with_separator_as_keystroke",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": true,
+    "overrides": [
+      "agent.step_limit=78",
+      "agent.wall_time_limit_seconds=1663",
+      "run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply"
+    ]
+  },
+  {
+    "round": 3,
+    "agent": {
+      "rc": 0,
+      "killed_by_wrapper": false,
+      "duration_s": 148.5,
+      "steps": 21,
+      "exit_status": "Submitted",
+      "patch_chars": 2687
+    },
+    "check": {
+      "group": "G3",
+      "apply_ok": true,
+      "duration_s": 22.3,
+      "selection_mode": "functions",
+      "command": "tox -epy39 -v -- tests/test_markup.py::test_inline",
+      "timed_out": false
+    },
+    "pre_applied_previous_patch": true,
+    "overrides": [
+      "agent.step_limit=60",
+      "agent.wall_time_limit_seconds=1565",
+      "run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply"
+    ]
+  }
+]

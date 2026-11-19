@@ -1,0 +1,56 @@
+{
+    "sphinx-doc__sphinx-8721": {
+        "patch_is_None": false,
+        "patch_exists": true,
+        "patch_successfully_applied": true,
+        "resolved": true,
+        "coverage_pred": 0.75,
+        "coverage_gold": 0.75,
+        "coverage_base": 0.5,
+        "coverage_delta_pred": 0.75,
+        "coverage_delta_gold": 0.75,
+        "added_f2p": 1,
+        "tests_base": {
+            "FAIL_TO_PASS": [],
+            "PASS_TO_PASS": [
+                "tests/test_ext_viewcode.py::test_local_source_files",
+                "tests/test_ext_viewcode.py::test_linkcode"
+            ],
+            "FAIL_TO_FAIL": [
+                "tests/test_ext_viewcode.py::test_viewcode"
+            ],
+            "PASS_TO_FAIL": [],
+            "UNMATCHED": []
+        },
+        "tests_pred": {
+            "FAIL_TO_PASS": [
+                "tests/test_ext_viewcode.py::test_viewcode_epub_default"
+            ],
+            "PASS_TO_PASS": [
+                "tests/test_ext_viewcode.py::test_local_source_files",
+                "tests/test_ext_viewcode.py::test_viewcode_epub_enabled",
+                "tests/test_ext_viewcode.py::test_linkcode"
+            ],
+            "FAIL_TO_FAIL": [
+                "tests/test_ext_viewcode.py::test_viewcode"
+            ],
+            "PASS_TO_FAIL": [],
+            "UNMATCHED": []
+        },
+        "tests_gold": {
+            "FAIL_TO_PASS": [
+                "tests/test_ext_viewcode.py::test_viewcode_epub_default"
+            ],
+            "PASS_TO_PASS": [
+                "tests/test_ext_viewcode.py::test_local_source_files",
+                "tests/test_ext_viewcode.py::test_viewcode_epub_enabled",
+                "tests/test_ext_viewcode.py::test_linkcode"
+            ],
+            "FAIL_TO_FAIL": [
+                "tests/test_ext_viewcode.py::test_viewcode"
+            ],
+            "PASS_TO_FAIL": [],
+            "UNMATCHED": []
+        }
+    }
+}

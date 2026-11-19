@@ -1,0 +1,27 @@
+2026-11-13 19:18:46,923 - WARNING - Starting evaluation at 1794619126.9238238
+2026-11-13 19:18:47,203 - INFO - Creating container for django__django-16485...
+2026-11-13 19:18:47,281 - INFO - Container for django__django-16485 created: 0cb917695adb5a4034d89fa02932974228c09dc728751119b2ddca2474ece967
+2026-11-13 19:18:47,460 - INFO - Container for django__django-16485 started: 0cb917695adb5a4034d89fa02932974228c09dc728751119b2ddca2474ece967
+2026-11-13 19:18:48,202 - INFO - Git diff before:
+
+2026-11-13 19:18:48,202 - INFO - Eval script for django__django-16485 written to eval.sh, now applying to container...
+2026-11-13 19:18:53,084 - INFO - Test output for django__django-16485 written to run_instance_swt_logs/gold_pre/django__django-16485/246c58a97b75ca7b3551c411af15945ec4446a46cf04ac5b9ed8a2da7a8b3167/test_output.txt
+2026-11-13 19:18:53,161 - INFO - Git diff after:
+diff --git a/tests/template_tests/filter_tests/test_floatformat.py b/tests/template_tests/filter_tests/test_floatformat.py
+index 361a888ce3..8f75c2b4ee 100644
+--- a/tests/template_tests/filter_tests/test_floatformat.py
++++ b/tests/template_tests/filter_tests/test_floatformat.py
+@@ -111,6 +111,8 @@ class FunctionTests(SimpleTestCase):
+         self.assertEqual(
+             floatformat(0.000000000000000000015, 20), "0.00000000000000000002"
+         )
++        self.assertEqual(floatformat("0.00", 0), "0")
++        self.assertEqual(floatformat(Decimal("0.00"), 0), "0")
+ 
+     def test_negative_zero_values(self):
+         tests = [
+2026-11-13 19:18:53,161 - INFO - Git diff changed after running eval script
+2026-11-13 19:18:53,161 - INFO - Attempting to stop container exec.eval.x86_64.9097b18874f4d0ac315ef2.3054e91debcdaa3051adcc.131560706428176...
+2026-11-13 19:19:08,421 - INFO - Attempting to remove container exec.eval.x86_64.9097b18874f4d0ac315ef2.3054e91debcdaa3051adcc.131560706428176...
+2026-11-13 19:19:08,460 - INFO - Container exec.eval.x86_64.9097b18874f4d0ac315ef2.3054e91debcdaa3051adcc.131560706428176 removed.
+2026-11-13 19:19:08,460 - WARNING - End of eval at 1794619148.4602876

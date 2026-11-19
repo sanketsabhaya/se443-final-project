@@ -1,0 +1,56 @@
+2026-11-14 13:24:58,324 - WARNING - Starting evaluation at 1794684298.3242478
+2026-11-14 13:24:58,616 - INFO - Creating container for sympy__sympy-15017...
+2026-11-14 13:24:58,692 - INFO - Container for sympy__sympy-15017 created: a92c3f6ec5f08c4193dc81a7ec2d4787587b6e24e5774c095096756a4631db44
+2026-11-14 13:24:58,869 - INFO - Container for sympy__sympy-15017 started: a92c3f6ec5f08c4193dc81a7ec2d4787587b6e24e5774c095096756a4631db44
+2026-11-14 13:24:59,228 - INFO - Git diff before:
+
+2026-11-14 13:24:59,228 - INFO - Eval script for sympy__sympy-15017 written to eval.sh, now applying to container...
+2026-11-14 13:25:04,470 - INFO - Test output for sympy__sympy-15017 written to run_instance_swt_logs/gold_post/sympy__sympy-15017/ba7fc9732c146af3174de1a4985d82dc72b3335da3c8d373aa6d8e0dfe7331be/test_output.txt
+2026-11-14 13:25:04,546 - INFO - Git diff after:
+diff --git a/sympy/tensor/array/dense_ndim_array.py b/sympy/tensor/array/dense_ndim_array.py
+index 9be94a8631..3e04e75891 100644
+--- a/sympy/tensor/array/dense_ndim_array.py
++++ b/sympy/tensor/array/dense_ndim_array.py
+@@ -149,7 +149,7 @@ def _new(cls, iterable, shape, **kwargs):
+         self._shape = shape
+         self._array = list(flat_list)
+         self._rank = len(shape)
+-        self._loop_size = functools.reduce(lambda x,y: x*y, shape) if shape else 0
++        self._loop_size = functools.reduce(lambda x,y: x*y, shape, 1)
+         return self
+ 
+     def __setitem__(self, index, value):
+diff --git a/sympy/tensor/array/tests/test_immutable_ndim_array.py b/sympy/tensor/array/tests/test_immutable_ndim_array.py
+index 5a576c44f0..326ffd2266 100644
+--- a/sympy/tensor/array/tests/test_immutable_ndim_array.py
++++ b/sympy/tensor/array/tests/test_immutable_ndim_array.py
+@@ -9,6 +9,10 @@
+ 
+ 
+ def test_ndim_array_initiation():
++    arr_with_no_elements = ImmutableDenseNDimArray([], shape=(0,))
++    assert len(arr_with_no_elements) == 0
++    assert arr_with_no_elements.rank() == 1
++
+     arr_with_one_element = ImmutableDenseNDimArray([23])
+     assert len(arr_with_one_element) == 1
+     assert arr_with_one_element[0] == 23
+@@ -73,11 +77,11 @@ def test_ndim_array_initiation():
+ 
+     from sympy.abc import x
+     rank_zero_array = ImmutableDenseNDimArray(x)
+-    assert len(rank_zero_array) == 0
++    assert len(rank_zero_array) == 1
+     assert rank_zero_array.shape == ()
+     assert rank_zero_array.rank() == 0
+     assert rank_zero_array[()] == x
+-    raises(ValueError, lambda: rank_zero_array[0])
++    assert rank_zero_array[0] == x
+ 
+ 
+ def test_reshape():
+2026-11-14 13:25:04,547 - INFO - Git diff changed after running eval script
+2026-11-14 13:25:04,547 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.10cf833f01c9d407cdc40c.128060624865488...
+2026-11-14 13:25:19,792 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.10cf833f01c9d407cdc40c.128060624865488...
+2026-11-14 13:25:19,840 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.10cf833f01c9d407cdc40c.128060624865488 removed.
+2026-11-14 13:25:19,840 - WARNING - End of eval at 1794684319.8409352

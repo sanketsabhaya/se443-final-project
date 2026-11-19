@@ -1,0 +1,106 @@
+This is mini-swe-agent version 2.4.6.
+Check the v2 migration guide at https://klieret.short.gy/mini-v2-migration
+Loading global config from '/home/mihir_barvaliya/.config/mini-swe-agent/.env'
+minisweagent: INFO: Results will be saved to                                    
+/home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-708
+0                                                                               
+Logging to '/home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7080/minisweagent.log'
+minisweagent: INFO: Loading dataset                                             
+/home/mihir_barvaliya/.cache/huggingface/hub/datasets--princeton-nlp--SWE-bench_
+Verified/snapshots/c104f840cc67f8b6eec6f759ebc8b2693d585d4a, split test...      
+minisweagent: INFO: Instance filter: 500 -> 1 instances                         
+minisweagent: INFO: Running on 1 instances...                                   
+minisweagent: INFO: Building agent config from specs:                           
+['/home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml']              
+minisweagent.environment: DEBUG: Starting container with command: docker run -d 
+--name minisweagent-34c2b779 -w /testbed --rm                                   
+docker.io/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-7080:latest sleep 2h 
+minisweagent.environment: INFO: Started container minisweagent-34c2b779 with ID 
+2380e6975e1f79c6c06f5927e59f9a329b279d3e06acdf3f49a7244b18ef32ff                
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: INFO: Saved trajectory to                                         
+'/home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-70
+80/pylint-dev__pylint-7080/pylint-dev__pylint-7080.traj.json'                   
+  Overall Progress ($0.01) ━━━━━━━━━━━━━━━━━━━━━━━ 1/1 100% 0:01:52 eta: 0:00:00
+┏━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Exit Status ┃ Count ┃ Most recent instances                                  ┃
+┡━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Submitted   │     1 │ pylint-dev__pylint-7080                                │
+└─────────────┴───────┴────────────────────────────────────────────────────────┘

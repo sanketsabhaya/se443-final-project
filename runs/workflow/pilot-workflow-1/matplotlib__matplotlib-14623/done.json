@@ -1,0 +1,8 @@
+{
+  "arm": "workflow",
+  "run_id": "pilot-workflow-1",
+  "instance_id": "matplotlib__matplotlib-14623",
+  "finished": "2026-11-13T18:52:55-06:00",
+  "final_round": 2,
+  "stop_reason": "G5"
+}

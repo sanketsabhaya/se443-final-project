@@ -1,0 +1,54 @@
+[
+  {
+    "instance_id": "sphinx-doc__sphinx-10614",
+    "repo": "sphinx-doc/sphinx",
+    "version": "7.2",
+    "command": "tox -epy39 -v -- tests/test_util_typing.py::test_restify",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_s": 15.4,
+    "n_parsed": 1,
+    "target_matched": {
+      "tests/test_util_typing.py::test_restify": "PASSED"
+    },
+    "ok": true
+  },
+  {
+    "instance_id": "pylint-dev__pylint-6528",
+    "repo": "pylint-dev/pylint",
+    "version": "2.14",
+    "command": "pytest -rA --tb=long -p no:cacheprovider tests/test_numversion.py::test_numversion",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_s": 1.6,
+    "n_parsed": 11,
+    "target_matched": {
+      "tests/test_numversion.py::test_numversion[2.8.1-expected_numversion0]": "PASSED",
+      "tests/test_numversion.py::test_numversion[2.8.2+-expected_numversion1]": "PASSED",
+      "tests/test_numversion.py::test_numversion[3.0.0a0-expected_numversion2]": "PASSED",
+      "tests/test_numversion.py::test_numversion[3..0-expected_numversion3]": "PASSED",
+      "tests/test_numversion.py::test_numversion[1.a-expected_numversion4]": "PASSED",
+      "tests/test_numversion.py::test_numversion[-expected_numversion5]": "PASSED",
+      "tests/test_numversion.py::test_numversion[3.0.0b1-expected_numversion6]": "PASSED",
+      "tests/test_numversion.py::test_numversion[3.0.0rc1-expected_numversion7]": "PASSED",
+      "tests/test_numversion.py::test_numversion[3.0.0dev-234324234234f23abc4-expected_numversion8]": "PASSED",
+      "tests/test_numversion.py::test_numversion[pylint-2.4.7-expected_numversion9]": "PASSED",
+      "tests/test_numversion.py::test_numversion[2.8.3.dev3+g28c093c2.d20210428-expected_numversion10]": "PASSED"
+    },
+    "ok": true
+  },
+  {
+    "instance_id": "sympy__sympy-14976",
+    "repo": "sympy/sympy",
+    "version": "1.2",
+    "command": "bin/test -C --verbose sympy/core/tests/test_basic.py",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_s": 2.3,
+    "n_parsed": 16,
+    "target_matched": {
+      "test_structure": "PASSED"
+    },
+    "ok": true
+  }
+]

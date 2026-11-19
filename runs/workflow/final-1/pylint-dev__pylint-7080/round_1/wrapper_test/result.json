@@ -1,0 +1,46 @@
+{
+  "start": "2026-11-14T08:30:18-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "tests/test_self.py"
+    ]
+  },
+  "end": "2026-11-14T08:30:22-06:00",
+  "duration_s": 3.6,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "tests/test_self.py",
+      "cls": "TestRunTC",
+      "func": "test_ignore_path_recursive_current_dir",
+      "label": "tests/test_self.py::TestRunTC::test_ignore_path_recursive_current_dir"
+    }
+  ],
+  "command": "pytest -rA --tb=long -p no:cacheprovider tests/test_self.py::TestRunTC::test_ignore_path_recursive_current_dir",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "tests/test_self.py::TestRunTC::test_ignore_path_recursive_current_dir": "FAILED"
+  },
+  "group": "G5",
+  "evidence": {
+    "issue_exc": [],
+    "mode": "functions",
+    "collected": {
+      "tests/test_self.py::TestRunTC::test_ignore_path_recursive_current_dir": "FAILED"
+    },
+    "setup_markers": [],
+    "failure_types": {
+      "tests/test_self.py::TestRunTC::test_ignore_path_recursive_current_dir": "AssertionError"
+    },
+    "reason": "failure_matches_issue"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": true,
+    "skip_or_xfail_added": false
+  }
+}

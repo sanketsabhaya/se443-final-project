@@ -1,0 +1,7 @@
+{
+  "matplotlib__matplotlib-22719": {
+    "instance_id": "matplotlib__matplotlib-22719",
+    "model_name_or_path": "deepseek/deepseek-flash",
+    "model_patch": "diff --git a/lib/matplotlib/tests/test_category.py b/lib/matplotlib/tests/test_category.py\nindex f0e424bd8e..8e2b0a42d0 100644\n--- a/lib/matplotlib/tests/test_category.py\n+++ b/lib/matplotlib/tests/test_category.py\n@@ -1,4 +1,6 @@\n \"\"\"Catch all for categorical functions\"\"\"\n+import warnings\n+\n import pytest\n import numpy as np\n \n@@ -211,6 +213,14 @@ class TestPlotNumlike:\n \n \n class TestPlotTypes:\n+    def test_plot_empty(self):\n+        fig, ax = plt.subplots()\n+        ax.xaxis.update_units([\"a\", \"b\"])\n+        with warnings.catch_warnings():\n+            warnings.simplefilter(\"error\", MatplotlibDeprecationWarning)\n+            line, = ax.plot([], [])\n+        assert line.get_xdata().size == 0\n+\n     @pytest.mark.parametrize(\"plotter\", PLOT_LIST, ids=PLOT_IDS)\n     def test_plot_unicode(self, plotter):\n         ax = plt.figure().subplots()\n"
+  }
+}

@@ -1,0 +1,38 @@
+2026-11-14 15:51:03,417 - WARNING - Starting evaluation at 1794693063.4172585
+2026-11-14 15:51:03,709 - INFO - Creating container for pylint-dev__pylint-6386...
+2026-11-14 15:51:03,784 - INFO - Container for pylint-dev__pylint-6386 created: 34b97fb24c0934ad2118fa590b7abe14a588466d2b022cd90cd70580ab9c2bbd
+2026-11-14 15:51:03,944 - INFO - Container for pylint-dev__pylint-6386 started: 34b97fb24c0934ad2118fa590b7abe14a588466d2b022cd90cd70580ab9c2bbd
+2026-11-14 15:51:04,186 - INFO - Git diff before:
+
+2026-11-14 15:51:04,186 - INFO - Eval script for pylint-dev__pylint-6386 written to eval.sh, now applying to container...
+2026-11-14 15:51:10,364 - INFO - Test output for pylint-dev__pylint-6386 written to run_instance_swt_logs/posthoc-c-1-workflow-pylint-dev__pylint-6386/pred_pre__deepseek__deepseek-flash/pylint-dev__pylint-6386/test_output.txt
+2026-11-14 15:51:10,437 - INFO - Git diff after:
+diff --git a/tests/config/test_config.py b/tests/config/test_config.py
+index f91e6cbf4..f41350cef 100644
+--- a/tests/config/test_config.py
++++ b/tests/config/test_config.py
+@@ -100,3 +100,19 @@ def test_unknown_py_version(capsys: CaptureFixture) -> None:
+         Run([str(EMPTY_MODULE), "--py-version=the-newest"], exit=False)
+     output = capsys.readouterr()
+     assert "the-newest has an invalid format, should be a version string." in output.err
++
++
++def test_short_verbose(capsys: CaptureFixture) -> None:
++    """Check that we correctly handle the -v flag without an argument."""
++    try:
++        runner = Run([str(EMPTY_MODULE), "-v"], exit=False)
++    except SystemExit as exc:
++        output = capsys.readouterr()
++        assert exc.code == 0, (
++            "pylint should accept -v without an argument, but exited with "
++            f"status {exc.code}: {output.err}"
++        )
++    else:
++        output = capsys.readouterr()
++        assert runner.verbose
++        assert "Using config file" in output.err
+2026-11-14 15:51:10,437 - INFO - Git diff changed after running eval script
+2026-11-14 15:51:10,437 - INFO - Attempting to stop container exec.eval.x86_64.efca49fa1fde6067d6f416.558acdbe3fad3b7b8a3e50.127086769263056...
+2026-11-14 15:51:25,687 - INFO - Attempting to remove container exec.eval.x86_64.efca49fa1fde6067d6f416.558acdbe3fad3b7b8a3e50.127086769263056...
+2026-11-14 15:51:25,725 - INFO - Container exec.eval.x86_64.efca49fa1fde6067d6f416.558acdbe3fad3b7b8a3e50.127086769263056 removed.
+2026-11-14 15:51:25,725 - WARNING - End of eval at 1794693085.7258847

@@ -1,0 +1,7 @@
+2026-11-13 19:06:34,044 - minisweagent - INFO - Loading dataset /home/mihir_barvaliya/.cache/huggingface/hub/datasets--princeton-nlp--SWE-bench_Verified/snapshots/c104f840cc67f8b6eec6f759ebc8b2693d585d4a, split test...
+2026-11-13 19:06:34,106 - minisweagent - INFO - Instance filter: 500 -> 1 instances
+2026-11-13 19:06:34,107 - minisweagent - INFO - Running on 1 instances...
+2026-11-13 19:06:34,108 - minisweagent - INFO - Building agent config from specs: ['/home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml']
+2026-11-13 19:06:37,040 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-b38d214b -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.astropy_1776_astropy-8872:latest sleep 2h
+2026-11-13 19:06:37,416 - minisweagent.environment - INFO - Started container minisweagent-b38d214b with ID 965d52f60b65d9960813a6f1924fcbf4326dc25b72caa0a8d91f9ad60b1b2959
+2026-11-13 19:07:21,105 - minisweagent - INFO - Saved trajectory to '/home/mihir_barvaliya/se443/project/runs/workflow/final-1/astropy__astropy-8872/round_1/mini/astropy__astropy-8872/astropy__astropy-8872.traj.json'

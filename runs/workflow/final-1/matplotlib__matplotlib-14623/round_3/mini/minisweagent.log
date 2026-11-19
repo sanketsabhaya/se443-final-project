@@ -1,0 +1,6 @@
+2026-11-13 19:23:47,984 - minisweagent - INFO - Loading dataset /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-14623/round_3/dataset, split test...
+2026-11-13 19:23:48,040 - minisweagent - INFO - Running on 1 instances...
+2026-11-13 19:23:48,041 - minisweagent - INFO - Building agent config from specs: ['/home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml', 'agent.step_limit=67', 'agent.wall_time_limit_seconds=1652', 'run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply']
+2026-11-13 19:23:50,325 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-a43c6d6e -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-14623:latest sleep 2h
+2026-11-13 19:23:50,625 - minisweagent.environment - INFO - Started container minisweagent-a43c6d6e with ID a13d67e1c5a7aaefb8c4dd076e084b4d3e682b5c5a5e06c552018125fcbcf8ef
+2026-11-13 19:24:43,863 - minisweagent - INFO - Saved trajectory to '/home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-14623/round_3/mini/matplotlib__matplotlib-14623/matplotlib__matplotlib-14623.traj.json'

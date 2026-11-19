@@ -1,0 +1,226 @@
+.pkg: find interpreter for spec PythonSpec(major=3, minor=9)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(path=/opt/miniconda3/envs/testbed/bin/python)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3, minor=5)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python3, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.11.5.final.0-64, exe=/opt/miniconda3/bin/python3, platform=linux, version='3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/usr/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3, minor=6)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python3, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.11.5.final.0-64, exe=/opt/miniconda3/bin/python3, platform=linux, version='3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/usr/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3, minor=7)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python3, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.11.5.final.0-64, exe=/opt/miniconda3/bin/python3, platform=linux, version='3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/usr/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3, minor=8)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python3, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.11.5.final.0-64, exe=/opt/miniconda3/bin/python3, platform=linux, version='3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/usr/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(path=/opt/miniconda3/envs/testbed/bin/python)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(path=/opt/miniconda3/envs/testbed/bin/python)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(path=/opt/miniconda3/envs/testbed/bin/python)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(path=/opt/miniconda3/envs/testbed/bin/python)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(path=/opt/miniconda3/envs/testbed/bin/python)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(path=/opt/miniconda3/envs/testbed/bin/python)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+py39: create virtual environment via CPython3Posix(dest=/testbed/.tox/py39, clear=False, no_vcs_ignore=False, global=False)
+py39: add seed packages via FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/root/.local/share/virtualenv)
+py39: add activators for Bash, CShell, Fish, Nushell, PowerShell, Python
+.pkg: create virtual environment via CPython3Posix(dest=/testbed/.tox/.pkg, clear=False, no_vcs_ignore=False, global=False)
+.pkg: add seed packages via FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/root/.local/share/virtualenv)
+.pkg: add activators for Bash, CShell, Fish, Nushell, PowerShell, Python
+.pkg: install_requires> python -I -m pip install 'setuptools>=40.8.0' wheel
+.pkg: exit 0 (0.76 seconds) /testbed> python -I -m pip install 'setuptools>=40.8.0' wheel pid=59
+.pkg: _optional_hooks> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True setuptools.build_meta __legacy__
+.pkg: exit None (0.21 seconds) /testbed> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True setuptools.build_meta __legacy__ pid=64
+.pkg: get_requires_for_build_editable> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True setuptools.build_meta __legacy__
+.pkg: exit None (0.28 seconds) /testbed> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True setuptools.build_meta __legacy__ pid=67
+.pkg: build_editable> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True setuptools.build_meta __legacy__
+.pkg: exit None (0.40 seconds) /testbed> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True setuptools.build_meta __legacy__ pid=71
+py39: install_package_deps> python -I -m pip install 'Jinja2<3.0' 'Pygments>=2.0' 'alabaster<0.7.12,>=0.7' 'babel>=1.3' 'colorama>=0.3.5; sys_platform == "win32"' cython 'docutils>=0.12' html5lib imagesize 'markupsafe<=2.0.1' packaging pytest pytest-cov 'requests>=2.5.0' setuptools 'snowballstemmer>=1.1' 'sphinxcontrib-applehelp<=1.0.7' 'sphinxcontrib-devhelp<=1.0.5' 'sphinxcontrib-htmlhelp<=2.0.4' sphinxcontrib-jsmath 'sphinxcontrib-qthelp<=1.0.6' 'sphinxcontrib-serializinghtml<=1.1.9' typed-ast
+py39: exit 0 (13.45 seconds) /testbed> python -I -m pip install 'Jinja2<3.0' 'Pygments>=2.0' 'alabaster<0.7.12,>=0.7' 'babel>=1.3' 'colorama>=0.3.5; sys_platform == "win32"' cython 'docutils>=0.12' html5lib imagesize 'markupsafe<=2.0.1' packaging pytest pytest-cov 'requests>=2.5.0' setuptools 'snowballstemmer>=1.1' 'sphinxcontrib-applehelp<=1.0.7' 'sphinxcontrib-devhelp<=1.0.5' 'sphinxcontrib-htmlhelp<=2.0.4' sphinxcontrib-jsmath 'sphinxcontrib-qthelp<=1.0.6' 'sphinxcontrib-serializinghtml<=1.1.9' typed-ast pid=75
+py39: install_package> python -I -m pip install --force-reinstall --no-deps /testbed/.tox/.tmp/package/1/Sphinx-3.4.0.dev20261114-0.editable-py3-none-any.whl
+py39: exit 0 (0.44 seconds) /testbed> python -I -m pip install --force-reinstall --no-deps /testbed/.tox/.tmp/package/1/Sphinx-3.4.0.dev20261114-0.editable-py3-none-any.whl pid=85
+py39: commands[0]> python -X dev -m pytest -rA --durations 25 tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.9.20, pytest-8.4.2, pluggy-1.6.0
+cachedir: .tox/py39/.pytest_cache
+libraries: Sphinx-3.4.0+/37037ddd3, docutils-0.19
+base tempdir: /tmp/pytest-of-root/pytest-0
+rootdir: /testbed
+configfile: setup.cfg
+plugins: cov-7.1.0
+collected 1 item
+
+tests/test_ext_autodoc_configs.py [31mF[0m[31m                                      [100%][0m
+
+=================================== FAILURES ===================================
+[31m[1m__________________ test_autodoc_type_aliases_for_description ___________________[0m
+
+app = <SphinxTestApp buildername='text'>
+
+    [0m[37m@pytest[39;49;00m.mark.skipif(sys.version_info < ([94m3[39;49;00m, [94m7[39;49;00m), reason=[33m'[39;49;00m[33mpython 3.7+ is required.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.sphinx([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, testroot=[33m'[39;49;00m[33mext-autodoc[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+                        confoverrides={[33m'[39;49;00m[33mautodoc_typehints[39;49;00m[33m'[39;49;00m: [33m'[39;49;00m[33mdescription[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+                                       [33m'[39;49;00m[33mautodoc_type_aliases[39;49;00m[33m'[39;49;00m: {[33m'[39;49;00m[33mmyint[39;49;00m[33m'[39;49;00m: [33m'[39;49;00m[33mmyint[39;49;00m[33m'[39;49;00m}})[90m[39;49;00m
+    [94mdef[39;49;00m[90m [39;49;00m[92mtest_autodoc_type_aliases_for_description[39;49;00m(app):[90m[39;49;00m
+        text = [33m"[39;49;00m[33m.. automodule:: target.annotations[39;49;00m[33m\n[39;49;00m[33m   :members:[39;49;00m[33m\n[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        doctree = restructuredtext.parse(app, text)[90m[39;49;00m
+        text = doctree.astext()[90m[39;49;00m
+>       [94massert[39;49;00m [33m'[39;49;00m[33mx (myint)[39;49;00m[33m'[39;49;00m [95min[39;49;00m text[90m[39;49;00m
+[1m[31mE       AssertionError: assert 'x (myint)' in '\n\n\n\n\n\nclass target.annotations.Foo\n\ndocstring\n\n\n\nattr: myint\n\ndocstring\n\n\n\ntarget.annotations.mult(...nParameters\n\nx (int) -- \n\ny (int) -- \n\nReturn type\n\nint\n\n\n\ntarget.annotations.variable: myint\n\ndocstring'[0m
+
+[1m[31mtests/test_ext_autodoc_configs.py[0m:934: AssertionError
+--------------------------- Captured stdout teardown ---------------------------
+# testroot: root
+# builder: text
+# srcdir: /tmp/pytest-of-root/pytest-0/ext-autodoc
+# outdir: /tmp/pytest-of-root/pytest-0/ext-autodoc/_build/text
+# status: 
+[01mRunning Sphinx v3.4.0+/37037ddd3[39;49;00m
+
+# warning: 
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'meta' is already registered, its visitors will be overridden[39;49;00m
+
+[33m=============================== warnings summary ===============================[0m
+sphinx/util/docutils.py:45
+  /testbed/sphinx/util/docutils.py:45: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    __version_info__ = tuple(LooseVersion(docutils.__version__).version)
+
+sphinx/registry.py:22
+  /testbed/sphinx/registry.py:22: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    from pkg_resources import iter_entry_points
+
+sphinx/directives/patches.py:14
+  /testbed/sphinx/directives/patches.py:14: DeprecationWarning: The `docutils.parsers.rst.directive.html` module will be removed in Docutils 2.0. Since Docutils 0.18, the "Meta" node is defined in `docutils.parsers.rst.directives.misc`.
+    from docutils.parsers.rst.directives import html, images, tables
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/transforms/__init__.py:210: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in self.document.traverse():  # type: Node
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/transforms/i18n.py:95: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in self.document.traverse(addnodes.translatable):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/transforms/__init__.py:110: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for ref in self.document.traverse(nodes.substitution_reference):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/transforms/__init__.py:131: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in self.document.traverse(nodes.target):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/transforms/__init__.py:150: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in self.document.traverse(nodes.block_quote):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/transforms/__init__.py:175: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in self.document.traverse(nodes.Element):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/transforms/__init__.py:222: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in self.document.traverse(addnodes.index):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/transforms/__init__.py:189: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in self.document.traverse(nodes.section):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/transforms/__init__.py:279: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in self.document.traverse(nodes.doctest_block):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/domains/citation.py:116: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in self.document.traverse(nodes.citation):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/domains/citation.py:135: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in self.document.traverse(nodes.citation_reference):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/builders/latex/transforms.py:36: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in self.document.traverse(matcher):  # type: nodes.Element
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/transforms/__init__.py:291: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in self.document.traverse(matcher):  # type: Element
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/util/compat.py:44: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in self.document.traverse(addnodes.index):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/domains/index.py:51: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in document.traverse(addnodes.index):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/domains/math.py:84: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    self.data['has_equations'][docname] = any(document.traverse(math_node))
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/environment/collectors/asset.py:46: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in doctree.traverse(nodes.image):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/environment/collectors/asset.py:127: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in doctree.traverse(addnodes.download_reference):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/environment/collectors/title.py:46: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in doctree.traverse(nodes.section):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/transforms/__init__.py:301: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in self.document.traverse(nodes.system_message):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/transforms/__init__.py:390: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in self.document.traverse(addnodes.manpage):
+
+tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+  /testbed/sphinx/transforms/i18n.py:488: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for inline in self.document.traverse(matcher):  # type: nodes.inline
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================= slowest 25 durations =============================
+0.35s setup    tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+0.04s call     tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description
+
+(1 durations < 0.005s hidden.  Use -vv to show these durations.)
+[36m[1m=========================== short test summary info ============================[0m
+[31mFAILED[0m tests/test_ext_autodoc_configs.py::[1mtest_autodoc_type_aliases_for_description[0m - AssertionError: assert 'x (myint)' in '\n\n\n\n\n\nclass target.annotations...
+[31m======================== [31m[1m1 failed[0m, [33m25 warnings[0m[31m in 0.71s[0m[31m ========================[0m
+py39: exit 1 (1.64 seconds) /testbed> python -X dev -m pytest -rA --durations 25 tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description pid=92
+  py39: FAIL code 1 (18.18=setup[16.54]+cmd[1.64] seconds)
+  evaluation failed :( (18.86 seconds)

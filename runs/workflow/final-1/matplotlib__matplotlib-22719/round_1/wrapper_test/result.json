@@ -1,0 +1,49 @@
+{
+  "start": "2026-11-13T20:53:00-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "lib/matplotlib/tests/test_category.py"
+    ]
+  },
+  "end": "2026-11-13T20:53:05-06:00",
+  "duration_s": 5.0,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "lib/matplotlib/tests/test_category.py",
+      "cls": "TestPlotTypes",
+      "func": "test_plot_empty",
+      "label": "lib/matplotlib/tests/test_category.py::TestPlotTypes::test_plot_empty"
+    }
+  ],
+  "command": "pytest -rA --tb=long -p no:cacheprovider lib/matplotlib/tests/test_category.py::TestPlotTypes::test_plot_empty",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "lib/matplotlib/tests/test_category.py::TestPlotTypes::test_plot_empty": "FAILED"
+  },
+  "group": "G5",
+  "evidence": {
+    "issue_exc": [
+      "ConversionError",
+      "MatplotlibDeprecationWarning"
+    ],
+    "mode": "functions",
+    "collected": {
+      "lib/matplotlib/tests/test_category.py::TestPlotTypes::test_plot_empty": "FAILED"
+    },
+    "setup_markers": [],
+    "failure_types": {
+      "lib/matplotlib/tests/test_category.py::TestPlotTypes::test_plot_empty": "ConversionError"
+    },
+    "reason": "failure_matches_issue"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": false,
+    "skip_or_xfail_added": false
+  }
+}

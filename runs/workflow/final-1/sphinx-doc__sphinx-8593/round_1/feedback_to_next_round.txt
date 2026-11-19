@@ -1,0 +1,215 @@
+
+
+---
+FEEDBACK FROM AN AUTOMATED TEST RUN (revision 1 of at most 2)
+
+A previous attempt at this task produced the test patch shown below. We applied it to the current,
+unfixed code in a fresh copy of the repository and ran only the tests it adds or changes.
+
+Command: tox -epy39 -v -- tests/test_ext_autodoc_private_members.py::test_private_field tests/test_ext_autodoc_private_members.py::test_private_field_and_private_members tests/test_ext_autodoc_private_members.py::test_private_members
+Result: Your tests fail, but not in a way related to the issue.
+The failure (unknown error) does not look like the problem described in the issue. Fix the test so that it fails because of the behavior the issue describes, not because of a mistake in the test.
+
+Per-test results:
+tests/test_ext_autodoc_private_members.py::test_private_field: FAILED
+tests/test_ext_autodoc_private_members.py::test_private_field_and_private_members: PASSED
+tests/test_ext_autodoc_private_members.py::test_private_members: FAILED
+
+Test output (last 150 lines):
+<test_output>
+
+            [33m'[39;49;00m[33m   :module: target.private[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m   :value: None[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m   :meta public:[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+        ][90m[39;49;00m
+[1m[31mE       AssertionError: assert ['', '.. py:m...private', ...] == ['', '.. py:m...private', ...][0m
+[1m[31mE         [0m
+[1m[31mE         At index 12 diff: [0m[33m'[39;49;00m[33m.. py:data:: private_variable[39;49;00m[33m'[39;49;00m[90m[39;49;00m != [0m[33m'[39;49;00m[33m.. py:data:: _public_variable[39;49;00m[33m'[39;49;00m[90m[39;49;00m[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_ext_autodoc_private_members.py[0m:21: AssertionError
+--------------------------- Captured stdout teardown ---------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-root/pytest-0/ext-autodoc
+# outdir: /tmp/pytest-of-root/pytest-0/ext-autodoc/_build/html
+# status: 
+[01mRunning Sphinx v3.5.0+/a576ca5e9[39;49;00m
+
+# warning: 
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'meta' is already registered, its visitors will be overridden[39;49;00m
+
+[31m[1m_____________________________ test_private_members _____________________________[0m
+
+app = <SphinxTestApp buildername='html'>
+
+    [0m[37m@pytest[39;49;00m.mark.sphinx([33m'[39;49;00m[33mhtml[39;49;00m[33m'[39;49;00m, testroot=[33m'[39;49;00m[33mext-autodoc[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+    [94mdef[39;49;00m[90m [39;49;00m[92mtest_private_members[39;49;00m(app):[90m[39;49;00m
+        app.config.autoclass_content = [33m'[39;49;00m[33mclass[39;49;00m[33m'[39;49;00m[90m[39;49;00m
+        options = {[33m"[39;49;00m[33mmembers[39;49;00m[33m"[39;49;00m: [94mNone[39;49;00m,[90m[39;49;00m
+                   [33m"[39;49;00m[33mprivate-members[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33m_public_function[39;49;00m[33m"[39;49;00m}[90m[39;49;00m
+        actual = do_autodoc(app, [33m'[39;49;00m[33mmodule[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mtarget.private[39;49;00m[33m'[39;49;00m, options)[90m[39;49;00m
+>       [94massert[39;49;00m [96mlist[39;49;00m(actual) == [[90m[39;49;00m
+            [33m'[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m.. py:module:: target.private[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m.. py:function:: _public_function(name)[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m   :module: target.private[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m   public_function is a docstring().[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m   :meta public:[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m.. py:data:: _public_variable[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m   :module: target.private[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m   :value: None[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m   :meta public:[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+            [33m'[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+        ][90m[39;49;00m
+[1m[31mE       AssertionError: assert ['', '.. py:m...private', ...] == ['', '.. py:m...private', ...][0m
+[1m[31mE         [0m
+[1m[31mE         At index 12 diff: [0m[33m'[39;49;00m[33m.. py:data:: private_variable[39;49;00m[33m'[39;49;00m[90m[39;49;00m != [0m[33m'[39;49;00m[33m.. py:data:: _public_variable[39;49;00m[33m'[39;49;00m[90m[39;49;00m[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_ext_autodoc_private_members.py[0m:92: AssertionError
+--------------------------- Captured stdout teardown ---------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-root/pytest-0/ext-autodoc
+# outdir: /tmp/pytest-of-root/pytest-0/ext-autodoc/_build/html
+# status: 
+[01mRunning Sphinx v3.5.0+/a576ca5e9[39;49;00m
+
+# warning: 
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'meta' is already registered, its visitors will be overridden[39;49;00m
+
+[33m=============================== warnings summary ===============================[0m
+sphinx/util/docutils.py:45
+  /testbed/sphinx/util/docutils.py:45: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    __version_info__ = tuple(LooseVersion(docutils.__version__).version)
+
+sphinx/registry.py:22
+  /testbed/sphinx/registry.py:22: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    from pkg_resources import iter_entry_points
+
+sphinx/directives/patches.py:14
+  /testbed/sphinx/directives/patches.py:14: DeprecationWarning: The `docutils.parsers.rst.directive.html` module will be removed in Docutils 2.0. Since Docutils 0.18, the "Meta" node is defined in `docutils.parsers.rst.directives.misc`.
+    from docutils.parsers.rst.directives import html, images, tables
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+--------------------------- Captured stdout teardown ---------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-root/pytest-0/ext-autodoc
+# outdir: /tmp/pytest-of-root/pytest-0/ext-autodoc/_build/html
+# status: 
+[01mRunning Sphinx v3.5.0+/a576ca5e9[39;49;00m
+
+# warning: 
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'meta' is already registered, its visitors will be overridden[39;49;00m
+
+============================= slowest 25 durations =============================
+0.38s setup    tests/test_ext_autodoc_private_members.py::test_private_field
+0.04s call     tests/test_ext_autodoc_private_members.py::test_private_field
+0.01s setup    tests/test_ext_autodoc_private_members.py::test_private_members
+0.01s setup    tests/test_ext_autodoc_private_members.py::test_private_field_and_private_members
+
+(5 durations < 0.005s hidden.  Use -vv to show these durations.)
+[36m[1m=========================== short test summary info ============================[0m
+[32mPASSED[0m tests/test_ext_autodoc_private_members.py::[1mtest_private_field_and_private_members[0m
+[31mFAILED[0m tests/test_ext_autodoc_private_members.py::[1mtest_private_field[0m - AssertionError: assert ['', '.. py:m...private', ...] == ['', '.. py:m...pr...
+[31mFAILED[0m tests/test_ext_autodoc_private_members.py::[1mtest_private_members[0m - AssertionError: assert ['', '.. py:m...private', ...] == ['', '.. py:m...pr...
+[31m=================== [31m[1m2 failed[0m, [32m1 passed[0m, [33m3 warnings[0m[31m in 0.68s[0m[31m ====================[0m
+py39: exit 1 (1.57 seconds) /testbed> python -X dev -m pytest -rA --durations 25 tests/test_ext_autodoc_private_members.py::test_private_field tests/test_ext_autodoc_private_members.py::test_private_field_and_private_members tests/test_ext_autodoc_private_members.py::test_private_members pid=99
+  py39: FAIL code 1 (18.78=setup[17.21]+cmd[1.57] seconds)
+  evaluation failed :( (19.40 seconds)
+</test_output>
+
+Previous test patch:
+<previous_patch>
+diff --git a/tests/roots/test-ext-autodoc/target/private.py b/tests/roots/test-ext-autodoc/target/private.py
+index a39ce085e..d2d6a29e7 100644
+--- a/tests/roots/test-ext-autodoc/target/private.py
++++ b/tests/roots/test-ext-autodoc/target/private.py
+@@ -9,3 +9,10 @@ def _public_function(name):
+ 
+     :meta public:
+     """
++
++
++#: :meta public:
++_public_variable = None
++
++#: :meta private:
++private_variable = None
+diff --git a/tests/test_ext_autodoc_private_members.py b/tests/test_ext_autodoc_private_members.py
+index 6bce5ce78..44b292607 100644
+--- a/tests/test_ext_autodoc_private_members.py
++++ b/tests/test_ext_autodoc_private_members.py
+@@ -30,6 +30,13 @@ def test_private_field(app):
+         '',
+         '   :meta public:',
+         '',
++        '',
++        '.. py:data:: _public_variable',
++        '   :module: target.private',
++        '   :value: None',
++        '',
++        '   :meta public:',
++        '',
+     ]
+ 
+ 
+@@ -52,6 +59,13 @@ def test_private_field_and_private_members(app):
+         '   :meta public:',
+         '',
+         '',
++        '.. py:data:: _public_variable',
++        '   :module: target.private',
++        '   :value: None',
++        '',
++        '   :meta public:',
++        '',
++        '',
+         '.. py:function:: private_function(name)',
+         '   :module: target.private',
+         '',
+@@ -59,6 +73,13 @@ def test_private_field_and_private_members(app):
+         '',
+         '   :meta private:',
+         '',
++        '',
++        '.. py:data:: private_variable',
++        '   :module: target.private',
++        '   :value: None',
++        '',
++        '   :meta private:',
++        '',
+     ]
+ 
+ 
+@@ -80,4 +101,11 @@ def test_private_members(app):
+         '',
+         '   :meta public:',
+         '',
++        '',
++        '.. py:data:: _public_variable',
++        '   :module: target.private',
++        '   :value: None',
++        '',
++        '   :meta public:',
++        '',
+     ]
+
+</previous_patch>
+This patch is already applied in /testbed. Edit the test files in place, then submit as instructed.
+
+Please revise the test. It must still check the behavior described in the issue with meaningful
+assertions: do not delete or weaken assertions, and do not skip, xfail or otherwise disable the test
+just to change its outcome. As before, change test files only and do not fix the issue.

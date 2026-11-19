@@ -1,0 +1,31 @@
+============================= test process starts ==============================
+executable:         /opt/miniconda3/envs/testbed/bin/python  (3.9.20-final-0) [CPython]
+architecture:       64-bit
+cache:              no
+ground types:       python 
+numpy:              None
+random seed:        37715561
+hash randomization: on (PYTHONHASHSEED=2343988243)
+
+sympy/core/tests/test_basic.py[16] 
+test_structure ok
+test_equality ok
+test_matches_basic ok
+test_has ok
+test_subs ok
+test_atoms ok
+test_free_symbols_empty ok
+test_doit ok
+test_S ok
+test_xreplace ok
+test_preorder_traversal ok
+test_sorted_args ok
+test_call ok
+test_rewrite ok
+test_literal_evalf_is_number_is_zero_is_comparable ok
+test_as_Basic ok                                                            [OK]
+
+
+================== tests finished: 16 passed, in 0.07 seconds ==================
+/testbed/sympy/solvers/diophantine.py:3188: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if feasible is 1:  # it's prime and k == 2

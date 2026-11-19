@@ -1,0 +1,24 @@
+{
+    "total_instances": 3,
+    "completed_instances": 0,
+    "resolved_instances": 0,
+    "unresolved_instances": 3,
+    "error_instances": 0,
+    "Mean coverage": 0.75,
+    "Mean coverage delta": 0.5,
+    "unstopped_instances": 0,
+    "completed_ids": [],
+    "resolved_ids": [],
+    "unresolved_ids": [
+        "matplotlib__matplotlib-25311",
+        "pylint-dev__pylint-6903",
+        "sphinx-doc__sphinx-8459"
+    ],
+    "error_ids": [],
+    "unstopped_containers": [],
+    "unremoved_images": [
+        "exec.eval.x86_64.77d82541416cab86d0d86a.2d81df98fa1799b50f4abc:latest",
+        "exec.eval.x86_64.89beb6334e800c4362eea6.a0be8ca4c1490fd9d2a3a4:latest",
+        "exec.eval.x86_64.fc8235bb41fea90b41065e.0e61b8e442dd90882e9ff4:latest"
+    ]
+}

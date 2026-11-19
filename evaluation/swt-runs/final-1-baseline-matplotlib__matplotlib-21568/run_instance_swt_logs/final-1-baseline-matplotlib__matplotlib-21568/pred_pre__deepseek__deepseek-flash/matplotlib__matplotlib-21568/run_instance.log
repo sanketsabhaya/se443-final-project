@@ -1,0 +1,70 @@
+2026-11-13 20:29:22,725 - WARNING - Starting evaluation at 1794623362.7259667
+2026-11-13 20:36:26,913 - INFO - Creating container for matplotlib__matplotlib-21568...
+2026-11-13 20:36:27,015 - INFO - Container for matplotlib__matplotlib-21568 created: 6887c2f35fb68f13f74f1de1b291bfc5dd7ebc751e44ce88533ffd58afe531de
+2026-11-13 20:36:27,223 - INFO - Container for matplotlib__matplotlib-21568 started: 6887c2f35fb68f13f74f1de1b291bfc5dd7ebc751e44ce88533ffd58afe531de
+2026-11-13 20:36:28,263 - INFO - Git diff before:
+
+2026-11-13 20:36:28,263 - INFO - Eval script for matplotlib__matplotlib-21568 written to eval.sh, now applying to container...
+2026-11-13 20:36:51,681 - INFO - Test output for matplotlib__matplotlib-21568 written to run_instance_swt_logs/final-1-baseline-matplotlib__matplotlib-21568/pred_pre__deepseek__deepseek-flash/matplotlib__matplotlib-21568/test_output.txt
+2026-11-13 20:36:51,760 - INFO - Git diff after:
+diff --git a/lib/matplotlib/tests/test_dates.py b/lib/matplotlib/tests/test_dates.py
+index 96a3db1730..18079f7859 100644
+--- a/lib/matplotlib/tests/test_dates.py
++++ b/lib/matplotlib/tests/test_dates.py
+@@ -6,7 +6,7 @@ import functools
+ import numpy as np
+ import pytest
+ 
+-from matplotlib import rc_context
++from matplotlib import rc_context, style
+ import matplotlib.dates as mdates
+ import matplotlib.pyplot as plt
+ from matplotlib.testing.decorators import image_comparison
+@@ -323,13 +323,17 @@ def test_date_formatter_callable():
+ 
+ @pytest.mark.parametrize('delta, expected', [
+     (datetime.timedelta(weeks=52 * 200),
+-     [r'$\mathdefault{%d}$' % (year,) for year in range(1990, 2171, 20)]),
++     [r'$\mathdefault{%d}$' % year for year in range(1990, 2171, 20)]),
+     (datetime.timedelta(days=30),
+-     [r'Jan$\mathdefault{ %02d 1990}$' % (day,) for day in range(1, 32, 3)]),
++     [r'$\mathdefault{1990{-}01{-}%02d}$' % day for day in range(1, 32, 3)]),
+     (datetime.timedelta(hours=20),
+-     [r'$\mathdefault{%02d:00:00}$' % (hour,) for hour in range(0, 21, 2)]),
++     [r'$\mathdefault{01{-}01\;%02d}$' % hour for hour in range(0, 21, 2)]),
++    (datetime.timedelta(minutes=10),
++     [r'$\mathdefault{01\;00{:}%02d}$' % minu for minu in range(0, 11)]),
+ ])
+ def test_date_formatter_usetex(delta, expected):
++    style.use("default")
++
+     d1 = datetime.datetime(1990, 1, 1)
+     d2 = d1 + delta
+ 
+@@ -609,14 +613,14 @@ def test_concise_formatter_show_offset(t_delta, expected):
+       '$\\mathdefault{25}$', '$\\mathdefault{29}$', 'Feb',
+       '$\\mathdefault{05}$', '$\\mathdefault{09}$']),
+     (datetime.timedelta(hours=40),
+-     ['Jan$\\mathdefault{{-}01}$', '$\\mathdefault{04:00}$',
+-      '$\\mathdefault{08:00}$', '$\\mathdefault{12:00}$',
+-      '$\\mathdefault{16:00}$', '$\\mathdefault{20:00}$',
+-      'Jan$\\mathdefault{{-}02}$', '$\\mathdefault{04:00}$',
+-      '$\\mathdefault{08:00}$', '$\\mathdefault{12:00}$',
+-      '$\\mathdefault{16:00}$']),
++     ['Jan$\\mathdefault{{-}01}$', '$\\mathdefault{04{:}00}$',
++      '$\\mathdefault{08{:}00}$', '$\\mathdefault{12{:}00}$',
++      '$\\mathdefault{16{:}00}$', '$\\mathdefault{20{:}00}$',
++      'Jan$\\mathdefault{{-}02}$', '$\\mathdefault{04{:}00}$',
++      '$\\mathdefault{08{:}00}$', '$\\mathdefault{12{:}00}$',
++      '$\\mathdefault{16{:}00}$']),
+     (datetime.timedelta(seconds=2),
+-     ['$\\mathdefault{59.5}$', '$\\mathdefault{00:00}$',
++     ['$\\mathdefault{59.5}$', '$\\mathdefault{00{:}00}$',
+       '$\\mathdefault{00.5}$', '$\\mathdefault{01.0}$',
+       '$\\mathdefault{01.5}$', '$\\mathdefault{02.0}$',
+       '$\\mathdefault{02.5}$']),
+2026-11-13 20:36:51,760 - INFO - Git diff changed after running eval script
+2026-11-13 20:36:51,760 - INFO - Attempting to stop container exec.eval.x86_64.ea14326ccfbf5376330c69.d07f6a72057eeedea9660a.129886964148432...
+2026-11-13 20:37:07,011 - INFO - Attempting to remove container exec.eval.x86_64.ea14326ccfbf5376330c69.d07f6a72057eeedea9660a.129886964148432...
+2026-11-13 20:37:07,048 - INFO - Container exec.eval.x86_64.ea14326ccfbf5376330c69.d07f6a72057eeedea9660a.129886964148432 removed.
+2026-11-13 20:37:07,050 - WARNING - End of eval at 1794623827.0493312

@@ -1,0 +1,23 @@
+{
+  "time": "2026-11-14T11:38:52-06:00",
+  "images": [
+    {
+      "image": "exec.eval.x86_64.77d82541416cab86d0d86a.6e9b2c0524b12613dd45e1:latest",
+      "id": "sha256:a05a26bc17860cf2addc34231cbd9cfbb9d1fb70974a9b993dac60df5ac9a2e2",
+      "repo_digests": [
+        "exec.eval.x86_64.77d82541416cab86d0d86a.6e9b2c0524b12613dd45e1@sha256:a05a26bc17860cf2addc34231cbd9cfbb9d1fb70974a9b993dac60df5ac9a2e2"
+      ],
+      "size_bytes": 4393670061,
+      "rmi_exit_code": 0
+    },
+    {
+      "image": "docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8593:latest",
+      "id": "sha256:815b32905af211560f2ccece18e672fb3660569d3f00b3b6c663fe55efe8e6a8",
+      "repo_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8593@sha256:815b32905af211560f2ccece18e672fb3660569d3f00b3b6c663fe55efe8e6a8"
+      ],
+      "size_bytes": 4052201107,
+      "rmi_exit_code": 0
+    }
+  ]
+}

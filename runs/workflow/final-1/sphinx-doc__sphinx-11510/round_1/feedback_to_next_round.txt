@@ -1,0 +1,209 @@
+
+
+---
+FEEDBACK FROM AN AUTOMATED TEST RUN (revision 1 of at most 2)
+
+A previous attempt at this task produced the test patch shown below. We applied it to the current,
+unfixed code in a fresh copy of the repository and ran only the tests it adds or changes.
+
+Command: tox -epy39 -v -- tests/test_directive_other.py::test_include_source_read_event tests/test_directive_other.py::test_include_source_read_event_nested_includes
+Result: Your tests fail, but not in a way related to the issue.
+The failure (unknown error) does not look like the problem described in the issue. Fix the test so that it fails because of the behavior the issue describes, not because of a mistake in the test.
+
+Per-test results:
+tests/test_directive_other.py::test_include_source_read_event: FAILED
+tests/test_directive_other.py::test_include_source_read_event_nested_includes: FAILED
+
+Test output (last 141 lines):
+<test_output>
+ter<0.8,>=0.7' 'babel>=2.9' 'colorama>=0.4.5; sys_platform == "win32"' 'cython>=3.0' 'docutils<0.21,>=0.18.1' filelock html5lib 'imagesize>=1.3' 'importlib-metadata>=4.8; python_version < "3.10"' 'packaging>=21.0' 'pytest>=4.6' 'requests>=2.25.0' 'setuptools>=67.0' 'snowballstemmer>=2.0' sphinxcontrib-applehelp sphinxcontrib-devhelp 'sphinxcontrib-htmlhelp>=2.0.0' sphinxcontrib-jsmath sphinxcontrib-qthelp 'sphinxcontrib-serializinghtml>=1.1.5' pid=74
+py39: install_package> python -I -m pip install --force-reinstall --no-deps /testbed/.tox/.tmp/package/1/sphinx-7.2.0-py3-none-any.whl
+py39: exit 0 (0.38 seconds) /testbed> python -I -m pip install --force-reinstall --no-deps /testbed/.tox/.tmp/package/1/sphinx-7.2.0-py3-none-any.whl pid=82
+py39: commands[0]> python -X dev -X warn_default_encoding -m pytest -rA --durations 25 tests/test_directive_other.py::test_include_source_read_event tests/test_directive_other.py::test_include_source_read_event_nested_includes
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.9.20, pytest-8.4.2, pluggy-1.6.0
+cachedir: .tox/py39/.pytest_cache
+libraries: Sphinx-7.2.0+/d5aa7d4f8, docutils-0.20.1
+base tmp_path: /tmp/pytest-of-root/pytest-0
+rootdir: /testbed
+configfile: pyproject.toml
+collected 2 items
+
+tests/test_directive_other.py [31mF[0m[31mF[0m[31m                                         [100%][0m
+
+=================================== FAILURES ===================================
+[31m[1m________________________ test_include_source_read_event ________________________[0m
+
+app = <SphinxTestApp buildername='html'>
+
+    [0m[37m@pytest[39;49;00m.mark.sphinx(testroot=[33m'[39;49;00m[33mdirective-include[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+    [94mdef[39;49;00m[90m [39;49;00m[92mtest_include_source_read_event[39;49;00m(app):[90m[39;49;00m
+        sources_reported = {}[90m[39;49;00m
+    [90m[39;49;00m
+        [94mdef[39;49;00m[90m [39;49;00m[92msource_read_handler[39;49;00m(app, doc, source):[90m[39;49;00m
+            sources_reported[doc] = source[[94m0[39;49;00m][90m[39;49;00m
+    [90m[39;49;00m
+        app.connect([33m"[39;49;00m[33msource-read[39;49;00m[33m"[39;49;00m, source_read_handler)[90m[39;49;00m
+        text = ([33m"[39;49;00m[33m.. include:: baz/baz.rst[39;49;00m[33m\n[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                [33m"[39;49;00m[33m   :start-line: 4[39;49;00m[33m\n[39;49;00m[33m\n[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                [33m"[39;49;00m[33m.. include:: text.txt[39;49;00m[33m\n[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                [33m"[39;49;00m[33m   :literal:    [39;49;00m[33m\n[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+        app.env.find_files(app.config, app.builder)[90m[39;49;00m
+        restructuredtext.parse(app, text, [33m'[39;49;00m[33mindex[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+        [94massert[39;49;00m [33m"[39;49;00m[33mindex[39;49;00m[33m"[39;49;00m [95min[39;49;00m sources_reported[90m[39;49;00m
+        [94massert[39;49;00m [33m"[39;49;00m[33mtext.txt[39;49;00m[33m"[39;49;00m [95mnot[39;49;00m [95min[39;49;00m sources_reported  [90m# text was included as literal, no rst parsing[39;49;00m[90m[39;49;00m
+>       [94massert[39;49;00m [33m"[39;49;00m[33mbaz/baz[39;49;00m[33m"[39;49;00m [95min[39;49;00m sources_reported[90m[39;49;00m
+[1m[31mE       AssertionError: assert 'baz/baz' in {'index': '.. include:: baz/baz.rst\n   :start-line: 4\n\n.. include:: text.txt\n   :literal:    \n'}[0m
+
+[1m[31mtests/test_directive_other.py[0m:169: AssertionError
+--------------------------- Captured stdout teardown ---------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-root/pytest-0/directive-include
+# outdir: /tmp/pytest-of-root/pytest-0/directive-include/_build/html
+# status: 
+[01mRunning Sphinx v7.2.0+/d5aa7d4f8[39;49;00m
+
+# warning: 
+
+[31m[1m________________ test_include_source_read_event_nested_includes ________________[0m
+
+app = <SphinxTestApp buildername='html'>
+
+    [0m[37m@pytest[39;49;00m.mark.sphinx(testroot=[33m'[39;49;00m[33mdirective-include[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+    [94mdef[39;49;00m[90m [39;49;00m[92mtest_include_source_read_event_nested_includes[39;49;00m(app):[90m[39;49;00m
+    [90m[39;49;00m
+        [94mdef[39;49;00m[90m [39;49;00m[92msource_read_handler[39;49;00m(app, doc, source):[90m[39;49;00m
+            text = source[[94m0[39;49;00m].replace([33m"[39;49;00m[33m#magical[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mamazing[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+            source[[94m0[39;49;00m] = text[90m[39;49;00m
+    [90m[39;49;00m
+        app.connect([33m"[39;49;00m[33msource-read[39;49;00m[33m"[39;49;00m, source_read_handler)[90m[39;49;00m
+        text = ([33m"[39;49;00m[33m.. include:: baz/baz.rst[39;49;00m[33m\n[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+        app.env.find_files(app.config, app.builder)[90m[39;49;00m
+        doctree = restructuredtext.parse(app, text, [33m'[39;49;00m[33mindex[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+        assert_node(doctree, addnodes.document)[90m[39;49;00m
+        [94massert[39;49;00m [96mlen[39;49;00m(doctree.children) == [94m3[39;49;00m[90m[39;49;00m
+        assert_node(doctree.children[[94m1[39;49;00m], nodes.paragraph)[90m[39;49;00m
+>       [94massert[39;49;00m doctree.children[[94m1[39;49;00m].rawsource == [33m"[39;49;00m[33mThe amazing foo.[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE       AssertionError: assert 'The #magical foo.' == 'The amazing foo.'[0m
+[1m[31mE         [0m
+[1m[31mE         [0m[91m- The amazing foo.[39;49;00m[90m[39;49;00m[0m
+[1m[31mE         [92m+ The #magical foo.[39;49;00m[90m[39;49;00m[0m
+
+[1m[31mtests/test_directive_other.py[0m:187: AssertionError
+--------------------------- Captured stdout teardown ---------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-root/pytest-0/directive-include
+# outdir: /tmp/pytest-of-root/pytest-0/directive-include/_build/html
+# status: 
+[01mRunning Sphinx v7.2.0+/d5aa7d4f8[39;49;00m
+
+# warning: 
+
+============================= slowest 25 durations =============================
+0.45s setup    tests/test_directive_other.py::test_include_source_read_event
+0.02s call     tests/test_directive_other.py::test_include_source_read_event
+0.02s setup    tests/test_directive_other.py::test_include_source_read_event_nested_includes
+0.01s call     tests/test_directive_other.py::test_include_source_read_event_nested_includes
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+[36m[1m=========================== short test summary info ============================[0m
+[31mFAILED[0m tests/test_directive_other.py::[1mtest_include_source_read_event[0m - AssertionError: assert 'baz/baz' in {'index': '.. include:: baz/baz.rst\n  ...
+[31mFAILED[0m tests/test_directive_other.py::[1mtest_include_source_read_event_nested_includes[0m - AssertionError: assert 'The #magical foo.' == 'The amazing foo.'
+[31m============================== [31m[1m2 failed[0m[31m in 0.62s[0m[31m ===============================[0m
+py39: exit 1 (1.34 seconds) /testbed> python -X dev -X warn_default_encoding -m pytest -rA --durations 25 tests/test_directive_other.py::test_include_source_read_event tests/test_directive_other.py::test_include_source_read_event_nested_includes pid=89
+.pkg: _exit> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True flit_core.buildapi
+.pkg: exit None (0.00 seconds) /testbed> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True flit_core.buildapi pid=71
+  py39: FAIL code 1 (13.05=setup[11.71]+cmd[1.34] seconds)
+  evaluation failed :( (13.66 seconds)
+</test_output>
+
+Previous test patch:
+<previous_patch>
+diff --git a/tests/roots/test-directive-include/baz/baz.rst b/tests/roots/test-directive-include/baz/baz.rst
+new file mode 100644
+index 000000000..0b74be0ba
+--- /dev/null
++++ b/tests/roots/test-directive-include/baz/baz.rst
+@@ -0,0 +1,6 @@
++Baz
++===
++
++.. include:: foo.rst
++
++Baz was here.
+diff --git a/tests/roots/test-directive-include/conf.py b/tests/roots/test-directive-include/conf.py
+new file mode 100644
+index 000000000..a4768582f
+--- /dev/null
++++ b/tests/roots/test-directive-include/conf.py
+@@ -0,0 +1,2 @@
++project = 'test-directive-include'
++exclude_patterns = ['_build']
+diff --git a/tests/roots/test-directive-include/foo.rst b/tests/roots/test-directive-include/foo.rst
+new file mode 100644
+index 000000000..0f82e661b
+--- /dev/null
++++ b/tests/roots/test-directive-include/foo.rst
+@@ -0,0 +1 @@
++The #magical foo.
+diff --git a/tests/roots/test-directive-include/text.txt b/tests/roots/test-directive-include/text.txt
+new file mode 100644
+index 000000000..b7ea15d7b
+--- /dev/null
++++ b/tests/roots/test-directive-include/text.txt
+@@ -0,0 +1 @@
++This is plain text.
+diff --git a/tests/test_directive_other.py b/tests/test_directive_other.py
+index f221db075..45bd03304 100644
+--- a/tests/test_directive_other.py
++++ b/tests/test_directive_other.py
+@@ -148,3 +148,40 @@ def test_toctree_twice(app):
+     assert_node(doctree[0][0],
+                 entries=[(None, 'foo'), (None, 'foo')],
+                 includefiles=['foo', 'foo'])
++
++
++@pytest.mark.sphinx(testroot='directive-include')
++def test_include_source_read_event(app):
++    sources_reported = {}
++
++    def source_read_handler(app, doc, source):
++        sources_reported[doc] = source[0]
++
++    app.connect("source-read", source_read_handler)
++    text = (".. include:: baz/baz.rst\n"
++            "   :start-line: 4\n\n"
++            ".. include:: text.txt\n"
++            "   :literal:    \n")
++    app.env.find_files(app.config, app.builder)
++    restructuredtext.parse(app, text, 'index')
++    assert "index" in sources_reported
++    assert "text.txt" not in sources_reported  # text was included as literal, no rst parsing
++    assert "baz/baz" in sources_reported
++    assert sources_reported["baz/baz"] == "\nBaz was here."
++
++
++@pytest.mark.sphinx(testroot='directive-include')
++def test_include_source_read_event_nested_includes(app):
++
++    def source_read_handler(app, doc, source):
++        text = source[0].replace("#magical", "amazing")
++        source[0] = text
++
++    app.connect("source-read", source_read_handler)
++    text = (".. include:: baz/baz.rst\n")
++    app.env.find_files(app.config, app.builder)
++    doctree = restructuredtext.parse(app, text, 'index')
++    assert_node(doctree, addnodes.document)
++    assert len(doctree.children) == 3
++    assert_node(doctree.children[1], nodes.paragraph)
++    assert doctree.children[1].rawsource == "The amazing foo."
+
+</previous_patch>
+This patch is already applied in /testbed. Edit the test files in place, then submit as instructed.
+
+Please revise the test. It must still check the behavior described in the issue with meaningful
+assertions: do not delete or weaken assertions, and do not skip, xfail or otherwise disable the test
+just to change its outcome. As before, change test files only and do not fix the issue.

@@ -1,0 +1,219 @@
+2026-11-14 15:30:53,654 - INFO - Building image exec.eval.x86_64.fc8235bb41fea90b41065e.e24989c28a1f493aace8bb:latest
+Using dockerfile:
+FROM --platform=linux/x86_64 exec.env.x86_64.fc8235bb41fea90b41065e:latest
+
+COPY ./setup_repo.sh /root/
+RUN /bin/bash /root/setup_repo.sh
+
+WORKDIR /testbed/
+
+Adding (1) setup scripts to image build repo
+2026-11-14 15:30:53,654 - INFO - [SETUP SCRIPT] setup_repo.sh:
+#!/bin/bash
+set -euxo pipefail
+git clone -o origin https://github.com/pylint-dev/pylint /testbed
+chmod -R 777 /testbed
+cd /testbed
+git reset --hard ca80f03a43bc39e4cc2c67dc99817b3c9f13b8a6
+git remote remove origin
+source /opt/miniconda3/bin/activate
+conda activate testbed
+echo "Current environment: $CONDA_DEFAULT_ENV"
+python -m pip install -e . --config-settings editable_mode=compat
+
+2026-11-14 15:30:53,840 - INFO - Step 1/4 : FROM --platform=linux/x86_64 exec.env.x86_64.fc8235bb41fea90b41065e:latest
+2026-11-14 15:30:53,840 - INFO - 
+2026-11-14 15:30:53,855 - INFO - ---> 653406e83459
+2026-11-14 15:30:53,855 - INFO - Step 2/4 : COPY ./setup_repo.sh /root/
+2026-11-14 15:30:53,855 - INFO - 
+2026-11-14 15:31:21,040 - INFO - ---> 447b0a17e4df
+2026-11-14 15:31:21,040 - INFO - Step 3/4 : RUN /bin/bash /root/setup_repo.sh
+2026-11-14 15:31:21,040 - INFO - 
+2026-11-14 15:31:21,132 - INFO - ---> Running in 8711934d4598
+2026-11-14 15:31:21,317 - INFO - + git clone -o origin https://github.com/pylint-dev/pylint /testbed
+Cloning into '/testbed'...
+2026-11-14 15:31:27,296 - INFO - + chmod -R 777 /testbed
+2026-11-14 15:31:27,340 - INFO - + cd /testbed
++ git reset --hard ca80f03a43bc39e4cc2c67dc99817b3c9f13b8a6
+2026-11-14 15:31:27,682 - INFO - HEAD is now at ca80f03a4 Fixed misinterpreted modulo sign for ``consider-using-f-string`` (#6914)
+2026-11-14 15:31:27,682 - INFO - + git remote remove origin
+2026-11-14 15:31:27,702 - INFO - + source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
+2026-11-14 15:31:27,702 - INFO - +++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+2026-11-14 15:31:27,702 - INFO - +++ '[' -z '' ']'
++++ export CONDA_SHLVL=0
++++ CONDA_SHLVL=0
++++ '[' -n '' ']'
+2026-11-14 15:31:27,703 - INFO - +++++ dirname /opt/miniconda3/bin/conda
+2026-11-14 15:31:27,704 - INFO - ++++ dirname /opt/miniconda3/bin
+2026-11-14 15:31:27,705 - INFO - +++ PATH=/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export PATH
++++ '[' -z '' ']'
++++ PS1=
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
+2026-11-14 15:31:27,706 - INFO - +++ PS1=
++++ __conda_exe shell.posix activate
+2026-11-14 15:31:27,706 - INFO - +++ /opt/miniconda3/bin/conda shell.posix activate
+2026-11-14 15:31:27,899 - INFO - ++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=1
++++ CONDA_SHLVL=1
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+2026-11-14 15:31:27,900 - INFO - ++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+2026-11-14 15:31:27,901 - INFO - ++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+2026-11-14 15:31:27,901 - INFO - ++ /opt/miniconda3/bin/conda shell.posix activate testbed
+2026-11-14 15:31:28,010 - INFO - + ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=2
+++ CONDA_SHLVL=2
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_1=/opt/miniconda3
+++ CONDA_PREFIX_1=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ echo 'Current environment: testbed'
++ python -m pip install -e . --config-settings editable_mode=compat
+2026-11-14 15:31:28,010 - INFO - Current environment: testbed
+2026-11-14 15:31:28,341 - INFO - Obtaining file:///testbed
+2026-11-14 15:31:28,348 - INFO - Installing build dependencies: started
+2026-11-14 15:31:29,425 - INFO - Installing build dependencies: finished with status 'done'
+2026-11-14 15:31:29,427 - INFO - Checking if build backend supports build_editable: started
+2026-11-14 15:31:29,676 - INFO - Checking if build backend supports build_editable: finished with status 'done'
+2026-11-14 15:31:29,678 - INFO - Getting requirements to build editable: started
+2026-11-14 15:31:29,859 - INFO - Getting requirements to build editable: finished with status 'done'
+2026-11-14 15:31:29,861 - INFO - Preparing editable metadata (pyproject.toml): started
+2026-11-14 15:31:30,035 - INFO - Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-11-14 15:31:30,146 - INFO - Collecting dill>=0.2 (from pylint==2.15.0.dev0)
+2026-11-14 15:31:30,254 - INFO - Downloading dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+2026-11-14 15:31:30,265 - INFO - Requirement already satisfied: platformdirs>=2.2.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (4.4.0)
+2026-11-14 15:31:30,315 - INFO - Collecting astroid<=2.12.0-dev0,>=2.11.5 (from pylint==2.15.0.dev0)
+2026-11-14 15:31:30,332 - INFO - Downloading astroid-2.11.7-py3-none-any.whl.metadata (4.7 kB)
+2026-11-14 15:31:30,341 - INFO - Requirement already satisfied: isort<6,>=4.2.5 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (5.10.1)
+2026-11-14 15:31:30,342 - INFO - Requirement already satisfied: mccabe<0.8,>=0.6 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (0.7.0)
+2026-11-14 15:31:30,343 - INFO - Requirement already satisfied: tomli>=1.1.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (2.5.0)
+2026-11-14 15:31:30,356 - INFO - Requirement already satisfied: tomlkit>=0.10.1 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (0.15.2)
+2026-11-14 15:31:30,357 - INFO - Requirement already satisfied: typing-extensions>=3.10.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (4.16.0)
+2026-11-14 15:31:30,357 - INFO - Requirement already satisfied: lazy-object-proxy>=1.4.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from astroid<=2.12.0-dev0,>=2.11.5->pylint==2.15.0.dev0) (1.12.0)
+2026-11-14 15:31:30,358 - INFO - Requirement already satisfied: wrapt<2,>=1.11 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from astroid<=2.12.0-dev0,>=2.11.5->pylint==2.15.0.dev0) (1.17.3)
+2026-11-14 15:31:30,358 - INFO - Requirement already satisfied: setuptools>=20.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from astroid<=2.12.0-dev0,>=2.11.5->pylint==2.15.0.dev0) (80.9.0)
+2026-11-14 15:31:30,388 - INFO - Downloading astroid-2.11.7-py3-none-any.whl (251 kB)
+2026-11-14 15:31:30,471 - INFO - Downloading dill-0.4.1-py3-none-any.whl (120 kB)
+2026-11-14 15:31:30,496 - INFO - Building wheels for collected packages: pylint
+2026-11-14 15:31:30,500 - INFO - Building editable for pylint (pyproject.toml): started
+2026-11-14 15:31:30,799 - INFO - Building editable for pylint (pyproject.toml): finished with status 'done'
+2026-11-14 15:31:30,800 - INFO - Created wheel for pylint: filename=pylint-2.15.0.dev0-0.editable-py3-none-any.whl size=23651 sha256=6e0b73e44bcf6dcade2c8e856d065734272663d07dbca551d0d9a3fe1a3c365a
+  Stored in directory: /tmp/pip-ephem-wheel-cache-tr_ymq6a/wheels/7d/66/67/70d1ee2124ccf21d601c352e25cdca10f611f7c8b3f9ffb9e4
+2026-11-14 15:31:30,803 - INFO - Successfully built pylint
+2026-11-14 15:31:30,852 - INFO - Installing collected packages: dill, astroid, pylint
+2026-11-14 15:31:30,970 - INFO - Attempting uninstall: astroid
+2026-11-14 15:31:30,971 - INFO - Found existing installation: astroid 2.12.13
+2026-11-14 15:31:30,982 - INFO - Uninstalling astroid-2.12.13:
+2026-11-14 15:31:31,035 - INFO - Successfully uninstalled astroid-2.12.13
+2026-11-14 15:31:31,195 - INFO - 
+2026-11-14 15:31:31,206 - INFO - Successfully installed astroid-2.11.7 dill-0.4.1 pylint-2.15.0.dev0
+2026-11-14 15:31:31,207 - INFO - WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-11-14 15:31:45,169 - INFO - ---> Removed intermediate container 8711934d4598
+2026-11-14 15:31:45,169 - INFO - ---> 38f6ecbe0263
+2026-11-14 15:31:45,169 - INFO - Step 4/4 : WORKDIR /testbed/
+2026-11-14 15:31:45,169 - INFO - 
+2026-11-14 15:31:45,354 - INFO - ---> Running in f72bfeecaa41
+2026-11-14 15:31:54,378 - INFO - ---> Removed intermediate container f72bfeecaa41
+2026-11-14 15:31:54,378 - INFO - ---> f2bd21135070
+2026-11-14 15:31:54,386 - INFO - Successfully built f2bd21135070
+2026-11-14 15:31:54,405 - INFO - Successfully tagged exec.eval.x86_64.fc8235bb41fea90b41065e.e24989c28a1f493aace8bb:latest
+2026-11-14 15:31:54,409 - INFO - Image built successfully!

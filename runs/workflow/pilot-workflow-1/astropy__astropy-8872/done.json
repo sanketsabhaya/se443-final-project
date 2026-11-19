@@ -1,0 +1,8 @@
+{
+  "arm": "workflow",
+  "run_id": "pilot-workflow-1",
+  "instance_id": "astropy__astropy-8872",
+  "finished": "2026-11-13T18:47:55-06:00",
+  "final_round": 1,
+  "stop_reason": "G5"
+}

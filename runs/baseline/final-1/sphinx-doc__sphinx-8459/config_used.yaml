@@ -1,0 +1,201 @@
+# mini-SWE-agent config for SWT-Bench UNIT-TEST MODE test generation.
+# Used IDENTICALLY by the baseline and by our workflow (the wrapper adds feedback only).
+#
+# Derived from upstream mini-swe-agent v2.4.6 (04d809ce) config/benchmarks/swebench.yaml.
+# Differences from upstream (everything else is verbatim):
+#   - agent.instance_template: task changed from "fix the bug in non-test files" to
+#     "write a bug-reproducing test inside the repo's existing test suite"; submission
+#     step stages new test files so they appear in the diff. The baseline is NOT
+#     instructed to run or verify its test (it may choose to); execution-based
+#     verification is what our workflow adds.
+#   - Sampling: no temperature / seed set (upstream sets none). DeepSeek default
+#     temperature is 1 and has no effect in thinking mode (the default); the API has no seed.
+#   - agent.step_limit: 250 -> 100        (project budget)
+#   - agent.wall_time_limit_seconds: 0 -> 1800  (project budget, 30 min)
+#   - agent.cost_limit: 3. -> 0 (disabled; budget is steps + wall time only)
+#   - model.model_name: anthropic/claude-sonnet-4-5 -> deepseek/deepseek-flash
+# The prompt receives ONLY {{task}} = the instance's problem_statement (issue text).
+
+agent:
+  system_template: |
+    You are a helpful assistant that can interact with a computer shell to solve programming tasks.
+  instance_template: |
+    <pr_description>
+    Consider the following issue description:
+    {{task}}
+    </pr_description>
+
+    <instructions>
+    # Task Instructions
+
+    ## Overview
+
+    You're a software engineer interacting continuously with a computer by submitting commands.
+    Your task is to write a unit test that reproduces the issue described above, added to the repository's existing test suite in the current directory.
+    The test should fail on the current code (because the issue is present) and pass once the issue is fixed.
+    Do NOT fix the issue. Do NOT modify any non-test source files.
+    <IMPORTANT>This is an interactive process where you will think and issue AT LEAST ONE command, see the result, then think and issue your next command(s).</important>
+
+    For each response:
+
+    1. Include a THOUGHT section explaining your reasoning and what you're trying to accomplish
+    2. Provide one or more bash tool calls to execute
+
+    ## Important Boundaries
+
+    - MODIFY: Test files only, in the repository's existing test suite in /testbed (this is the working directory for all your subsequent commands). Prefer adding a test function to the most relevant existing test file; create a new test file only if no suitable one exists, following the repository's test naming and location conventions.
+    - DO NOT MODIFY: Non-test source code, configuration files (pyproject.toml, setup.cfg, tox.ini, etc.), or existing tests' expected behavior.
+
+    ## Recommended Workflow
+
+    1. Analyze the codebase by finding and reading the code related to the issue and its existing tests
+    2. Write a focused test that checks the behavior the issue says is expected
+    3. Keep your test consistent with the conventions of the existing tests in that file
+
+    ## Command Execution Rules
+
+    You are operating in an environment where
+
+    1. You issue at least one command
+    2. The system executes the command(s) in a subshell
+    3. You see the result(s)
+    4. You write your next command(s)
+
+    Each response should include:
+
+    1. **Reasoning text** where you explain your analysis and plan
+    2. At least one tool call with your command
+
+    **CRITICAL REQUIREMENTS:**
+
+    - Your response SHOULD include reasoning text explaining what you're doing
+    - Your response MUST include AT LEAST ONE bash tool call. You can make MULTIPLE tool calls in a single response when the commands are independent (e.g., searching multiple files, reading different parts of the codebase).
+    - Directory or environment variable changes are not persistent. Every action is executed in a new subshell.
+    - However, you can prefix any action with `MY_ENV_VAR=MY_VALUE cd /path/to/working/dir && ...` or write/load environment variables from files
+
+    Example of a CORRECT response:
+    <example_response>
+    I need to understand the Builder-related code. Let me find relevant files and check the project structure.
+
+    [Makes multiple bash tool calls: {"command": "ls -la"}, {"command": "find src -name '*.java' | grep -i builder"}, {"command": "cat README.md | head -50"}]
+    </example_response>
+
+    ## Environment Details
+
+    - You have a full Linux shell environment
+    - Always use non-interactive flags (-y, -f) for commands
+    - Avoid interactive tools like vi, nano, or any that require user input
+    - You can use bash commands or invoke any tool that is available in the environment
+    - You can also create new tools or scripts to help you with the task
+    - If a tool isn't available, you can also install it
+
+    ## Submission
+
+    When you've completed your work, you MUST submit your test changes as a git patch.
+    Follow these steps IN ORDER, with SEPARATE commands:
+
+    Step 1: Create the patch file
+    Run `git add -- path/to/test_file1 path/to/test_file2 && git diff --cached -- path/to/test_file1 path/to/test_file2 > patch.txt` listing only the test files you added or modified.
+    Do NOT commit your changes.
+
+    <IMPORTANT>
+    The patch must only contain the test files you added or modified to reproduce the issue.
+    Do not submit file creations or changes to any of the following files:
+
+    - non-test source files
+    - standalone reproduction scripts or helper scripts/tools that you created outside the test suite
+    - installation, build, packaging, configuration, or setup scripts (you can assume that the environment is already set up)
+    - binary or compiled files
+    </IMPORTANT>
+
+    Step 2: Verify your patch
+    Inspect patch.txt to confirm it only contains your intended test changes and headers show `--- a/` and `+++ b/` paths.
+
+    Step 3: Submit (EXACT command required)
+    You MUST use this EXACT command to submit:
+
+    ```bash
+    echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT && cat patch.txt
+    ```
+
+    If the command fails (nonzero exit status), it will not submit.
+
+    <CRITICAL>
+    - Creating/viewing the patch and submitting it MUST be separate commands (not combined with &&).
+    - If you modify patch.txt after verifying, you SHOULD verify again before submitting.
+    - You CANNOT continue working (reading, editing, testing) in any way on this task after submitting.
+    </CRITICAL>
+    </instructions>
+  step_limit: 100
+  wall_time_limit_seconds: 1800
+  cost_limit: 0
+
+environment:
+  cwd: "/testbed"
+  timeout: 60
+  interpreter: ["bash", "-c"]
+  env:
+    PAGER: cat
+    MANPAGER: cat
+    LESS: -R
+    PIP_PROGRESS_BAR: "off"
+    TQDM_DISABLE: "1"
+    # bash -c is non-login so it won't source ~/.bashrc; point BASH_ENV at it so the
+    # image's `conda activate testbed` runs (else commands use the base env, no testbed).
+    BASH_ENV: /root/.bashrc
+  environment_class: docker
+
+model:
+  observation_template: |
+    {% if output.exception_info -%}
+    <exception>{{output.exception_info}}</exception>
+    {% endif -%}
+    <returncode>{{output.returncode}}</returncode>
+    {% if output.output | length < 10000 -%}
+    <output>
+    {{ output.output -}}
+    </output>
+    {%- else -%}
+    <warning>
+    The output of your last command was too long.
+    Please try a different command that produces less output.
+    If you're looking at a file you can try use head, tail or sed to view a smaller number of lines selectively.
+    If you're using grep or find and it produced too much output, you can use a more selective search pattern.
+    If you really need to see something from the full command's output, you can redirect output to a file and then search in that file.
+    </warning>
+    {%- set elided_chars = output.output | length - 10000 -%}
+    <output_head>
+    {{ output.output[:5000] }}
+    </output_head>
+    <elided_chars>
+    {{ elided_chars }} characters elided
+    </elided_chars>
+    <output_tail>
+    {{ output.output[-5000:] }}
+    </output_tail>
+    {%- endif -%}
+  format_error_template: |
+    {% if finish_reason is defined and (finish_reason == "length" or (finish_reason == "tool_calls" and not has_tool_calls)) -%}
+    Your previous response reached the output token limit (finish_reason={{ finish_reason }}) before you produced a tool call, so it was cut off. Respond more concisely and finish with exactly one bash tool call. If you need to think more, do so briefly.
+    {%- else -%}
+    Tool call error:
+
+    <error>
+    {{error}}
+    </error>
+
+    Here is general guidance on how to submit correct toolcalls:
+
+    Every response needs to use the 'bash' tool at least once to execute commands.
+
+    Call the bash tool with your command as the argument:
+    - Tool: bash
+    - Arguments: {"command": "your_command_here"}
+
+    If you have completed your assignment, please consult the first message about how to
+    submit your solution (you will not be able to continue working on this task after that).
+    {%- endif %}
+  model_name: "deepseek/deepseek-flash"
+  model_kwargs:
+    drop_params: true
+    parallel_tool_calls: true

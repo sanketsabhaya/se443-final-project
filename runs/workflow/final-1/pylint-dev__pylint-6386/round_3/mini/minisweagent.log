@@ -1,0 +1,6 @@
+2026-11-14 07:58:59,660 - minisweagent - INFO - Loading dataset /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6386/round_3/dataset, split test...
+2026-11-14 07:58:59,726 - minisweagent - INFO - Running on 1 instances...
+2026-11-14 07:58:59,727 - minisweagent - INFO - Building agent config from specs: ['/home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml', 'agent.step_limit=52', 'agent.wall_time_limit_seconds=1599', 'run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply']
+2026-11-14 07:59:01,891 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-1cd53766 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-6386:latest sleep 2h
+2026-11-14 07:59:02,204 - minisweagent.environment - INFO - Started container minisweagent-1cd53766 with ID b80ddecdab53d703bd857444d5b07801e7940131ac7e67e2388b1088923a7ddf
+2026-11-14 08:00:12,145 - minisweagent - INFO - Saved trajectory to '/home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6386/round_3/mini/pylint-dev__pylint-6386/pylint-dev__pylint-6386.traj.json'

@@ -1,0 +1,14 @@
+{
+  "time": "2026-11-14T02:18:43-06:00",
+  "images": [
+    {
+      "image": "docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-22865:latest",
+      "id": "sha256:a57f77eb429bece1e7eef612143c5c1586cab2dd9da37f36faaccd9aec3062bd",
+      "repo_digests": [
+        "swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-22865@sha256:a57f77eb429bece1e7eef612143c5c1586cab2dd9da37f36faaccd9aec3062bd"
+      ],
+      "size_bytes": 10577880219,
+      "rmi_exit_code": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "time": "2026-11-13T19:57:26-06:00",
+  "images": [
+    {
+      "image": "exec.eval.x86_64.4c04dd2da7e137006c2b92.ee2b23ea35e21165f9fdb8:latest",
+      "id": "sha256:a266bf5cbc91b8c66e9dd5399363db199b3495ca2e636dd423e6ed3490fdfdb0",
+      "repo_digests": [
+        "exec.eval.x86_64.4c04dd2da7e137006c2b92.ee2b23ea35e21165f9fdb8@sha256:a266bf5cbc91b8c66e9dd5399363db199b3495ca2e636dd423e6ed3490fdfdb0"
+      ],
+      "size_bytes": 7546799513,
+      "rmi_exit_code": 0
+    },
+    {
+      "image": "docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-14623:latest",
+      "id": "sha256:5f6acd976c3bc2b2f293704f88b1188307d116baa87b87e5fa82a67976f157a9",
+      "repo_digests": [
+        "swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-14623@sha256:5f6acd976c3bc2b2f293704f88b1188307d116baa87b87e5fa82a67976f157a9"
+      ],
+      "size_bytes": 6871725623,
+      "rmi_exit_code": 0
+    }
+  ]
+}

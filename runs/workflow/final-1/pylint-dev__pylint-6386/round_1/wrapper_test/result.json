@@ -1,0 +1,46 @@
+{
+  "start": "2026-11-14T07:56:59-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "tests/config/test_config.py"
+    ]
+  },
+  "end": "2026-11-14T07:57:02-06:00",
+  "duration_s": 2.9,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "tests/config/test_config.py",
+      "cls": null,
+      "func": "test_short_verbose",
+      "label": "tests/config/test_config.py::test_short_verbose"
+    }
+  ],
+  "command": "pytest -rA --tb=long -p no:cacheprovider tests/config/test_config.py::test_short_verbose",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "tests/config/test_config.py::test_short_verbose": "FAILED"
+  },
+  "group": "G4",
+  "evidence": {
+    "issue_exc": [],
+    "mode": "functions",
+    "collected": {
+      "tests/config/test_config.py::test_short_verbose": "FAILED"
+    },
+    "setup_markers": [],
+    "failure_types": {
+      "tests/config/test_config.py::test_short_verbose": "SystemExit"
+    },
+    "reason": "failure_unrelated"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": false,
+    "skip_or_xfail_added": false
+  }
+}

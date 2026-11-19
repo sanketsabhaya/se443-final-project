@@ -1,0 +1,46 @@
+{
+  "start": "2026-11-14T10:11:02-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "tests/test_ext_autodoc_configs.py"
+    ]
+  },
+  "end": "2026-11-14T10:11:24-06:00",
+  "duration_s": 21.6,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "tests/test_ext_autodoc_configs.py",
+      "cls": null,
+      "func": "test_autodoc_type_aliases_for_description",
+      "label": "tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description"
+    }
+  ],
+  "command": "tox -epy39 -v -- tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description": "FAILED"
+  },
+  "group": "G4",
+  "evidence": {
+    "issue_exc": [],
+    "mode": "functions",
+    "collected": {
+      "tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description": "FAILED"
+    },
+    "setup_markers": [],
+    "failure_types": {
+      "tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases_for_description": null
+    },
+    "reason": "failure_unrelated"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": false,
+    "skip_or_xfail_added": true
+  }
+}

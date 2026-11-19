@@ -1,0 +1,14 @@
+2026-11-14 08:10:21,951 - WARNING - Starting evaluation at 1794665421.9513607
+2026-11-14 08:10:22,231 - INFO - Creating container for pylint-dev__pylint-6386...
+2026-11-14 08:10:22,307 - INFO - Container for pylint-dev__pylint-6386 created: 0a9b6a6278130122c0e37906a5c8e26719ad1b1158ce157d269d5e4de14f11fd
+2026-11-14 08:10:22,474 - INFO - Container for pylint-dev__pylint-6386 started: 0a9b6a6278130122c0e37906a5c8e26719ad1b1158ce157d269d5e4de14f11fd
+2026-11-14 08:10:22,717 - INFO - Git diff before:
+
+2026-11-14 08:10:22,717 - INFO - Eval script for pylint-dev__pylint-6386 written to eval.sh, now applying to container...
+2026-11-14 08:10:28,753 - INFO - Test output for pylint-dev__pylint-6386 written to run_instance_swt_logs/base_pre/pylint-dev__pylint-6386/763e5ed70b4305084f6aba1174081a3b96459310a22bad05e6887dc3e168d8c4/test_output.txt
+2026-11-14 08:10:28,824 - INFO - Git diff after:
+
+2026-11-14 08:10:28,824 - INFO - Attempting to stop container exec.eval.x86_64.efca49fa1fde6067d6f416.605786f79127f23902681b.129393803034000...
+2026-11-14 08:10:44,056 - INFO - Attempting to remove container exec.eval.x86_64.efca49fa1fde6067d6f416.605786f79127f23902681b.129393803034000...
+2026-11-14 08:10:44,089 - INFO - Container exec.eval.x86_64.efca49fa1fde6067d6f416.605786f79127f23902681b.129393803034000 removed.
+2026-11-14 08:10:44,089 - WARNING - End of eval at 1794665444.0898988

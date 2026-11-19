@@ -1,0 +1,46 @@
+2026-11-14 16:15:12,878 - WARNING - Starting evaluation at 1794694512.8784819
+2026-11-14 16:15:13,156 - INFO - Creating container for pylint-dev__pylint-7080...
+2026-11-14 16:15:13,235 - INFO - Container for pylint-dev__pylint-7080 created: 2fba31f4ed2b3e495fdab7f3bd02dab5a7b6e7f878c0633be214f09a58b7cbbe
+2026-11-14 16:15:13,406 - INFO - Container for pylint-dev__pylint-7080 started: 2fba31f4ed2b3e495fdab7f3bd02dab5a7b6e7f878c0633be214f09a58b7cbbe
+2026-11-14 16:15:13,691 - INFO - Git diff before:
+
+2026-11-14 16:15:13,691 - INFO - Eval script for pylint-dev__pylint-7080 written to eval.sh, now applying to container...
+2026-11-14 16:16:00,245 - INFO - Test output for pylint-dev__pylint-7080 written to run_instance_swt_logs/posthoc-c-1-workflow-pylint-dev__pylint-7080/pred_pre__deepseek__deepseek-flash/pylint-dev__pylint-7080/test_output.txt
+2026-11-14 16:16:00,324 - INFO - Git diff after:
+diff --git a/tests/test_self.py b/tests/test_self.py
+index c18a04aef..d745161c5 100644
+--- a/tests/test_self.py
++++ b/tests/test_self.py
+@@ -1330,6 +1330,27 @@ class TestRunTC:
+                     code=0,
+                 )
+ 
++    def test_ignore_path_recursive_current_dir(self) -> None:
++        """Tests that path is normalized before checked that is ignored. GitHub issue #6964"""
++        with _test_sys_path():
++            # pytest is including directory HERE/regrtest_data to sys.path which causes
++            # astroid to believe that directory is a package.
++            sys.path = [
++                path
++                for path in sys.path
++                if not os.path.basename(path) == "regrtest_data"
++            ]
++            with _test_cwd():
++                os.chdir(join(HERE, "regrtest_data", "directory"))
++                self._runtest(
++                    [
++                        ".",
++                        "--recursive=y",
++                        "--ignore-paths=^ignored_subdirectory/.*",
++                    ],
++                    code=0,
++                )
++
+     def test_regression_recursive_current_dir(self):
+         with _test_sys_path():
+             # pytest is including directory HERE/regrtest_data to sys.path which causes
+2026-11-14 16:16:00,324 - INFO - Git diff changed after running eval script
+2026-11-14 16:16:00,324 - INFO - Attempting to stop container exec.eval.x86_64.fc8235bb41fea90b41065e.ba1b50b26284d65b1dfcf9.123730000309264...
+2026-11-14 16:16:15,547 - INFO - Attempting to remove container exec.eval.x86_64.fc8235bb41fea90b41065e.ba1b50b26284d65b1dfcf9.123730000309264...
+2026-11-14 16:16:15,586 - INFO - Container exec.eval.x86_64.fc8235bb41fea90b41065e.ba1b50b26284d65b1dfcf9.123730000309264 removed.
+2026-11-14 16:16:15,586 - WARNING - End of eval at 1794694575.5867767

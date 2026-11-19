@@ -1,0 +1,67 @@
+This is mini-swe-agent version 2.4.6.
+Check the v2 migration guide at https://klieret.short.gy/mini-v2-migration
+Loading global config from '/home/mihir_barvaliya/.config/mini-swe-agent/.env'
+minisweagent: INFO: Results will be saved to                                    
+/home/mihir_barvaliya/se443/project/runs/workflow/pilot-workflow-1/astropy__astr
+opy-8872/round_1/mini                                                           
+Logging to '/home/mihir_barvaliya/se443/project/runs/workflow/pilot-workflow-1/astropy__astropy-8872/round_1/mini/minisweagent.log'
+minisweagent: INFO: Loading dataset                                             
+/home/mihir_barvaliya/.cache/huggingface/hub/datasets--princeton-nlp--SWE-bench_
+Verified/snapshots/c104f840cc67f8b6eec6f759ebc8b2693d585d4a, split test...      
+minisweagent: INFO: Instance filter: 500 -> 1 instances                         
+minisweagent: INFO: Running on 1 instances...                                   
+minisweagent: INFO: Building agent config from specs:                           
+['/home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml']              
+minisweagent.environment: DEBUG: Starting container with command: docker run -d 
+--name minisweagent-ce2d9c1a -w /testbed --rm                                   
+docker.io/swebench/sweb.eval.x86_64.astropy_1776_astropy-8872:latest sleep 2h   
+minisweagent.environment: INFO: Started container minisweagent-ce2d9c1a with ID 
+55b33d9b3540c3ae8f727ccab06e3e7f0c7b261a0fbe7424cad82918ba94dde8                
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+
+[1;31mProvider List: https://docs.litellm.ai/docs/providers[0m
+
+minisweagent: INFO: Saved trajectory to                                         
+'/home/mihir_barvaliya/se443/project/runs/workflow/pilot-workflow-1/astropy__ast
+ropy-8872/round_1/mini/astropy__astropy-8872/astropy__astropy-8872.traj.json'   
+  Overall Progress ($0.00) ━━━━━━━━━━━━━━━━━━━━━━━ 1/1 100% 0:00:34 eta: 0:00:00
+┏━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Exit Status ┃ Count ┃ Most recent instances                                  ┃
+┡━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Submitted   │     1 │ astropy__astropy-8872                                  │
+└─────────────┴───────┴────────────────────────────────────────────────────────┘

@@ -1,0 +1,965 @@
++ source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ '[' -z '' ']'
++++ export CONDA_SHLVL=0
++++ CONDA_SHLVL=0
++++ '[' -n '' ']'
++++++ dirname /opt/miniconda3/bin/conda
+++++ dirname /opt/miniconda3/bin
++++ PATH=/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export PATH
++++ '[' -z '' ']'
++++ PS1=
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1=
++++ __conda_exe shell.posix activate
++++ /opt/miniconda3/bin/conda shell.posix activate
+++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=1
++++ CONDA_SHLVL=1
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+++ /opt/miniconda3/bin/conda shell.posix activate testbed
++ ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=2
+++ CONDA_SHLVL=2
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_1=/opt/miniconda3
+++ CONDA_PREFIX_1=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ cd /testbed
++ git diff HEAD f0632c0fc7339f68e992ed63ae4cfac76cd41aad
++ git config --global --add safe.directory /testbed
++ cd /testbed
++ git status
+On branch main
+nothing to commit, working tree clean
++ git show
+commit f0632c0fc7339f68e992ed63ae4cfac76cd41aad
+Merge: b525983fb5 cf204e5cd5
+Author: Tim Hoffmann <2836374+timhoffm@users.noreply.github.com>
+Date:   Mon Nov 8 16:16:59 2021 +0100
+
+    Merge pull request #21558 from anntzer/sp
+    
+    Various small fixes for streamplot().
+
++ git diff f0632c0fc7339f68e992ed63ae4cfac76cd41aad
++ source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ '[' -z x ']'
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1='(testbed) '
++++ __conda_exe shell.posix activate
++++ /opt/miniconda3/bin/conda shell.posix activate
+++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=3
++++ CONDA_SHLVL=3
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_PREFIX_2=/opt/miniconda3/envs/testbed
++++ CONDA_PREFIX_2=/opt/miniconda3/envs/testbed
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+++ /opt/miniconda3/bin/conda shell.posix activate testbed
++ ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_3='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_3='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=4
+++ CONDA_SHLVL=4
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_3=/opt/miniconda3
+++ CONDA_PREFIX_3=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ python -m pip install -e .
+Obtaining file:///testbed
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: cycler>=0.10 in /opt/miniconda3/envs/testbed/lib/python3.8/site-packages (from matplotlib==3.5.0.dev2475+gf0632c0fc) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /opt/miniconda3/envs/testbed/lib/python3.8/site-packages (from matplotlib==3.5.0.dev2475+gf0632c0fc) (4.57.0)
+Requirement already satisfied: kiwisolver>=1.0.1 in /opt/miniconda3/envs/testbed/lib/python3.8/site-packages (from matplotlib==3.5.0.dev2475+gf0632c0fc) (1.4.7)
+Requirement already satisfied: numpy>=1.17 in /opt/miniconda3/envs/testbed/lib/python3.8/site-packages (from matplotlib==3.5.0.dev2475+gf0632c0fc) (1.24.4)
+Requirement already satisfied: packaging>=20.0 in /opt/miniconda3/envs/testbed/lib/python3.8/site-packages (from matplotlib==3.5.0.dev2475+gf0632c0fc) (26.2)
+Requirement already satisfied: pillow>=6.2.0 in /opt/miniconda3/envs/testbed/lib/python3.8/site-packages (from matplotlib==3.5.0.dev2475+gf0632c0fc) (10.4.0)
+Requirement already satisfied: pyparsing<3.0.0,>=2.2.1 in /opt/miniconda3/envs/testbed/lib/python3.8/site-packages (from matplotlib==3.5.0.dev2475+gf0632c0fc) (2.4.7)
+Requirement already satisfied: python-dateutil>=2.7 in /opt/miniconda3/envs/testbed/lib/python3.8/site-packages (from matplotlib==3.5.0.dev2475+gf0632c0fc) (3.0.0)
+Requirement already satisfied: setuptools_scm>=4 in /opt/miniconda3/envs/testbed/lib/python3.8/site-packages (from matplotlib==3.5.0.dev2475+gf0632c0fc) (10.3.4)
+Requirement already satisfied: six>=1.6 in /opt/miniconda3/envs/testbed/lib/python3.8/site-packages (from python-dateutil>=2.7->matplotlib==3.5.0.dev2475+gf0632c0fc) (1.17.0)
+Requirement already satisfied: tzdata in /opt/miniconda3/envs/testbed/lib/python3.8/site-packages (from python-dateutil>=2.7->matplotlib==3.5.0.dev2475+gf0632c0fc) (2026.6)
+Requirement already satisfied: vcs-versioning<3,>=2.5.0.dev0 in /opt/miniconda3/envs/testbed/lib/python3.8/site-packages (from setuptools_scm>=4->matplotlib==3.5.0.dev2475+gf0632c0fc) (2.6.0)
+Requirement already satisfied: setuptools in /opt/miniconda3/envs/testbed/lib/python3.8/site-packages (from setuptools_scm>=4->matplotlib==3.5.0.dev2475+gf0632c0fc) (75.1.0)
+Requirement already satisfied: tomli>=1 in /opt/miniconda3/envs/testbed/lib/python3.8/site-packages (from setuptools_scm>=4->matplotlib==3.5.0.dev2475+gf0632c0fc) (2.5.0)
+Requirement already satisfied: typing-extensions>=4.1 in /opt/miniconda3/envs/testbed/lib/python3.8/site-packages (from setuptools_scm>=4->matplotlib==3.5.0.dev2475+gf0632c0fc) (4.13.2)
+Installing collected packages: matplotlib
+  Attempting uninstall: matplotlib
+    Found existing installation: matplotlib 3.5.0.dev2475+gf0632c0fc
+    Uninstalling matplotlib-3.5.0.dev2475+gf0632c0fc:
+      Successfully uninstalled matplotlib-3.5.0.dev2475+gf0632c0fc
+  Running setup.py develop for matplotlib
+  DEPRECATION: Legacy editable install of matplotlib==3.5.0.dev2475+gf0632c0fc from file:///testbed (setup.py develop) is deprecated. pip 25.0 will enforce this behaviour change. A possible replacement is to add a pyproject.toml or enable --use-pep517, and use setuptools >= 64. If the resulting installation is not behaving as expected, try using --config-settings editable_mode=compat. Please consult the setuptools documentation for more information. Discussion can be found at https://github.com/pypa/pip/issues/11457
+Successfully installed matplotlib
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ git apply -v -
+Checking patch lib/matplotlib/tests/test_dates.py...
+Applied patch lib/matplotlib/tests/test_dates.py cleanly.
++ python3 /root/trace.py --count -C coverage.cover --include-pattern '/testbed/(lib/matplotlib/dates\.py)' -m pytest --no-header -rA -p no:cacheprovider lib/matplotlib/tests/test_dates.py
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(lib/matplotlib/dates\\.py)']
+============================= test session starts ==============================
+collected 77 items
+
+lib/matplotlib/tests/test_dates.py ........................FFFF.F..F.... [ 48%]
+.F...................FF.F...............                                 [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_date_axhspan[png] ____________________________
+
+args = ()
+kwds = {'extension': 'png', 'request': <FixtureRequest for <Function test_date_axhspan[png]>>}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+
+/opt/miniconda3/envs/testbed/lib/python3.8/contextlib.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+lib/matplotlib/figure.py:3016: in savefig
+    self.canvas.print_figure(fname, **kwargs)
+lib/matplotlib/backend_bases.py:2316: in print_figure
+    result = print_method(
+lib/matplotlib/backend_bases.py:1645: in wrapper
+    return func(*args, **kwargs)
+lib/matplotlib/_api/deprecation.py:412: in wrapper
+    return func(*inner_args, **inner_kwargs)
+lib/matplotlib/backends/backend_agg.py:550: in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+lib/matplotlib/backends/backend_agg.py:496: in _print_pil
+    mpl.image.imsave(
+lib/matplotlib/image.py:1633: in imsave
+    "Software": (f"Matplotlib version{mpl.__version__}, "
+lib/matplotlib/_api/__init__.py:221: in __getattr__
+    return props[name].__get__(instance)
+lib/matplotlib/__init__.py:181: in <lambda>
+    __version__ = property(lambda self: _get_version())
+lib/matplotlib/__init__.py:169: in _get_version
+    return setuptools_scm.get_version(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools_scm/_get_version.py:59: in get_version
+    return _get_version_public(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:379: in get_version
+    maybe_version = _get_version(config, force_write_version_files=True)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:195: in _get_version
+    return _finalize(scm_version, config, force_write=force_write_version_files)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:58: in _finalize
+    version_string = _format_version(applied)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_version_schemes/__init__.py:113: in format_version
+    main_version = _entrypoints._call_version_scheme(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_entrypoints.py:87: in _call_version_scheme
+    result = scheme(version)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+version = <ScmVersion 3.4.2 dist=2475 node=gf0632c0fc7339f68e992ed63ae4cfac76cd41aad dirty=True branch=main>
+
+    def _deprecated_release_branch_semver_version(version: ScmVersion) -> str:
+>       warnings.warn(
+            "Version scheme 'release-branch-semver' has been renamed to "
+            "'semver-pep440-release-branch'. "
+            "Please update your configuration. "
+            "The old name will be removed in a future version.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: Version scheme 'release-branch-semver' has been renamed to 'semver-pep440-release-branch'. Please update your configuration. The old name will be removed in a future version.
+
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_version_schemes/_standard.py:108: DeprecationWarning
+____________________________ test_date_axvspan[png] ____________________________
+
+args = ()
+kwds = {'extension': 'png', 'request': <FixtureRequest for <Function test_date_axvspan[png]>>}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+
+/opt/miniconda3/envs/testbed/lib/python3.8/contextlib.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+lib/matplotlib/figure.py:3016: in savefig
+    self.canvas.print_figure(fname, **kwargs)
+lib/matplotlib/backend_bases.py:2316: in print_figure
+    result = print_method(
+lib/matplotlib/backend_bases.py:1645: in wrapper
+    return func(*args, **kwargs)
+lib/matplotlib/_api/deprecation.py:412: in wrapper
+    return func(*inner_args, **inner_kwargs)
+lib/matplotlib/backends/backend_agg.py:550: in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+lib/matplotlib/backends/backend_agg.py:496: in _print_pil
+    mpl.image.imsave(
+lib/matplotlib/image.py:1633: in imsave
+    "Software": (f"Matplotlib version{mpl.__version__}, "
+lib/matplotlib/_api/__init__.py:221: in __getattr__
+    return props[name].__get__(instance)
+lib/matplotlib/__init__.py:181: in <lambda>
+    __version__ = property(lambda self: _get_version())
+lib/matplotlib/__init__.py:169: in _get_version
+    return setuptools_scm.get_version(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools_scm/_get_version.py:59: in get_version
+    return _get_version_public(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:379: in get_version
+    maybe_version = _get_version(config, force_write_version_files=True)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:195: in _get_version
+    return _finalize(scm_version, config, force_write=force_write_version_files)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:58: in _finalize
+    version_string = _format_version(applied)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_version_schemes/__init__.py:113: in format_version
+    main_version = _entrypoints._call_version_scheme(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_entrypoints.py:87: in _call_version_scheme
+    result = scheme(version)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+version = <ScmVersion 3.4.2 dist=2475 node=gf0632c0fc7339f68e992ed63ae4cfac76cd41aad dirty=True branch=main>
+
+    def _deprecated_release_branch_semver_version(version: ScmVersion) -> str:
+>       warnings.warn(
+            "Version scheme 'release-branch-semver' has been renamed to "
+            "'semver-pep440-release-branch'. "
+            "Please update your configuration. "
+            "The old name will be removed in a future version.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: Version scheme 'release-branch-semver' has been renamed to 'semver-pep440-release-branch'. Please update your configuration. The old name will be removed in a future version.
+
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_version_schemes/_standard.py:108: DeprecationWarning
+____________________________ test_date_axhline[png] ____________________________
+
+args = ()
+kwds = {'extension': 'png', 'request': <FixtureRequest for <Function test_date_axhline[png]>>}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+
+/opt/miniconda3/envs/testbed/lib/python3.8/contextlib.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+lib/matplotlib/figure.py:3016: in savefig
+    self.canvas.print_figure(fname, **kwargs)
+lib/matplotlib/backend_bases.py:2316: in print_figure
+    result = print_method(
+lib/matplotlib/backend_bases.py:1645: in wrapper
+    return func(*args, **kwargs)
+lib/matplotlib/_api/deprecation.py:412: in wrapper
+    return func(*inner_args, **inner_kwargs)
+lib/matplotlib/backends/backend_agg.py:550: in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+lib/matplotlib/backends/backend_agg.py:496: in _print_pil
+    mpl.image.imsave(
+lib/matplotlib/image.py:1633: in imsave
+    "Software": (f"Matplotlib version{mpl.__version__}, "
+lib/matplotlib/_api/__init__.py:221: in __getattr__
+    return props[name].__get__(instance)
+lib/matplotlib/__init__.py:181: in <lambda>
+    __version__ = property(lambda self: _get_version())
+lib/matplotlib/__init__.py:169: in _get_version
+    return setuptools_scm.get_version(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools_scm/_get_version.py:59: in get_version
+    return _get_version_public(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:379: in get_version
+    maybe_version = _get_version(config, force_write_version_files=True)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:195: in _get_version
+    return _finalize(scm_version, config, force_write=force_write_version_files)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:58: in _finalize
+    version_string = _format_version(applied)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_version_schemes/__init__.py:113: in format_version
+    main_version = _entrypoints._call_version_scheme(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_entrypoints.py:87: in _call_version_scheme
+    result = scheme(version)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+version = <ScmVersion 3.4.2 dist=2475 node=gf0632c0fc7339f68e992ed63ae4cfac76cd41aad dirty=True branch=main>
+
+    def _deprecated_release_branch_semver_version(version: ScmVersion) -> str:
+>       warnings.warn(
+            "Version scheme 'release-branch-semver' has been renamed to "
+            "'semver-pep440-release-branch'. "
+            "Please update your configuration. "
+            "The old name will be removed in a future version.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: Version scheme 'release-branch-semver' has been renamed to 'semver-pep440-release-branch'. Please update your configuration. The old name will be removed in a future version.
+
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_version_schemes/_standard.py:108: DeprecationWarning
+____________________________ test_date_axvline[png] ____________________________
+
+args = ()
+kwds = {'extension': 'png', 'request': <FixtureRequest for <Function test_date_axvline[png]>>}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+
+/opt/miniconda3/envs/testbed/lib/python3.8/contextlib.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+lib/matplotlib/figure.py:3016: in savefig
+    self.canvas.print_figure(fname, **kwargs)
+lib/matplotlib/backend_bases.py:2316: in print_figure
+    result = print_method(
+lib/matplotlib/backend_bases.py:1645: in wrapper
+    return func(*args, **kwargs)
+lib/matplotlib/_api/deprecation.py:412: in wrapper
+    return func(*inner_args, **inner_kwargs)
+lib/matplotlib/backends/backend_agg.py:550: in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+lib/matplotlib/backends/backend_agg.py:496: in _print_pil
+    mpl.image.imsave(
+lib/matplotlib/image.py:1633: in imsave
+    "Software": (f"Matplotlib version{mpl.__version__}, "
+lib/matplotlib/_api/__init__.py:221: in __getattr__
+    return props[name].__get__(instance)
+lib/matplotlib/__init__.py:181: in <lambda>
+    __version__ = property(lambda self: _get_version())
+lib/matplotlib/__init__.py:169: in _get_version
+    return setuptools_scm.get_version(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools_scm/_get_version.py:59: in get_version
+    return _get_version_public(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:379: in get_version
+    maybe_version = _get_version(config, force_write_version_files=True)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:195: in _get_version
+    return _finalize(scm_version, config, force_write=force_write_version_files)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:58: in _finalize
+    version_string = _format_version(applied)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_version_schemes/__init__.py:113: in format_version
+    main_version = _entrypoints._call_version_scheme(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_entrypoints.py:87: in _call_version_scheme
+    result = scheme(version)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+version = <ScmVersion 3.4.2 dist=2475 node=gf0632c0fc7339f68e992ed63ae4cfac76cd41aad dirty=True branch=main>
+
+    def _deprecated_release_branch_semver_version(version: ScmVersion) -> str:
+>       warnings.warn(
+            "Version scheme 'release-branch-semver' has been renamed to "
+            "'semver-pep440-release-branch'. "
+            "Please update your configuration. "
+            "The old name will be removed in a future version.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: Version scheme 'release-branch-semver' has been renamed to 'semver-pep440-release-branch'. Please update your configuration. The old name will be removed in a future version.
+
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_version_schemes/_standard.py:108: DeprecationWarning
+____________________________ test_RRuleLocator[png] ____________________________
+
+args = ()
+kwds = {'extension': 'png', 'request': <FixtureRequest for <Function test_RRuleLocator[png]>>}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+
+/opt/miniconda3/envs/testbed/lib/python3.8/contextlib.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+lib/matplotlib/figure.py:3016: in savefig
+    self.canvas.print_figure(fname, **kwargs)
+lib/matplotlib/backend_bases.py:2316: in print_figure
+    result = print_method(
+lib/matplotlib/backend_bases.py:1645: in wrapper
+    return func(*args, **kwargs)
+lib/matplotlib/_api/deprecation.py:412: in wrapper
+    return func(*inner_args, **inner_kwargs)
+lib/matplotlib/backends/backend_agg.py:550: in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+lib/matplotlib/backends/backend_agg.py:496: in _print_pil
+    mpl.image.imsave(
+lib/matplotlib/image.py:1633: in imsave
+    "Software": (f"Matplotlib version{mpl.__version__}, "
+lib/matplotlib/_api/__init__.py:221: in __getattr__
+    return props[name].__get__(instance)
+lib/matplotlib/__init__.py:181: in <lambda>
+    __version__ = property(lambda self: _get_version())
+lib/matplotlib/__init__.py:169: in _get_version
+    return setuptools_scm.get_version(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools_scm/_get_version.py:59: in get_version
+    return _get_version_public(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:379: in get_version
+    maybe_version = _get_version(config, force_write_version_files=True)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:195: in _get_version
+    return _finalize(scm_version, config, force_write=force_write_version_files)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:58: in _finalize
+    version_string = _format_version(applied)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_version_schemes/__init__.py:113: in format_version
+    main_version = _entrypoints._call_version_scheme(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_entrypoints.py:87: in _call_version_scheme
+    result = scheme(version)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+version = <ScmVersion 3.4.2 dist=2475 node=gf0632c0fc7339f68e992ed63ae4cfac76cd41aad dirty=True branch=main>
+
+    def _deprecated_release_branch_semver_version(version: ScmVersion) -> str:
+>       warnings.warn(
+            "Version scheme 'release-branch-semver' has been renamed to "
+            "'semver-pep440-release-branch'. "
+            "Please update your configuration. "
+            "The old name will be removed in a future version.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: Version scheme 'release-branch-semver' has been renamed to 'semver-pep440-release-branch'. Please update your configuration. The old name will be removed in a future version.
+
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_version_schemes/_standard.py:108: DeprecationWarning
+___________________________ test_DateFormatter[png] ____________________________
+
+args = ()
+kwds = {'extension': 'png', 'request': <FixtureRequest for <Function test_DateFormatter[png]>>}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+
+/opt/miniconda3/envs/testbed/lib/python3.8/contextlib.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+lib/matplotlib/figure.py:3016: in savefig
+    self.canvas.print_figure(fname, **kwargs)
+lib/matplotlib/backend_bases.py:2316: in print_figure
+    result = print_method(
+lib/matplotlib/backend_bases.py:1645: in wrapper
+    return func(*args, **kwargs)
+lib/matplotlib/_api/deprecation.py:412: in wrapper
+    return func(*inner_args, **inner_kwargs)
+lib/matplotlib/backends/backend_agg.py:550: in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+lib/matplotlib/backends/backend_agg.py:496: in _print_pil
+    mpl.image.imsave(
+lib/matplotlib/image.py:1633: in imsave
+    "Software": (f"Matplotlib version{mpl.__version__}, "
+lib/matplotlib/_api/__init__.py:221: in __getattr__
+    return props[name].__get__(instance)
+lib/matplotlib/__init__.py:181: in <lambda>
+    __version__ = property(lambda self: _get_version())
+lib/matplotlib/__init__.py:169: in _get_version
+    return setuptools_scm.get_version(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools_scm/_get_version.py:59: in get_version
+    return _get_version_public(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:379: in get_version
+    maybe_version = _get_version(config, force_write_version_files=True)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:195: in _get_version
+    return _finalize(scm_version, config, force_write=force_write_version_files)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:58: in _finalize
+    version_string = _format_version(applied)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_version_schemes/__init__.py:113: in format_version
+    main_version = _entrypoints._call_version_scheme(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_entrypoints.py:87: in _call_version_scheme
+    result = scheme(version)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+version = <ScmVersion 3.4.2 dist=2475 node=gf0632c0fc7339f68e992ed63ae4cfac76cd41aad dirty=True branch=main>
+
+    def _deprecated_release_branch_semver_version(version: ScmVersion) -> str:
+>       warnings.warn(
+            "Version scheme 'release-branch-semver' has been renamed to "
+            "'semver-pep440-release-branch'. "
+            "Please update your configuration. "
+            "The old name will be removed in a future version.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: Version scheme 'release-branch-semver' has been renamed to 'semver-pep440-release-branch'. Please update your configuration. The old name will be removed in a future version.
+
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_version_schemes/_standard.py:108: DeprecationWarning
+______________________ test_date_formatter_usetex_spacing ______________________
+
+    def test_date_formatter_usetex_spacing():
+        # Test that separators in datetime labels are not spaced like TeX
+        # binary operators (see issue #21518).
+        formatter = mdates.DateFormatter("%d %H:%M", usetex=True)
+        result = formatter(mdates.date2num(datetime.datetime(2020, 1, 1)))
+>       assert result == r'$\mathdefault{01\;00{:}00}$'
+E       AssertionError: assert '$\\mathdefault{01 00:00}$' == '$\\mathdefau...1\\;00{:}00}$'
+E         
+E         - $\mathdefault{01\;00{:}00}$
+E         ?                 ^^  - -
+E         + $\mathdefault{01 00:00}$
+E         ?                 ^
+
+lib/matplotlib/tests/test_dates.py:349: AssertionError
+______________________ test_auto_date_locator_intmult_tz _______________________
+
+    def test_auto_date_locator_intmult_tz():
+        def _create_auto_date_locator(date1, date2, tz):
+            locator = mdates.AutoDateLocator(interval_multiples=True, tz=tz)
+            locator.create_dummy_axis()
+            locator.axis.set_view_interval(*mdates.date2num([date1, date2]))
+            return locator
+    
+        results = ([datetime.timedelta(weeks=52*200),
+                    ['1980-01-01 00:00:00-08:00', '2000-01-01 00:00:00-08:00',
+                     '2020-01-01 00:00:00-08:00', '2040-01-01 00:00:00-08:00',
+                     '2060-01-01 00:00:00-08:00', '2080-01-01 00:00:00-08:00',
+                     '2100-01-01 00:00:00-08:00', '2120-01-01 00:00:00-08:00',
+                     '2140-01-01 00:00:00-08:00', '2160-01-01 00:00:00-08:00',
+                     '2180-01-01 00:00:00-08:00', '2200-01-01 00:00:00-08:00']
+                    ],
+                   [datetime.timedelta(weeks=52),
+                    ['1997-01-01 00:00:00-08:00', '1997-02-01 00:00:00-08:00',
+                     '1997-03-01 00:00:00-08:00', '1997-04-01 00:00:00-08:00',
+                     '1997-05-01 00:00:00-07:00', '1997-06-01 00:00:00-07:00',
+                     '1997-07-01 00:00:00-07:00', '1997-08-01 00:00:00-07:00',
+                     '1997-09-01 00:00:00-07:00', '1997-10-01 00:00:00-07:00',
+                     '1997-11-01 00:00:00-08:00', '1997-12-01 00:00:00-08:00']
+                    ],
+                   [datetime.timedelta(days=141),
+                    ['1997-01-01 00:00:00-08:00', '1997-01-15 00:00:00-08:00',
+                     '1997-02-01 00:00:00-08:00', '1997-02-15 00:00:00-08:00',
+                     '1997-03-01 00:00:00-08:00', '1997-03-15 00:00:00-08:00',
+                     '1997-04-01 00:00:00-08:00', '1997-04-15 00:00:00-07:00',
+                     '1997-05-01 00:00:00-07:00', '1997-05-15 00:00:00-07:00']
+                    ],
+                   [datetime.timedelta(days=40),
+                    ['1997-01-01 00:00:00-08:00', '1997-01-05 00:00:00-08:00',
+                     '1997-01-09 00:00:00-08:00', '1997-01-13 00:00:00-08:00',
+                     '1997-01-17 00:00:00-08:00', '1997-01-21 00:00:00-08:00',
+                     '1997-01-25 00:00:00-08:00', '1997-01-29 00:00:00-08:00',
+                     '1997-02-01 00:00:00-08:00', '1997-02-05 00:00:00-08:00',
+                     '1997-02-09 00:00:00-08:00']
+                    ],
+                   [datetime.timedelta(hours=40),
+                    ['1997-01-01 00:00:00-08:00', '1997-01-01 04:00:00-08:00',
+                     '1997-01-01 08:00:00-08:00', '1997-01-01 12:00:00-08:00',
+                     '1997-01-01 16:00:00-08:00', '1997-01-01 20:00:00-08:00',
+                     '1997-01-02 00:00:00-08:00', '1997-01-02 04:00:00-08:00',
+                     '1997-01-02 08:00:00-08:00', '1997-01-02 12:00:00-08:00',
+                     '1997-01-02 16:00:00-08:00']
+                    ],
+                   [datetime.timedelta(minutes=20),
+                    ['1997-01-01 00:00:00-08:00', '1997-01-01 00:05:00-08:00',
+                     '1997-01-01 00:10:00-08:00', '1997-01-01 00:15:00-08:00',
+                     '1997-01-01 00:20:00-08:00']
+                    ],
+                   [datetime.timedelta(seconds=40),
+                    ['1997-01-01 00:00:00-08:00', '1997-01-01 00:00:05-08:00',
+                     '1997-01-01 00:00:10-08:00', '1997-01-01 00:00:15-08:00',
+                     '1997-01-01 00:00:20-08:00', '1997-01-01 00:00:25-08:00',
+                     '1997-01-01 00:00:30-08:00', '1997-01-01 00:00:35-08:00',
+                     '1997-01-01 00:00:40-08:00']
+                    ]
+                   )
+    
+        tz = dateutil.tz.gettz('Canada/Pacific')
+        d1 = datetime.datetime(1997, 1, 1, tzinfo=tz)
+        for t_delta, expected in results:
+            with rc_context({'_internal.classic_mode': False}):
+                d2 = d1 + t_delta
+                locator = _create_auto_date_locator(d1, d2, tz)
+                st = list(map(str, mdates.num2date(locator(), tz=tz)))
+>               assert st == expected
+E               AssertionError: assert ['1980-01-01 ...0-07:00', ...] == ['1980-01-01 ...0-08:00', ...]
+E                 
+E                 At index 3 diff: '2040-01-01 00:00:00-07:00' != '2040-01-01 00:00:00-08:00'
+E                 Use -v to get more diff
+
+lib/matplotlib/tests/test_dates.py:859: AssertionError
+________________________ test_date_inverted_limit[png] _________________________
+
+args = ()
+kwds = {'extension': 'png', 'request': <FixtureRequest for <Function test_date_inverted_limit[png]>>}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+
+/opt/miniconda3/envs/testbed/lib/python3.8/contextlib.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+lib/matplotlib/figure.py:3016: in savefig
+    self.canvas.print_figure(fname, **kwargs)
+lib/matplotlib/backend_bases.py:2316: in print_figure
+    result = print_method(
+lib/matplotlib/backend_bases.py:1645: in wrapper
+    return func(*args, **kwargs)
+lib/matplotlib/_api/deprecation.py:412: in wrapper
+    return func(*inner_args, **inner_kwargs)
+lib/matplotlib/backends/backend_agg.py:550: in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+lib/matplotlib/backends/backend_agg.py:496: in _print_pil
+    mpl.image.imsave(
+lib/matplotlib/image.py:1633: in imsave
+    "Software": (f"Matplotlib version{mpl.__version__}, "
+lib/matplotlib/_api/__init__.py:221: in __getattr__
+    return props[name].__get__(instance)
+lib/matplotlib/__init__.py:181: in <lambda>
+    __version__ = property(lambda self: _get_version())
+lib/matplotlib/__init__.py:169: in _get_version
+    return setuptools_scm.get_version(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/setuptools_scm/_get_version.py:59: in get_version
+    return _get_version_public(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:379: in get_version
+    maybe_version = _get_version(config, force_write_version_files=True)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:195: in _get_version
+    return _finalize(scm_version, config, force_write=force_write_version_files)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_get_version_impl.py:58: in _finalize
+    version_string = _format_version(applied)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_version_schemes/__init__.py:113: in format_version
+    main_version = _entrypoints._call_version_scheme(
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_entrypoints.py:87: in _call_version_scheme
+    result = scheme(version)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+version = <ScmVersion 3.4.2 dist=2475 node=gf0632c0fc7339f68e992ed63ae4cfac76cd41aad dirty=True branch=main>
+
+    def _deprecated_release_branch_semver_version(version: ScmVersion) -> str:
+>       warnings.warn(
+            "Version scheme 'release-branch-semver' has been renamed to "
+            "'semver-pep440-release-branch'. "
+            "Please update your configuration. "
+            "The old name will be removed in a future version.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: Version scheme 'release-branch-semver' has been renamed to 'semver-pep440-release-branch'. Please update your configuration. The old name will be removed in a future version.
+
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/vcs_versioning/_version_schemes/_standard.py:108: DeprecationWarning
+___________________________ test_date2num_dst_pandas ___________________________
+
+pd = <module 'pandas' from '/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/pandas/__init__.py'>
+
+    def test_date2num_dst_pandas(pd):
+        # Test for github issue #3896, but in date2num around DST transitions
+        # with a timezone-aware pandas date_range object.
+    
+        def tz_convert(*args):
+            return pd.DatetimeIndex.tz_convert(*args).astype(object)
+    
+>       _test_date2num_dst(pd.date_range, tz_convert)
+
+lib/matplotlib/tests/test_dates.py:969: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+lib/matplotlib/tests/test_dates.py:889: in _test_date2num_dst
+    dt_bxl = tz_convert(dt_utc, BRUSSELS)
+lib/matplotlib/tests/test_dates.py:967: in tz_convert
+    return pd.DatetimeIndex.tz_convert(*args).astype(object)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/pandas/core/indexes/base.py:1017: in astype
+    new_values = values.astype(dtype, copy=copy)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/pandas/core/arrays/datetimes.py:701: in astype
+    return dtl.DatetimeLikeArrayMixin.astype(self, dtype, copy)
+/opt/miniconda3/envs/testbed/lib/python3.8/site-packages/pandas/core/arrays/datetimelike.py:450: in astype
+    converted = ints_to_pydatetime(
+pandas/_libs/tslibs/vectorized.pyx:122: in pandas._libs.tslibs.vectorized.ints_to_pydatetime
+    ???
+pandas/_libs/tslibs/tzconversion.pyx:86: in pandas._libs.tslibs.tzconversion.Localizer.__cinit__
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+>   ???
+E   AttributeError: 'NoneType' object has no attribute 'total_seconds'
+
+pandas/_libs/tslibs/timezones.pyx:355: AttributeError
+==================================== PASSES ====================================
+___________________________ test_too_many_date_ticks ___________________________
+------------------------------ Captured log call -------------------------------
+WARNING  matplotlib.ticker:ticker.py:1634 Locator attempting to generate 1461 ticks ([10246.0, ..., 11706.0]), which exceeds Locator.MAXTICKS (1000).
+=========================== short test summary info ============================
+PASSED lib/matplotlib/tests/test_dates.py::test_date_numpyx
+PASSED lib/matplotlib/tests/test_dates.py::test_date_date2num_numpy[datetime64[s]-t00]
+PASSED lib/matplotlib/tests/test_dates.py::test_date_date2num_numpy[datetime64[s]-t01]
+PASSED lib/matplotlib/tests/test_dates.py::test_date_date2num_numpy[datetime64[s]-t02]
+PASSED lib/matplotlib/tests/test_dates.py::test_date_date2num_numpy[datetime64[us]-t00]
+PASSED lib/matplotlib/tests/test_dates.py::test_date_date2num_numpy[datetime64[us]-t01]
+PASSED lib/matplotlib/tests/test_dates.py::test_date_date2num_numpy[datetime64[us]-t02]
+PASSED lib/matplotlib/tests/test_dates.py::test_date_date2num_numpy[datetime64[ms]-t00]
+PASSED lib/matplotlib/tests/test_dates.py::test_date_date2num_numpy[datetime64[ms]-t01]
+PASSED lib/matplotlib/tests/test_dates.py::test_date_date2num_numpy[datetime64[ms]-t02]
+PASSED lib/matplotlib/tests/test_dates.py::test_date_date2num_numpy[datetime64[ns]-t00]
+PASSED lib/matplotlib/tests/test_dates.py::test_date_date2num_numpy[datetime64[ns]-t01]
+PASSED lib/matplotlib/tests/test_dates.py::test_date_date2num_numpy[datetime64[ns]-t02]
+PASSED lib/matplotlib/tests/test_dates.py::test_date2num_NaT[datetime64[s]]
+PASSED lib/matplotlib/tests/test_dates.py::test_date2num_NaT[datetime64[us]]
+PASSED lib/matplotlib/tests/test_dates.py::test_date2num_NaT[datetime64[ms]]
+PASSED lib/matplotlib/tests/test_dates.py::test_date2num_NaT[datetime64[ns]]
+PASSED lib/matplotlib/tests/test_dates.py::test_date2num_NaT_scalar[s]
+PASSED lib/matplotlib/tests/test_dates.py::test_date2num_NaT_scalar[ms]
+PASSED lib/matplotlib/tests/test_dates.py::test_date2num_NaT_scalar[us]
+PASSED lib/matplotlib/tests/test_dates.py::test_date2num_NaT_scalar[ns]
+PASSED lib/matplotlib/tests/test_dates.py::test_date_empty
+PASSED lib/matplotlib/tests/test_dates.py::test_date_not_empty
+PASSED lib/matplotlib/tests/test_dates.py::test_axhline
+PASSED lib/matplotlib/tests/test_dates.py::test_too_many_date_ticks
+PASSED lib/matplotlib/tests/test_dates.py::test_RRuleLocator_dayrange
+PASSED lib/matplotlib/tests/test_dates.py::test_RRuleLocator_close_minmax
+PASSED lib/matplotlib/tests/test_dates.py::test_locator_set_formatter
+PASSED lib/matplotlib/tests/test_dates.py::test_date_formatter_callable
+PASSED lib/matplotlib/tests/test_dates.py::test_date_formatter_usetex[delta0-expected0]
+PASSED lib/matplotlib/tests/test_dates.py::test_date_formatter_usetex[delta1-expected1]
+PASSED lib/matplotlib/tests/test_dates.py::test_date_formatter_usetex[delta2-expected2]
+PASSED lib/matplotlib/tests/test_dates.py::test_drange
+PASSED lib/matplotlib/tests/test_dates.py::test_auto_date_locator
+PASSED lib/matplotlib/tests/test_dates.py::test_auto_date_locator_intmult
+PASSED lib/matplotlib/tests/test_dates.py::test_concise_formatter_subsecond
+PASSED lib/matplotlib/tests/test_dates.py::test_concise_formatter
+PASSED lib/matplotlib/tests/test_dates.py::test_concise_formatter_show_offset[t_delta0-1997-Jan-01 00:00]
+PASSED lib/matplotlib/tests/test_dates.py::test_concise_formatter_show_offset[t_delta1-1997-Jan-01 00:01]
+PASSED lib/matplotlib/tests/test_dates.py::test_concise_formatter_show_offset[t_delta2-1997-Jan-01]
+PASSED lib/matplotlib/tests/test_dates.py::test_concise_formatter_show_offset[t_delta3-1997-Jan-02]
+PASSED lib/matplotlib/tests/test_dates.py::test_concise_formatter_show_offset[t_delta4-1997-Jan]
+PASSED lib/matplotlib/tests/test_dates.py::test_concise_formatter_show_offset[t_delta5-]
+PASSED lib/matplotlib/tests/test_dates.py::test_concise_formatter_show_offset[t_delta6-]
+PASSED lib/matplotlib/tests/test_dates.py::test_concise_formatter_usetex[t_delta0-expected0]
+PASSED lib/matplotlib/tests/test_dates.py::test_concise_formatter_usetex[t_delta1-expected1]
+PASSED lib/matplotlib/tests/test_dates.py::test_concise_formatter_usetex[t_delta2-expected2]
+PASSED lib/matplotlib/tests/test_dates.py::test_concise_formatter_usetex[t_delta3-expected3]
+PASSED lib/matplotlib/tests/test_dates.py::test_concise_formatter_formats
+PASSED lib/matplotlib/tests/test_dates.py::test_concise_formatter_zformats
+PASSED lib/matplotlib/tests/test_dates.py::test_concise_formatter_tz
+PASSED lib/matplotlib/tests/test_dates.py::test_date2num_dst
+PASSED lib/matplotlib/tests/test_dates.py::test_rrulewrapper
+PASSED lib/matplotlib/tests/test_dates.py::test_rrulewrapper_pytz
+PASSED lib/matplotlib/tests/test_dates.py::test_yearlocator_pytz
+PASSED lib/matplotlib/tests/test_dates.py::test_YearLocator
+PASSED lib/matplotlib/tests/test_dates.py::test_DayLocator
+PASSED lib/matplotlib/tests/test_dates.py::test_tz_utc
+PASSED lib/matplotlib/tests/test_dates.py::test_num2timedelta[1-tdelta0]
+PASSED lib/matplotlib/tests/test_dates.py::test_num2timedelta[x1-tdelta1]
+PASSED lib/matplotlib/tests/test_dates.py::test_datetime64_in_list
+PASSED lib/matplotlib/tests/test_dates.py::test_change_epoch
+PASSED lib/matplotlib/tests/test_dates.py::test_warn_notintervals
+PASSED lib/matplotlib/tests/test_dates.py::test_change_converter
+PASSED lib/matplotlib/tests/test_dates.py::test_change_interval_multiples
+PASSED lib/matplotlib/tests/test_dates.py::test_epoch2num
+PASSED lib/matplotlib/tests/test_dates.py::test_julian2num
+FAILED lib/matplotlib/tests/test_dates.py::test_date_axhspan[png] - Deprecati...
+FAILED lib/matplotlib/tests/test_dates.py::test_date_axvspan[png] - Deprecati...
+FAILED lib/matplotlib/tests/test_dates.py::test_date_axhline[png] - Deprecati...
+FAILED lib/matplotlib/tests/test_dates.py::test_date_axvline[png] - Deprecati...
+FAILED lib/matplotlib/tests/test_dates.py::test_RRuleLocator[png] - Deprecati...
+FAILED lib/matplotlib/tests/test_dates.py::test_DateFormatter[png] - Deprecat...
+FAILED lib/matplotlib/tests/test_dates.py::test_date_formatter_usetex_spacing
+FAILED lib/matplotlib/tests/test_dates.py::test_auto_date_locator_intmult_tz
+FAILED lib/matplotlib/tests/test_dates.py::test_date_inverted_limit[png] - De...
+FAILED lib/matplotlib/tests/test_dates.py::test_date2num_dst_pandas - Attribu...
+======================== 10 failed, 67 passed in 17.61s ========================
++ cat coverage.cover
+{"/testbed/lib/matplotlib/dates.py": {"171": 1, "172": 1, "173": 1, "174": 1, "175": 1, "177": 1, "180": 1, "181": 1, "182": 1, "183": 1, "185": 1, "186": 1, "188": 1, "201": 1, "202": 1, "205": 1, "216": 1, "218": 1, "224": 1, "225": 1, "226": 1, "227": 1, "228": 1, "230": 1, "231": 1, "232": 1, "234": 1, "236": 1, "237": 1, "238": 1, "240": 1, "243": 1, "242": 1, "244": 1, "247": 1, "250": 1, "260": 1, "289": 1, "305": 1, "333": 1, "374": 1, "378": 1, "381": 1, "405": 1, "454": 1, "477": 1, "499": 1, "531": 2, "532": 4, "535": 1, "554": 1, "594": 1, "607": 2, "640": 2, "857": 2, "977": 2, "1082": 2, "1154": 2, "1230": 2, "1463": 2, "1504": 2, "1529": 2, "1557": 2, "1583": 2, "1603": 2, "1623": 2, "1643": 2, "1720": 2, "1721": 1, "1722": 1, "1743": 1, "1744": 1, "1764": 1, "1806": 2, "1866": 2, "1893": 2, "1921": 1, "1918": 2, "1919": 1, "1920": 1, "207": 1178, "208": 1178, "209": 1178, "210": 0, "257": 17, "284": 13, "285": 1, "286": 12, "300": 2751, "301": 5, "302": 2751, "316": 559, "317": 559, "318": 559, "319": 559, "320": 559, "321": 559, "323": 559, "324": 559, "325": 559, "326": 559, "327": 0, "328": 0, "329": 0, "330": 559, "344": 2183, "345": 0, "347": 4366, "348": 2183, "349": 2183, "350": 0, "354": 2183, "357": 2183, "359": 2183, "361": 2183, "364": 218, "365": 218, "366": 0, "368": 218, "370": 2183, "393": 0, "394": 0, "395": 0, "397": 0, "398": 0, "399": 0, "400": 0, "401": 0, "402": 0, "426": 560, "428": 0, "431": 560, "432": 560, "433": 168, "435": 560, "437": 560, "439": 514, "441": 1, "442": 513, "443": 513, "445": 4405, "446": 325, "447": 513, "449": 559, "451": 559, "469": 2, "470": 2, "473": 2, "474": 2, "491": 2, "492": 2, "495": 2, "496": 2, "526": 2016, "527": 655, "528": 2016, "551": 2, "574": 3, "575": 3, "576": 3, "579": 3, "582": 3, "585": 3, "587": 3, "588": 3, "590": 3, "591": 3, "595": 77, "596": 77, "599": 77, "600": 77, "601": 77, "613": 1, "632": 1, "636": 1, "625": 358, "626": 350, "627": 358, "628": 358, "629": 716, "630": 113, "633": 245, "634": 245, "637": 0, "711": 2, "712": 1, "770": 1, "775": 1, "850": 1, "853": 1, "717": 42, "718": 42, "719": 42, "723": 42, "724": 8, "725": 0, "727": 8, "729": 68, "730": 34, "731": 34, "732": 34, "733": 34, "734": 34, "740": 42, "741": 8, "742": 0, "744": 8, "745": 34, "747": 8, "750": 26, "751": 26, "753": 42, "754": 0, "755": 0, "757": 0, "759": 84, "760": 42, "761": 42, "762": 42, "763": 42, "764": 42, "765": 42, "766": 42, "767": 84, "768": 38, "771": 0, "772": 0, "773": 0, "776": 852, "777": 852, "785": 77, "787": 77, "790": 77, "795": 243, "796": 242, "798": 76, "799": 17, "800": 76, "801": 166, "804": 1, "808": 77, "809": 77, "810": 775, "811": 698, "812": 530, "813": 92, "815": 438, "818": 192, "819": 24, "820": 24, "822": 144, "823": 698, "830": 77, "831": 44, "832": 212, "833": 22, "834": 22, "835": 154, "836": 136, "837": 120, "839": 77, "841": 60, "842": 60, "843": 3, "845": 77, "846": 49, "848": 73, "851": 43, "854": 0, "913": 2, "914": 1, "953": 1, "956": 1, "936": 113, "937": 113, "938": 113, "939": 113, "940": 113, "941": 226, "942": 110, "944": 113, "945": 113, "946": 113, "947": 113, "948": 113, "949": 113, "950": 113, "943": 113, "954": 5, "957": 245, "958": 245, "959": 0, "960": 0, "962": 2017, "964": 245, "966": 245, "967": 244, "968": 244, "969": 1, "970": 1, "972": 0, "974": 245, "963": 1282, "978": 1, "984": 1, "989": 1, "1020": 1, "1027": 1, "1065": 1, "1078": 1, "979": 236, "980": 236, "982": 236, "985": 241, "987": 241, "990": 477, "995": 477, "996": 428, "997": 428, "998": 427, "999": 427, "1001": 0, "1003": 427, "1005": 477, "1006": 426, "1007": 426, "1008": 425, "1009": 425, "1011": 0, "1014": 425, "1016": 477, "1017": 477, "1018": 477, "1022": 3634, "1023": 16, "1025": 3618, "1030": 243, "1031": 1, "1035": 242, "1044": 242, "1052": 242, "1053": 0, "1058": 242, "1063": 242, "1036": 724, "1037": 484, "1038": 1, "1040": 484, "1042": 240, "1045": 1208, "1046": 484, "1048": 242, "1054": 0, "1055": 0, "1056": 0, "1059": 242, "1060": 242, "1061": 4118, "1066": 243, "1067": 0, "1069": 243, "1071": 243, "1072": 0, "1073": 243, "1074": 243, "1076": 0, "1079": 0, "1089": 1, "1091": 1, "1101": 1, "1107": 1, "1115": 1, "1122": 1, "1129": 1, "1135": 1, "1097": 437, "1098": 173, "1099": 437, "1105": 0, "1109": 0, "1110": 0, "1111": 0, "1113": 0, "1117": 525, "1118": 525, "1119": 8, "1120": 525, "1127": 0, "1133": 0, "1140": 6, "1142": 0, "1143": 0, "1144": 6, "1145": 0, "1146": 6, "1147": 6, "1148": 6, "1149": 0, "1150": 0, "1151": 6, "1157": 1, "1161": 1, "1170": 1, "1177": 1, "1201": 1, "1206": 1, "1207": 1, "1226": 1, "1158": 234, "1159": 234, "1163": 239, "1164": 239, "1165": 0, "1166": 0, "1168": 239, "1171": 241, "1172": 241, "1173": 241, "1174": 1, "1175": 240, "1180": 201, "1183": 201, "1184": 201, "1185": 6, "1187": 12, "1188": 6, "1190": 201, "1191": 201, "1192": 5, "1194": 10, "1195": 5, "1197": 201, "1199": 201, "1203": 48, "1204": 48, "1208": 234, "1209": 94, "1210": 140, "1211": 0, "1212": 140, "1213": 0, "1214": 140, "1215": 105, "1216": 35, "1217": 11, "1218": 24, "1219": 24, "1220": 0, "1221": 0, "1224": 0, "1227": 6, "1270": 1, "1333": 1, "1339": 1, "1342": 1, "1356": 1, "1362": 1, "1295": 171, "1296": 171, "1297": 342, "1298": 171, "1299": 171, "1301": 342, "1302": 171, "1303": 171, "1304": 0, "1305": 0, "1306": 0, "1310": 0, "1311": 171, "1313": 342, "1314": 171, "1315": 171, "1316": 171, "1317": 171, "1318": 171, "1319": 171, "1320": 342, "1321": 171, "1322": 171, "1312": 171, "1324": 171, "1328": 157, "1330": 342, "1331": 171, "1335": 254, "1336": 254, "1337": 254, "1340": 0, "1345": 67, "1347": 0, "1348": 0, "1349": 67, "1350": 1, "1351": 67, "1352": 1, "1353": 1, "1354": 67, "1357": 202, "1358": 16, "1360": 186, "1364": 254, "1365": 254, "1368": 254, "1369": 0, "1370": 0, "1375": 254, "1376": 254, "1377": 254, "1378": 254, "1379": 254, "1380": 254, "1381": 254, "1383": 508, "1384": 254, "1386": 254, "1391": 254, "1398": 949, "1400": 949, "1404": 695, "1405": 695, "1409": 1236, "1410": 1219, "1411": 237, "1413": 17, "1414": 2, "1415": 1, "1421": 254, "1423": 254, "1424": 168, "1425": 168, "1426": 98, "1428": 34, "1429": 64, "1430": 0, "1432": 168, "1434": 86, "1435": 254, "1437": 0, "1439": 254, "1440": 37, "1441": 217, "1442": 185, "1443": 370, "1444": 185, "1445": 185, "1446": 185, "1447": 185, "1449": 185, "1451": 32, "1452": 32, "1453": 0, "1454": 0, "1459": 254, "1460": 254, "1475": 1, "1485": 1, "1480": 120, "1481": 80, "1482": 40, "1483": 40, "1488": 40, "1489": 40, "1491": 40, "1492": 80, "1493": 40, "1494": 40, "1495": 40, "1497": 40, "1498": 40, "1499": 40, "1501": 40, "1508": 1, "1516": 0, "1517": 0, "1518": 0, "1522": 0, "1524": 0, "1525": 0, "1526": 0, "1534": 1, "1546": 0, "1550": 0, "1552": 0, "1553": 0, "1554": 0, "1562": 1, "1568": 7, "1569": 4, "1570": 3, "1571": 3, "1572": 0, "1576": 0, "1578": 9, "1579": 6, "1580": 3, "1587": 1, "1595": 0, "1596": 0, "1598": 0, "1599": 0, "1600": 0, "1607": 1, "1615": 4, "1616": 0, "1618": 8, "1619": 4, "1620": 4, "1627": 1, "1636": 0, "1637": 0, "1639": 0, "1640": 0, "1665": 1, "1675": 1, "1679": 1, "1680": 1, "1684": 1, "1685": 1, "1689": 1, "1698": 1, "1711": 1, "1715": 1, "1671": 32, "1672": 32, "1673": 32, "1676": 32, "1677": 32, "1681": 0, "1682": 0, "1686": 0, "1687": 0, "1691": 32, "1692": 32, "1693": 0, "1694": 0, "1696": 32, "1699": 32, "1700": 32, "1701": 32, "1702": 32, "1703": 32, "1704": 32, "1706": 32, "1708": 32, "1709": 32, "1713": 0, "1717": 0, "1737": 6, "1738": 4, "1740": 2, "1758": 6, "1759": 4, "1761": 2, "1770": 0, "1771": 0, "1773": 0, "1774": 0, "1775": 0, "1776": 0, "1777": 0, "1778": 0, "1780": 0, "1781": 0, "1782": 0, "1783": 0, "1784": 0, "1785": 0, "1786": 0, "1787": 0, "1788": 0, "1789": 0, "1790": 0, "1791": 0, "1792": 0, "1793": 0, "1794": 0, "1795": 0, "1796": 0, "1797": 0, "1799": 0, "1800": 0, "1802": 0, "1803": 0, "1814": 1, "1818": 1, "1836": 1, "1837": 1, "1846": 1, "1847": 1, "1815": 317, "1816": 317, "1825": 107, "1827": 214, "1828": 107, "1829": 107, "1830": 107, "1831": 107, "1833": 214, "1834": 107, "1844": 151, "1851": 57, "1852": 20, "1854": 57, "1855": 57, "1856": 6, "1857": 6, "1859": 57, "1860": 57, "1861": 8, "1862": 8, "1863": 8, "1869": 2, "1870": 1, "1878": 1, "1871": 5, "1872": 5, "1873": 5, "1874": 5, "1875": 5, "1876": 5, "1880": 2, "1881": 4, "1882": 2, "1883": 4, "1884": 2, "1885": 2, "1886": 2, "1887": 2, "1888": 2, "1889": 4, "1890": 2, "1900": 1, "1901": 1, "1908": 1, "1911": 1, "1914": 1, "1903": 317, "1902": 634, "1904": 317, "1905": 317, "1906": 317, "1909": 109, "1912": 57, "1915": 151}}
++ git checkout f0632c0fc7339f68e992ed63ae4cfac76cd41aad
+Note: switching to 'f0632c0fc7339f68e992ed63ae4cfac76cd41aad'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at f0632c0fc7 Merge pull request #21558 from anntzer/sp
+M	lib/matplotlib/tests/test_dates.py
++ git apply /root/pre_state.patch
+error: unrecognized input

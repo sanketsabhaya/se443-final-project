@@ -1,0 +1,11 @@
+{
+  "matplotlib__matplotlib-14623": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "lib/matplotlib/tests/test_scale.py"
+    ],
+    "non_test_files": [],
+    "model_name_or_path": "deepseek/deepseek-flash"
+  }
+}

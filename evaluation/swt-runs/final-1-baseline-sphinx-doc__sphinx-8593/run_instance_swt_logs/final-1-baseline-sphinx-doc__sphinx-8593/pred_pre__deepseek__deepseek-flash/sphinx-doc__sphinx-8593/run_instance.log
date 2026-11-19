@@ -1,0 +1,135 @@
+2026-11-14 11:30:33,641 - WARNING - Starting evaluation at 1794677433.6415248
+2026-11-14 11:32:01,895 - INFO - Creating container for sphinx-doc__sphinx-8593...
+2026-11-14 11:32:02,005 - INFO - Container for sphinx-doc__sphinx-8593 created: d59e5c833be39e9b535fa60bf4fd37ab80f5713dddff88bc0fc11c63d73a5c12
+2026-11-14 11:32:02,165 - INFO - Container for sphinx-doc__sphinx-8593 started: d59e5c833be39e9b535fa60bf4fd37ab80f5713dddff88bc0fc11c63d73a5c12
+2026-11-14 11:32:02,456 - INFO - Git diff before:
+diff --git a/setup.py b/setup.py
+index 8d40de1a8..03f325278 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.12',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tox.ini b/tox.ini
+index dbb705a3a..9f4fc3a32 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+     PYTEST_ADDOPTS = {env:PYTEST_ADDOPTS:} --color yes
+ commands=
+-    python -X dev -m pytest --durations 25 {posargs}
++    python -X dev -m pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-14 11:32:02,457 - INFO - Eval script for sphinx-doc__sphinx-8593 written to eval.sh, now applying to container...
+2026-11-14 11:32:19,277 - INFO - Test output for sphinx-doc__sphinx-8593 written to run_instance_swt_logs/final-1-baseline-sphinx-doc__sphinx-8593/pred_pre__deepseek__deepseek-flash/sphinx-doc__sphinx-8593/test_output.txt
+2026-11-14 11:32:19,354 - INFO - Git diff after:
+diff --git a/setup.py b/setup.py
+index 8d40de1a8..03f325278 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.12',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tests/test_ext_autodoc_private_members.py b/tests/test_ext_autodoc_private_members.py
+index 6bce5ce78..17ff37ad4 100644
+--- a/tests/test_ext_autodoc_private_members.py
++++ b/tests/test_ext_autodoc_private_members.py
+@@ -81,3 +81,21 @@ def test_private_members(app):
+         '   :meta public:',
+         '',
+     ]
++
++
++@pytest.mark.sphinx('html', testroot='ext-autodoc')
++def test_public_metadata_on_variable(app):
++    options = {"members": None}
++    actual = do_autodoc(app, 'module', 'target.private_variable', options)
++    assert list(actual) == [
++        '',
++        '.. py:module:: target.private_variable',
++        '',
++        '',
++        '.. py:data:: _foo',
++        '   :module: target.private_variable',
++        '   :value: None',
++        '',
++        '   :meta public:',
++        '',
++    ]
+diff --git a/tox.ini b/tox.ini
+index dbb705a3a..9f4fc3a32 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+     PYTEST_ADDOPTS = {env:PYTEST_ADDOPTS:} --color yes
+ commands=
+-    python -X dev -m pytest --durations 25 {posargs}
++    python -X dev -m pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-14 11:32:19,355 - INFO - Git diff changed after running eval script
+2026-11-14 11:32:19,355 - INFO - Attempting to stop container exec.eval.x86_64.77d82541416cab86d0d86a.6e9b2c0524b12613dd45e1.124974185848528...
+2026-11-14 11:32:34,598 - INFO - Attempting to remove container exec.eval.x86_64.77d82541416cab86d0d86a.6e9b2c0524b12613dd45e1.124974185848528...
+2026-11-14 11:32:34,707 - INFO - Container exec.eval.x86_64.77d82541416cab86d0d86a.6e9b2c0524b12613dd45e1.124974185848528 removed.
+2026-11-14 11:32:34,707 - WARNING - End of eval at 1794677554.7076354

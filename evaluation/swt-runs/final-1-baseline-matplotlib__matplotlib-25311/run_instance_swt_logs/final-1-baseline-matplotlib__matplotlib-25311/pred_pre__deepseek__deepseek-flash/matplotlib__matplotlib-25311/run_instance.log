@@ -1,0 +1,48 @@
+2026-11-14 06:57:14,147 - WARNING - Starting evaluation at 1794661034.1471043
+2026-11-14 07:35:13,405 - INFO - Creating container for matplotlib__matplotlib-25311...
+2026-11-14 07:35:13,768 - INFO - Container for matplotlib__matplotlib-25311 created: f8f060513e38b8c2ee71819947fe2721db998a84b9f9f4d48f99ff406aadc4cf
+2026-11-14 07:35:14,501 - INFO - Container for matplotlib__matplotlib-25311 started: f8f060513e38b8c2ee71819947fe2721db998a84b9f9f4d48f99ff406aadc4cf
+2026-11-14 07:35:15,812 - INFO - Git diff before:
+
+2026-11-14 07:35:15,915 - INFO - Eval script for matplotlib__matplotlib-25311 written to eval.sh, now applying to container...
+2026-11-14 07:36:30,419 - INFO - Test output for matplotlib__matplotlib-25311 written to run_instance_swt_logs/final-1-baseline-matplotlib__matplotlib-25311/pred_pre__deepseek__deepseek-flash/matplotlib__matplotlib-25311/test_output.txt
+2026-11-14 07:36:30,503 - INFO - Git diff after:
+diff --git a/lib/matplotlib/tests/test_pickle.py b/lib/matplotlib/tests/test_pickle.py
+index ec6bdcc2fe..0f707d1666 100644
+--- a/lib/matplotlib/tests/test_pickle.py
++++ b/lib/matplotlib/tests/test_pickle.py
+@@ -9,6 +9,7 @@ import matplotlib as mpl
+ from matplotlib import cm
+ from matplotlib.testing import subprocess_run_helper
+ from matplotlib.testing.decorators import check_figures_equal
++from matplotlib.backend_bases import FigureCanvasBase
+ from matplotlib.dates import rrulewrapper
+ from matplotlib.lines import VertexSelector
+ import matplotlib.pyplot as plt
+@@ -282,3 +283,21 @@ def test_dynamic_norm():
+ def test_vertexselector():
+     line, = plt.plot([0, 1], picker=True)
+     pickle.loads(pickle.dumps(VertexSelector(line)))
++
++
++class _UnpicklableCanvas(FigureCanvasBase):
++    def __reduce__(self):
++        raise TypeError("cannot pickle canvas")
++
++
++@pytest.mark.parametrize("set_draggable", [
++    lambda ax: ax.legend().set_draggable(True),
++    lambda ax: ax.annotate("foo", (.5, .5)).draggable(True),
++])
++def test_pickle_draggable_artist(set_draggable):
++    fig = mfigure.Figure()
++    _UnpicklableCanvas(fig)
++    ax = fig.subplots()
++    ax.plot([1, 2], [3, 4], label="foo")
++    set_draggable(ax)
++    pickle.loads(pickle.dumps(fig))
+2026-11-14 07:36:30,503 - INFO - Git diff changed after running eval script
+2026-11-14 07:36:30,504 - INFO - Attempting to stop container exec.eval.x86_64.89beb6334e800c4362eea6.a0be8ca4c1490fd9d2a3a4.128008535760016...
+2026-11-14 07:36:45,926 - INFO - Attempting to remove container exec.eval.x86_64.89beb6334e800c4362eea6.a0be8ca4c1490fd9d2a3a4.128008535760016...
+2026-11-14 07:36:45,970 - INFO - Container exec.eval.x86_64.89beb6334e800c4362eea6.a0be8ca4c1490fd9d2a3a4.128008535760016 removed.
+2026-11-14 07:36:45,972 - WARNING - End of eval at 1794663405.9712367

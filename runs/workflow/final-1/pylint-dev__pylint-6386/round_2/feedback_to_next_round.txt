@@ -1,0 +1,201 @@
+
+
+---
+FEEDBACK FROM AN AUTOMATED TEST RUN (revision 2 of at most 2)
+
+A previous attempt at this task produced the test patch shown below. We applied it to the current,
+unfixed code in a fresh copy of the repository and ran only the tests it adds or changes.
+
+Command: pytest -rA --tb=long -p no:cacheprovider tests/config/test_config.py::test_short_verbose
+Result: Your tests fail, but not in a way related to the issue.
+The failure (Failed) does not look like the problem described in the issue. Fix the test so that it fails because of the behavior the issue describes, not because of a mistake in the test.
+
+Per-test results:
+tests/config/test_config.py::test_short_verbose: FAILED (Failed)
+
+Test output (last 150 lines):
+<test_output>
+        # Run init hook, if present, before loading plugins
+        if "init-hook" in config_data:
+            exec(utils._unquote(config_data["init-hook"]))  # pylint: disable=exec-used
+    
+        # Load plugins if specified in the config file
+        if "load-plugins" in config_data:
+            linter.load_plugin_modules(utils._splitstrip(config_data["load-plugins"]))
+    
+        # First we parse any options from a configuration file
+        try:
+            linter._parse_configuration_file(config_args)
+        except _UnrecognizedOptionError as exc:
+            msg = ", ".join(exc.options)
+            linter.add_message("unrecognized-option", line=0, args=msg)
+    
+        # Then, if a custom reporter is provided as argument, it may be overridden
+        # by file parameters, so we re-set it here. We do this before command line
+        # parsing, so it's still overridable by command line options
+        if reporter:
+            linter.set_reporter(reporter)
+    
+        # Set the current module to the command line
+        # to allow raising messages on it
+        linter.set_current_module("Command line")
+    
+        # Now we parse any options from the command line, so they can override
+        # the configuration file
+>       parsed_args_list = linter._parse_command_line_configuration(args_list)
+
+pylint/config/config_initialization.py:73: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = Checker 'master' (responsible for 'F0001', 'F0002', 'F0010', 'F0011', 'I0001', 'I0010', 'I0011', 'I0013', 'I0020', 'I0021', 'I0022', 'E0001', 'E0011', 'E0012', 'E0013', 'E0014', 'E0015')
+arguments = ['/testbed/tests/config/../regrtest_data/empty.py', '-v']
+
+    def _parse_command_line_configuration(
+        self, arguments: Sequence[str] | None = None
+    ) -> list[str]:
+        """Parse the arguments found on the command line into the namespace."""
+        arguments = sys.argv[1:] if arguments is None else arguments
+    
+>       self.config, parsed_args = self._arg_parser.parse_known_args(
+            arguments, self.config
+        )
+
+pylint/config/arguments_manager.py:258: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = ArgumentParser(prog='pylint', usage='%(prog)s [options]', description=None, formatter_class=<class 'pylint.config.help_formatter._HelpFormatter'>, conflict_handler='error', add_help=True)
+args = ['/testbed/tests/config/../regrtest_data/empty.py', '-v']
+namespace = Namespace(rcfile=None, output=None, init_hook=None, help_msg=None, list_msgs=None, list_msgs_enabled=None, list_groups...True, accept_no_yields_doc=True, default_docstring_type='default', max_line_length_suggestions=0, runtime_typing=False)
+
+    def parse_known_args(self, args=None, namespace=None):
+        if args is None:
+            # args default to the system args
+            args = _sys.argv[1:]
+        else:
+            # make sure that args are mutable
+            args = list(args)
+    
+        # default Namespace built from parser defaults
+        if namespace is None:
+            namespace = Namespace()
+    
+        # add any action defaults that aren't present
+        for action in self._actions:
+            if action.dest is not SUPPRESS:
+                if not hasattr(namespace, action.dest):
+                    if action.default is not SUPPRESS:
+                        setattr(namespace, action.dest, action.default)
+    
+        # add any parser defaults that aren't present
+        for dest in self._defaults:
+            if not hasattr(namespace, dest):
+                setattr(namespace, dest, self._defaults[dest])
+    
+        # parse the arguments and exit if there are any errors
+        if self.exit_on_error:
+            try:
+                namespace, args = self._parse_known_args(args, namespace)
+            except ArgumentError:
+                err = _sys.exc_info()[1]
+>               self.error(str(err))
+
+/opt/miniconda3/envs/testbed/lib/python3.9/argparse.py:1861: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = ArgumentParser(prog='pylint', usage='%(prog)s [options]', description=None, formatter_class=<class 'pylint.config.help_formatter._HelpFormatter'>, conflict_handler='error', add_help=True)
+message = 'argument --verbose/-v: expected one argument'
+
+    def error(self, message):
+        """error(message: string)
+    
+        Prints a usage message incorporating the message to stderr and
+        exits.
+    
+        If you override this in a subclass, it should not return -- it
+        should either exit or raise an exception.
+        """
+        self.print_usage(_sys.stderr)
+        args = {'prog': self.prog, 'message': message}
+>       self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+
+/opt/miniconda3/envs/testbed/lib/python3.9/argparse.py:2582: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = ArgumentParser(prog='pylint', usage='%(prog)s [options]', description=None, formatter_class=<class 'pylint.config.help_formatter._HelpFormatter'>, conflict_handler='error', add_help=True)
+status = 2
+message = 'pylint: error: argument --verbose/-v: expected one argument\n'
+
+    def exit(self, status=0, message=None):
+        if message:
+            self._print_message(message, _sys.stderr)
+>       _sys.exit(status)
+E       SystemExit: 2
+
+/opt/miniconda3/envs/testbed/lib/python3.9/argparse.py:2569: SystemExit
+
+During handling of the above exception, another exception occurred:
+
+capsys = <_pytest.capture.CaptureFixture object at 0x74d833c7ec70>
+
+    def test_short_verbose(capsys: CaptureFixture) -> None:
+        """Check that we correctly handle the -v flag."""
+        try:
+            runner = Run([str(EMPTY_MODULE), "-v"], exit=False)
+        except SystemExit as exc:
+            output = capsys.readouterr()
+>           pytest.fail(
+                f"pylint should accept -v without an argument, but exited with "
+                f"status {exc.code}: {output.err}"
+            )
+E           Failed: pylint should accept -v without an argument, but exited with status 2: usage: pylint [options]
+E           pylint: error: argument --verbose/-v: expected one argument
+
+tests/config/test_config.py:111: Failed
+=============================== warnings summary ===============================
+../opt/miniconda3/envs/testbed/lib/python3.9/site-packages/astroid/interpreter/_import/util.py:6
+  /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/astroid/interpreter/_import/util.py:6: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    import pkg_resources
+
+pylint/checkers/utils.py:455: 146 warnings
+tests/config/test_config.py: 14 warnings
+  /testbed/pylint/checkers/utils.py:455: DeprecationWarning: utils.check_messages will be removed in favour of calling utils.only_required_for_messages in pylint 3.0
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/config/test_config.py::test_short_verbose - Failed: pylint shoul...
+======================= 1 failed, 161 warnings in 0.26s ========================
+</test_output>
+
+Previous test patch:
+<previous_patch>
+diff --git a/tests/config/test_config.py b/tests/config/test_config.py
+index f91e6cbf..d519f9d8 100644
+--- a/tests/config/test_config.py
++++ b/tests/config/test_config.py
+@@ -100,3 +100,18 @@ def test_unknown_py_version(capsys: CaptureFixture) -> None:
+         Run([str(EMPTY_MODULE), "--py-version=the-newest"], exit=False)
+     output = capsys.readouterr()
+     assert "the-newest has an invalid format, should be a version string." in output.err
++
++
++def test_short_verbose(capsys: CaptureFixture) -> None:
++    """Check that we correctly handle the -v flag."""
++    try:
++        runner = Run([str(EMPTY_MODULE), "-v"], exit=False)
++    except SystemExit as exc:
++        output = capsys.readouterr()
++        pytest.fail(
++            f"pylint should accept -v without an argument, but exited with "
++            f"status {exc.code}: {output.err}"
++        )
++    output = capsys.readouterr()
++    assert runner.verbose
++    assert "Using config file" in output.err
+
+</previous_patch>
+This patch is already applied in /testbed. Edit the test files in place, then submit as instructed.
+
+Please revise the test. It must still check the behavior described in the issue with meaningful
+assertions: do not delete or weaken assertions, and do not skip, xfail or otherwise disable the test
+just to change its outcome. As before, change test files only and do not fix the issue.

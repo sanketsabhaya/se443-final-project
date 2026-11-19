@@ -1,0 +1,473 @@
+[2026-11-13T19:05:48-06:00] driver start run_id=final-1 instances=25
+[2026-11-13T19:05:48-06:00] ===== astropy__astropy-8872 (D: free 179 GB)
+[2026-11-13T19:05:48-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 astropy__astropy-8872
+[2026-11-13T19:06:30-06:00] astropy__astropy-8872 baseline: attempt 1 rc=0 done=True
+[2026-11-13T19:06:30-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 astropy__astropy-8872
+[2026-11-13T19:07:26-06:00] astropy__astropy-8872 workflow: attempt 1 rc=0 done=True
+[2026-11-13T19:07:26-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/astropy__astropy-8872/harness_input astropy__astropy-8872 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/astropy__astropy-8872/preds.json
+[2026-11-13T19:07:26-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-astropy__astropy-8872 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/astropy__astropy-8872/harness_input.jsonl astropy__astropy-8872
+[2026-11-13T19:12:24-06:00] astropy__astropy-8872 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=False
+[2026-11-13T19:12:24-06:00] moved incomplete /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-astropy__astropy-8872 -> /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-astropy__astropy-8872.interrupted-20261113T191224
+[2026-11-13T19:12:24-06:00] astropy__astropy-8872 baseline: HARNESS RETRY 2/2 with unchanged prediction (sha256 4debdef8c180)
+[2026-11-13T19:12:24-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-astropy__astropy-8872 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/astropy__astropy-8872/harness_input.jsonl astropy__astropy-8872
+[2026-11-13T19:13:03-06:00] astropy__astropy-8872 baseline: harness attempt 2 exit=0 complete=True ok(no error instances)=False
+[2026-11-13T19:13:03-06:00] astropy__astropy-8872 baseline: harness still erroring after 2 attempts; recorded as harness error
+[2026-11-13T19:13:03-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/astropy__astropy-8872/harness_input astropy__astropy-8872 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/astropy__astropy-8872/final_preds.json
+[2026-11-13T19:13:03-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-astropy__astropy-8872 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/astropy__astropy-8872/harness_input.jsonl astropy__astropy-8872
+[2026-11-13T19:13:41-06:00] astropy__astropy-8872 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=False
+[2026-11-13T19:13:41-06:00] moved incomplete /home/mihir_barvaliya/se443/swt-runs/final-1-workflow-astropy__astropy-8872 -> /home/mihir_barvaliya/se443/swt-runs/final-1-workflow-astropy__astropy-8872.interrupted-20261113T191341
+[2026-11-13T19:13:41-06:00] astropy__astropy-8872 workflow: HARNESS RETRY 2/2 with unchanged prediction (sha256 163b40c1dc8f)
+[2026-11-13T19:13:41-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-astropy__astropy-8872 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/astropy__astropy-8872/harness_input.jsonl astropy__astropy-8872
+[2026-11-13T19:14:13-06:00] astropy__astropy-8872 workflow: harness attempt 2 exit=0 complete=True ok(no error instances)=False
+[2026-11-13T19:14:13-06:00] astropy__astropy-8872 workflow: harness still erroring after 2 attempts; recorded as harness error
+[2026-11-13T19:14:15-06:00] astropy__astropy-8872: removed instance-level images [('docker.io/swebench/sweb.eval.x86_64.astropy_1776_astropy-8872:latest', 0)]
+[2026-11-13T19:14:15-06:00] ===== django__django-16485 (D: free 178 GB)
+[2026-11-13T19:14:15-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 django__django-16485
+[2026-11-13T19:14:52-06:00] django__django-16485 baseline: attempt 1 rc=0 done=True
+[2026-11-13T19:14:52-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 django__django-16485
+[2026-11-13T19:15:34-06:00] django__django-16485 workflow: attempt 1 rc=0 done=True
+[2026-11-13T19:15:34-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/django__django-16485/harness_input django__django-16485 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/django__django-16485/preds.json
+[2026-11-13T19:15:34-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-django__django-16485 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/django__django-16485/harness_input.jsonl django__django-16485
+[2026-11-13T19:17:57-06:00] django__django-16485 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-13T19:17:57-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/django__django-16485/harness_input django__django-16485 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/django__django-16485/final_preds.json
+[2026-11-13T19:17:57-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-django__django-16485 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/django__django-16485/harness_input.jsonl django__django-16485
+[2026-11-13T19:20:17-06:00] django__django-16485 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-13T19:20:19-06:00] django__django-16485: removed instance-level images [('docker.io/swebench/sweb.eval.x86_64.django_1776_django-16485:latest', 0)]
+[2026-11-13T19:20:19-06:00] ===== matplotlib__matplotlib-14623 (D: free 178 GB)
+[2026-11-13T19:20:19-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 matplotlib__matplotlib-14623
+[2026-11-13T19:21:17-06:00] matplotlib__matplotlib-14623 baseline: attempt 1 rc=0 done=True
+[2026-11-13T19:21:17-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 matplotlib__matplotlib-14623
+[2026-11-13T19:24:51-06:00] matplotlib__matplotlib-14623 workflow: attempt 1 rc=0 done=True
+[2026-11-13T19:24:51-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-14623/harness_input matplotlib__matplotlib-14623 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-14623/preds.json
+[2026-11-13T19:24:51-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-matplotlib__matplotlib-14623 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-14623/harness_input.jsonl matplotlib__matplotlib-14623
+[2026-11-13T19:42:15-06:00] matplotlib__matplotlib-14623 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-13T19:42:15-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-14623/harness_input matplotlib__matplotlib-14623 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-14623/final_preds.json
+[2026-11-13T19:42:15-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-matplotlib__matplotlib-14623 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-14623/harness_input.jsonl matplotlib__matplotlib-14623
+[2026-11-13T19:57:18-06:00] matplotlib__matplotlib-14623 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-13T19:57:26-06:00] matplotlib__matplotlib-14623: removed instance-level images [('exec.eval.x86_64.4c04dd2da7e137006c2b92.ee2b23ea35e21165f9fdb8:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-14623:latest', 0)]
+[2026-11-13T19:57:26-06:00] ===== matplotlib__matplotlib-20676 (D: free 176 GB)
+[2026-11-13T19:57:26-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 matplotlib__matplotlib-20676
+[2026-11-13T20:01:48-06:00] matplotlib__matplotlib-20676 baseline: attempt 1 rc=0 done=True
+[2026-11-13T20:01:48-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 matplotlib__matplotlib-20676
+[2026-11-13T20:03:20-06:00] matplotlib__matplotlib-20676 workflow: attempt 1 rc=0 done=True
+[2026-11-13T20:03:20-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-20676/harness_input matplotlib__matplotlib-20676 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-20676/preds.json
+[2026-11-13T20:03:20-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-matplotlib__matplotlib-20676 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-20676/harness_input.jsonl matplotlib__matplotlib-20676
+[2026-11-13T20:19:05-06:00] matplotlib__matplotlib-20676 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-13T20:19:05-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-20676/harness_input matplotlib__matplotlib-20676 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-20676/final_preds.json
+[2026-11-13T20:19:05-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-matplotlib__matplotlib-20676 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-20676/harness_input.jsonl matplotlib__matplotlib-20676
+[2026-11-13T20:23:01-06:00] matplotlib__matplotlib-20676 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-13T20:23:10-06:00] matplotlib__matplotlib-20676: removed instance-level images [('exec.eval.x86_64.ea14326ccfbf5376330c69.98285d7b47072b73e49460:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-20676:latest', 0)]
+[2026-11-13T20:23:10-06:00] ===== matplotlib__matplotlib-21568 (D: free 173 GB)
+[2026-11-13T20:23:10-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 matplotlib__matplotlib-21568
+[2026-11-13T20:27:29-06:00] matplotlib__matplotlib-21568 baseline: attempt 1 rc=0 done=True
+[2026-11-13T20:27:29-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 matplotlib__matplotlib-21568
+[2026-11-13T20:29:15-06:00] matplotlib__matplotlib-21568 workflow: attempt 1 rc=0 done=True
+[2026-11-13T20:29:15-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-21568/harness_input matplotlib__matplotlib-21568 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-21568/preds.json
+[2026-11-13T20:29:16-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-matplotlib__matplotlib-21568 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-21568/harness_input.jsonl matplotlib__matplotlib-21568
+[2026-11-13T20:40:38-06:00] matplotlib__matplotlib-21568 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-13T20:40:38-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-21568/harness_input matplotlib__matplotlib-21568 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-21568/final_preds.json
+[2026-11-13T20:40:38-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-matplotlib__matplotlib-21568 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-21568/harness_input.jsonl matplotlib__matplotlib-21568
+[2026-11-13T20:44:50-06:00] matplotlib__matplotlib-21568 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-13T20:44:59-06:00] matplotlib__matplotlib-21568: removed instance-level images [('exec.eval.x86_64.ea14326ccfbf5376330c69.d07f6a72057eeedea9660a:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-21568:latest', 0)]
+[2026-11-13T20:44:59-06:00] ===== matplotlib__matplotlib-22719 (D: free 173 GB)
+[2026-11-13T20:44:59-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 matplotlib__matplotlib-22719
+[2026-11-13T20:52:09-06:00] matplotlib__matplotlib-22719 baseline: attempt 1 rc=0 done=True
+[2026-11-13T20:52:09-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 matplotlib__matplotlib-22719
+[2026-11-13T20:53:05-06:00] matplotlib__matplotlib-22719 workflow: attempt 1 rc=0 done=True
+[2026-11-13T20:53:05-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22719/harness_input matplotlib__matplotlib-22719 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22719/preds.json
+[2026-11-13T20:53:05-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-matplotlib__matplotlib-22719 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22719/harness_input.jsonl matplotlib__matplotlib-22719
+[2026-11-13T21:45:32-06:00] matplotlib__matplotlib-22719 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=False
+[2026-11-13T21:45:32-06:00] moved incomplete /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22719 -> /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22719.interrupted-20261113T214532
+[2026-11-13T21:45:32-06:00] matplotlib__matplotlib-22719 baseline: HARNESS RETRY 2/2 with unchanged prediction (sha256 3bcbc524a857)
+[2026-11-13T21:45:32-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-matplotlib__matplotlib-22719 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22719/harness_input.jsonl matplotlib__matplotlib-22719
+[2026-11-13T21:51:48-06:00] driver start run_id=final-1 instances=25
+[2026-11-13T21:51:48-06:00] ===== astropy__astropy-8872 (D: free 173 GB)
+[2026-11-13T21:51:48-06:00] astropy__astropy-8872 baseline: already done, skipping
+[2026-11-13T21:51:48-06:00] astropy__astropy-8872 workflow: already done, skipping
+[2026-11-13T21:51:48-06:00] astropy__astropy-8872 baseline: harness final, skipping
+[2026-11-13T21:51:48-06:00] astropy__astropy-8872 workflow: harness final, skipping
+[2026-11-13T21:51:48-06:00] ===== django__django-16485 (D: free 173 GB)
+[2026-11-13T21:51:48-06:00] django__django-16485 baseline: already done, skipping
+[2026-11-13T21:51:48-06:00] django__django-16485 workflow: already done, skipping
+[2026-11-13T21:51:48-06:00] django__django-16485 baseline: harness final, skipping
+[2026-11-13T21:51:48-06:00] django__django-16485 workflow: harness final, skipping
+[2026-11-13T21:51:48-06:00] ===== matplotlib__matplotlib-14623 (D: free 173 GB)
+[2026-11-13T21:51:48-06:00] matplotlib__matplotlib-14623 baseline: already done, skipping
+[2026-11-13T21:51:48-06:00] matplotlib__matplotlib-14623 workflow: already done, skipping
+[2026-11-13T21:51:48-06:00] matplotlib__matplotlib-14623 baseline: harness final, skipping
+[2026-11-13T21:51:48-06:00] matplotlib__matplotlib-14623 workflow: harness final, skipping
+[2026-11-13T21:51:48-06:00] ===== matplotlib__matplotlib-20676 (D: free 173 GB)
+[2026-11-13T21:51:48-06:00] matplotlib__matplotlib-20676 baseline: already done, skipping
+[2026-11-13T21:51:48-06:00] matplotlib__matplotlib-20676 workflow: already done, skipping
+[2026-11-13T21:51:48-06:00] matplotlib__matplotlib-20676 baseline: harness final, skipping
+[2026-11-13T21:51:48-06:00] matplotlib__matplotlib-20676 workflow: harness final, skipping
+[2026-11-13T21:51:48-06:00] ===== matplotlib__matplotlib-21568 (D: free 173 GB)
+[2026-11-13T21:51:48-06:00] matplotlib__matplotlib-21568 baseline: already done, skipping
+[2026-11-13T21:51:48-06:00] matplotlib__matplotlib-21568 workflow: already done, skipping
+[2026-11-13T21:51:48-06:00] matplotlib__matplotlib-21568 baseline: harness final, skipping
+[2026-11-13T21:51:48-06:00] matplotlib__matplotlib-21568 workflow: harness final, skipping
+[2026-11-13T21:51:48-06:00] ===== matplotlib__matplotlib-22719 (D: free 173 GB)
+[2026-11-13T21:51:48-06:00] matplotlib__matplotlib-22719 baseline: already done, skipping
+[2026-11-13T21:51:48-06:00] matplotlib__matplotlib-22719 workflow: already done, skipping
+[2026-11-13T21:51:48-06:00] moved incomplete /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22719 -> /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22719.interrupted-20261113T215148
+[2026-11-13T21:51:48-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-matplotlib__matplotlib-22719 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22719/harness_input.jsonl matplotlib__matplotlib-22719
+[2026-11-13T22:27:48-06:00] matplotlib__matplotlib-22719 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=False
+[2026-11-13T22:27:48-06:00] moved incomplete /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22719 -> /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22719.interrupted-20261113T222748
+[2026-11-13T22:27:48-06:00] matplotlib__matplotlib-22719 baseline: HARNESS RETRY 2/2 with unchanged prediction (sha256 3bcbc524a857)
+[2026-11-13T22:27:48-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-matplotlib__matplotlib-22719 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22719/harness_input.jsonl matplotlib__matplotlib-22719
+[2026-11-13T23:00:24-06:00] matplotlib__matplotlib-22719 baseline: harness attempt 2 exit=0 complete=True ok(no error instances)=False
+[2026-11-13T23:00:24-06:00] matplotlib__matplotlib-22719 baseline: harness still erroring after 2 attempts; recorded as harness error
+[2026-11-13T23:00:24-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22719/harness_input matplotlib__matplotlib-22719 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22719/final_preds.json
+[2026-11-13T23:00:24-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-matplotlib__matplotlib-22719 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22719/harness_input.jsonl matplotlib__matplotlib-22719
+[2026-11-13T23:31:00-06:00] matplotlib__matplotlib-22719 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=False
+[2026-11-13T23:31:00-06:00] moved incomplete /home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22719 -> /home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22719.interrupted-20261113T233100
+[2026-11-13T23:31:00-06:00] matplotlib__matplotlib-22719 workflow: HARNESS RETRY 2/2 with unchanged prediction (sha256 84486bead341)
+[2026-11-13T23:31:00-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-matplotlib__matplotlib-22719 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22719/harness_input.jsonl matplotlib__matplotlib-22719
+[2026-11-14T00:02:05-06:00] matplotlib__matplotlib-22719 workflow: harness attempt 2 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T00:02:05-06:00] matplotlib__matplotlib-22719 workflow: harness still erroring after 2 attempts; recorded as harness error
+[2026-11-14T00:02:16-06:00] matplotlib__matplotlib-22719: removed instance-level images [('docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-22719:latest', 0)]
+[2026-11-14T00:02:16-06:00] ===== matplotlib__matplotlib-22865 (D: free 172 GB)
+[2026-11-14T00:02:16-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 matplotlib__matplotlib-22865
+[2026-11-14T00:09:25-06:00] matplotlib__matplotlib-22865 baseline: attempt 1 rc=0 done=True
+[2026-11-14T00:09:25-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 matplotlib__matplotlib-22865
+[2026-11-14T00:14:48-06:00] matplotlib__matplotlib-22865 workflow: attempt 1 rc=0 done=True
+[2026-11-14T00:14:48-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22865/harness_input matplotlib__matplotlib-22865 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22865/preds.json
+[2026-11-14T00:14:48-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-matplotlib__matplotlib-22865 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22865/harness_input.jsonl matplotlib__matplotlib-22865
+[2026-11-14T00:45:13-06:00] matplotlib__matplotlib-22865 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T00:45:13-06:00] moved incomplete /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22865 -> /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22865.interrupted-20261114T004513
+[2026-11-14T00:45:13-06:00] matplotlib__matplotlib-22865 baseline: HARNESS RETRY 2/2 with unchanged prediction (sha256 32c8c090d934)
+[2026-11-14T00:45:13-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-matplotlib__matplotlib-22865 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22865/harness_input.jsonl matplotlib__matplotlib-22865
+[2026-11-14T01:16:18-06:00] matplotlib__matplotlib-22865 baseline: harness attempt 2 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T01:16:18-06:00] matplotlib__matplotlib-22865 baseline: harness still erroring after 2 attempts; recorded as harness error
+[2026-11-14T01:16:18-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22865/harness_input matplotlib__matplotlib-22865 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22865/final_preds.json
+[2026-11-14T01:16:18-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-matplotlib__matplotlib-22865 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22865/harness_input.jsonl matplotlib__matplotlib-22865
+[2026-11-14T01:47:24-06:00] matplotlib__matplotlib-22865 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T01:47:24-06:00] moved incomplete /home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22865 -> /home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22865.interrupted-20261114T014724
+[2026-11-14T01:47:24-06:00] matplotlib__matplotlib-22865 workflow: HARNESS RETRY 2/2 with unchanged prediction (sha256 7592e0e4650e)
+[2026-11-14T01:47:24-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-matplotlib__matplotlib-22865 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22865/harness_input.jsonl matplotlib__matplotlib-22865
+[2026-11-14T02:18:30-06:00] matplotlib__matplotlib-22865 workflow: harness attempt 2 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T02:18:30-06:00] matplotlib__matplotlib-22865 workflow: harness still erroring after 2 attempts; recorded as harness error
+[2026-11-14T02:18:43-06:00] matplotlib__matplotlib-22865: removed instance-level images [('docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-22865:latest', 0)]
+[2026-11-14T02:18:43-06:00] ===== matplotlib__matplotlib-22871 (D: free 172 GB)
+[2026-11-14T02:18:43-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 matplotlib__matplotlib-22871
+[2026-11-14T02:25:54-06:00] matplotlib__matplotlib-22871 baseline: attempt 1 rc=0 done=True
+[2026-11-14T02:25:54-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 matplotlib__matplotlib-22871
+[2026-11-14T02:27:19-06:00] matplotlib__matplotlib-22871 workflow: attempt 1 rc=0 done=True
+[2026-11-14T02:27:19-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22871/harness_input matplotlib__matplotlib-22871 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22871/preds.json
+[2026-11-14T02:27:19-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-matplotlib__matplotlib-22871 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22871/harness_input.jsonl matplotlib__matplotlib-22871
+[2026-11-14T02:57:39-06:00] matplotlib__matplotlib-22871 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T02:57:39-06:00] moved incomplete /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22871 -> /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-22871.interrupted-20261114T025739
+[2026-11-14T02:57:39-06:00] matplotlib__matplotlib-22871 baseline: HARNESS RETRY 2/2 with unchanged prediction (sha256 074bc2ae0fa4)
+[2026-11-14T02:57:39-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-matplotlib__matplotlib-22871 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22871/harness_input.jsonl matplotlib__matplotlib-22871
+[2026-11-14T03:28:43-06:00] matplotlib__matplotlib-22871 baseline: harness attempt 2 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T03:28:43-06:00] matplotlib__matplotlib-22871 baseline: harness still erroring after 2 attempts; recorded as harness error
+[2026-11-14T03:28:43-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22871/harness_input matplotlib__matplotlib-22871 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22871/final_preds.json
+[2026-11-14T03:28:43-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-matplotlib__matplotlib-22871 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22871/harness_input.jsonl matplotlib__matplotlib-22871
+[2026-11-14T03:59:50-06:00] matplotlib__matplotlib-22871 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T03:59:50-06:00] moved incomplete /home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22871 -> /home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-22871.interrupted-20261114T035950
+[2026-11-14T03:59:50-06:00] matplotlib__matplotlib-22871 workflow: HARNESS RETRY 2/2 with unchanged prediction (sha256 84fbc0386c02)
+[2026-11-14T03:59:50-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-matplotlib__matplotlib-22871 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22871/harness_input.jsonl matplotlib__matplotlib-22871
+[2026-11-14T04:30:55-06:00] matplotlib__matplotlib-22871 workflow: harness attempt 2 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T04:30:55-06:00] matplotlib__matplotlib-22871 workflow: harness still erroring after 2 attempts; recorded as harness error
+[2026-11-14T04:31:08-06:00] matplotlib__matplotlib-22871: removed instance-level images [('docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-22871:latest', 0)]
+[2026-11-14T04:31:08-06:00] ===== matplotlib__matplotlib-23299 (D: free 172 GB)
+[2026-11-14T04:31:08-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 matplotlib__matplotlib-23299
+[2026-11-14T04:39:41-06:00] matplotlib__matplotlib-23299 baseline: attempt 1 rc=0 done=True
+[2026-11-14T04:39:41-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 matplotlib__matplotlib-23299
+[2026-11-14T04:41:16-06:00] matplotlib__matplotlib-23299 workflow: attempt 1 rc=0 done=True
+[2026-11-14T04:41:16-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-23299/harness_input matplotlib__matplotlib-23299 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-23299/preds.json
+[2026-11-14T04:41:16-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-matplotlib__matplotlib-23299 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-23299/harness_input.jsonl matplotlib__matplotlib-23299
+[2026-11-14T05:12:04-06:00] matplotlib__matplotlib-23299 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T05:12:04-06:00] moved incomplete /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-23299 -> /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-matplotlib__matplotlib-23299.interrupted-20261114T051204
+[2026-11-14T05:12:04-06:00] matplotlib__matplotlib-23299 baseline: HARNESS RETRY 2/2 with unchanged prediction (sha256 286c1f5fdab3)
+[2026-11-14T05:12:04-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-matplotlib__matplotlib-23299 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-23299/harness_input.jsonl matplotlib__matplotlib-23299
+[2026-11-14T05:43:09-06:00] matplotlib__matplotlib-23299 baseline: harness attempt 2 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T05:43:09-06:00] matplotlib__matplotlib-23299 baseline: harness still erroring after 2 attempts; recorded as harness error
+[2026-11-14T05:43:09-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-23299/harness_input matplotlib__matplotlib-23299 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-23299/final_preds.json
+[2026-11-14T05:43:09-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-matplotlib__matplotlib-23299 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-23299/harness_input.jsonl matplotlib__matplotlib-23299
+[2026-11-14T06:14:15-06:00] matplotlib__matplotlib-23299 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T06:14:15-06:00] moved incomplete /home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-23299 -> /home/mihir_barvaliya/se443/swt-runs/final-1-workflow-matplotlib__matplotlib-23299.interrupted-20261114T061415
+[2026-11-14T06:14:15-06:00] matplotlib__matplotlib-23299 workflow: HARNESS RETRY 2/2 with unchanged prediction (sha256 3a157cc42ed3)
+[2026-11-14T06:14:15-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-matplotlib__matplotlib-23299 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-23299/harness_input.jsonl matplotlib__matplotlib-23299
+[2026-11-14T06:45:23-06:00] matplotlib__matplotlib-23299 workflow: harness attempt 2 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T06:45:23-06:00] matplotlib__matplotlib-23299 workflow: harness still erroring after 2 attempts; recorded as harness error
+[2026-11-14T06:45:40-06:00] matplotlib__matplotlib-23299: removed instance-level images [('docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23299:latest', 0)]
+[2026-11-14T06:45:40-06:00] ===== matplotlib__matplotlib-25311 (D: free 171 GB)
+[2026-11-14T06:45:40-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 matplotlib__matplotlib-25311
+[2026-11-14T06:55:02-06:00] matplotlib__matplotlib-25311 baseline: attempt 1 rc=0 done=True
+[2026-11-14T06:55:02-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 matplotlib__matplotlib-25311
+[2026-11-14T06:57:07-06:00] matplotlib__matplotlib-25311 workflow: attempt 1 rc=0 done=True
+[2026-11-14T06:57:07-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-25311/harness_input matplotlib__matplotlib-25311 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-25311/preds.json
+[2026-11-14T06:57:07-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-matplotlib__matplotlib-25311 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-25311/harness_input.jsonl matplotlib__matplotlib-25311
+[2026-11-14T07:43:53-06:00] matplotlib__matplotlib-25311 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T07:43:53-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-25311/harness_input matplotlib__matplotlib-25311 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-25311/final_preds.json
+[2026-11-14T07:43:53-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-matplotlib__matplotlib-25311 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-25311/harness_input.jsonl matplotlib__matplotlib-25311
+[2026-11-14T07:52:27-06:00] matplotlib__matplotlib-25311 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T07:52:44-06:00] matplotlib__matplotlib-25311: removed instance-level images [('exec.eval.x86_64.89beb6334e800c4362eea6.a0be8ca4c1490fd9d2a3a4:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-25311:latest', 0)]
+[2026-11-14T07:52:44-06:00] ===== pylint-dev__pylint-6386 (D: free 158 GB)
+[2026-11-14T07:52:44-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 pylint-dev__pylint-6386
+[2026-11-14T07:55:36-06:00] pylint-dev__pylint-6386 baseline: attempt 1 rc=0 done=True
+[2026-11-14T07:55:36-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 pylint-dev__pylint-6386
+[2026-11-14T08:00:16-06:00] pylint-dev__pylint-6386 workflow: attempt 1 rc=0 done=True
+[2026-11-14T08:00:16-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-6386/harness_input pylint-dev__pylint-6386 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-6386/preds.json
+[2026-11-14T08:00:16-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-pylint-dev__pylint-6386 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-6386/harness_input.jsonl pylint-dev__pylint-6386
+[2026-11-14T08:08:43-06:00] pylint-dev__pylint-6386 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T08:08:43-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6386/harness_input pylint-dev__pylint-6386 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6386/final_preds.json
+[2026-11-14T08:08:43-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-pylint-dev__pylint-6386 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6386/harness_input.jsonl pylint-dev__pylint-6386
+[2026-11-14T08:11:13-06:00] pylint-dev__pylint-6386 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T08:11:14-06:00] pylint-dev__pylint-6386: removed instance-level images [('exec.eval.x86_64.efca49fa1fde6067d6f416.605786f79127f23902681b:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-6386:latest', 0)]
+[2026-11-14T08:11:14-06:00] ===== pylint-dev__pylint-6903 (D: free 158 GB)
+[2026-11-14T08:11:14-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 pylint-dev__pylint-6903
+[2026-11-14T08:12:26-06:00] pylint-dev__pylint-6903 baseline: attempt 1 rc=0 done=True
+[2026-11-14T08:12:26-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 pylint-dev__pylint-6903
+[2026-11-14T08:13:53-06:00] pylint-dev__pylint-6903 workflow: attempt 1 rc=0 done=True
+[2026-11-14T08:13:53-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-6903/harness_input pylint-dev__pylint-6903 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-6903/preds.json
+[2026-11-14T08:13:53-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-pylint-dev__pylint-6903 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-6903/harness_input.jsonl pylint-dev__pylint-6903
+[2026-11-14T08:21:50-06:00] pylint-dev__pylint-6903 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T08:21:50-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6903/harness_input pylint-dev__pylint-6903 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6903/final_preds.json
+[2026-11-14T08:21:50-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-pylint-dev__pylint-6903 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6903/harness_input.jsonl pylint-dev__pylint-6903
+[2026-11-14T08:24:28-06:00] pylint-dev__pylint-6903 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T08:24:30-06:00] pylint-dev__pylint-6903: removed instance-level images [('exec.eval.x86_64.fc8235bb41fea90b41065e.0e61b8e442dd90882e9ff4:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-6903:latest', 0)]
+[2026-11-14T08:24:30-06:00] ===== pylint-dev__pylint-7080 (D: free 158 GB)
+[2026-11-14T08:24:30-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 pylint-dev__pylint-7080
+[2026-11-14T08:28:42-06:00] pylint-dev__pylint-7080 baseline: attempt 1 rc=0 done=True
+[2026-11-14T08:28:42-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 pylint-dev__pylint-7080
+[2026-11-14T08:30:22-06:00] pylint-dev__pylint-7080 workflow: attempt 1 rc=0 done=True
+[2026-11-14T08:30:23-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7080/harness_input pylint-dev__pylint-7080 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7080/preds.json
+[2026-11-14T08:30:23-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-pylint-dev__pylint-7080 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7080/harness_input.jsonl pylint-dev__pylint-7080
+[2026-11-14T08:37:59-06:00] pylint-dev__pylint-7080 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T08:37:59-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7080/harness_input pylint-dev__pylint-7080 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7080/final_preds.json
+[2026-11-14T08:37:59-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-pylint-dev__pylint-7080 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7080/harness_input.jsonl pylint-dev__pylint-7080
+[2026-11-14T08:43:56-06:00] pylint-dev__pylint-7080 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T08:44:00-06:00] pylint-dev__pylint-7080: removed instance-level images [('exec.eval.x86_64.fc8235bb41fea90b41065e.fdd505a934ca05e5eb6f41:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-7080:latest', 0)]
+[2026-11-14T08:44:01-06:00] ===== pylint-dev__pylint-7277 (D: free 158 GB)
+[2026-11-14T08:44:01-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 pylint-dev__pylint-7277
+[2026-11-14T08:46:28-06:00] pylint-dev__pylint-7277 baseline: attempt 1 rc=0 done=True
+[2026-11-14T08:46:28-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 pylint-dev__pylint-7277
+[2026-11-14T08:47:24-06:00] pylint-dev__pylint-7277 workflow: attempt 1 rc=0 done=True
+[2026-11-14T08:47:24-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7277/harness_input pylint-dev__pylint-7277 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7277/preds.json
+[2026-11-14T08:47:24-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-pylint-dev__pylint-7277 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7277/harness_input.jsonl pylint-dev__pylint-7277
+[2026-11-14T08:48:00-06:00] pylint-dev__pylint-7277 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T08:48:00-06:00] moved incomplete /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-pylint-dev__pylint-7277 -> /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-pylint-dev__pylint-7277.interrupted-20261114T084800
+[2026-11-14T08:48:00-06:00] pylint-dev__pylint-7277 baseline: HARNESS RETRY 2/2 with unchanged prediction (sha256 d37b9a1d9ede)
+[2026-11-14T08:48:00-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-pylint-dev__pylint-7277 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7277/harness_input.jsonl pylint-dev__pylint-7277
+[2026-11-14T08:48:24-06:00] pylint-dev__pylint-7277 baseline: harness attempt 2 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T08:48:24-06:00] pylint-dev__pylint-7277 baseline: harness still erroring after 2 attempts; recorded as harness error
+[2026-11-14T08:48:24-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7277/harness_input pylint-dev__pylint-7277 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7277/final_preds.json
+[2026-11-14T08:48:24-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-pylint-dev__pylint-7277 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7277/harness_input.jsonl pylint-dev__pylint-7277
+[2026-11-14T08:48:48-06:00] pylint-dev__pylint-7277 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T08:48:48-06:00] moved incomplete /home/mihir_barvaliya/se443/swt-runs/final-1-workflow-pylint-dev__pylint-7277 -> /home/mihir_barvaliya/se443/swt-runs/final-1-workflow-pylint-dev__pylint-7277.interrupted-20261114T084848
+[2026-11-14T08:48:48-06:00] pylint-dev__pylint-7277 workflow: HARNESS RETRY 2/2 with unchanged prediction (sha256 638502c37780)
+[2026-11-14T08:48:48-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-pylint-dev__pylint-7277 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7277/harness_input.jsonl pylint-dev__pylint-7277
+[2026-11-14T08:49:12-06:00] pylint-dev__pylint-7277 workflow: harness attempt 2 exit=0 complete=True ok(no error instances)=False
+[2026-11-14T08:49:12-06:00] pylint-dev__pylint-7277 workflow: harness still erroring after 2 attempts; recorded as harness error
+[2026-11-14T08:49:13-06:00] pylint-dev__pylint-7277: removed instance-level images [('docker.io/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-7277:latest', 0)]
+[2026-11-14T08:49:13-06:00] ===== sphinx-doc__sphinx-11510 (D: free 158 GB)
+[2026-11-14T08:49:13-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 sphinx-doc__sphinx-11510
+[2026-11-14T08:52:19-06:00] sphinx-doc__sphinx-11510 baseline: attempt 1 rc=0 done=True
+[2026-11-14T08:52:19-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 sphinx-doc__sphinx-11510
+[2026-11-14T08:59:28-06:00] sphinx-doc__sphinx-11510 workflow: attempt 1 rc=0 done=True
+[2026-11-14T08:59:28-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-11510/harness_input sphinx-doc__sphinx-11510 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-11510/preds.json
+[2026-11-14T08:59:28-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-sphinx-doc__sphinx-11510 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-11510/harness_input.jsonl sphinx-doc__sphinx-11510
+[2026-11-14T09:50:07-06:00] driver start run_id=final-1 instances=25
+[2026-11-14T09:50:07-06:00] ===== astropy__astropy-8872 (D: free 158 GB)
+[2026-11-14T09:50:07-06:00] astropy__astropy-8872 baseline: already done, skipping
+[2026-11-14T09:50:07-06:00] astropy__astropy-8872 workflow: already done, skipping
+[2026-11-14T09:50:07-06:00] astropy__astropy-8872 baseline: harness final, skipping
+[2026-11-14T09:50:07-06:00] astropy__astropy-8872 workflow: harness final, skipping
+[2026-11-14T09:50:07-06:00] ===== django__django-16485 (D: free 158 GB)
+[2026-11-14T09:50:07-06:00] django__django-16485 baseline: already done, skipping
+[2026-11-14T09:50:07-06:00] django__django-16485 workflow: already done, skipping
+[2026-11-14T09:50:07-06:00] django__django-16485 baseline: harness final, skipping
+[2026-11-14T09:50:07-06:00] django__django-16485 workflow: harness final, skipping
+[2026-11-14T09:50:07-06:00] ===== matplotlib__matplotlib-14623 (D: free 158 GB)
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-14623 baseline: already done, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-14623 workflow: already done, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-14623 baseline: harness final, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-14623 workflow: harness final, skipping
+[2026-11-14T09:50:07-06:00] ===== matplotlib__matplotlib-20676 (D: free 158 GB)
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-20676 baseline: already done, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-20676 workflow: already done, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-20676 baseline: harness final, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-20676 workflow: harness final, skipping
+[2026-11-14T09:50:07-06:00] ===== matplotlib__matplotlib-21568 (D: free 158 GB)
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-21568 baseline: already done, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-21568 workflow: already done, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-21568 baseline: harness final, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-21568 workflow: harness final, skipping
+[2026-11-14T09:50:07-06:00] ===== matplotlib__matplotlib-22719 (D: free 158 GB)
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-22719 baseline: already done, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-22719 workflow: already done, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-22719 baseline: harness final, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-22719 workflow: harness final, skipping
+[2026-11-14T09:50:07-06:00] ===== matplotlib__matplotlib-22865 (D: free 158 GB)
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-22865 baseline: already done, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-22865 workflow: already done, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-22865 baseline: harness final, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-22865 workflow: harness final, skipping
+[2026-11-14T09:50:07-06:00] ===== matplotlib__matplotlib-22871 (D: free 158 GB)
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-22871 baseline: already done, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-22871 workflow: already done, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-22871 baseline: harness final, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-22871 workflow: harness final, skipping
+[2026-11-14T09:50:07-06:00] ===== matplotlib__matplotlib-23299 (D: free 158 GB)
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-23299 baseline: already done, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-23299 workflow: already done, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-23299 baseline: harness final, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-23299 workflow: harness final, skipping
+[2026-11-14T09:50:07-06:00] ===== matplotlib__matplotlib-25311 (D: free 158 GB)
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-25311 baseline: already done, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-25311 workflow: already done, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-25311 baseline: harness final, skipping
+[2026-11-14T09:50:07-06:00] matplotlib__matplotlib-25311 workflow: harness final, skipping
+[2026-11-14T09:50:07-06:00] ===== pylint-dev__pylint-6386 (D: free 158 GB)
+[2026-11-14T09:50:07-06:00] pylint-dev__pylint-6386 baseline: already done, skipping
+[2026-11-14T09:50:07-06:00] pylint-dev__pylint-6386 workflow: already done, skipping
+[2026-11-14T09:50:07-06:00] pylint-dev__pylint-6386 baseline: harness final, skipping
+[2026-11-14T09:50:07-06:00] pylint-dev__pylint-6386 workflow: harness final, skipping
+[2026-11-14T09:50:07-06:00] ===== pylint-dev__pylint-6903 (D: free 158 GB)
+[2026-11-14T09:50:07-06:00] pylint-dev__pylint-6903 baseline: already done, skipping
+[2026-11-14T09:50:07-06:00] pylint-dev__pylint-6903 workflow: already done, skipping
+[2026-11-14T09:50:07-06:00] pylint-dev__pylint-6903 baseline: harness final, skipping
+[2026-11-14T09:50:07-06:00] pylint-dev__pylint-6903 workflow: harness final, skipping
+[2026-11-14T09:50:07-06:00] ===== pylint-dev__pylint-7080 (D: free 158 GB)
+[2026-11-14T09:50:07-06:00] pylint-dev__pylint-7080 baseline: already done, skipping
+[2026-11-14T09:50:07-06:00] pylint-dev__pylint-7080 workflow: already done, skipping
+[2026-11-14T09:50:07-06:00] pylint-dev__pylint-7080 baseline: harness final, skipping
+[2026-11-14T09:50:07-06:00] pylint-dev__pylint-7080 workflow: harness final, skipping
+[2026-11-14T09:50:07-06:00] ===== pylint-dev__pylint-7277 (D: free 158 GB)
+[2026-11-14T09:50:07-06:00] pylint-dev__pylint-7277 baseline: already done, skipping
+[2026-11-14T09:50:07-06:00] pylint-dev__pylint-7277 workflow: already done, skipping
+[2026-11-14T09:50:07-06:00] pylint-dev__pylint-7277 baseline: harness final, skipping
+[2026-11-14T09:50:07-06:00] pylint-dev__pylint-7277 workflow: harness final, skipping
+[2026-11-14T09:50:07-06:00] ===== sphinx-doc__sphinx-11510 (D: free 158 GB)
+[2026-11-14T09:50:07-06:00] sphinx-doc__sphinx-11510 baseline: already done, skipping
+[2026-11-14T09:50:07-06:00] sphinx-doc__sphinx-11510 workflow: already done, skipping
+[2026-11-14T09:50:07-06:00] moved incomplete /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-11510 -> /home/mihir_barvaliya/se443/swt-runs/final-1-baseline-sphinx-doc__sphinx-11510.interrupted-20261114T095007
+[2026-11-14T09:50:07-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-sphinx-doc__sphinx-11510 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-11510/harness_input.jsonl sphinx-doc__sphinx-11510
+[2026-11-14T10:03:14-06:00] sphinx-doc__sphinx-11510 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T10:03:14-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-11510/harness_input sphinx-doc__sphinx-11510 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-11510/final_preds.json
+[2026-11-14T10:03:14-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-sphinx-doc__sphinx-11510 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-11510/harness_input.jsonl sphinx-doc__sphinx-11510
+[2026-11-14T10:06:22-06:00] sphinx-doc__sphinx-11510 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T10:06:24-06:00] sphinx-doc__sphinx-11510: removed instance-level images [('exec.eval.x86_64.77d82541416cab86d0d86a.6392ab2727212bbd1cfd34:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-11510:latest', 0)]
+[2026-11-14T10:06:24-06:00] ===== sphinx-doc__sphinx-8459 (D: free 158 GB)
+[2026-11-14T10:06:24-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 sphinx-doc__sphinx-8459
+[2026-11-14T10:08:00-06:00] sphinx-doc__sphinx-8459 baseline: attempt 1 rc=0 done=True
+[2026-11-14T10:08:00-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 sphinx-doc__sphinx-8459
+[2026-11-14T10:13:03-06:00] sphinx-doc__sphinx-8459 workflow: attempt 1 rc=0 done=True
+[2026-11-14T10:13:03-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8459/harness_input sphinx-doc__sphinx-8459 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8459/preds.json
+[2026-11-14T10:13:03-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-sphinx-doc__sphinx-8459 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8459/harness_input.jsonl sphinx-doc__sphinx-8459
+[2026-11-14T10:18:06-06:00] sphinx-doc__sphinx-8459 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T10:18:06-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8459/harness_input sphinx-doc__sphinx-8459 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8459/final_preds.json
+[2026-11-14T10:18:06-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-sphinx-doc__sphinx-8459 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8459/harness_input.jsonl sphinx-doc__sphinx-8459
+[2026-11-14T10:22:08-06:00] sphinx-doc__sphinx-8459 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T10:22:10-06:00] sphinx-doc__sphinx-8459: removed instance-level images [('exec.eval.x86_64.77d82541416cab86d0d86a.2d81df98fa1799b50f4abc:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8459:latest', 0)]
+[2026-11-14T10:22:10-06:00] ===== sphinx-doc__sphinx-8475 (D: free 158 GB)
+[2026-11-14T10:22:10-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 sphinx-doc__sphinx-8475
+[2026-11-14T10:25:40-06:00] sphinx-doc__sphinx-8475 baseline: attempt 1 rc=0 done=True
+[2026-11-14T10:25:40-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 sphinx-doc__sphinx-8475
+[2026-11-14T10:29:58-06:00] sphinx-doc__sphinx-8475 workflow: attempt 1 rc=0 done=True
+[2026-11-14T10:29:59-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8475/harness_input sphinx-doc__sphinx-8475 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8475/preds.json
+[2026-11-14T10:29:59-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-sphinx-doc__sphinx-8475 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8475/harness_input.jsonl sphinx-doc__sphinx-8475
+[2026-11-14T10:35:28-06:00] sphinx-doc__sphinx-8475 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T10:35:28-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8475/harness_input sphinx-doc__sphinx-8475 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8475/final_preds.json
+[2026-11-14T10:35:28-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-sphinx-doc__sphinx-8475 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8475/harness_input.jsonl sphinx-doc__sphinx-8475
+[2026-11-14T10:39:26-06:00] sphinx-doc__sphinx-8475 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T10:39:30-06:00] sphinx-doc__sphinx-8475: removed instance-level images [('exec.eval.x86_64.77d82541416cab86d0d86a.0599ff53767a95070e5c74:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8475:latest', 0)]
+[2026-11-14T10:39:30-06:00] ===== sphinx-doc__sphinx-8548 (D: free 158 GB)
+[2026-11-14T10:39:30-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 sphinx-doc__sphinx-8548
+[2026-11-14T10:44:11-06:00] sphinx-doc__sphinx-8548 baseline: attempt 1 rc=0 done=True
+[2026-11-14T10:44:11-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 sphinx-doc__sphinx-8548
+[2026-11-14T10:50:38-06:00] sphinx-doc__sphinx-8548 workflow: attempt 1 rc=0 done=True
+[2026-11-14T10:50:38-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8548/harness_input sphinx-doc__sphinx-8548 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8548/preds.json
+[2026-11-14T10:50:38-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-sphinx-doc__sphinx-8548 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8548/harness_input.jsonl sphinx-doc__sphinx-8548
+[2026-11-14T10:55:35-06:00] sphinx-doc__sphinx-8548 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T10:55:35-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8548/harness_input sphinx-doc__sphinx-8548 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8548/final_preds.json
+[2026-11-14T10:55:35-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-sphinx-doc__sphinx-8548 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8548/harness_input.jsonl sphinx-doc__sphinx-8548
+[2026-11-14T10:59:02-06:00] sphinx-doc__sphinx-8548 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T10:59:06-06:00] sphinx-doc__sphinx-8548: removed instance-level images [('exec.eval.x86_64.77d82541416cab86d0d86a.8697b35c69cb90ab63e1a5:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8548:latest', 0)]
+[2026-11-14T10:59:06-06:00] ===== sphinx-doc__sphinx-8551 (D: free 158 GB)
+[2026-11-14T10:59:06-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 sphinx-doc__sphinx-8551
+[2026-11-14T11:03:29-06:00] sphinx-doc__sphinx-8551 baseline: attempt 1 rc=0 done=True
+[2026-11-14T11:03:29-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 sphinx-doc__sphinx-8551
+[2026-11-14T11:10:27-06:00] sphinx-doc__sphinx-8551 workflow: attempt 1 rc=0 done=True
+[2026-11-14T11:10:27-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8551/harness_input sphinx-doc__sphinx-8551 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8551/preds.json
+[2026-11-14T11:10:27-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-sphinx-doc__sphinx-8551 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8551/harness_input.jsonl sphinx-doc__sphinx-8551
+[2026-11-14T11:15:58-06:00] sphinx-doc__sphinx-8551 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T11:15:58-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8551/harness_input sphinx-doc__sphinx-8551 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8551/final_preds.json
+[2026-11-14T11:15:58-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-sphinx-doc__sphinx-8551 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8551/harness_input.jsonl sphinx-doc__sphinx-8551
+[2026-11-14T11:20:27-06:00] sphinx-doc__sphinx-8551 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T11:20:32-06:00] sphinx-doc__sphinx-8551: removed instance-level images [('exec.eval.x86_64.77d82541416cab86d0d86a.f484b979b91a6e0136288c:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8551:latest', 0)]
+[2026-11-14T11:20:32-06:00] ===== sphinx-doc__sphinx-8593 (D: free 158 GB)
+[2026-11-14T11:20:32-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 sphinx-doc__sphinx-8593
+[2026-11-14T11:24:32-06:00] sphinx-doc__sphinx-8593 baseline: attempt 1 rc=0 done=True
+[2026-11-14T11:24:32-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 sphinx-doc__sphinx-8593
+[2026-11-14T11:30:25-06:00] sphinx-doc__sphinx-8593 workflow: attempt 1 rc=0 done=True
+[2026-11-14T11:30:25-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8593/harness_input sphinx-doc__sphinx-8593 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8593/preds.json
+[2026-11-14T11:30:25-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-sphinx-doc__sphinx-8593 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8593/harness_input.jsonl sphinx-doc__sphinx-8593
+[2026-11-14T11:35:19-06:00] sphinx-doc__sphinx-8593 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T11:35:19-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8593/harness_input sphinx-doc__sphinx-8593 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8593/final_preds.json
+[2026-11-14T11:35:19-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-sphinx-doc__sphinx-8593 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8593/harness_input.jsonl sphinx-doc__sphinx-8593
+[2026-11-14T11:38:48-06:00] sphinx-doc__sphinx-8593 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T11:38:52-06:00] sphinx-doc__sphinx-8593: removed instance-level images [('exec.eval.x86_64.77d82541416cab86d0d86a.6e9b2c0524b12613dd45e1:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8593:latest', 0)]
+[2026-11-14T11:38:52-06:00] ===== sphinx-doc__sphinx-8595 (D: free 158 GB)
+[2026-11-14T11:38:52-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 sphinx-doc__sphinx-8595
+[2026-11-14T11:42:39-06:00] sphinx-doc__sphinx-8595 baseline: attempt 1 rc=0 done=True
+[2026-11-14T11:42:39-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 sphinx-doc__sphinx-8595
+[2026-11-14T11:46:10-06:00] sphinx-doc__sphinx-8595 workflow: attempt 1 rc=0 done=True
+[2026-11-14T11:46:10-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8595/harness_input sphinx-doc__sphinx-8595 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8595/preds.json
+[2026-11-14T11:46:10-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-sphinx-doc__sphinx-8595 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8595/harness_input.jsonl sphinx-doc__sphinx-8595
+[2026-11-14T11:51:56-06:00] sphinx-doc__sphinx-8595 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T11:51:56-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8595/harness_input sphinx-doc__sphinx-8595 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8595/final_preds.json
+[2026-11-14T11:51:56-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-sphinx-doc__sphinx-8595 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8595/harness_input.jsonl sphinx-doc__sphinx-8595
+[2026-11-14T11:56:12-06:00] sphinx-doc__sphinx-8595 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T11:56:17-06:00] sphinx-doc__sphinx-8595: removed instance-level images [('exec.eval.x86_64.77d82541416cab86d0d86a.4291916db94e96fb9b3479:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8595:latest', 0)]
+[2026-11-14T11:56:17-06:00] ===== sphinx-doc__sphinx-8621 (D: free 158 GB)
+[2026-11-14T11:56:17-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 sphinx-doc__sphinx-8621
+[2026-11-14T12:00:42-06:00] sphinx-doc__sphinx-8621 baseline: attempt 1 rc=0 done=True
+[2026-11-14T12:00:42-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 sphinx-doc__sphinx-8621
+[2026-11-14T12:07:29-06:00] sphinx-doc__sphinx-8621 workflow: attempt 1 rc=0 done=True
+[2026-11-14T12:07:29-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8621/harness_input sphinx-doc__sphinx-8621 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8621/preds.json
+[2026-11-14T12:07:29-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-sphinx-doc__sphinx-8621 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8621/harness_input.jsonl sphinx-doc__sphinx-8621
+[2026-11-14T12:12:18-06:00] sphinx-doc__sphinx-8621 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T12:12:18-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8621/harness_input sphinx-doc__sphinx-8621 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8621/final_preds.json
+[2026-11-14T12:12:18-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-sphinx-doc__sphinx-8621 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8621/harness_input.jsonl sphinx-doc__sphinx-8621
+[2026-11-14T12:15:39-06:00] sphinx-doc__sphinx-8621 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T12:15:43-06:00] sphinx-doc__sphinx-8621: removed instance-level images [('exec.eval.x86_64.77d82541416cab86d0d86a.eaf24027d9a2534598aa84:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8621:latest', 0)]
+[2026-11-14T12:15:43-06:00] ===== sphinx-doc__sphinx-8638 (D: free 158 GB)
+[2026-11-14T12:15:43-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 sphinx-doc__sphinx-8638
+[2026-11-14T12:20:46-06:00] sphinx-doc__sphinx-8638 baseline: attempt 1 rc=0 done=True
+[2026-11-14T12:20:46-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 sphinx-doc__sphinx-8638
+[2026-11-14T12:26:30-06:00] sphinx-doc__sphinx-8638 workflow: attempt 1 rc=0 done=True
+[2026-11-14T12:26:30-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8638/harness_input sphinx-doc__sphinx-8638 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8638/preds.json
+[2026-11-14T12:26:30-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-sphinx-doc__sphinx-8638 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8638/harness_input.jsonl sphinx-doc__sphinx-8638
+[2026-11-14T12:32:32-06:00] sphinx-doc__sphinx-8638 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T12:32:32-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8638/harness_input sphinx-doc__sphinx-8638 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8638/final_preds.json
+[2026-11-14T12:32:32-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-sphinx-doc__sphinx-8638 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8638/harness_input.jsonl sphinx-doc__sphinx-8638
+[2026-11-14T12:36:59-06:00] sphinx-doc__sphinx-8638 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T12:37:04-06:00] sphinx-doc__sphinx-8638: removed instance-level images [('exec.eval.x86_64.77d82541416cab86d0d86a.1622f4ab259b2666752891:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8638:latest', 0)]
+[2026-11-14T12:37:04-06:00] ===== sphinx-doc__sphinx-8721 (D: free 158 GB)
+[2026-11-14T12:37:04-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 sphinx-doc__sphinx-8721
+[2026-11-14T12:41:54-06:00] sphinx-doc__sphinx-8721 baseline: attempt 1 rc=0 done=True
+[2026-11-14T12:41:54-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 sphinx-doc__sphinx-8721
+[2026-11-14T12:48:34-06:00] sphinx-doc__sphinx-8721 workflow: attempt 1 rc=0 done=True
+[2026-11-14T12:48:34-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8721/harness_input sphinx-doc__sphinx-8721 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8721/preds.json
+[2026-11-14T12:48:34-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-sphinx-doc__sphinx-8721 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8721/harness_input.jsonl sphinx-doc__sphinx-8721
+[2026-11-14T13:07:55-06:00] sphinx-doc__sphinx-8721 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T13:07:55-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8721/harness_input sphinx-doc__sphinx-8721 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8721/final_preds.json
+[2026-11-14T13:07:55-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-sphinx-doc__sphinx-8721 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8721/harness_input.jsonl sphinx-doc__sphinx-8721
+[2026-11-14T13:11:25-06:00] sphinx-doc__sphinx-8721 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T13:11:29-06:00] sphinx-doc__sphinx-8721: removed instance-level images [('exec.eval.x86_64.77d82541416cab86d0d86a.43753761ebd4b62b4a9d61:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8721:latest', 0)]
+[2026-11-14T13:11:29-06:00] ===== sympy__sympy-15017 (D: free 158 GB)
+[2026-11-14T13:11:29-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_baseline.sh final-1 sympy__sympy-15017
+[2026-11-14T13:15:13-06:00] sympy__sympy-15017 baseline: attempt 1 rc=0 done=True
+[2026-11-14T13:15:13-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_workflow.sh final-1 sympy__sympy-15017
+[2026-11-14T13:18:55-06:00] sympy__sympy-15017 workflow: attempt 1 rc=0 done=True
+[2026-11-14T13:18:56-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sympy__sympy-15017/harness_input sympy__sympy-15017 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sympy__sympy-15017/preds.json
+[2026-11-14T13:18:56-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-baseline-sympy__sympy-15017 /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sympy__sympy-15017/harness_input.jsonl sympy__sympy-15017
+[2026-11-14T13:26:12-06:00] sympy__sympy-15017 baseline: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T13:26:12-06:00] run: /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sympy__sympy-15017/harness_input sympy__sympy-15017 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sympy__sympy-15017/final_preds.json
+[2026-11-14T13:26:12-06:00] run: /home/mihir_barvaliya/se443/project/scripts/run_swt_harness.sh final-1-workflow-sympy__sympy-15017 /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sympy__sympy-15017/harness_input.jsonl sympy__sympy-15017
+[2026-11-14T13:28:39-06:00] sympy__sympy-15017 workflow: harness attempt 1 exit=0 complete=True ok(no error instances)=True
+[2026-11-14T13:28:42-06:00] sympy__sympy-15017: removed instance-level images [('exec.eval.x86_64.deec2122407a414e380748.10cf833f01c9d407cdc40c:latest', 0), ('docker.io/swebench/sweb.eval.x86_64.sympy_1776_sympy-15017:latest', 0)]
+[2026-11-14T13:28:42-06:00] driver finished all instances

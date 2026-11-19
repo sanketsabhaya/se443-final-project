@@ -1,0 +1,38 @@
+2026-11-14 09:59:43,819 - WARNING - Starting evaluation at 1794671983.8199742
+2026-11-14 09:59:44,092 - INFO - Creating container for sphinx-doc__sphinx-11510...
+2026-11-14 09:59:44,172 - INFO - Container for sphinx-doc__sphinx-11510 created: baf5e0b63e15a401452c73258ebb3fb0f3b79e39d658739d459741c6c1b3d8ca
+2026-11-14 09:59:44,343 - INFO - Container for sphinx-doc__sphinx-11510 started: baf5e0b63e15a401452c73258ebb3fb0f3b79e39d658739d459741c6c1b3d8ca
+2026-11-14 09:59:44,635 - INFO - Git diff before:
+diff --git a/tox.ini b/tox.ini
+index a3dc56211..c76147de3 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -24,7 +24,7 @@ setenv =
+     PYTHONWARNINGS = error
+     PYTEST_ADDOPTS = {env:PYTEST_ADDOPTS:} --color yes
+ commands=
+-    python -X dev -X warn_default_encoding -m pytest --durations 25 {posargs}
++    python -X dev -X warn_default_encoding -m pytest -rA --durations 25 {posargs}
+ 
+ [testenv:docs]
+ basepython = python3
+2026-11-14 09:59:44,635 - INFO - Eval script for sphinx-doc__sphinx-11510 written to eval.sh, now applying to container...
+2026-11-14 10:01:08,865 - INFO - Test output for sphinx-doc__sphinx-11510 written to run_instance_swt_logs/base_pre/sphinx-doc__sphinx-11510/10db77ffaf7a0e4d0a9a297603130c2fc149857588862b16e5d64a2641fe9f0a/test_output.txt
+2026-11-14 10:01:08,942 - INFO - Git diff after:
+diff --git a/tox.ini b/tox.ini
+index a3dc56211..c76147de3 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -24,7 +24,7 @@ setenv =
+     PYTHONWARNINGS = error
+     PYTEST_ADDOPTS = {env:PYTEST_ADDOPTS:} --color yes
+ commands=
+-    python -X dev -X warn_default_encoding -m pytest --durations 25 {posargs}
++    python -X dev -X warn_default_encoding -m pytest -rA --durations 25 {posargs}
+ 
+ [testenv:docs]
+ basepython = python3
+2026-11-14 10:01:08,942 - INFO - Attempting to stop container exec.eval.x86_64.77d82541416cab86d0d86a.6392ab2727212bbd1cfd34.136037420583568...
+2026-11-14 10:01:24,199 - INFO - Attempting to remove container exec.eval.x86_64.77d82541416cab86d0d86a.6392ab2727212bbd1cfd34.136037420583568...
+2026-11-14 10:01:24,345 - INFO - Container exec.eval.x86_64.77d82541416cab86d0d86a.6392ab2727212bbd1cfd34.136037420583568 removed.
+2026-11-14 10:01:24,345 - WARNING - End of eval at 1794672084.3457825

@@ -1,0 +1,46 @@
+{
+  "start": "2026-11-14T11:10:05-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "tests/test_domain_py.py"
+    ]
+  },
+  "end": "2026-11-14T11:10:26-06:00",
+  "duration_s": 21.1,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "tests/test_domain_py.py",
+      "cls": null,
+      "func": "test_doc_field_xref_uses_current_module",
+      "label": "tests/test_domain_py.py::test_doc_field_xref_uses_current_module"
+    }
+  ],
+  "command": "tox -epy39 -v -- tests/test_domain_py.py::test_doc_field_xref_uses_current_module",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "tests/test_domain_py.py::test_doc_field_xref_uses_current_module": "FAILED"
+  },
+  "group": "G4",
+  "evidence": {
+    "issue_exc": [],
+    "mode": "functions",
+    "collected": {
+      "tests/test_domain_py.py::test_doc_field_xref_uses_current_module": "FAILED"
+    },
+    "setup_markers": [],
+    "failure_types": {
+      "tests/test_domain_py.py::test_doc_field_xref_uses_current_module": null
+    },
+    "reason": "failure_unrelated"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": false,
+    "skip_or_xfail_added": false
+  }
+}

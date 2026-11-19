@@ -1,0 +1,6 @@
+2026-11-14 13:17:11,475 - minisweagent - INFO - Loading dataset /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sympy__sympy-15017/round_3/dataset, split test...
+2026-11-14 13:17:11,519 - minisweagent - INFO - Running on 1 instances...
+2026-11-14 13:17:11,520 - minisweagent - INFO - Building agent config from specs: ['/home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml', 'agent.step_limit=69', 'agent.wall_time_limit_seconds=1685', 'run.env_startup_command=cd /testbed && echo {{prev_patch_b64}} | base64 -d | git apply']
+2026-11-14 13:17:13,728 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-67f070f1 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.sympy_1776_sympy-15017:latest sleep 2h
+2026-11-14 13:17:14,039 - minisweagent.environment - INFO - Started container minisweagent-67f070f1 with ID 83ff6b1f9840ec46df912f70e2485579d11944bfedd3f43ba4216f607c11faaa
+2026-11-14 13:18:51,394 - minisweagent - INFO - Saved trajectory to '/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sympy__sympy-15017/round_3/mini/sympy__sympy-15017/sympy__sympy-15017.traj.json'

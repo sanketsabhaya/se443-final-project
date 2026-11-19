@@ -1,0 +1,461 @@
+.pkg: find interpreter for spec PythonSpec(major=3, minor=9)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(path=/opt/miniconda3/envs/testbed/bin/python)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3, minor=5)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python3, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.11.5.final.0-64, exe=/opt/miniconda3/bin/python3, platform=linux, version='3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/usr/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3, minor=6)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python3, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.11.5.final.0-64, exe=/opt/miniconda3/bin/python3, platform=linux, version='3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/usr/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3, minor=7)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python3, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.11.5.final.0-64, exe=/opt/miniconda3/bin/python3, platform=linux, version='3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/usr/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3, minor=8)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python3, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.11.5.final.0-64, exe=/opt/miniconda3/bin/python3, platform=linux, version='3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/usr/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(path=/opt/miniconda3/envs/testbed/bin/python)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(path=/opt/miniconda3/envs/testbed/bin/python)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(path=/opt/miniconda3/envs/testbed/bin/python)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(path=/opt/miniconda3/envs/testbed/bin/python)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(path=/opt/miniconda3/envs/testbed/bin/python)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(path=/opt/miniconda3/envs/testbed/bin/python)
+.pkg: proposed PythonInfo(spec=CPython3.9.21.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+py39: create virtual environment via CPython3Posix(dest=/testbed/.tox/py39, clear=False, no_vcs_ignore=False, global=False)
+py39: add seed packages via FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/root/.local/share/virtualenv)
+py39: add activators for Bash, CShell, Fish, Nushell, PowerShell, Python
+.pkg: create virtual environment via CPython3Posix(dest=/testbed/.tox/.pkg, clear=False, no_vcs_ignore=False, global=False)
+.pkg: add seed packages via FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/root/.local/share/virtualenv)
+.pkg: add activators for Bash, CShell, Fish, Nushell, PowerShell, Python
+.pkg: install_requires> python -I -m pip install 'setuptools>=40.8.0' wheel
+.pkg: exit 0 (0.75 seconds) /testbed> python -I -m pip install 'setuptools>=40.8.0' wheel pid=59
+.pkg: _optional_hooks> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True setuptools.build_meta __legacy__
+.pkg: exit None (0.22 seconds) /testbed> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True setuptools.build_meta __legacy__ pid=64
+.pkg: get_requires_for_build_editable> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True setuptools.build_meta __legacy__
+.pkg: exit None (0.31 seconds) /testbed> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True setuptools.build_meta __legacy__ pid=67
+.pkg: build_editable> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True setuptools.build_meta __legacy__
+.pkg: exit None (0.38 seconds) /testbed> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True setuptools.build_meta __legacy__ pid=71
+py39: install_package_deps> python -I -m pip install 'Jinja2<3.0' 'Pygments>=2.0' 'alabaster<0.7.12,>=0.7' 'babel>=1.3' 'colorama>=0.3.5; sys_platform == "win32"' cython 'docutils>=0.12' html5lib imagesize 'markupsafe<=2.0.1' packaging pytest pytest-cov 'requests>=2.5.0' setuptools 'snowballstemmer>=1.1' 'sphinxcontrib-applehelp<=1.0.7' 'sphinxcontrib-devhelp<=1.0.5' 'sphinxcontrib-htmlhelp<=2.0.4' sphinxcontrib-jsmath 'sphinxcontrib-qthelp<=1.0.6' 'sphinxcontrib-serializinghtml<=1.1.9' 'typed_ast; python_version < "3.8"'
+py39: exit 0 (13.71 seconds) /testbed> python -I -m pip install 'Jinja2<3.0' 'Pygments>=2.0' 'alabaster<0.7.12,>=0.7' 'babel>=1.3' 'colorama>=0.3.5; sys_platform == "win32"' cython 'docutils>=0.12' html5lib imagesize 'markupsafe<=2.0.1' packaging pytest pytest-cov 'requests>=2.5.0' setuptools 'snowballstemmer>=1.1' 'sphinxcontrib-applehelp<=1.0.7' 'sphinxcontrib-devhelp<=1.0.5' 'sphinxcontrib-htmlhelp<=2.0.4' sphinxcontrib-jsmath 'sphinxcontrib-qthelp<=1.0.6' 'sphinxcontrib-serializinghtml<=1.1.9' 'typed_ast; python_version < "3.8"' pid=75
+py39: install_package> python -I -m pip install --force-reinstall --no-deps /testbed/.tox/.tmp/package/1/Sphinx-3.5.0.dev20261114-0.editable-py3-none-any.whl
+py39: exit 0 (0.46 seconds) /testbed> python -I -m pip install --force-reinstall --no-deps /testbed/.tox/.tmp/package/1/Sphinx-3.5.0.dev20261114-0.editable-py3-none-any.whl pid=85
+py39: commands[0]> python -X dev -m pytest -rA --durations 25 tests/test_markup.py::test_kbd_role_with_separator_as_keystroke
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.9.21, pytest-8.4.2, pluggy-1.6.0
+cachedir: .tox/py39/.pytest_cache
+libraries: Sphinx-3.5.0+/f8aefaaf5, docutils-0.19
+base tempdir: /tmp/pytest-of-root/pytest-0
+rootdir: /testbed
+configfile: setup.cfg
+plugins: cov-7.1.0
+collected 6 items
+
+tests/test_markup.py [31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31m                                              [100%][0m
+
+=================================== FAILURES ===================================
+[31m[1m___ test_kbd_role_with_separator_as_keystroke[:kbd:`-`---expected_children0] ___[0m
+
+parse = <function parse.<locals>.parse_ at 0x78c474d1a230>, rst = ':kbd:`-`'
+expected_text = '-', expected_children = [('text', '-')]
+
+    [0m[37m@pytest[39;49;00m.mark.parametrize([33m'[39;49;00m[33mrst, expected_text, expected_children[39;49;00m[33m'[39;49;00m, [[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`-`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`+`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`^`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Shift-+`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift-+[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Ctrl+-`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mCtrl+-[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mCtrl[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Shift-^`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift-^[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+    ])[90m[39;49;00m
+    [94mdef[39;49;00m[90m [39;49;00m[92mtest_kbd_role_with_separator_as_keystroke[39;49;00m(parse, rst, expected_text,[90m[39;49;00m
+                                                 expected_children):[90m[39;49;00m
+        document = parse(rst)[90m[39;49;00m
+        KeyboardTransform(document).apply()[90m[39;49;00m
+    [90m[39;49;00m
+        node = document[[94m0[39;49;00m][[94m0[39;49;00m][90m[39;49;00m
+        assert_node(node, nodes.literal, classes=[[33m'[39;49;00m[33mkbd[39;49;00m[33m'[39;49;00m])[90m[39;49;00m
+        [94massert[39;49;00m node.astext() == expected_text[90m[39;49;00m
+    [90m[39;49;00m
+        children = [][90m[39;49;00m
+        [94mfor[39;49;00m child [95min[39;49;00m node:[90m[39;49;00m
+            [94mif[39;49;00m [96misinstance[39;49;00m(child, nodes.literal):[90m[39;49;00m
+                children.append(([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, child.astext()))[90m[39;49;00m
+            [94melse[39;49;00m:[90m[39;49;00m
+                children.append(([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, child.astext()))[90m[39;49;00m
+    [90m[39;49;00m
+>       [94massert[39;49;00m children == expected_children[90m[39;49;00m
+[1m[31mE       AssertionError: assert [('literal', ...literal', '')] == [('text', '-')][0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: [0m([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m'[39;49;00m)[90m[39;49;00m != [0m([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m)[90m[39;49;00m[0m
+[1m[31mE         Left contains 2 more items, first extra item: [0m([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m)[90m[39;49;00m[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_markup.py[0m:604: AssertionError
+--------------------------- Captured stdout teardown ---------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-root/pytest-0/root
+# outdir: /tmp/pytest-of-root/pytest-0/root/_build/html
+# status: 
+[01mRunning Sphinx v3.5.0+/f8aefaaf5[39;49;00m
+
+# warning: 
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'meta' is already registered, its visitors will be overridden[39;49;00m
+
+[31m[1m___ test_kbd_role_with_separator_as_keystroke[:kbd:`+`-+-expected_children1] ___[0m
+
+parse = <function parse.<locals>.parse_ at 0x78c474e74730>, rst = ':kbd:`+`'
+expected_text = '+', expected_children = [('text', '+')]
+
+    [0m[37m@pytest[39;49;00m.mark.parametrize([33m'[39;49;00m[33mrst, expected_text, expected_children[39;49;00m[33m'[39;49;00m, [[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`-`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`+`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`^`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Shift-+`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift-+[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Ctrl+-`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mCtrl+-[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mCtrl[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Shift-^`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift-^[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+    ])[90m[39;49;00m
+    [94mdef[39;49;00m[90m [39;49;00m[92mtest_kbd_role_with_separator_as_keystroke[39;49;00m(parse, rst, expected_text,[90m[39;49;00m
+                                                 expected_children):[90m[39;49;00m
+        document = parse(rst)[90m[39;49;00m
+        KeyboardTransform(document).apply()[90m[39;49;00m
+    [90m[39;49;00m
+        node = document[[94m0[39;49;00m][[94m0[39;49;00m][90m[39;49;00m
+        assert_node(node, nodes.literal, classes=[[33m'[39;49;00m[33mkbd[39;49;00m[33m'[39;49;00m])[90m[39;49;00m
+        [94massert[39;49;00m node.astext() == expected_text[90m[39;49;00m
+    [90m[39;49;00m
+        children = [][90m[39;49;00m
+        [94mfor[39;49;00m child [95min[39;49;00m node:[90m[39;49;00m
+            [94mif[39;49;00m [96misinstance[39;49;00m(child, nodes.literal):[90m[39;49;00m
+                children.append(([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, child.astext()))[90m[39;49;00m
+            [94melse[39;49;00m:[90m[39;49;00m
+                children.append(([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, child.astext()))[90m[39;49;00m
+    [90m[39;49;00m
+>       [94massert[39;49;00m children == expected_children[90m[39;49;00m
+[1m[31mE       AssertionError: assert [('literal', ...literal', '')] == [('text', '+')][0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: [0m([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m'[39;49;00m)[90m[39;49;00m != [0m([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m)[90m[39;49;00m[0m
+[1m[31mE         Left contains 2 more items, first extra item: [0m([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m)[90m[39;49;00m[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_markup.py[0m:604: AssertionError
+--------------------------- Captured stdout teardown ---------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-root/pytest-0/root
+# outdir: /tmp/pytest-of-root/pytest-0/root/_build/html
+# status: 
+[01mRunning Sphinx v3.5.0+/f8aefaaf5[39;49;00m
+
+# warning: 
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'meta' is already registered, its visitors will be overridden[39;49;00m
+
+[31m[1m___ test_kbd_role_with_separator_as_keystroke[:kbd:`^`-^-expected_children2] ___[0m
+
+parse = <function parse.<locals>.parse_ at 0x78c474b91c30>, rst = ':kbd:`^`'
+expected_text = '^', expected_children = [('text', '^')]
+
+    [0m[37m@pytest[39;49;00m.mark.parametrize([33m'[39;49;00m[33mrst, expected_text, expected_children[39;49;00m[33m'[39;49;00m, [[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`-`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`+`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`^`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Shift-+`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift-+[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Ctrl+-`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mCtrl+-[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mCtrl[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Shift-^`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift-^[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+    ])[90m[39;49;00m
+    [94mdef[39;49;00m[90m [39;49;00m[92mtest_kbd_role_with_separator_as_keystroke[39;49;00m(parse, rst, expected_text,[90m[39;49;00m
+                                                 expected_children):[90m[39;49;00m
+        document = parse(rst)[90m[39;49;00m
+        KeyboardTransform(document).apply()[90m[39;49;00m
+    [90m[39;49;00m
+        node = document[[94m0[39;49;00m][[94m0[39;49;00m][90m[39;49;00m
+        assert_node(node, nodes.literal, classes=[[33m'[39;49;00m[33mkbd[39;49;00m[33m'[39;49;00m])[90m[39;49;00m
+        [94massert[39;49;00m node.astext() == expected_text[90m[39;49;00m
+    [90m[39;49;00m
+        children = [][90m[39;49;00m
+        [94mfor[39;49;00m child [95min[39;49;00m node:[90m[39;49;00m
+            [94mif[39;49;00m [96misinstance[39;49;00m(child, nodes.literal):[90m[39;49;00m
+                children.append(([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, child.astext()))[90m[39;49;00m
+            [94melse[39;49;00m:[90m[39;49;00m
+                children.append(([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, child.astext()))[90m[39;49;00m
+    [90m[39;49;00m
+>       [94massert[39;49;00m children == expected_children[90m[39;49;00m
+[1m[31mE       AssertionError: assert [('literal', ...literal', '')] == [('text', '^')][0m
+[1m[31mE         [0m
+[1m[31mE         At index 0 diff: [0m([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m'[39;49;00m)[90m[39;49;00m != [0m([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m)[90m[39;49;00m[0m
+[1m[31mE         Left contains 2 more items, first extra item: [0m([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m)[90m[39;49;00m[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_markup.py[0m:604: AssertionError
+--------------------------- Captured stdout teardown ---------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-root/pytest-0/root
+# outdir: /tmp/pytest-of-root/pytest-0/root/_build/html
+# status: 
+[01mRunning Sphinx v3.5.0+/f8aefaaf5[39;49;00m
+
+# warning: 
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'meta' is already registered, its visitors will be overridden[39;49;00m
+
+[31m[1m_ test_kbd_role_with_separator_as_keystroke[:kbd:`Shift-+`-Shift-+-expected_children3] _[0m
+
+parse = <function parse.<locals>.parse_ at 0x78c474a7a870>
+rst = ':kbd:`Shift-+`', expected_text = 'Shift-+'
+expected_children = [('literal', 'Shift'), ('text', '-'), ('literal', '+')]
+
+    [0m[37m@pytest[39;49;00m.mark.parametrize([33m'[39;49;00m[33mrst, expected_text, expected_children[39;49;00m[33m'[39;49;00m, [[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`-`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`+`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`^`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Shift-+`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift-+[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Ctrl+-`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mCtrl+-[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mCtrl[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Shift-^`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift-^[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+    ])[90m[39;49;00m
+    [94mdef[39;49;00m[90m [39;49;00m[92mtest_kbd_role_with_separator_as_keystroke[39;49;00m(parse, rst, expected_text,[90m[39;49;00m
+                                                 expected_children):[90m[39;49;00m
+        document = parse(rst)[90m[39;49;00m
+        KeyboardTransform(document).apply()[90m[39;49;00m
+    [90m[39;49;00m
+        node = document[[94m0[39;49;00m][[94m0[39;49;00m][90m[39;49;00m
+        assert_node(node, nodes.literal, classes=[[33m'[39;49;00m[33mkbd[39;49;00m[33m'[39;49;00m])[90m[39;49;00m
+        [94massert[39;49;00m node.astext() == expected_text[90m[39;49;00m
+    [90m[39;49;00m
+        children = [][90m[39;49;00m
+        [94mfor[39;49;00m child [95min[39;49;00m node:[90m[39;49;00m
+            [94mif[39;49;00m [96misinstance[39;49;00m(child, nodes.literal):[90m[39;49;00m
+                children.append(([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, child.astext()))[90m[39;49;00m
+            [94melse[39;49;00m:[90m[39;49;00m
+                children.append(([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, child.astext()))[90m[39;49;00m
+    [90m[39;49;00m
+>       [94massert[39;49;00m children == expected_children[90m[39;49;00m
+[1m[31mE       AssertionError: assert [('literal', ...literal', '')] == [('literal', ...iteral', '+')][0m
+[1m[31mE         [0m
+[1m[31mE         At index 2 diff: [0m([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m'[39;49;00m)[90m[39;49;00m != [0m([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m)[90m[39;49;00m[0m
+[1m[31mE         Left contains 2 more items, first extra item: [0m([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m)[90m[39;49;00m[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_markup.py[0m:604: AssertionError
+--------------------------- Captured stdout teardown ---------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-root/pytest-0/root
+# outdir: /tmp/pytest-of-root/pytest-0/root/_build/html
+# status: 
+[01mRunning Sphinx v3.5.0+/f8aefaaf5[39;49;00m
+
+# warning: 
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'meta' is already registered, its visitors will be overridden[39;49;00m
+
+[31m[1m_ test_kbd_role_with_separator_as_keystroke[:kbd:`Ctrl+-`-Ctrl+--expected_children4] _[0m
+
+parse = <function parse.<locals>.parse_ at 0x78c4748ea4b0>
+rst = ':kbd:`Ctrl+-`', expected_text = 'Ctrl+-'
+expected_children = [('literal', 'Ctrl'), ('text', '+'), ('literal', '-')]
+
+    [0m[37m@pytest[39;49;00m.mark.parametrize([33m'[39;49;00m[33mrst, expected_text, expected_children[39;49;00m[33m'[39;49;00m, [[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`-`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`+`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`^`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Shift-+`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift-+[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Ctrl+-`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mCtrl+-[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mCtrl[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Shift-^`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift-^[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+    ])[90m[39;49;00m
+    [94mdef[39;49;00m[90m [39;49;00m[92mtest_kbd_role_with_separator_as_keystroke[39;49;00m(parse, rst, expected_text,[90m[39;49;00m
+                                                 expected_children):[90m[39;49;00m
+        document = parse(rst)[90m[39;49;00m
+        KeyboardTransform(document).apply()[90m[39;49;00m
+    [90m[39;49;00m
+        node = document[[94m0[39;49;00m][[94m0[39;49;00m][90m[39;49;00m
+        assert_node(node, nodes.literal, classes=[[33m'[39;49;00m[33mkbd[39;49;00m[33m'[39;49;00m])[90m[39;49;00m
+        [94massert[39;49;00m node.astext() == expected_text[90m[39;49;00m
+    [90m[39;49;00m
+        children = [][90m[39;49;00m
+        [94mfor[39;49;00m child [95min[39;49;00m node:[90m[39;49;00m
+            [94mif[39;49;00m [96misinstance[39;49;00m(child, nodes.literal):[90m[39;49;00m
+                children.append(([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, child.astext()))[90m[39;49;00m
+            [94melse[39;49;00m:[90m[39;49;00m
+                children.append(([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, child.astext()))[90m[39;49;00m
+    [90m[39;49;00m
+>       [94massert[39;49;00m children == expected_children[90m[39;49;00m
+[1m[31mE       AssertionError: assert [('literal', ...literal', '')] == [('literal', ...iteral', '-')][0m
+[1m[31mE         [0m
+[1m[31mE         At index 2 diff: [0m([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m'[39;49;00m)[90m[39;49;00m != [0m([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m)[90m[39;49;00m[0m
+[1m[31mE         Left contains 2 more items, first extra item: [0m([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m)[90m[39;49;00m[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_markup.py[0m:604: AssertionError
+--------------------------- Captured stdout teardown ---------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-root/pytest-0/root
+# outdir: /tmp/pytest-of-root/pytest-0/root/_build/html
+# status: 
+[01mRunning Sphinx v3.5.0+/f8aefaaf5[39;49;00m
+
+# warning: 
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'meta' is already registered, its visitors will be overridden[39;49;00m
+
+[31m[1m_ test_kbd_role_with_separator_as_keystroke[:kbd:`Shift-^`-Shift-^-expected_children5] _[0m
+
+parse = <function parse.<locals>.parse_ at 0x78c47488d410>
+rst = ':kbd:`Shift-^`', expected_text = 'Shift-^'
+expected_children = [('literal', 'Shift'), ('text', '-'), ('literal', '^')]
+
+    [0m[37m@pytest[39;49;00m.mark.parametrize([33m'[39;49;00m[33mrst, expected_text, expected_children[39;49;00m[33m'[39;49;00m, [[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`-`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`+`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`^`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m, [([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Shift-+`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift-+[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Ctrl+-`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mCtrl+-[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mCtrl[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m+[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+        ([33m'[39;49;00m[33m:kbd:`Shift-^`[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift-^[39;49;00m[33m'[39;49;00m,[90m[39;49;00m
+         [([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mShift[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m-[39;49;00m[33m'[39;49;00m), ([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m)]),[90m[39;49;00m
+    ])[90m[39;49;00m
+    [94mdef[39;49;00m[90m [39;49;00m[92mtest_kbd_role_with_separator_as_keystroke[39;49;00m(parse, rst, expected_text,[90m[39;49;00m
+                                                 expected_children):[90m[39;49;00m
+        document = parse(rst)[90m[39;49;00m
+        KeyboardTransform(document).apply()[90m[39;49;00m
+    [90m[39;49;00m
+        node = document[[94m0[39;49;00m][[94m0[39;49;00m][90m[39;49;00m
+        assert_node(node, nodes.literal, classes=[[33m'[39;49;00m[33mkbd[39;49;00m[33m'[39;49;00m])[90m[39;49;00m
+        [94massert[39;49;00m node.astext() == expected_text[90m[39;49;00m
+    [90m[39;49;00m
+        children = [][90m[39;49;00m
+        [94mfor[39;49;00m child [95min[39;49;00m node:[90m[39;49;00m
+            [94mif[39;49;00m [96misinstance[39;49;00m(child, nodes.literal):[90m[39;49;00m
+                children.append(([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, child.astext()))[90m[39;49;00m
+            [94melse[39;49;00m:[90m[39;49;00m
+                children.append(([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, child.astext()))[90m[39;49;00m
+    [90m[39;49;00m
+>       [94massert[39;49;00m children == expected_children[90m[39;49;00m
+[1m[31mE       AssertionError: assert [('literal', ...literal', '')] == [('literal', ...iteral', '^')][0m
+[1m[31mE         [0m
+[1m[31mE         At index 2 diff: [0m([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m'[39;49;00m)[90m[39;49;00m != [0m([33m'[39;49;00m[33mliteral[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m)[90m[39;49;00m[0m
+[1m[31mE         Left contains 2 more items, first extra item: [0m([33m'[39;49;00m[33mtext[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33m^[39;49;00m[33m'[39;49;00m)[90m[39;49;00m[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31mtests/test_markup.py[0m:604: AssertionError
+--------------------------- Captured stdout teardown ---------------------------
+# testroot: root
+# builder: html
+# srcdir: /tmp/pytest-of-root/pytest-0/root
+# outdir: /tmp/pytest-of-root/pytest-0/root/_build/html
+# status: 
+[01mRunning Sphinx v3.5.0+/f8aefaaf5[39;49;00m
+
+# warning: 
+[91mWARNING: while setting up extension sphinx.addnodes: node class 'meta' is already registered, its visitors will be overridden[39;49;00m
+
+[33m=============================== warnings summary ===============================[0m
+sphinx/util/docutils.py:45
+  /testbed/sphinx/util/docutils.py:45: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    __version_info__ = tuple(LooseVersion(docutils.__version__).version)
+
+sphinx/registry.py:22
+  /testbed/sphinx/registry.py:22: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    from pkg_resources import iter_entry_points
+
+sphinx/directives/patches.py:14
+  /testbed/sphinx/directives/patches.py:14: DeprecationWarning: The `docutils.parsers.rst.directive.html` module will be removed in Docutils 2.0. Since Docutils 0.18, the "Meta" node is defined in `docutils.parsers.rst.directives.misc`.
+    from docutils.parsers.rst.directives import html, images, tables
+
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`-`---expected_children0]
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`+`-+-expected_children1]
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`^`-^-expected_children2]
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Shift-+`-Shift-+-expected_children3]
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Ctrl+-`-Ctrl+--expected_children4]
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Shift-^`-Shift-^-expected_children5]
+  /testbed/tests/test_markup.py:32: DeprecationWarning: The frontend.OptionParser class will be replaced by a subclass of argparse.ArgumentParser in Docutils 0.21 or later.
+    optparser = frontend.OptionParser(
+
+tests/test_markup.py: 546 warnings
+  /opt/miniconda3/envs/testbed/lib/python3.9/optparse.py:1000: DeprecationWarning: The frontend.Option class will be removed in Docutils 0.21 or later.
+    option = self.option_class(*args, **kwargs)
+
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`-`---expected_children0]
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`+`-+-expected_children1]
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`^`-^-expected_children2]
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Shift-+`-Shift-+-expected_children3]
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Ctrl+-`-Ctrl+--expected_children4]
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Shift-^`-Shift-^-expected_children5]
+  /testbed/tests/test_markup.py:70: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for msg in document.traverse(nodes.system_message):
+
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`-`---expected_children0]
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`+`-+-expected_children1]
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`^`-^-expected_children2]
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Shift-+`-Shift-+-expected_children3]
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Ctrl+-`-Ctrl+--expected_children4]
+tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Shift-^`-Shift-^-expected_children5]
+  /testbed/sphinx/builders/html/transforms.py:44: PendingDeprecationWarning: nodes.Node.traverse() is obsoleted by Node.findall().
+    for node in self.document.traverse(matcher):  # type: nodes.literal
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================= slowest 25 durations =============================
+0.32s setup    tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`-`---expected_children0]
+0.05s call     tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`-`---expected_children0]
+0.05s setup    tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`+`-+-expected_children1]
+0.02s setup    tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Shift-^`-Shift-^-expected_children5]
+0.02s setup    tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`^`-^-expected_children2]
+0.02s setup    tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Shift-+`-Shift-+-expected_children3]
+0.02s setup    tests/test_markup.py::test_kbd_role_with_separator_as_keystroke[:kbd:`Ctrl+-`-Ctrl+--expected_children4]
+
+(11 durations < 0.005s hidden.  Use -vv to show these durations.)
+[36m[1m=========================== short test summary info ============================[0m
+[31mFAILED[0m tests/test_markup.py::[1mtest_kbd_role_with_separator_as_keystroke[:kbd:`-`---expected_children0][0m - AssertionError: assert [('literal', ...literal', '')] == [('text', '-')]
+[31mFAILED[0m tests/test_markup.py::[1mtest_kbd_role_with_separator_as_keystroke[:kbd:`+`-+-expected_children1][0m - AssertionError: assert [('literal', ...literal', '')] == [('text', '+')]
+[31mFAILED[0m tests/test_markup.py::[1mtest_kbd_role_with_separator_as_keystroke[:kbd:`^`-^-expected_children2][0m - AssertionError: assert [('literal', ...literal', '')] == [('text', '^')]
+[31mFAILED[0m tests/test_markup.py::[1mtest_kbd_role_with_separator_as_keystroke[:kbd:`Shift-+`-Shift-+-expected_children3][0m - AssertionError: assert [('literal', ...literal', '')] == [('literal', ...it...
+[31mFAILED[0m tests/test_markup.py::[1mtest_kbd_role_with_separator_as_keystroke[:kbd:`Ctrl+-`-Ctrl+--expected_children4][0m - AssertionError: assert [('literal', ...literal', '')] == [('literal', ...it...
+[31mFAILED[0m tests/test_markup.py::[1mtest_kbd_role_with_separator_as_keystroke[:kbd:`Shift-^`-Shift-^-expected_children5][0m - AssertionError: assert [('literal', ...literal', '')] == [('literal', ...it...
+[31m======================= [31m[1m6 failed[0m, [33m567 warnings[0m[31m in 0.78s[0m[31m ========================[0m
+py39: exit 1 (1.74 seconds) /testbed> python -X dev -m pytest -rA --durations 25 tests/test_markup.py::test_kbd_role_with_separator_as_keystroke pid=92
+  py39: FAIL code 1 (18.56=setup[16.82]+cmd[1.74] seconds)
+  evaluation failed :( (19.16 seconds)

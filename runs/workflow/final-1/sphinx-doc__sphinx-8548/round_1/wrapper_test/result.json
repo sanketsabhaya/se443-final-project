@@ -1,0 +1,55 @@
+{
+  "start": "2026-11-14T10:45:55-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "tests/roots/test-ext-autodoc/target/instance_variable.py",
+      "tests/test_ext_autodoc_autoclass.py"
+    ]
+  },
+  "end": "2026-11-14T10:46:16-06:00",
+  "duration_s": 21.3,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "tests/test_ext_autodoc_autoclass.py",
+      "cls": null,
+      "func": "test_instance_variable",
+      "label": "tests/test_ext_autodoc_autoclass.py::test_instance_variable"
+    },
+    {
+      "file": "tests/test_ext_autodoc_autoclass.py",
+      "cls": null,
+      "func": "test_inherited_instance_variable",
+      "label": "tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable"
+    }
+  ],
+  "command": "tox -epy39 -v -- tests/test_ext_autodoc_autoclass.py::test_instance_variable tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "tests/test_ext_autodoc_autoclass.py::test_instance_variable": "PASSED",
+    "tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable": "FAILED"
+  },
+  "group": "G4",
+  "evidence": {
+    "issue_exc": [],
+    "mode": "functions",
+    "collected": {
+      "tests/test_ext_autodoc_autoclass.py::test_instance_variable": "PASSED",
+      "tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable": "FAILED"
+    },
+    "setup_markers": [],
+    "failure_types": {
+      "tests/test_ext_autodoc_autoclass.py::test_inherited_instance_variable": null
+    },
+    "reason": "failure_unrelated"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": false,
+    "skip_or_xfail_added": false
+  }
+}

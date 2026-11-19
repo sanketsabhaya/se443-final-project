@@ -1,0 +1,7 @@
+{
+  "pylint-dev__pylint-7277": {
+    "model_name_or_path": "deepseek/deepseek-flash",
+    "instance_id": "pylint-dev__pylint-7277",
+    "model_patch": "diff --git a/tests/test_self.py b/tests/test_self.py\nindex 7c11601a..860dc2d4 100644\n--- a/tests/test_self.py\n+++ b/tests/test_self.py\n@@ -814,6 +814,15 @@ a.py:1:4: E0001: Parsing failed: 'invalid syntax (<unknown>, line 1)' (syntax-er\n                 modify_sys_path()\n             assert sys.path == paths[1:]\n \n+            # Only remove the first entry when it refers to the current\n+            # working directory. Extensions can add their own entries that\n+            # must not be discarded.\n+            paths = [\"/custom_pythonpath\", *default_paths]\n+            sys.path = copy(paths)\n+            with _test_environ_pythonpath():\n+                modify_sys_path()\n+            assert sys.path == paths\n+\n     @pytest.mark.parametrize(\n         \"args\",\n         [\n"
+  }
+}

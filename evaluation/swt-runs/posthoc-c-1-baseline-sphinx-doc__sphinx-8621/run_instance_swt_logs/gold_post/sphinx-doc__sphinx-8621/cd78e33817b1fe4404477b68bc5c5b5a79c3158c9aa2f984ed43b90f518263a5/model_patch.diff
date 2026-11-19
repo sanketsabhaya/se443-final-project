@@ -1,0 +1,54 @@
+diff --git a/tests/test_markup.py b/tests/test_markup.py
+index a2bcb2dc1..3f4b9fe3f 100644
+--- a/tests/test_markup.py
++++ b/tests/test_markup.py
+@@ -266,6 +266,49 @@ def get_verifier(verify, verify_re):
+          '</kbd></p>'),
+         '\\sphinxkeyboard{\\sphinxupquote{M\\sphinxhyphen{}x  M\\sphinxhyphen{}s}}',
+     ),
++    (
++        # kbd role: a separator used as a standalone keystroke
++        'verify',
++        ':kbd:`-`',
++        '<p><kbd class="kbd docutils literal notranslate">-</kbd></p>',
++        None,
++    ),
++    (
++        # kbd role: a separator used as a standalone keystroke
++        'verify',
++        ':kbd:`+`',
++        '<p><kbd class="kbd docutils literal notranslate">+</kbd></p>',
++        None,
++    ),
++    (
++        # kbd role: a separator used as a standalone keystroke
++        'verify',
++        ':kbd:`^`',
++        '<p><kbd class="kbd docutils literal notranslate">^</kbd></p>',
++        None,
++    ),
++    (
++        # kbd role: a separator used as the final keystroke of a compound key
++        'verify',
++        ':kbd:`Shift-+`',
++        ('<p><kbd class="kbd docutils literal notranslate">'
++         '<kbd class="kbd docutils literal notranslate">Shift</kbd>'
++         '-'
++         '<kbd class="kbd docutils literal notranslate">+</kbd>'
++         '</kbd></p>'),
++        None,
++    ),
++    (
++        # kbd role: a separator used as the final keystroke of a compound key
++        'verify',
++        ':kbd:`Alt+^`',
++        ('<p><kbd class="kbd docutils literal notranslate">'
++         '<kbd class="kbd docutils literal notranslate">Alt</kbd>'
++         '+'
++         '<kbd class="kbd docutils literal notranslate">^</kbd>'
++         '</kbd></p>'),
++        None,
++    ),
+     (
+         # non-interpolation of dashes in option role
+         'verify_re',

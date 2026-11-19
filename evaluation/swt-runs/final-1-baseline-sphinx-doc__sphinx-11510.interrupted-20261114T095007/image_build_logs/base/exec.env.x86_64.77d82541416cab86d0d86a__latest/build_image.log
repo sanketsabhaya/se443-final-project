@@ -1,0 +1,27 @@
+2026-11-14 08:59:38,385 - INFO - Building image exec.env.x86_64.77d82541416cab86d0d86a:latest
+Using dockerfile:
+FROM --platform=linux/x86_64 exec.base.x86_64:latest
+
+COPY ./setup_env.sh /root/
+RUN chmod +x /root/setup_env.sh
+RUN /bin/bash -c "source ~/.bashrc && /root/setup_env.sh"
+
+WORKDIR /testbed/
+
+# Automatically activate the testbed environment
+RUN echo "source /opt/miniconda3/etc/profile.d/conda.sh && conda activate testbed" > /root/.bashrc
+
+Adding (1) setup scripts to image build repo
+2026-11-14 08:59:38,385 - INFO - [SETUP SCRIPT] setup_env.sh:
+#!/bin/bash
+set -euxo pipefail
+source /opt/miniconda3/bin/activate
+conda create -n testbed python=3.9  -y
+conda activate testbed
+python -m pip install tox==4.16.0 tox-current-env==0.0.11
+
+2026-11-14 08:59:38,545 - INFO - Step 1/6 : FROM --platform=linux/x86_64 exec.base.x86_64:latest
+2026-11-14 08:59:38,545 - INFO - 
+2026-11-14 08:59:38,555 - INFO - ---> 46c5d9a47e6d
+2026-11-14 08:59:38,555 - INFO - Step 2/6 : COPY ./setup_env.sh /root/
+2026-11-14 08:59:38,555 - INFO - 

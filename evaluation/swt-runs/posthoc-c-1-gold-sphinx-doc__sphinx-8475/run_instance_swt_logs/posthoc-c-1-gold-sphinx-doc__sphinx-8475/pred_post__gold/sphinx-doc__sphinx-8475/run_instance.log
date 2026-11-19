@@ -1,0 +1,169 @@
+2026-11-14 16:48:37,956 - WARNING - Starting evaluation at 1794696517.9567285
+2026-11-14 16:48:38,236 - INFO - Creating container for sphinx-doc__sphinx-8475...
+2026-11-14 16:48:38,326 - INFO - Container for sphinx-doc__sphinx-8475 created: df4a984b7a50e12e95f02857bc36085aa6c5f962c79349ca160e69ee8ddb0905
+2026-11-14 16:48:38,506 - INFO - Container for sphinx-doc__sphinx-8475 started: df4a984b7a50e12e95f02857bc36085aa6c5f962c79349ca160e69ee8ddb0905
+2026-11-14 16:48:38,762 - INFO - Git diff before:
+diff --git a/setup.py b/setup.py
+index ca08a6d4a..cf9830194 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+-    'docutils>=0.12',
++    'docutils>=0.12,<0.20',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tox.ini b/tox.ini
+index dbb705a3a..9f4fc3a32 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+     PYTEST_ADDOPTS = {env:PYTEST_ADDOPTS:} --color yes
+ commands=
+-    python -X dev -m pytest --durations 25 {posargs}
++    python -X dev -m pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-14 16:48:38,763 - INFO - Eval script for sphinx-doc__sphinx-8475 written to eval.sh, now applying to container...
+2026-11-14 16:48:55,808 - INFO - Test output for sphinx-doc__sphinx-8475 written to run_instance_swt_logs/posthoc-c-1-gold-sphinx-doc__sphinx-8475/pred_post__gold/sphinx-doc__sphinx-8475/test_output.txt
+2026-11-14 16:48:55,883 - INFO - Git diff after:
+diff --git a/setup.py b/setup.py
+index ca08a6d4a..cf9830194 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+-    'docutils>=0.12',
++    'docutils>=0.12,<0.20',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/sphinx/builders/linkcheck.py b/sphinx/builders/linkcheck.py
+index 1dc0337c3..4104fe658 100644
+--- a/sphinx/builders/linkcheck.py
++++ b/sphinx/builders/linkcheck.py
+@@ -20,7 +20,7 @@ from urllib.parse import unquote, urlparse
+ 
+ from docutils import nodes
+ from docutils.nodes import Node
+-from requests.exceptions import HTTPError
++from requests.exceptions import HTTPError, TooManyRedirects
+ 
+ from sphinx.application import Sphinx
+ from sphinx.builders import Builder
+@@ -172,7 +172,7 @@ class CheckExternalLinksBuilder(Builder):
+                                                  config=self.app.config, auth=auth_info,
+                                                  **kwargs)
+                         response.raise_for_status()
+-                    except HTTPError:
++                    except (HTTPError, TooManyRedirects):
+                         # retry with GET request if that fails, some servers
+                         # don't like HEAD requests.
+                         response = requests.get(req_url, stream=True, config=self.app.config,
+diff --git a/tests/test_build_linkcheck.py b/tests/test_build_linkcheck.py
+index c09c81fe0..e6102e2a3 100644
+--- a/tests/test_build_linkcheck.py
++++ b/tests/test_build_linkcheck.py
+@@ -382,3 +382,31 @@ def test_connect_to_selfsigned_nonexistent_cert_file(app):
+         "uri": "https://localhost:7777/",
+         "info": "Could not find a suitable TLS CA certificate bundle, invalid path: does/not/exist",
+     }
++
++
++@pytest.mark.sphinx('linkcheck', testroot='linkcheck-localserver', freshenv=True)
++def test_TooManyRedirects_on_HEAD(app):
++    class InfiniteRedirectOnHeadHandler(http.server.BaseHTTPRequestHandler):
++        def do_HEAD(self):
++            self.send_response(302, "Found")
++            self.send_header("Location", "http://localhost:7777/")
++            self.end_headers()
++
++        def do_GET(self):
++            self.send_response(200, "OK")
++            self.end_headers()
++            self.wfile.write(b"ok\n")
++
++    with http_server(InfiniteRedirectOnHeadHandler):
++        app.builder.build_all()
++
++    with open(app.outdir / 'output.json') as fp:
++        content = json.load(fp)
++    assert content == {
++        "code": 0,
++        "status": "working",
++        "filename": "index.rst",
++        "lineno": 1,
++        "uri": "http://localhost:7777/",
++        "info": "",
++    }
+diff --git a/tox.ini b/tox.ini
+index dbb705a3a..9f4fc3a32 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+     PYTEST_ADDOPTS = {env:PYTEST_ADDOPTS:} --color yes
+ commands=
+-    python -X dev -m pytest --durations 25 {posargs}
++    python -X dev -m pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-14 16:48:55,883 - INFO - Git diff changed after running eval script
+2026-11-14 16:48:55,883 - INFO - Attempting to stop container exec.eval.x86_64.77d82541416cab86d0d86a.86be1341afe9afcc70cc3f.135782723499600...
+2026-11-14 16:49:11,103 - INFO - Attempting to remove container exec.eval.x86_64.77d82541416cab86d0d86a.86be1341afe9afcc70cc3f.135782723499600...
+2026-11-14 16:49:11,213 - INFO - Container exec.eval.x86_64.77d82541416cab86d0d86a.86be1341afe9afcc70cc3f.135782723499600 removed.
+2026-11-14 16:49:11,213 - WARNING - End of eval at 1794696551.2133386

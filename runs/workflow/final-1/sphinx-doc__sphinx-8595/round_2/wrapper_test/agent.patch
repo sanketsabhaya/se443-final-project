@@ -1,0 +1,40 @@
+diff --git a/tests/roots/test-ext-autodoc/target/empty_all.py b/tests/roots/test-ext-autodoc/target/empty_all.py
+new file mode 100644
+index 000000000..00c66c720
+--- /dev/null
++++ b/tests/roots/test-ext-autodoc/target/empty_all.py
+@@ -0,0 +1,13 @@
++__all__ = []
++
++
++def foo():
++    "docstring"
++
++
++def bar():
++    "docstring"
++
++
++def baz():
++    "docstring"
+diff --git a/tests/test_ext_autodoc.py b/tests/test_ext_autodoc.py
+index 39897eb7d..463a78506 100755
+--- a/tests/test_ext_autodoc.py
++++ b/tests/test_ext_autodoc.py
+@@ -714,6 +714,16 @@ def test_autodoc_special_members(app):
+     ]
+ 
+ 
++@pytest.mark.sphinx('html', testroot='ext-autodoc')
++def test_autodoc_empty_module_all(app):
++    options = {"members": None}
++    actual = do_autodoc(app, 'module', 'target.empty_all', options)
++
++    # An empty __all__ means that no module members should be documented.
++    directives = [line for line in actual if line.startswith('.. py:')]
++    assert directives == ['.. py:module:: target.empty_all']
++
++
+ @pytest.mark.sphinx('html', testroot='ext-autodoc')
+ def test_autodoc_ignore_module_all(app):
+     # default (no-ignore-module-all)

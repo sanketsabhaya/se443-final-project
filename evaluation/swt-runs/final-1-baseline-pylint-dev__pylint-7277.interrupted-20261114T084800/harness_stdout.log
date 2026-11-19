@@ -1,0 +1,27 @@
+<frozen runpy>:128: RuntimeWarning: 'src.main' found in sys.modules after import of package 'src', but prior to execution of 'src.main'; this may result in unpredictable behaviour
+Using the latest cached version of the dataset since princeton-nlp/SWE-bench_Verified couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/mihir_barvaliya/.cache/huggingface/datasets/princeton-nlp___swe-bench_verified/default/0.0.0/c104f840cc67f8b6eec6f759ebc8b2693d585d4a (last modified on Fri Nov 13 17:42:18 2026).
+Using the latest cached version of the dataset since princeton-nlp/SWE-bench_Verified couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/mihir_barvaliya/.cache/huggingface/datasets/princeton-nlp___swe-bench_verified/default/0.0.0/c104f840cc67f8b6eec6f759ebc8b2693d585d4a (last modified on Fri Nov 13 17:42:18 2026).
+Running 1 unevaluated instances...
+Running 1 instances...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:21<00:00, 21.05s/it]100%|██████████| 1/1 [00:21<00:00, 21.05s/it]
+Base image exec.base.x86_64:latest already exists, skipping build.
+Env image exec.env.x86_64.fc8235bb41fea90b41065e:latest already exists, skipping build.
+EvaluationError pylint-dev__pylint-7277: pylint-dev__pylint-7277: exec.eval.x86_64.fc8235bb41fea90b41065e.f3bca8871c5ee7d2b88dc6:latest: The command '/bin/sh -c /bin/bash /root/setup_repo.sh' returned a non-zero code: 1
+Check (image_build_logs/instances/exec.eval.x86_64.fc8235bb41fea90b41065e.f3bca8871c5ee7d2b88dc6__latest/build_image.log) for more information.
+Check (run_instance_swt_logs/final-1-baseline-pylint-dev__pylint-7277/pred_pre__deepseek__deepseek-flash/pylint-dev__pylint-7277/run_instance.log) for more information.
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 12372.58it/s]
+Total instances: 1
+Instances completed: 0
+Mean coverage: 0
+Mean coverage delta: 0
+Instances resolved: 0
+Instances unresolved: 0
+Instances with errors: 1
+Instances still running: 0
+Still existing images: 0
+Report written to evaluation_results/deepseek__deepseek-flash.final-1-baseline-pylint-dev__pylint-7277.json

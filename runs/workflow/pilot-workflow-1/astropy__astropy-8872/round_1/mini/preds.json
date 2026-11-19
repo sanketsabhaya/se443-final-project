@@ -1,0 +1,7 @@
+{
+  "astropy__astropy-8872": {
+    "model_name_or_path": "deepseek/deepseek-flash",
+    "instance_id": "astropy__astropy-8872",
+    "model_patch": "diff --git a/astropy/units/tests/test_quantity.py b/astropy/units/tests/test_quantity.py\nindex be18e65c5..dc63139cd 100644\n--- a/astropy/units/tests/test_quantity.py\n+++ b/astropy/units/tests/test_quantity.py\n@@ -150,6 +150,14 @@ class TestQuantityCreation:\n         q5 = u.Quantity(decimal.Decimal('10.25'), u.m, dtype=object)\n         assert q5.dtype == object\n \n+    def test_preserve_float16_dtype(self):\n+        # Regression test for float16 values being promoted to float64.\n+        q = u.Quantity(np.float16(1), u.km)\n+        assert q.dtype == np.float16\n+\n+        q = np.float16(1) * u.km\n+        assert q.dtype == np.float16\n+\n     def test_copy(self):\n \n         # By default, a new quantity is constructed, but not if copy=False\n"
+  }
+}

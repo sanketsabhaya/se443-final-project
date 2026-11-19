@@ -1,0 +1,23 @@
+diff --git a/astropy/units/tests/test_quantity.py b/astropy/units/tests/test_quantity.py
+index be18e65c5..19eda9001 100644
+--- a/astropy/units/tests/test_quantity.py
++++ b/astropy/units/tests/test_quantity.py
+@@ -150,6 +150,18 @@ class TestQuantityCreation:
+         q5 = u.Quantity(decimal.Decimal('10.25'), u.m, dtype=object)
+         assert q5.dtype == object
+ 
++    def test_preserve_float16_dtype(self):
++        # Regression test: float16 should not be upcast to float64.
++        q1 = u.Quantity(np.float16(1), u.km)
++        assert q1.dtype == np.float16
++
++        q2 = np.float16(1) * u.km
++        assert q2.dtype == np.float16
++
++        a = np.array([1, 2], dtype=np.float16)
++        q3 = u.Quantity(a, u.km)
++        assert q3.dtype == np.float16
++
+     def test_copy(self):
+ 
+         # By default, a new quantity is constructed, but not if copy=False

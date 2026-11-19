@@ -1,0 +1,17 @@
+diff --git a/tests/config/test_argparse_config.py b/tests/config/test_argparse_config.py
+index 901bb547..80cd9318 100644
+--- a/tests/config/test_argparse_config.py
++++ b/tests/config/test_argparse_config.py
+@@ -46,6 +46,12 @@ class TestArgparseOptionsProviderMixin:
+             Run([LOGGING_TEST, f"--rcfile={LOGGING_TEST.replace('.py', '.rc')}"])
+         assert ex.value.code == 0
+ 
++    @staticmethod
++    def test_verbose_short_option() -> None:
++        """Check that the short verbose option does not expect an argument."""
++        run = Run([EMPTY_MODULE, "-v"], exit=False)
++        assert run.verbose
++
+ 
+ class TestDeprecationOptions:
+     @staticmethod

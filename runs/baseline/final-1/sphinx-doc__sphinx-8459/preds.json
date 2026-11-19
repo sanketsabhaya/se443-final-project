@@ -1,0 +1,7 @@
+{
+  "sphinx-doc__sphinx-8459": {
+    "model_name_or_path": "deepseek/deepseek-flash",
+    "instance_id": "sphinx-doc__sphinx-8459",
+    "model_patch": "diff --git a/tests/test_ext_autodoc_configs.py b/tests/test_ext_autodoc_configs.py\nindex 496059b7c..c1f4127e9 100644\n--- a/tests/test_ext_autodoc_configs.py\n+++ b/tests/test_ext_autodoc_configs.py\n@@ -778,6 +778,23 @@ def test_autodoc_type_aliases(app):\n     ]\n \n \n+@pytest.mark.sphinx('text', testroot='ext-autodoc',\n+                    confoverrides={'autodoc_typehints': 'description',\n+                                   'autodoc_type_aliases': {'myint': 'myint'}})\n+def test_autodoc_type_aliases_with_typehints_description(app):\n+    doctree = restructuredtext.parse(app, '.. autofunction:: target.annotations.sum')\n+    assert doctree.astext() == (\n+        '\\n\\n'\n+        'target.annotations.sum(x, y)\\n\\n'\n+        'docstring\\n\\n'\n+        'Parameters\\n\\n'\n+        'x (myint) -- \\n\\n'\n+        'y (myint) -- \\n\\n'\n+        'Return type\\n\\n'\n+        'myint'\n+    )\n+\n+\n @pytest.mark.sphinx('html', testroot='ext-autodoc')\n def test_autodoc_default_options(app):\n     # no settings\n"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "time": "2026-11-14T08:24:30-06:00",
+  "images": [
+    {
+      "image": "exec.eval.x86_64.fc8235bb41fea90b41065e.0e61b8e442dd90882e9ff4:latest",
+      "id": "sha256:b31b92970eb135c8756f267b36bfe59cb18ac6c682c360608048b7d7df0b2951",
+      "repo_digests": [
+        "exec.eval.x86_64.fc8235bb41fea90b41065e.0e61b8e442dd90882e9ff4@sha256:b31b92970eb135c8756f267b36bfe59cb18ac6c682c360608048b7d7df0b2951"
+      ],
+      "size_bytes": 4288875070,
+      "rmi_exit_code": 0
+    },
+    {
+      "image": "docker.io/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-6903:latest",
+      "id": "sha256:bad80b1c20eeb5d49a6e82dc485ee40fbd67b91df47b56740e1be5471b678f5b",
+      "repo_digests": [
+        "swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-6903@sha256:bad80b1c20eeb5d49a6e82dc485ee40fbd67b91df47b56740e1be5471b678f5b"
+      ],
+      "size_bytes": 4039034246,
+      "rmi_exit_code": 0
+    }
+  ]
+}

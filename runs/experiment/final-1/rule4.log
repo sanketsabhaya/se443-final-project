@@ -1,0 +1,150 @@
+
+===== 2026-11-13T19:07:26-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/astropy__astropy-8872/harness_input astropy__astropy-8872 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/astropy__astropy-8872/preds.json
+astropy__astropy-8872: valid=True reason=ok files=['astropy/units/tests/test_quantity.py']
+
+===== 2026-11-13T19:13:03-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/astropy__astropy-8872/harness_input astropy__astropy-8872 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/astropy__astropy-8872/final_preds.json
+astropy__astropy-8872: valid=True reason=ok files=['astropy/units/tests/test_quantity.py']
+
+===== 2026-11-13T19:15:34-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/django__django-16485/harness_input django__django-16485 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/django__django-16485/preds.json
+django__django-16485: valid=True reason=ok files=['tests/template_tests/filter_tests/test_floatformat.py']
+
+===== 2026-11-13T19:17:57-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/django__django-16485/harness_input django__django-16485 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/django__django-16485/final_preds.json
+django__django-16485: valid=True reason=ok files=['tests/template_tests/filter_tests/test_floatformat.py']
+
+===== 2026-11-13T19:24:51-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-14623/harness_input matplotlib__matplotlib-14623 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-14623/preds.json
+matplotlib__matplotlib-14623: valid=True reason=ok files=['lib/matplotlib/tests/test_scale.py']
+
+===== 2026-11-13T19:42:15-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-14623/harness_input matplotlib__matplotlib-14623 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-14623/final_preds.json
+matplotlib__matplotlib-14623: valid=True reason=ok files=['lib/matplotlib/tests/test_axes.py']
+
+===== 2026-11-13T20:03:20-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-20676/harness_input matplotlib__matplotlib-20676 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-20676/preds.json
+matplotlib__matplotlib-20676: valid=True reason=ok files=['lib/matplotlib/tests/test_widgets.py']
+
+===== 2026-11-13T20:19:05-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-20676/harness_input matplotlib__matplotlib-20676 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-20676/final_preds.json
+matplotlib__matplotlib-20676: valid=True reason=ok files=['lib/matplotlib/tests/test_widgets.py']
+
+===== 2026-11-13T20:29:15-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-21568/harness_input matplotlib__matplotlib-21568 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-21568/preds.json
+matplotlib__matplotlib-21568: valid=True reason=ok files=['lib/matplotlib/tests/test_dates.py']
+
+===== 2026-11-13T20:40:38-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-21568/harness_input matplotlib__matplotlib-21568 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-21568/final_preds.json
+matplotlib__matplotlib-21568: valid=True reason=ok files=['lib/matplotlib/tests/test_dates.py']
+
+===== 2026-11-13T20:53:05-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22719/harness_input matplotlib__matplotlib-22719 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22719/preds.json
+matplotlib__matplotlib-22719: valid=True reason=ok files=['lib/matplotlib/tests/test_category.py']
+
+===== 2026-11-13T23:00:24-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22719/harness_input matplotlib__matplotlib-22719 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22719/final_preds.json
+matplotlib__matplotlib-22719: valid=True reason=ok files=['lib/matplotlib/tests/test_category.py']
+
+===== 2026-11-14T00:14:48-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22865/harness_input matplotlib__matplotlib-22865 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22865/preds.json
+matplotlib__matplotlib-22865: valid=True reason=ok files=['lib/matplotlib/tests/test_colorbar.py']
+
+===== 2026-11-14T01:16:18-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22865/harness_input matplotlib__matplotlib-22865 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22865/final_preds.json
+matplotlib__matplotlib-22865: valid=True reason=ok files=['lib/matplotlib/tests/test_colorbar.py']
+
+===== 2026-11-14T02:27:19-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22871/harness_input matplotlib__matplotlib-22871 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-22871/preds.json
+matplotlib__matplotlib-22871: valid=True reason=ok files=['lib/matplotlib/tests/test_dates.py']
+
+===== 2026-11-14T03:28:43-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22871/harness_input matplotlib__matplotlib-22871 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-22871/final_preds.json
+matplotlib__matplotlib-22871: valid=True reason=ok files=['lib/matplotlib/tests/test_dates.py']
+
+===== 2026-11-14T04:41:16-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-23299/harness_input matplotlib__matplotlib-23299 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-23299/preds.json
+matplotlib__matplotlib-23299: valid=True reason=ok files=['lib/matplotlib/tests/test_rcparams.py']
+
+===== 2026-11-14T05:43:09-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-23299/harness_input matplotlib__matplotlib-23299 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-23299/final_preds.json
+matplotlib__matplotlib-23299: valid=True reason=ok files=['lib/matplotlib/tests/test_rcparams.py']
+
+===== 2026-11-14T06:57:07-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-25311/harness_input matplotlib__matplotlib-25311 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/matplotlib__matplotlib-25311/preds.json
+matplotlib__matplotlib-25311: valid=True reason=ok files=['lib/matplotlib/tests/test_pickle.py']
+
+===== 2026-11-14T07:43:53-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-25311/harness_input matplotlib__matplotlib-25311 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/matplotlib__matplotlib-25311/final_preds.json
+matplotlib__matplotlib-25311: valid=True reason=ok files=['lib/matplotlib/tests/test_pickle.py']
+
+===== 2026-11-14T08:00:16-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-6386/harness_input pylint-dev__pylint-6386 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-6386/preds.json
+pylint-dev__pylint-6386: valid=True reason=ok files=['tests/config/test_argparse_config.py']
+
+===== 2026-11-14T08:08:43-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6386/harness_input pylint-dev__pylint-6386 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6386/final_preds.json
+pylint-dev__pylint-6386: valid=True reason=ok files=['tests/config/test_config.py']
+
+===== 2026-11-14T08:13:53-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-6903/harness_input pylint-dev__pylint-6903 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-6903/preds.json
+pylint-dev__pylint-6903: valid=True reason=ok files=['tests/test_pylint_runners.py']
+
+===== 2026-11-14T08:21:50-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6903/harness_input pylint-dev__pylint-6903 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-6903/final_preds.json
+pylint-dev__pylint-6903: valid=True reason=ok files=['tests/test_pylint_runners.py']
+
+===== 2026-11-14T08:30:23-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7080/harness_input pylint-dev__pylint-7080 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7080/preds.json
+pylint-dev__pylint-7080: valid=True reason=ok files=['tests/test_self.py']
+
+===== 2026-11-14T08:37:59-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7080/harness_input pylint-dev__pylint-7080 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7080/final_preds.json
+pylint-dev__pylint-7080: valid=True reason=ok files=['tests/test_self.py']
+
+===== 2026-11-14T08:47:24-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7277/harness_input pylint-dev__pylint-7277 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/pylint-dev__pylint-7277/preds.json
+pylint-dev__pylint-7277: valid=True reason=ok files=['tests/test_self.py']
+
+===== 2026-11-14T08:48:24-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7277/harness_input pylint-dev__pylint-7277 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/pylint-dev__pylint-7277/final_preds.json
+pylint-dev__pylint-7277: valid=True reason=ok files=['tests/test_self.py']
+
+===== 2026-11-14T08:59:28-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-11510/harness_input sphinx-doc__sphinx-11510 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-11510/preds.json
+sphinx-doc__sphinx-11510: valid=True reason=ok files=['tests/test_build_html.py']
+
+===== 2026-11-14T10:03:14-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-11510/harness_input sphinx-doc__sphinx-11510 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-11510/final_preds.json
+sphinx-doc__sphinx-11510: valid=True reason=ok files=['tests/roots/test-directive-include/baz/baz.rst', 'tests/roots/test-directive-include/conf.py', 'tests/roots/test-directive-include/foo.rst', 'tests/roots/test-directive-include/text.txt', 'tests/test_directive_other.py']
+
+===== 2026-11-14T10:13:03-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8459/harness_input sphinx-doc__sphinx-8459 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8459/preds.json
+sphinx-doc__sphinx-8459: valid=True reason=ok files=['tests/test_ext_autodoc_configs.py']
+
+===== 2026-11-14T10:18:06-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8459/harness_input sphinx-doc__sphinx-8459 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8459/final_preds.json
+sphinx-doc__sphinx-8459: valid=True reason=ok files=['tests/test_ext_autodoc_configs.py']
+
+===== 2026-11-14T10:29:59-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8475/harness_input sphinx-doc__sphinx-8475 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8475/preds.json
+sphinx-doc__sphinx-8475: valid=True reason=ok files=['tests/test_build_linkcheck.py']
+
+===== 2026-11-14T10:35:28-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8475/harness_input sphinx-doc__sphinx-8475 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8475/final_preds.json
+sphinx-doc__sphinx-8475: valid=True reason=ok files=['tests/test_build_linkcheck.py']
+
+===== 2026-11-14T10:50:38-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8548/harness_input sphinx-doc__sphinx-8548 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8548/preds.json
+sphinx-doc__sphinx-8548: valid=True reason=ok files=['tests/roots/test-ext-autodoc/target/instance_variable.py', 'tests/test_ext_autodoc_autoclass.py']
+
+===== 2026-11-14T10:55:35-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8548/harness_input sphinx-doc__sphinx-8548 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8548/final_preds.json
+sphinx-doc__sphinx-8548: valid=True reason=ok files=['tests/roots/test-ext-autodoc/target/instance_variable.py', 'tests/test_ext_autodoc_autoclass.py']
+
+===== 2026-11-14T11:10:27-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8551/harness_input sphinx-doc__sphinx-8551 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8551/preds.json
+sphinx-doc__sphinx-8551: valid=True reason=ok files=['tests/roots/test-domain-py-xref-types/conf.py', 'tests/roots/test-domain-py-xref-types/index.rst', 'tests/test_domain_py.py']
+
+===== 2026-11-14T11:15:58-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8551/harness_input sphinx-doc__sphinx-8551 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8551/final_preds.json
+sphinx-doc__sphinx-8551: valid=True reason=ok files=['tests/test_domain_py.py']
+
+===== 2026-11-14T11:30:25-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8593/harness_input sphinx-doc__sphinx-8593 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8593/preds.json
+sphinx-doc__sphinx-8593: valid=True reason=ok files=['tests/roots/test-ext-autodoc/target/private_variable.py', 'tests/test_ext_autodoc_private_members.py']
+
+===== 2026-11-14T11:35:19-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8593/harness_input sphinx-doc__sphinx-8593 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8593/final_preds.json
+sphinx-doc__sphinx-8593: valid=True reason=ok files=['tests/roots/test-ext-autodoc/target/private.py', 'tests/test_ext_autodoc_private_members.py']
+
+===== 2026-11-14T11:46:10-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8595/harness_input sphinx-doc__sphinx-8595 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8595/preds.json
+sphinx-doc__sphinx-8595: valid=True reason=ok files=['tests/roots/test-ext-autodoc/target/empty_all.py', 'tests/test_ext_autodoc.py']
+
+===== 2026-11-14T11:51:56-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8595/harness_input sphinx-doc__sphinx-8595 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8595/final_preds.json
+sphinx-doc__sphinx-8595: valid=True reason=ok files=['tests/roots/test-ext-autodoc/target/empty_all.py', 'tests/test_ext_autodoc.py']
+
+===== 2026-11-14T12:07:29-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8621/harness_input sphinx-doc__sphinx-8621 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8621/preds.json
+sphinx-doc__sphinx-8621: valid=True reason=ok files=['tests/test_markup.py']
+
+===== 2026-11-14T12:12:18-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8621/harness_input sphinx-doc__sphinx-8621 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8621/final_preds.json
+sphinx-doc__sphinx-8621: valid=True reason=ok files=['tests/test_markup.py']
+
+===== 2026-11-14T12:26:30-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8638/harness_input sphinx-doc__sphinx-8638 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8638/preds.json
+sphinx-doc__sphinx-8638: valid=True reason=ok files=['tests/test_domain_py.py']
+
+===== 2026-11-14T12:32:32-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8638/harness_input sphinx-doc__sphinx-8638 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8638/final_preds.json
+sphinx-doc__sphinx-8638: valid=True reason=ok files=['tests/test_domain_py.py']
+
+===== 2026-11-14T12:48:34-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8721/harness_input sphinx-doc__sphinx-8721 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sphinx-doc__sphinx-8721/preds.json
+sphinx-doc__sphinx-8721: valid=True reason=ok files=['tests/test_ext_viewcode.py']
+
+===== 2026-11-14T13:07:55-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8721/harness_input sphinx-doc__sphinx-8721 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8721/final_preds.json
+sphinx-doc__sphinx-8721: valid=True reason=ok files=['tests/test_ext_viewcode.py']
+
+===== 2026-11-14T13:18:56-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sympy__sympy-15017/harness_input sympy__sympy-15017 -- /home/mihir_barvaliya/se443/project/runs/baseline/final-1/sympy__sympy-15017/preds.json
+sympy__sympy-15017: valid=True reason=ok files=['sympy/tensor/array/tests/test_immutable_ndim_array.py']
+
+===== 2026-11-14T13:26:12-06:00 /usr/bin/python3 /home/mihir_barvaliya/se443/project/scripts/check_test_only.py /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sympy__sympy-15017/harness_input sympy__sympy-15017 -- /home/mihir_barvaliya/se443/project/runs/workflow/final-1/sympy__sympy-15017/final_preds.json
+sympy__sympy-15017: valid=True reason=ok files=['sympy/tensor/array/tests/test_immutable_ndim_array.py']

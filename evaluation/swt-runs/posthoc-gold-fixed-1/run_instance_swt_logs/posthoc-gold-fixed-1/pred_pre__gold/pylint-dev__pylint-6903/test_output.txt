@@ -1,0 +1,573 @@
++ source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ '[' -z '' ']'
++++ export CONDA_SHLVL=0
++++ CONDA_SHLVL=0
++++ '[' -n '' ']'
++++++ dirname /opt/miniconda3/bin/conda
+++++ dirname /opt/miniconda3/bin
++++ PATH=/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export PATH
++++ '[' -z '' ']'
++++ PS1=
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1=
++++ __conda_exe shell.posix activate
++++ /opt/miniconda3/bin/conda shell.posix activate
+++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=1
++++ CONDA_SHLVL=1
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+++ /opt/miniconda3/bin/conda shell.posix activate testbed
++ ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=2
+++ CONDA_SHLVL=2
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_1=/opt/miniconda3
+++ CONDA_PREFIX_1=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ cd /testbed
++ git diff HEAD ca80f03a43bc39e4cc2c67dc99817b3c9f13b8a6
++ git config --global --add safe.directory /testbed
++ cd /testbed
++ git status
+On branch main
+nothing to commit, working tree clean
++ git show
+commit ca80f03a43bc39e4cc2c67dc99817b3c9f13b8a6
+Author: Paul Lichtenberger <paul.lichtenberger.rgbg@gmail.com>
+Date:   Sat Jun 11 19:05:48 2022 +0200
+
+    Fixed misinterpreted modulo sign for ``consider-using-f-string`` (#6914)
+    
+    * Fixed a false positive in consider-using-f-string if the left side of a % is not a string.
+    
+    * consider-using-f-string: if left side of a \% does not have the attr value it can't be a str
+
+diff --git a/doc/whatsnew/2/2.14/full.rst b/doc/whatsnew/2/2.14/full.rst
+index 1bbd46587..d39bc4b82 100644
+--- a/doc/whatsnew/2/2.14/full.rst
++++ b/doc/whatsnew/2/2.14/full.rst
+@@ -5,6 +5,10 @@ What's New in Pylint 2.14.2?
+ ----------------------------
+ Release date: TBA
+ 
++* Fixed a false positive in ``consider-using-f-string`` if the left side of a ``%`` is not a string.
++
++  Closes #6689
++
+ * Fixed a false positive in ``unnecessary-list-index-lookup`` and ``unnecessary-dict-index-lookup``
+   when the subscript is updated in the body of a nested loop.
+ 
+diff --git a/pylint/checkers/refactoring/recommendation_checker.py b/pylint/checkers/refactoring/recommendation_checker.py
+index 72c822839..7873dc25e 100644
+--- a/pylint/checkers/refactoring/recommendation_checker.py
++++ b/pylint/checkers/refactoring/recommendation_checker.py
+@@ -394,6 +394,12 @@ class RecommendationChecker(checkers.BaseChecker):
+             if "\\" in node.parent.right.as_string():
+                 return
+ 
++            # If % applied to another type than str, it's modulo and can't be replaced by formatting
++            if not hasattr(node.parent.left, "value") or not isinstance(
++                node.parent.left.value, str
++            ):
++                return
++
+             inferred_right = utils.safe_infer(node.parent.right)
+ 
+             # If dicts or lists of length > 1 are used
+diff --git a/tests/functional/c/consider/consider_using_f_string.py b/tests/functional/c/consider/consider_using_f_string.py
+index f6801989e..e961c44f7 100644
+--- a/tests/functional/c/consider/consider_using_f_string.py
++++ b/tests/functional/c/consider/consider_using_f_string.py
+@@ -72,6 +72,9 @@ def statement_good():
+     "{}".format("\n".join(i for i in "string"))
+     "%s" % "\n"
+     "%s" % "\n".join(i for i in "string")
++    1 % "str"
++    (1, 2) % 'garbage'
++
+ 
+ def statement_bad():
+     "String %f" % PARAM_1  # [consider-using-f-string]
+diff --git a/tests/functional/c/consider/consider_using_f_string.txt b/tests/functional/c/consider/consider_using_f_string.txt
+index f3ac4adf0..1d68e947b 100644
+--- a/tests/functional/c/consider/consider_using_f_string.txt
++++ b/tests/functional/c/consider/consider_using_f_string.txt
+@@ -8,23 +8,23 @@ consider-using-f-string:51:10:51:21:print_bad:Formatting a regular string which
+ consider-using-f-string:52:10:52:21:print_bad:Formatting a regular string which could be a f-string:UNDEFINED
+ consider-using-f-string:53:10:53:24:print_bad:Formatting a regular string which could be a f-string:UNDEFINED
+ consider-using-f-string:54:10:54:21:print_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:77:4:77:15:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:78:4:78:15:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:79:4:79:22:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:80:4:80:11:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:81:4:81:20:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:82:4:82:15:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:83:4:83:15:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:84:4:84:15:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:85:4:85:18:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:80:4:80:15:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:81:4:81:15:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:82:4:82:22:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:83:4:83:11:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:84:4:84:20:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:85:4:85:15:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
+ consider-using-f-string:86:4:86:15:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:109:8:109:19:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:110:8:110:19:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:111:8:111:26:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:112:8:112:15:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:113:8:113:24:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:114:8:114:19:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:115:8:115:19:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:116:8:116:19:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
+-consider-using-f-string:117:8:117:22:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:87:4:87:15:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:88:4:88:18:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:89:4:89:15:statement_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:112:8:112:19:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:113:8:113:19:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:114:8:114:26:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:115:8:115:15:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:116:8:116:24:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:117:8:117:19:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
+ consider-using-f-string:118:8:118:19:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:119:8:119:19:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:120:8:120:22:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
++consider-using-f-string:121:8:121:19:assignment_bad:Formatting a regular string which could be a f-string:UNDEFINED
++ git diff ca80f03a43bc39e4cc2c67dc99817b3c9f13b8a6
++ source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ '[' -z x ']'
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1='(testbed) '
++++ __conda_exe shell.posix activate
++++ /opt/miniconda3/bin/conda shell.posix activate
+++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=3
++++ CONDA_SHLVL=3
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_PREFIX_2=/opt/miniconda3/envs/testbed
++++ CONDA_PREFIX_2=/opt/miniconda3/envs/testbed
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+++ /opt/miniconda3/bin/conda shell.posix activate testbed
++ ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_3='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_3='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=4
+++ CONDA_SHLVL=4
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_3=/opt/miniconda3
+++ CONDA_PREFIX_3=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ python -m pip install -e . --config-settings editable_mode=compat
+Obtaining file:///testbed
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: dill>=0.2 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (0.4.1)
+Requirement already satisfied: platformdirs>=2.2.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (4.4.0)
+Requirement already satisfied: astroid<=2.12.0-dev0,>=2.11.5 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (2.11.7)
+Requirement already satisfied: isort<6,>=4.2.5 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (5.10.1)
+Requirement already satisfied: mccabe<0.8,>=0.6 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (0.7.0)
+Requirement already satisfied: tomli>=1.1.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (2.5.0)
+Requirement already satisfied: tomlkit>=0.10.1 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (0.15.2)
+Requirement already satisfied: typing-extensions>=3.10.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (4.16.0)
+Requirement already satisfied: lazy-object-proxy>=1.4.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from astroid<=2.12.0-dev0,>=2.11.5->pylint==2.15.0.dev0) (1.12.0)
+Requirement already satisfied: wrapt<2,>=1.11 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from astroid<=2.12.0-dev0,>=2.11.5->pylint==2.15.0.dev0) (1.17.3)
+Requirement already satisfied: setuptools>=20.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from astroid<=2.12.0-dev0,>=2.11.5->pylint==2.15.0.dev0) (80.9.0)
+Building wheels for collected packages: pylint
+  Building editable for pylint (pyproject.toml): started
+  Building editable for pylint (pyproject.toml): finished with status 'done'
+  Created wheel for pylint: filename=pylint-2.15.0.dev0-0.editable-py3-none-any.whl size=23651 sha256=87e76d169766429827efded3b7e319f94b1809b8c9a807874ca9b3fd5e6fab7c
+  Stored in directory: /tmp/pip-ephem-wheel-cache-rywocs5j/wheels/7d/66/67/70d1ee2124ccf21d601c352e25cdca10f611f7c8b3f9ffb9e4
+Successfully built pylint
+Installing collected packages: pylint
+  Attempting uninstall: pylint
+    Found existing installation: pylint 2.15.0.dev0
+    Uninstalling pylint-2.15.0.dev0:
+      Successfully uninstalled pylint-2.15.0.dev0
+Successfully installed pylint-2.15.0.dev0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ git apply -v -
+Checking patch tests/test_pylint_runners.py...
+Applied patch tests/test_pylint_runners.py cleanly.
++ python3 /root/trace.py --count -C coverage.cover --include-pattern '/testbed/(pylint/lint/run\.py)' -m pytest --no-header -rA -p no:cacheprovider tests/test_pylint_runners.py
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(pylint/lint/run\\.py)']
+============================= test session starts ==============================
+collected 9 items
+
+tests/test_pylint_runners.py ........F                                   [100%]
+
+=================================== FAILURES ===================================
+_________ test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction _________
+
+tmpdir = local('/tmp/pytest-of-root/pytest-0/test_pylint_run_jobs_equal_zer0')
+
+    def test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction(
+        tmpdir: LocalPath,
+    ) -> None:
+        """Check that the pylint runner does not crash if `pylint.lint.run._query_cpu`
+        determines only a fraction of a CPU core to be available.
+        """
+        builtin_open = open
+    
+        def _mock_open(*args, **kwargs):
+            if args[0] == "/sys/fs/cgroup/cpu/cpu.cfs_quota_us":
+                return mock_open(read_data=b"-1")(*args, **kwargs)
+            if args[0] == "/sys/fs/cgroup/cpu/cpu.shares":
+                return mock_open(read_data=b"2")(*args, **kwargs)
+            return builtin_open(*args, **kwargs)
+    
+        pathlib_path = pathlib.Path
+    
+        def _mock_path(*args, **kwargs):
+            if args[0] == "/sys/fs/cgroup/cpu/cpu.shares":
+                return MagicMock(is_file=lambda: True)
+            return pathlib_path(*args, **kwargs)
+    
+        filepath = os.path.abspath(__file__)
+        testargs = [filepath, "--jobs=0"]
+        with tmpdir.as_cwd():
+            with pytest.raises(SystemExit) as err:
+                with patch("builtins.open", _mock_open):
+                    with patch("pylint.lint.run.Path", _mock_path):
+>                       Run(testargs, reporter=Reporter())
+
+tests/test_pylint_runners.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pylint/lint/run.py:197: in __init__
+    linter.check(args)
+pylint/lint/pylinter.py:654: in check
+    check_parallel(
+pylint/lint/parallel.py:140: in check_parallel
+    with multiprocessing.Pool(
+/opt/miniconda3/envs/testbed/lib/python3.9/multiprocessing/context.py:119: in Pool
+    return Pool(processes, initializer, initargs, maxtasksperchild,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <multiprocessing.pool.Pool state=INIT pool_size=0>, processes = 0
+initializer = functools.partial(<function _worker_initialize at 0x7e9825cb9a60>, arguments=['/testbed/tests/test_pylint_runners.py'])
+initargs = [b'\x80\x04\x95\x01\x00\x01\x00\x00\x00\x00\x00\x8c\x14pylint.lint.pylinter\x94\x8c\x08PyLinter\x94\x93\x94)\x81\x94}\...\x94j\xdb\x15\x00\x00j\xdd\x15\x00\x00\x87\x94\x8c\x06RP0003\x94j\xe0\x15\x00\x00j\xe2\x15\x00\x00\x87\x94\x87\x94ub.']
+maxtasksperchild = None
+context = <multiprocessing.context.ForkContext object at 0x7e98286f27c0>
+
+    def __init__(self, processes=None, initializer=None, initargs=(),
+                 maxtasksperchild=None, context=None):
+        # Attributes initialized early to make sure that they exist in
+        # __del__() if __init__() raises an exception
+        self._pool = []
+        self._state = INIT
+    
+        self._ctx = context or get_context()
+        self._setup_queues()
+        self._taskqueue = queue.SimpleQueue()
+        # The _change_notifier queue exist to wake up self._handle_workers()
+        # when the cache (self._cache) is empty or when there is a change in
+        # the _state variable of the thread that runs _handle_workers.
+        self._change_notifier = self._ctx.SimpleQueue()
+        self._cache = _PoolCache(notifier=self._change_notifier)
+        self._maxtasksperchild = maxtasksperchild
+        self._initializer = initializer
+        self._initargs = initargs
+    
+        if processes is None:
+            processes = os.cpu_count() or 1
+        if processes < 1:
+>           raise ValueError("Number of processes must be at least 1")
+E           ValueError: Number of processes must be at least 1
+
+/opt/miniconda3/envs/testbed/lib/python3.9/multiprocessing/pool.py:205: ValueError
+=============================== warnings summary ===============================
+../opt/miniconda3/envs/testbed/lib/python3.9/site-packages/astroid/interpreter/_import/util.py:6
+  /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/astroid/interpreter/_import/util.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    import pkg_resources
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+___________________________ test_runner[run_epylint] ___________________________
+----------------------------- Captured stdout call -----------------------------
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(pylint/lint/run\\.py)']
+ 
+----------------------------- Captured stderr call -----------------------------
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/astroid/interpreter/_import/util.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+usage: pylint [options]
+pylint: error: Unrecognized option found: count, C, include-pattern, c
+___________________________ test_runner[run_pylint] ____________________________
+----------------------------- Captured stdout call -----------------------------
+
+------------------------------------
+Your code has been rated at 10.00/10
+
+__________________________ test_runner[run_pyreverse] __________________________
+----------------------------- Captured stdout call -----------------------------
+parsing /testbed/tests/test_pylint_runners.py...
+___________________________ test_runner[run_symilar] ___________________________
+----------------------------- Captured stdout call -----------------------------
+TOTAL lines=77 duplicates=0 percent=0.00
+
+___________________ test_runner_with_arguments[run_epylint] ____________________
+----------------------------- Captured stdout call -----------------------------
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(pylint/lint/run\\.py)']
+ 
+----------------------------- Captured stderr call -----------------------------
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/astroid/interpreter/_import/util.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+usage: pylint [options]
+pylint: error: Unrecognized option found: count, C, include-pattern, c
+____________________ test_runner_with_arguments[run_pylint] ____________________
+----------------------------- Captured stdout call -----------------------------
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+__________________ test_runner_with_arguments[run_pyreverse] ___________________
+----------------------------- Captured stdout call -----------------------------
+parsing /testbed/tests/test_pylint_runners.py...
+___________________ test_runner_with_arguments[run_symilar] ____________________
+----------------------------- Captured stdout call -----------------------------
+TOTAL lines=77 duplicates=0 percent=0.00
+
+=========================== short test summary info ============================
+PASSED tests/test_pylint_runners.py::test_runner[run_epylint]
+PASSED tests/test_pylint_runners.py::test_runner[run_pylint]
+PASSED tests/test_pylint_runners.py::test_runner[run_pyreverse]
+PASSED tests/test_pylint_runners.py::test_runner[run_symilar]
+PASSED tests/test_pylint_runners.py::test_runner_with_arguments[run_epylint]
+PASSED tests/test_pylint_runners.py::test_runner_with_arguments[run_pylint]
+PASSED tests/test_pylint_runners.py::test_runner_with_arguments[run_pyreverse]
+PASSED tests/test_pylint_runners.py::test_runner_with_arguments[run_symilar]
+FAILED tests/test_pylint_runners.py::test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction
+=================== 1 failed, 8 passed, 1 warning in 13.19s ====================
++ cat coverage.cover
+{"/testbed/pylint/lint/run.py": {"5": 1, "7": 1, "8": 1, "9": 1, "10": 1, "11": 1, "12": 1, "14": 1, "15": 1, "19": 1, "20": 1, "21": 1, "22": 1, "23": 1, "24": 1, "25": 1, "27": 1, "28": 1, "29": 1, "30": 0, "31": 0, "34": 1, "64": 1, "83": 1, "86": 2, "225": 2, "40": 2, "42": 2, "43": 0, "45": 0, "48": 2, "47": 2, "49": 0, "50": 0, "52": 0, "53": 0, "55": 0, "56": 2, "57": 1, "58": 1, "60": 1, "61": 2, "68": 2, "69": 2, "70": 2, "72": 2, "73": 2, "74": 0, "75": 0, "77": 0, "78": 2, "79": 1, "80": 1, "89": 1, "90": 1, "97": 1, "106": 1, "107": 1, "108": 1, "103": 1, "111": 3, "112": 0, "113": 0, "115": 3, "116": 3, "117": 3, "118": 3, "121": 3, "122": 3, "123": 0, "124": 0, "125": 0, "128": 3, "129": 3, "130": 3, "131": 0, "133": 6, "134": 3, "135": 3, "136": 3, "139": 3, "141": 3, "143": 3, "144": 3, "148": 3, "149": 0, "151": 6, "152": 3, "156": 3, "157": 0, "158": 0, "159": 0, "161": 0, "162": 0, "163": 0, "164": 0, "167": 3, "168": 0, "169": 0, "171": 3, "172": 0, "173": 0, "174": 0, "176": 0, "177": 3, "178": 1, "179": 0, "180": 0, "181": 0, "183": 0, "184": 1, "185": 1, "187": 3, "188": 0, "189": 0, "190": 0, "191": 0, "192": 0, "193": 0, "194": 0, "195": 0, "197": 3, "198": 2, "200": 2, "201": 0, "202": 0, "203": 0, "205": 0, "207": 2, "208": 2, "209": 0, "210": 2, "213": 0, "214": 2, "215": 2, "216": 2, "220": 0, "222": 0, "228": 1, "229": 1}}
++ git checkout ca80f03a43bc39e4cc2c67dc99817b3c9f13b8a6
+M	tests/test_pylint_runners.py
+Note: switching to 'ca80f03a43bc39e4cc2c67dc99817b3c9f13b8a6'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at ca80f03a4 Fixed misinterpreted modulo sign for ``consider-using-f-string`` (#6914)
++ git apply /root/pre_state.patch
+error: unrecognized input

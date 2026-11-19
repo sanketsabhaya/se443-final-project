@@ -1,0 +1,27 @@
+2026-11-13 19:15:40,064 - WARNING - Starting evaluation at 1794618940.0648916
+2026-11-13 19:15:40,368 - INFO - Creating container for django__django-16485...
+2026-11-13 19:15:40,457 - INFO - Container for django__django-16485 created: 87d41961b0068f8dcc58f9b2fdb93dbe8e6d5f039e27463fa1f281a5529607ee
+2026-11-13 19:15:40,627 - INFO - Container for django__django-16485 started: 87d41961b0068f8dcc58f9b2fdb93dbe8e6d5f039e27463fa1f281a5529607ee
+2026-11-13 19:15:43,140 - INFO - Git diff before:
+
+2026-11-13 19:15:43,140 - INFO - Eval script for django__django-16485 written to eval.sh, now applying to container...
+2026-11-13 19:15:49,346 - INFO - Test output for django__django-16485 written to run_instance_swt_logs/final-1-baseline-django__django-16485/pred_pre__deepseek__deepseek-flash/django__django-16485/test_output.txt
+2026-11-13 19:15:49,425 - INFO - Git diff after:
+diff --git a/tests/template_tests/filter_tests/test_floatformat.py b/tests/template_tests/filter_tests/test_floatformat.py
+index 361a888ce3..db8498ff1c 100644
+--- a/tests/template_tests/filter_tests/test_floatformat.py
++++ b/tests/template_tests/filter_tests/test_floatformat.py
+@@ -108,6 +108,8 @@ class FunctionTests(SimpleTestCase):
+         self.assertEqual(floatformat(0, 6), "0.000000")
+         self.assertEqual(floatformat(0, 7), "0.0000000")
+         self.assertEqual(floatformat(0, 10), "0.0000000000")
++        self.assertEqual(floatformat("0.00", 0), "0")
++        self.assertEqual(floatformat(Decimal("0.00"), 0), "0")
+         self.assertEqual(
+             floatformat(0.000000000000000000015, 20), "0.00000000000000000002"
+         )
+2026-11-13 19:15:49,425 - INFO - Git diff changed after running eval script
+2026-11-13 19:15:49,425 - INFO - Attempting to stop container exec.eval.x86_64.9097b18874f4d0ac315ef2.3054e91debcdaa3051adcc.137221114020240...
+2026-11-13 19:16:04,691 - INFO - Attempting to remove container exec.eval.x86_64.9097b18874f4d0ac315ef2.3054e91debcdaa3051adcc.137221114020240...
+2026-11-13 19:16:04,733 - INFO - Container exec.eval.x86_64.9097b18874f4d0ac315ef2.3054e91debcdaa3051adcc.137221114020240 removed.
+2026-11-13 19:16:04,733 - WARNING - End of eval at 1794618964.7332199

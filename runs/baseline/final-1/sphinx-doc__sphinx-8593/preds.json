@@ -1,0 +1,7 @@
+{
+  "sphinx-doc__sphinx-8593": {
+    "model_name_or_path": "deepseek/deepseek-flash",
+    "instance_id": "sphinx-doc__sphinx-8593",
+    "model_patch": "diff --git a/tests/roots/test-ext-autodoc/target/private_variable.py b/tests/roots/test-ext-autodoc/target/private_variable.py\nnew file mode 100644\nindex 000000000..1eacd2d2d\n--- /dev/null\n+++ b/tests/roots/test-ext-autodoc/target/private_variable.py\n@@ -0,0 +1 @@\n+_foo = None  #: :meta public:\ndiff --git a/tests/test_ext_autodoc_private_members.py b/tests/test_ext_autodoc_private_members.py\nindex 6bce5ce78..17ff37ad4 100644\n--- a/tests/test_ext_autodoc_private_members.py\n+++ b/tests/test_ext_autodoc_private_members.py\n@@ -81,3 +81,21 @@ def test_private_members(app):\n         '   :meta public:',\n         '',\n     ]\n+\n+\n+@pytest.mark.sphinx('html', testroot='ext-autodoc')\n+def test_public_metadata_on_variable(app):\n+    options = {\"members\": None}\n+    actual = do_autodoc(app, 'module', 'target.private_variable', options)\n+    assert list(actual) == [\n+        '',\n+        '.. py:module:: target.private_variable',\n+        '',\n+        '',\n+        '.. py:data:: _foo',\n+        '   :module: target.private_variable',\n+        '   :value: None',\n+        '',\n+        '   :meta public:',\n+        '',\n+    ]\n"
+  }
+}

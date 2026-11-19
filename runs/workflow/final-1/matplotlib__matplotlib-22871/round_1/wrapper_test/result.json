@@ -1,0 +1,46 @@
+{
+  "start": "2026-11-14T02:27:14-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "lib/matplotlib/tests/test_dates.py"
+    ]
+  },
+  "end": "2026-11-14T02:27:18-06:00",
+  "duration_s": 4.8,
+  "apply_ok": true,
+  "selection_mode": "functions",
+  "targets": [
+    {
+      "file": "lib/matplotlib/tests/test_dates.py",
+      "cls": null,
+      "func": "test_concise_formatter_offset_year_not_in_ticks",
+      "label": "lib/matplotlib/tests/test_dates.py::test_concise_formatter_offset_year_not_in_ticks"
+    }
+  ],
+  "command": "pytest -rA --tb=long -p no:cacheprovider lib/matplotlib/tests/test_dates.py::test_concise_formatter_offset_year_not_in_ticks",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "lib/matplotlib/tests/test_dates.py::test_concise_formatter_offset_year_not_in_ticks": "FAILED"
+  },
+  "group": "G5",
+  "evidence": {
+    "issue_exc": [],
+    "mode": "functions",
+    "collected": {
+      "lib/matplotlib/tests/test_dates.py::test_concise_formatter_offset_year_not_in_ticks": "FAILED"
+    },
+    "setup_markers": [],
+    "failure_types": {
+      "lib/matplotlib/tests/test_dates.py::test_concise_formatter_offset_year_not_in_ticks": "AssertionError"
+    },
+    "reason": "failure_matches_issue"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": false,
+    "skip_or_xfail_added": false
+  }
+}

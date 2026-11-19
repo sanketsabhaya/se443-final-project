@@ -1,0 +1,20 @@
+{
+  "ledger": [
+    {
+      "round": 1,
+      "kind": "agent",
+      "steps": 16,
+      "seconds": 76.4
+    },
+    {
+      "round": 1,
+      "kind": "wrapper_test",
+      "steps": 1,
+      "seconds": 4.8
+    }
+  ],
+  "steps_used": 17,
+  "wall_s": 81.1,
+  "step_budget": 100,
+  "time_budget_s": 1800
+}

@@ -1,0 +1,14 @@
+{
+  "time": "2026-11-13T19:20:19-06:00",
+  "images": [
+    {
+      "image": "docker.io/swebench/sweb.eval.x86_64.django_1776_django-16485:latest",
+      "id": "sha256:570eb343d44b9ef6ddd5bfffbbe0c80217c926c79f164205cc328b51c5676020",
+      "repo_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-16485@sha256:570eb343d44b9ef6ddd5bfffbbe0c80217c926c79f164205cc328b51c5676020"
+      ],
+      "size_bytes": 4482732821,
+      "rmi_exit_code": 0
+    }
+  ]
+}

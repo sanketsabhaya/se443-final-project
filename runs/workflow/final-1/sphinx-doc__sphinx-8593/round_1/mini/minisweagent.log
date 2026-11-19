@@ -1,0 +1,7 @@
+2026-11-14 11:24:35,529 - minisweagent - INFO - Loading dataset /home/mihir_barvaliya/.cache/huggingface/hub/datasets--princeton-nlp--SWE-bench_Verified/snapshots/c104f840cc67f8b6eec6f759ebc8b2693d585d4a, split test...
+2026-11-14 11:24:35,577 - minisweagent - INFO - Instance filter: 500 -> 1 instances
+2026-11-14 11:24:35,578 - minisweagent - INFO - Running on 1 instances...
+2026-11-14 11:24:35,579 - minisweagent - INFO - Building agent config from specs: ['/home/mihir_barvaliya/se443/project/configs/unit_test_gen.yaml']
+2026-11-14 11:24:37,865 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-63ab9947 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8593:latest sleep 2h
+2026-11-14 11:24:38,194 - minisweagent.environment - INFO - Started container minisweagent-63ab9947 with ID 33e18e54e94fb2e9e55fe8016da857934a4621da523237960778273516dbaf76
+2026-11-14 11:25:47,481 - minisweagent - INFO - Saved trajectory to '/home/mihir_barvaliya/se443/project/runs/workflow/final-1/sphinx-doc__sphinx-8593/round_1/mini/sphinx-doc__sphinx-8593/sphinx-doc__sphinx-8593.traj.json'

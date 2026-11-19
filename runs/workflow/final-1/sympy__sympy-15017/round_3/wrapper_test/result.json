@@ -1,0 +1,61 @@
+{
+  "start": "2026-11-14T13:18:52-06:00",
+  "timeout_s": 900,
+  "rule4": {
+    "valid": true,
+    "reason": "ok",
+    "files": [
+      "sympy/tensor/array/tests/test_immutable_ndim_array.py"
+    ]
+  },
+  "end": "2026-11-14T13:18:55-06:00",
+  "duration_s": 3.0,
+  "apply_ok": true,
+  "selection_mode": "files(sympy)",
+  "targets": [
+    {
+      "file": "sympy/tensor/array/tests/test_immutable_ndim_array.py",
+      "cls": null,
+      "func": "test_ndim_array_initiation",
+      "label": "sympy/tensor/array/tests/test_immutable_ndim_array.py::test_ndim_array_initiation"
+    }
+  ],
+  "command": "bin/test -C --verbose sympy/tensor/array/tests/test_immutable_ndim_array.py",
+  "exit_code": 1,
+  "timed_out": false,
+  "statuses": {
+    "test_ndim_array_initiation": "FAILED",
+    "test_reshape": "PASSED",
+    "test_iterator": "PASSED",
+    "test_sparse": "PASSED",
+    "test_calculation": "PASSED",
+    "test_ndim_array_converting": "PASSED",
+    "test_converting_functions": "PASSED",
+    "test_equality": "PASSED",
+    "test_arithmetic": "PASSED",
+    "test_higher_dimenions": "PASSED",
+    "test_rebuild_immutable_arrays": "PASSED",
+    "test_slices": "PASSED",
+    "test_diff_and_applyfunc": "PASSED",
+    "test_op_priority": "PASSED",
+    "test_symbolic_indexing": "PASSED",
+    "test_issue_12665": "PASSED"
+  },
+  "group": "G4",
+  "evidence": {
+    "issue_exc": [],
+    "mode": "files(sympy)",
+    "collected": {
+      "sympy/tensor/array/tests/test_immutable_ndim_array.py::test_ndim_array_initiation": "FAILED"
+    },
+    "setup_markers": [],
+    "failure_types": {
+      "sympy/tensor/array/tests/test_immutable_ndim_array.py::test_ndim_array_initiation": null
+    },
+    "reason": "failure_unrelated"
+  },
+  "flags": {
+    "no_assertion_in_added_lines": false,
+    "skip_or_xfail_added": false
+  }
+}

@@ -1,0 +1,32 @@
+diff --git a/lib/matplotlib/tests/test_axes.py b/lib/matplotlib/tests/test_axes.py
+index 06ff5aca4..4d41a8cac 100644
+--- a/lib/matplotlib/tests/test_axes.py
++++ b/lib/matplotlib/tests/test_axes.py
+@@ -939,6 +939,27 @@ def test_inverted_limits():
+     plt.close()
+ 
+ 
++@pytest.mark.parametrize('axis', ['x', 'y'])
++@pytest.mark.parametrize('scale', ['linear', 'log'])
++def test_inverted_limits_via_set_lim(axis, scale):
++    # Test gh:14646: reversing the limits of a log-scaled axis must invert
++    # the axis just like it does for a linear scale.
++    data = np.linspace(100, 1, 10)
++    fig, ax = plt.subplots()
++    if axis == 'x':
++        ax.plot(data, np.arange(data.size))
++    else:
++        ax.plot(np.arange(data.size), data)
++    getattr(ax, f'set_{axis}scale')(scale)
++
++    limits = (100, 1)
++    getattr(ax, f'set_{axis}lim')(*limits)
++
++    assert getattr(ax, f'get_{axis}lim')() == limits
++    assert getattr(ax, f'{axis}axis_inverted')()
++    plt.close(fig)
++
++
+ @image_comparison(baseline_images=['nonfinite_limits'])
+ def test_nonfinite_limits():
+     x = np.arange(0., np.e, 0.01)

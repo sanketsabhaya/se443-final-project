@@ -1,0 +1,67 @@
+.pkg: find interpreter for spec PythonSpec(major=3, minor=9)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(path=/opt/miniconda3/envs/testbed/bin/python)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3, minor=10)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python3, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.11.5.final.0-64, exe=/opt/miniconda3/bin/python3, platform=linux, version='3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/usr/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3, minor=11)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python3, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.11.5.final.0-64, exe=/opt/miniconda3/bin/python3, platform=linux, version='3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3, minor=12)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python3, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.11.5.final.0-64, exe=/opt/miniconda3/bin/python3, platform=linux, version='3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/usr/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: proposed PathPythonInfo(spec=CPython3.10.12.final.0-64, exe=/bin/python3, platform=linux, version='3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(major=3)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+.pkg: find interpreter for spec PythonSpec(path=/opt/miniconda3/envs/testbed/bin/python)
+.pkg: proposed PythonInfo(spec=CPython3.9.20.final.0-64, exe=/opt/miniconda3/envs/testbed/bin/python, platform=linux, version='3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]', encoding_fs_io=utf-8-utf-8)
+py39: create virtual environment via CPython3Posix(dest=/testbed/.tox/py39, clear=False, no_vcs_ignore=False, global=False)
+py39: add seed packages via FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/root/.local/share/virtualenv)
+py39: add activators for Bash, CShell, Fish, Nushell, PowerShell, Python
+.pkg: create virtual environment via CPython3Posix(dest=/testbed/.tox/.pkg, clear=False, no_vcs_ignore=False, global=False)
+.pkg: add seed packages via FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/root/.local/share/virtualenv)
+.pkg: add activators for Bash, CShell, Fish, Nushell, PowerShell, Python
+.pkg: install_requires> python -I -m pip install 'flit_core>=3.7'
+.pkg: exit 0 (1.25 seconds) /testbed> python -I -m pip install 'flit_core>=3.7' pid=39
+.pkg: _optional_hooks> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True flit_core.buildapi
+.pkg: exit None (0.07 seconds) /testbed> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True flit_core.buildapi pid=44
+.pkg: get_requires_for_build_editable> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True flit_core.buildapi
+.pkg: exit None (0.01 seconds) /testbed> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True flit_core.buildapi pid=44
+.pkg: build_editable> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True flit_core.buildapi
+.pkg: exit None (0.01 seconds) /testbed> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True flit_core.buildapi pid=44
+py39: install_package_deps> python -I -m pip install 'Jinja2>=3.0' 'Pygments>=2.13' 'alabaster<0.8,>=0.7' 'babel>=2.9' 'colorama>=0.4.5; sys_platform == "win32"' cython 'docutils<0.21,>=0.18.1' filelock html5lib 'imagesize>=1.3' 'importlib-metadata>=4.8; python_version < "3.10"' 'packaging>=21.0' 'pytest>=4.6' 'requests>=2.25.0' 'snowballstemmer>=2.0' sphinxcontrib-applehelp sphinxcontrib-devhelp 'sphinxcontrib-htmlhelp>=2.0.0' sphinxcontrib-jsmath sphinxcontrib-qthelp 'sphinxcontrib-serializinghtml>=1.1.5'
+py39: exit 0 (10.59 seconds) /testbed> python -I -m pip install 'Jinja2>=3.0' 'Pygments>=2.13' 'alabaster<0.8,>=0.7' 'babel>=2.9' 'colorama>=0.4.5; sys_platform == "win32"' cython 'docutils<0.21,>=0.18.1' filelock html5lib 'imagesize>=1.3' 'importlib-metadata>=4.8; python_version < "3.10"' 'packaging>=21.0' 'pytest>=4.6' 'requests>=2.25.0' 'snowballstemmer>=2.0' sphinxcontrib-applehelp sphinxcontrib-devhelp 'sphinxcontrib-htmlhelp>=2.0.0' sphinxcontrib-jsmath sphinxcontrib-qthelp 'sphinxcontrib-serializinghtml>=1.1.5' pid=47
+py39: install_package> python -I -m pip install --force-reinstall --no-deps /testbed/.tox/.tmp/package/1/sphinx-7.2.0-py3-none-any.whl
+py39: exit 0 (0.38 seconds) /testbed> python -I -m pip install --force-reinstall --no-deps /testbed/.tox/.tmp/package/1/sphinx-7.2.0-py3-none-any.whl pid=55
+py39: commands[0]> python -X dev -X warn_default_encoding -m pytest -rA --durations 25 tests/test_util_typing.py::test_restify
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.9.20, pytest-8.4.2, pluggy-1.6.0
+cachedir: .tox/py39/.pytest_cache
+libraries: Sphinx-7.2.0+/df2f7c873, docutils-0.20.1
+base tmp_path: /tmp/pytest-of-root/pytest-0
+rootdir: /testbed
+configfile: pyproject.toml
+collected 1 item
+
+tests/test_util_typing.py [32m.[0m[32m                                              [100%][0m
+
+==================================== PASSES ====================================
+============================= slowest 25 durations =============================
+
+(3 durations < 0.005s hidden.  Use -vv to show these durations.)
+[36m[1m=========================== short test summary info ============================[0m
+[32mPASSED[0m tests/test_util_typing.py::[1mtest_restify[0m
+[32m============================== [32m[1m1 passed[0m[32m in 0.17s[0m[32m ===============================[0m
+py39: exit 0 (0.80 seconds) /testbed> python -X dev -X warn_default_encoding -m pytest -rA --durations 25 tests/test_util_typing.py::test_restify pid=62
+.pkg: _exit> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True flit_core.buildapi
+.pkg: exit None (0.00 seconds) /testbed> python /opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pyproject_api/_backend.py True flit_core.buildapi pid=44
+  py39: OK (13.98=setup[13.18]+cmd[0.80] seconds)
+  congratulations :) (14.67 seconds)

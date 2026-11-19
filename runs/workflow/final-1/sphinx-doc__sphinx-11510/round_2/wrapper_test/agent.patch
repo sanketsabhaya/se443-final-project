@@ -1,0 +1,95 @@
+diff --git a/tests/roots/test-directive-include/baz/baz.rst b/tests/roots/test-directive-include/baz/baz.rst
+new file mode 100644
+index 000000000..0b74be0ba
+--- /dev/null
++++ b/tests/roots/test-directive-include/baz/baz.rst
+@@ -0,0 +1,6 @@
++Baz
++===
++
++.. include:: foo.rst
++
++Baz was here.
+diff --git a/tests/roots/test-directive-include/baz/foo.rst b/tests/roots/test-directive-include/baz/foo.rst
+new file mode 100644
+index 000000000..0f82e661b
+--- /dev/null
++++ b/tests/roots/test-directive-include/baz/foo.rst
+@@ -0,0 +1 @@
++The #magical foo.
+diff --git a/tests/roots/test-directive-include/conf.py b/tests/roots/test-directive-include/conf.py
+new file mode 100644
+index 000000000..a4768582f
+--- /dev/null
++++ b/tests/roots/test-directive-include/conf.py
+@@ -0,0 +1,2 @@
++project = 'test-directive-include'
++exclude_patterns = ['_build']
+diff --git a/tests/roots/test-directive-include/foo.rst b/tests/roots/test-directive-include/foo.rst
+new file mode 100644
+index 000000000..0f82e661b
+--- /dev/null
++++ b/tests/roots/test-directive-include/foo.rst
+@@ -0,0 +1 @@
++The #magical foo.
+diff --git a/tests/roots/test-directive-include/included.rst b/tests/roots/test-directive-include/included.rst
+new file mode 100644
+index 000000000..e63253568
+--- /dev/null
++++ b/tests/roots/test-directive-include/included.rst
+@@ -0,0 +1,4 @@
++Testing
++=======
++
++&REPLACE_ME;
+diff --git a/tests/roots/test-directive-include/index.rst b/tests/roots/test-directive-include/index.rst
+new file mode 100644
+index 000000000..78f29c3f8
+--- /dev/null
++++ b/tests/roots/test-directive-include/index.rst
+@@ -0,0 +1,8 @@
++This is a test
++==============
++
++.. include:: included.rst
++
++.. include:: baz/baz.rst
++
++&REPLACE_ME;
+diff --git a/tests/test_directive_other.py b/tests/test_directive_other.py
+index f221db075..564986e94 100644
+--- a/tests/test_directive_other.py
++++ b/tests/test_directive_other.py
+@@ -148,3 +148,32 @@ def test_toctree_twice(app):
+     assert_node(doctree[0][0],
+                 entries=[(None, 'foo'), (None, 'foo')],
+                 includefiles=['foo', 'foo'])
++
++
++@pytest.mark.sphinx('html', testroot='directive-include', freshenv=True)
++def test_include_source_read_event(app):
++    sources_reported = []
++
++    def source_read_handler(app, doc, source):
++        sources_reported.append(doc)
++        source[0] = source[0].replace("&REPLACE_ME;", "REPLACED")
++
++    app.connect("source-read", source_read_handler)
++    app.build(force_all=True)
++    content = (app.outdir / 'index.html').read_text(encoding='utf8')
++    assert "REPLACE_ME" not in content
++    assert content.count("REPLACED") == 2
++    assert "included" in sources_reported
++
++
++@pytest.mark.sphinx('html', testroot='directive-include', freshenv=True)
++def test_include_source_read_event_nested_includes(app):
++
++    def source_read_handler(app, doc, source):
++        source[0] = source[0].replace("#magical", "amazing")
++
++    app.connect("source-read", source_read_handler)
++    app.build(force_all=True)
++    content = (app.outdir / 'index.html').read_text(encoding='utf8')
++    assert "#magical" not in content
++    assert "The amazing foo." in content
